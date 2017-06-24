@@ -2,12 +2,13 @@
 namespace Roc\FrontendController;
 use \Phalcon\Mvc\Controller;
 use Roc\Library\Captcha;
+use Roc\Library\PhpMailer;
 
 /**
  * User: ambi
  * Date: 2017/6/21
  */
-class IndexController extends Controller{
+class IndexController extends FrontendController {
     public function indexAction(){
         echo 'index->frontend';
     }
@@ -23,5 +24,17 @@ class IndexController extends Controller{
         $img_src = "data:image/".$captcha->imageType.";base64," . $image64;
         echo $captcha->captchaCode;
         echo ("<img src='{$img_src}' style='width:110px;height:40px;' />");
+    }
+
+    public function test_voltAction(){
+        $this->view->render('index','index');
+    }
+
+    public function test_mailAction(){
+        PhpMailer::sendRegisterMail();
+    }
+
+    public function phpinfoAction(){
+        phpinfo();
     }
 }
