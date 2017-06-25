@@ -6,14 +6,14 @@
 return array(
     'directory'=>array(
         'library'=>APP_PATH.'library',
-        'backend'=>APP_PATH.'controller/backend',
+        'cms'=>APP_PATH.'controller/cms',
         'frontend'=>APP_PATH.'controller/frontend',
         'view'=>APP_PATH.'view',
         'core'=>APP_PATH.'core',
         'model'=>APP_PATH.'model',
     ),
     'namespace' =>array(
-        'backend'=>"Roc\\BackendController",
+        'cms'=>"Roc\\BackendController",
         'frontend'=>"Roc\\FrontendController",
         'library'=>"Roc\\Library",
     ),

@@ -9,7 +9,7 @@ $config = require "config.php";
 
 $loader = new \Phalcon\Loader();
 $loader->registerNamespaces(array(
-    $config['namespace']['backend']=>$config['directory']['backend'],
+    $config['namespace']['cms']=>$config['directory']['cms'],
     $config['namespace']['frontend']=>$config['directory']['frontend'],
     $config['namespace']['library']=>$config['directory']['library'],
 ))->register();
@@ -53,8 +53,8 @@ $di->setShared(
 
 $route = new \Phalcon\Mvc\Router();
 
-$route->add('/backend/?([a-zA-Z0-9_-]*)/?([a-zA-Z0-9_]*)(/.*)*',array(
-    'namespace' => $config['namespace']['backend'],
+$route->add('/cms/?([a-zA-Z0-9_-]*)/?([a-zA-Z0-9_]*)(/.*)*',array(
+    'namespace' => $config['namespace']['cms'],
     'controller'=> 1,
     'action'    => 2,
     'params'    => 3
