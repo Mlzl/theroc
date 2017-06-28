@@ -1,6 +1,6 @@
 <?php
 namespace Roc\FrontendController;
-use \Phalcon\Mvc\Controller;
+use Roc\Library\SymmetricEncryption;
 use Roc\Library\Captcha;
 use Roc\Library\PhpMailer;
 
@@ -28,6 +28,11 @@ class IndexController extends FrontendController {
 
     public function test_voltAction(){
         $this->view->render('index','index');
+    }
+
+    public function test_decryptAction(){
+        $symme = SymmetricEncryption::encrypt('user',123456678);
+        echo SymmetricEncryption::decrypt('user', $symme);
     }
 
     public function test_mailAction(){
