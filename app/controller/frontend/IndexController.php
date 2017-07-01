@@ -3,6 +3,7 @@ namespace Roc\FrontendController;
 use Roc\Library\SymmetricEncryption;
 use Roc\Library\Captcha;
 use Roc\Library\PhpMailer;
+use Roc\Library\UploadFile;
 
 /**
  * User: ambi
@@ -10,11 +11,7 @@ use Roc\Library\PhpMailer;
  */
 class IndexController extends FrontendController {
     public function indexAction(){
-        echo 'index->frontend';
-    }
-    public function testDBAction(){
-        $res = \Test::findFirst();
-        var_dump($res->toArray());
+        $this->view->render('index', 'test_upload');
     }
 
     public function test_captchaAction(){
@@ -41,5 +38,21 @@ class IndexController extends FrontendController {
 
     public function phpinfoAction(){
         phpinfo();
+    }
+
+    public function add_addressAction(){
+        $addressModel = new \UserAddress();
+        $addressModel = $addressModel->getAddressById(1);
+        var_dump($addressModel->toArray());
+    }
+
+    public function test_uploadAction(){
+        var_dump($this->request->isPost());
+        var_dump($_FILES);
+        $upload = new UploadFile();
+        if(!$upload->upload($_FILES['upload_file'])){
+            echo $upload->getErrorMsg();
+        }
+        exit();
     }
 }

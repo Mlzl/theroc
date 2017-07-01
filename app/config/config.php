@@ -16,6 +16,7 @@ return array(
         'cms'=>"Roc\\BackendController",
         'frontend'=>"Roc\\FrontendController",
         'library'=>"Roc\\Library",
+        'core'  =>"Roc\\Core",
     ),
     'mysql' =>array(
         'host'=>getenv('THEROC_MYSQL_HOST'),

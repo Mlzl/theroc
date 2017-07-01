@@ -12,6 +12,7 @@ $loader->registerNamespaces(array(
     $config['namespace']['cms']=>$config['directory']['cms'],
     $config['namespace']['frontend']=>$config['directory']['frontend'],
     $config['namespace']['library']=>$config['directory']['library'],
+    $config['namespace']['core']=>$config['directory']['core'],
 ))->register();
 $loader->registerDirs(
     array(
@@ -29,7 +30,7 @@ $di->setShared('db',function ()use($config){
 });
 
 $di->set('view', function() use ($config) {
-    $view = new \Phalcon\Mvc\View();
+    $view = new \Roc\Core\View();
     $view->setViewsDir($config['directory']['view']); //设置模版文件位置
     $view->registerEngines(array(
         ".volt" => 'volt'
@@ -42,11 +43,11 @@ $di->setShared(
     function ($view, $di) {
         $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
 
-        $volt->setOptions(
-            [
-                "compiledPath"      => "../app/cache/",
-            ]
-        );
+//        $volt->setOptions(
+//            [
+//                "compiledPath"      => "../app/cache/",
+//            ]
+//        );
         return $volt;
     }
 );

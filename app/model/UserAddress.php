@@ -8,7 +8,16 @@ class UserAddress extends Model{
         return 'theroc_user_address';
     }
 
-    public function addAddress(){}
+    public function addAddress($address){
+        $data = array(
+            'big_address'=>$address['big_address'],
+            'detail_address'=>$address['detail_address'],
+            'zip_code'  =>$address['zip_code'],
+            'phone_number'=>$address['phone_number'],
+            'create_time'=>time()
+        );
+        $this->save($data);
+    }
 
     public function getAddressById($address_id){
         $address = self::findFirst(array(
