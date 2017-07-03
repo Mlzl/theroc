@@ -4,10 +4,9 @@
  * Date: 2017/6/26
  */
 namespace Roc\Library;
-class UploadFile {
+class UploadFile extends Library{
     private $save_path = UPLOAD_IMG_PATH;
     private $filename = null;
-    private $error_msg = '';
     public function __construct(){
         $this->save_path = $this->save_path . date('Ymd') .'/';
         $this->check_dir();
@@ -44,7 +43,5 @@ class UploadFile {
         $this->error_msg = '上传失败';
         return false;
     }
-    public function getErrorMsg(){
-        return $this->error_msg;
-    }
+
 }

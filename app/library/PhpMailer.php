@@ -23,9 +23,9 @@ class PhpMailer{
         }
         return $mailer;
     }
-    public static function sendRegisterMail(){
+    public static function sendRegisterMail($mail, $name){
         $mailer = self::getMailerInstance();
-        $mailer->addAddress('245452530@qq.com', 'ttys');     // Add a recipient
+        $mailer->addAddress($mail, $name);     // Add a recipient
         $mailer->Subject = 'Here is the mail test';
         $mailer->Body    = 'This is the HTML message body <b>in bold!</b>';
         if(!$mailer->send()){

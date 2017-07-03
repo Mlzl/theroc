@@ -36,6 +36,15 @@ class Captcha{
         $this->width = $width;
         $this->imageHandle = imagecreate($this->width , $this->height);
     }
+
+    public static function verify($code){
+        $raw_code = $_SESSION['captcha_code'];
+        if(strtoupper($code) == strtoupper($raw_code)){
+            return true;
+        }
+        return false;
+    }
+
     public static function getFontColor(){
         $_ = array(
             array(0xEE,0x41,0x02),//大红
@@ -160,9 +169,9 @@ class Captcha{
                 $this->paintLine($this->fontColor);
             }
         }
-
         $this->isPaintPixel && $this->setPixel($this->fontColor);
         $this->isDisturb && $this->paintDisturbText();
+        $_SESSION['captcha_code'] = $this->captchaCode;
         return $this->captchaCode;
     }
 

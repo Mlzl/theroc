@@ -8,6 +8,7 @@ return array(
         'library'=>APP_PATH.'library',
         'cms'=>APP_PATH.'controller/cms',
         'frontend'=>APP_PATH.'controller/frontend',
+        'api'=>APP_PATH.'controller/api',
         'view'=>APP_PATH.'view',
         'core'=>APP_PATH.'core',
         'model'=>APP_PATH.'model',

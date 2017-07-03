@@ -11,6 +11,7 @@ $loader = new \Phalcon\Loader();
 $loader->registerNamespaces(array(
     $config['namespace']['cms']=>$config['directory']['cms'],
     $config['namespace']['frontend']=>$config['directory']['frontend'],
+    $config['namespace']['api']=>$config['directory']['api'],
     $config['namespace']['library']=>$config['directory']['library'],
     $config['namespace']['core']=>$config['directory']['core'],
 ))->register();

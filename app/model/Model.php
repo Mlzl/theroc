@@ -5,7 +5,7 @@
  * Date: 2017/6/26
  */
 class Model extends \Phalcon\Mvc\Model{
-    private $error_message;
+    protected $error_message;
     public function getMessage()
     {
         foreach (parent::getMessages() as $message){
