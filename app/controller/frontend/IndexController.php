@@ -55,4 +55,9 @@ class IndexController extends FrontendController {
         }
         exit();
     }
+
+    public function test_redisAction(){
+        $this->redis->set('redis_test', 'redis_value', 10);
+        var_dump($this->redis->get('redis_test'));
+    }
 }

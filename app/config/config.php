@@ -18,6 +18,7 @@ return array(
         'frontend'=>"Roc\\FrontendController",
         'library'=>"Roc\\Library",
         'core'  =>"Roc\\Core",
+        'api'  =>"Roc\\ApiController",
     ),
     'mysql' =>array(
         'host'=>getenv('THEROC_MYSQL_HOST'),
@@ -26,5 +27,9 @@ return array(
         'port'=>getenv('THEROC_MYSQL_PORT'),
         'dbname'=>getenv('THEROC_MYSQL_DATABASE'),
         'charset' => 'utf8',
-    )
+    ),
+    'redis' =>array(
+        'host'=>getenv('THEROC_REDIS_HOST'),
+        'port'=>getenv('THEROC_REDIS_PORT')
+    ),
 );

@@ -11,5 +11,8 @@ use Phalcon\Mvc\Controller;
 
 class ApiController extends Controller {
 
-
+    public function testAction(){
+        echo 'api';
+        exit;
+    }
 }
