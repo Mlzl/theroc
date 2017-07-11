@@ -10,7 +10,12 @@ use Roc\Library\UploadFile;
  * Date: 2017/6/21
  */
 class IndexController extends FrontendController {
+
     public function indexAction(){
+        $this->view->render('home','index');
+    }
+
+    public function index1Action(){
         $this->view->render('index', 'test_upload');
     }
 
@@ -21,10 +26,6 @@ class IndexController extends FrontendController {
         $img_src = "data:image/".$captcha->imageType.";base64," . $image64;
         echo $captcha->captchaCode;
         echo ("<img src='{$img_src}' style='width:110px;height:40px;' />");
-    }
-
-    public function test_voltAction(){
-        $this->view->render('index','index');
     }
 
     public function test_decryptAction(){
