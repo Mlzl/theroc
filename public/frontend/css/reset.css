@@ -30,9 +30,9 @@ td {
 body {
   font-family: STHeitiSC!important;
   font-size: 14px!important;
-  font-weight: 300;
+  font-weight: 300!important;
   color: #14181b!important;
-  /*background-color:#fafafa!important;*/
+  background-color: #fafafa!important;
 }
 h1,
 h2,

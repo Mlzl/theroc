@@ -30,9 +30,9 @@ td {
 body {
   font-family: STHeitiSC!important;
   font-size: 14px!important;
-  font-weight: 300;
+  font-weight: 300!important;
   color: #14181b!important;
-  /*background-color:#fafafa!important;*/
+  background-color: #fafafa!important;
 }
 h1,
 h2,
@@ -94,6 +94,89 @@ table {
 [v-cloak] {
   display: none;
 }
-body {
-  color: red;
+#home .topBar {
+  min-width: 1366px;
+  height: 56px;
+  position: relative;
+}
+#home .topBar .logo {
+  width: 36px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#home .topBar .topBar_menu {
+  width: 528px;
+  height: 56px;
+  margin: 0 auto;
+}
+#home .topBar .topBar_menu li {
+  cursor: pointer;
+  height: 40px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0 30px;
+  float: left;
+  position: relative;
+}
+#home .topBar .topBar_menu li:hover {
+  color: #25ba80;
+  border-bottom: 1px solid #25ba80;
+}
+#home .topBar .topBar_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#home .carouselArea {
+  min-width: 1366px;
+  height: 342px;
+  background: blue;
+}
+#home .product_nav {
+  text-align: center;
+}
+#home .product_nav .oneProduct {
+  display: inline-block;
+  width: 560px;
+  height: 280px;
+}
+#home .product_nav .oneProduct .oneProduct_img,
+#home .product_nav .oneProduct .oneProduct_desc {
+  width: 280px;
+  height: 280px;
+  float: left;
+}
+#home .product_nav .oneProduct .oneProduct_img {
+  background: red;
+}
+#home .product_sellWell,
+#home .product_recommend {
+  text-align: center;
+}
+#home .product_sellWell > h3,
+#home .product_recommend > h3 {
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  color: #585858;
+}
+#home .product_sellWell .oneProduct,
+#home .product_recommend .oneProduct {
+  display: inline-block;
+  width: 271px;
+  height: 331px;
+  margin: 0 12px;
+}
+#home .product_sellWell .oneProduct .oneProduct_img,
+#home .product_recommend .oneProduct .oneProduct_img {
+  width: 271px;
+  height: 271px;
+}
+#home .product_sellWell .oneProduct .oneProduct_desc,
+#home .product_recommend .oneProduct .oneProduct_desc {
+  width: 271px;
+  height: 60px;
+  background-color: #585858;
 }
