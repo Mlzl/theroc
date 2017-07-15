@@ -1,3 +1,38 @@
 [v-cloak] {
   display: none;
 }
+.topBar {
+  min-width: 1366px;
+  height: 56px;
+  position: relative;
+}
+.topBar .logo {
+  width: 36px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.topBar .topBar_menu {
+  width: 528px;
+  height: 56px;
+  margin: 0 auto;
+}
+.topBar .topBar_menu li {
+  cursor: pointer;
+  height: 40px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0 30px;
+  float: left;
+  position: relative;
+}
+.topBar .topBar_menu li:hover {
+  color: #25ba80;
+  border-bottom: 1px solid #25ba80;
+}
+.topBar .topBar_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

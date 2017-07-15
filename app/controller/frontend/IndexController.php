@@ -12,8 +12,17 @@ use Roc\Library\UploadFile;
 class IndexController extends FrontendController {
 
     public function indexAction(){
-        $this->view->render('home','index');
+        $this->view->render('home','index1');
     }
+    public function productsAction(){
+        $this->view->render('products','index');
+    }
+    public function productsDetailAction(){
+        $this->view->render('products','detail');
+    }
+
+
+
 
     public function index1Action(){
         $this->view->render('index', 'test_upload');

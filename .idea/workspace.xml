@@ -2,667 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ce694b9-0347-408e-b266-a208bfee89be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/badge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/breadcrumb-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/breadcrumb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/button-group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/card.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/carousel-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/cascader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/checkbox-button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/checkbox-group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/checkbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/col.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/collapse-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/color-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/date-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/dropdown-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/dropdown-menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/element-ui.common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/form-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/icon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/input-number.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/loading.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/af-ZA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/cz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/nb-NO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ru-RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/sv-SE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/tk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/tr-TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/locale/lang/zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/menu-item-group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/menu-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/message-box.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/message.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/mixins/emitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/mixins/locale.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/mixins/migrating.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/notification.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/option-group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/option.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/progress.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/radio-button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/radio-group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/radio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/rate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/row.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/scrollbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/spinner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/step.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/steps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/submenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/tab-pane.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/table-column.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/tabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/tag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/alert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/badge.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/breadcrumb-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/breadcrumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/button-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/card.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/carousel-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/cascader.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/checkbox-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/checkbox-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/checkbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/col.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/collapse-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/color-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/date-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dropdown-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dropdown-menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/form-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/icon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/input-number.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/input.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/loading.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/menu-item-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/menu-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/message-box.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/notification.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/option-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/option.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/pagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/popover.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/progress.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/radio-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/radio-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/radio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/rate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/row.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/scrollbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/select-dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/spinner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/step.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/steps.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/submenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/tab-pane.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/table-column.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/tabs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/tag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/time-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/time-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/transfer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/tree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/upload.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/time-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/time-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/transfer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/transitions/collapse-transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/af-ZA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/cz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/nb-NO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ru-RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/sv-SE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/tk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/tr-TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/clickoutside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/dom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/merge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/popup/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/popup/popup-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/resize-event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/scrollbar-width.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/shared.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/sync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/vdom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/utils/vue-popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/alert/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/alert/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/autocomplete/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/autocomplete/src/autocomplete-suggestions.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/autocomplete/src/autocomplete.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/badge/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/badge/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/breadcrumb-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/breadcrumb/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/breadcrumb/src/breadcrumb-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/breadcrumb/src/breadcrumb.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/button-group/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/button/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/button/src/button-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/button/src/button.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/card/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/card/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/_index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/src/item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/carousel/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/cascader/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/cascader/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/cascader/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/cascader/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/cascader/src/menu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox-button/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox-group/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox/src/checkbox-button.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox/src/checkbox-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/checkbox/src/checkbox.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/col/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/col/src/col.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/collapse-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/collapse/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/collapse/src/collapse-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/collapse/src/collapse.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/components/alpha-slider.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/components/hue-slider.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/components/picker-dropdown.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/components/sv-panel.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/draggable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/color-picker/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/_index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/basic/date-table.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/basic/month-table.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/basic/time-spinner.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/basic/year-table.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/panel/date-range.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/panel/date.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/panel/time-range.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/panel/time-select.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/panel/time.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/picker.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/picker/date-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/picker/time-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/picker/time-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/date-picker/src/util/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dialog/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dialog/src/component.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown-menu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown/src/dropdown-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown/src/dropdown-menu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/dropdown/src/dropdown.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/form-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/form/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/form/src/form-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/form/src/form.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/icon/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/icon/src/icon.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/input-number/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/input-number/src/input-number.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/input/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/input/src/calcTextareaHeight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/input/src/input.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/src/directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/loading/src/loading.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu-item-group/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu-item/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/src/menu-item-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/src/menu-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/src/menu-mixin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/src/menu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/menu/src/submenu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message-box/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message-box/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message-box/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/assets/error.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/assets/info.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/assets/success.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/assets/warning.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/message/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/notification/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/notification/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/notification/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/option-group/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/option/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/src/pager.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/pagination/src/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/popover/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/popover/src/directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/popover/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/progress/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/progress/src/progress.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio-button/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio-group/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio/src/radio-button.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio/src/radio-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/radio/src/radio.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/rate/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/rate/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/row/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/row/src/row.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/scrollbar/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/scrollbar/src/bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/scrollbar/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/scrollbar/src/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/select/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/select/src/option-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/select/src/option.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/select/src/select-dropdown.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/select/src/select.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/slider/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/slider/src/button.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/slider/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/spinner/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/spinner/src/spinner.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/step/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/steps/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/steps/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/steps/src/step.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/steps/src/steps.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/submenu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/switch/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/switch/src/component.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tab-pane/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table-column/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/_index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/filter-panel.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-body.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-column.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-footer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-layout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table-store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/table.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/table/src/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tabs/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tabs/src/tab-bar.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tabs/src/tab-nav.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tabs/src/tab-pane.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tabs/src/tabs.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tag/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tag/src/tag.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/alert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/badge.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/breadcrumb-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/breadcrumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/button-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/card.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/carousel-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/cascader.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/checkbox-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/checkbox-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/checkbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/col.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/collapse-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/color-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/date-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dropdown-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dropdown-menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/form-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/icon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/input-number.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/input.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/loading.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/menu-item-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/menu-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/message-box.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/notification.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/option-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/option.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/pagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/popover.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/progress.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/radio-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/radio-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/radio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/rate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/row.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/scrollbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/select-dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/spinner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/step.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/steps.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/submenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/tab-pane.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/table-column.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/tabs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/tag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/time-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/time-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/transfer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/tree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/upload.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/alert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/badge.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/breadcrumb-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/breadcrumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/button-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/card.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/carousel-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/cascader.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/checkbox-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/checkbox-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/checkbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/col.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/collapse-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/color-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/common/popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/common/transition.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/common/var.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/core/dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/core/input.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/core/option.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/core/tag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/date-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/date-range-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/date-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/month-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/picker-panel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/time-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/time-range-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/time-spinner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/date-picker/year-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dropdown-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dropdown-menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/form-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/icon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/input-number.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/input.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/loading.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/menu-item-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/menu-item.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/message-box.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/mixins/_button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/notification.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/option-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/option.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/pagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/popover.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/progress.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/radio-button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/radio-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/radio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/rate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/row.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/scrollbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/select-dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/spinner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/step.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/steps.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/submenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/tab-pane.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/table-column.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/tabs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/tag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/time-picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/time-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/transfer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/tree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/upload.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/time-picker/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/time-select/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tooltip/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tooltip/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/transfer/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/transfer/src/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/transfer/src/transfer-panel.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/src/model/node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/src/model/tree-store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/src/model/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/src/tree-node.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/tree/src/tree.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/cooking.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/iframe-upload.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/index.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/upload-dragger.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/upload-list.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/upload/src/upload.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/af-ZA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/cz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/nb-NO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ru-RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/sv-SE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/tk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/tr-TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/locale/lang/zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/mixins/emitter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/mixins/locale.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/mixins/migrating.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/transitions/collapse-transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/clickoutside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/dom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/merge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/popup/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/popup/popup-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/resize-event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/scrollbar-width.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/shared.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/sync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/vdom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugin/element-ui/src/utils/vue-popper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/frontend/productsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/frontend/modules/footer.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/frontend/modules/topBar.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/frontend/products/detail.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/frontend/products/index.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frontend/js/products/detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frontend/js/products/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frontend/less/products/detail.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/frontend/less/products/index.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.ttf" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.woff" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/fonts/element-icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.ttf" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.woff" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/fonts/element-icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.ttf" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.woff" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/fonts/element-icons.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/frontend/IndexController.php" afterPath="$PROJECT_DIR$/app/controller/frontend/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/frontend/home/index.volt" afterPath="$PROJECT_DIR$/app/view/frontend/home/index.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/frontend/home/index.volt.php" afterPath="$PROJECT_DIR$/app/view/frontend/home/index.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/css/common.css" afterPath="$PROJECT_DIR$/public/frontend/css/common.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/css/home/index.css" afterPath="$PROJECT_DIR$/public/frontend/css/home/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/css/reset.css" afterPath="$PROJECT_DIR$/public/frontend/css/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/less/common.less" afterPath="$PROJECT_DIR$/public/frontend/less/common.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/less/home/index.less" afterPath="$PROJECT_DIR$/public/frontend/less/home/index.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/frontend/less/reset.less" afterPath="$PROJECT_DIR$/public/frontend/less/reset.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dialog.css" afterPath="$PROJECT_DIR$/public/plugin/element-ui/lib/theme-default/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/package.json" afterPath="$PROJECT_DIR$/public/plugin/element-ui/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dialog.css" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/lib/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dialog.css" afterPath="$PROJECT_DIR$/public/plugin/element-ui/packages/theme-default/src/dialog.css" />
     </list>
     <ignored path=".idea/modules.xml" />
     <ignored path=".idea/theroc.iml" />
@@ -680,15 +46,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/frontend/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="190">
+              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding>
                 <element signature="e#40#76#0#PHP" expanded="true" />
-                <marker date="1499695722000" expanded="true" signature="744:768" ph="..." />
+                <marker date="1500092337000" expanded="true" signature="941:965" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productsController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controller/frontend/productsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -696,28 +72,28 @@
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/frontend/home/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+            <state relative-caret-position="130">
+              <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/frontend/less/home/index.less">
+      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/frontend/products/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+            <state relative-caret-position="95">
+              <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/frontend/js/home/index.js">
+      <file leaf-file-name="detail.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/frontend/products/detail.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -758,16 +134,27 @@
         <option value="$PROJECT_DIR$/public/frontend/home/js/index.js" />
         <option value="$PROJECT_DIR$/app/view/frontend/index.volt" />
         <option value="$PROJECT_DIR$/app/view/frontend/home.volt" />
-        <option value="$PROJECT_DIR$/app/controller/frontend/IndexController.php" />
         <option value="$USER_HOME$/PhpstormProjects/ttsy/index.html" />
         <option value="$USER_HOME$/PhpstormProjects/ttsy/index.js" />
-        <option value="$PROJECT_DIR$/public/frontend/less/common.less" />
         <option value="$PROJECT_DIR$/public/frontend/css/home/index.css" />
         <option value="$PROJECT_DIR$/public/frontend/less/reset.less" />
-        <option value="$PROJECT_DIR$/public/frontend/less/home/index.less" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/frontend/js/home/index.js" />
+        <option value="$PROJECT_DIR$/app/view/frontend/modules/topBar.volt" />
+        <option value="$PROJECT_DIR$/public/frontend/less/home/index.less" />
+        <option value="$PROJECT_DIR$/public/frontend/less/common.less" />
+        <option value="$PROJECT_DIR$/app/view/frontend/modules/footer.volt" />
+        <option value="$PROJECT_DIR$/app/view/frontend/products/index.volt" />
         <option value="$PROJECT_DIR$/app/view/frontend/home/index.volt" />
+        <option value="$PROJECT_DIR$/public/frontend/less/products/index.less" />
+        <option value="$PROJECT_DIR$/public/frontend/js/products/index.js" />
+        <option value="$PROJECT_DIR$/app/view/frontend/products/detail.volt" />
+        <option value="$PROJECT_DIR$/public/frontend/less/products/detail.less" />
+        <option value="$PROJECT_DIR$/public/frontend/js/products/detail.js" />
+        <option value="$PROJECT_DIR$/app/controller/frontend/productsController.php" />
+        <option value="$PROJECT_DIR$/app/controller/frontend/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/view/frontend/home/index1.volt" />
+        <option value="$PROJECT_DIR$/app/config/service.php" />
       </list>
     </option>
   </component>
@@ -811,6 +198,20 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yubian" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="theroc" />
@@ -927,6 +328,96 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="home" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -967,15 +458,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -993,7 +484,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1001,11 +496,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1097,6 +588,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1124,6 +637,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theroc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1137,7 +672,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -1153,11 +688,11 @@
       <recent name="$PROJECT_DIR$/public/frontend/js/home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/plugin" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$USER_HOME$/PhpstormProjects/ttsy" />
-      <recent name="$PROJECT_DIR$/app/view/frontend/home/js" />
       <recent name="$PROJECT_DIR$/app/view/frontend/home" />
+      <recent name="$PROJECT_DIR$/app/controller/frontend" />
+      <recent name="$PROJECT_DIR$/public/frontend/js/products" />
+      <recent name="$PROJECT_DIR$/public/frontend/less/products" />
+      <recent name="$PROJECT_DIR$/app/view/frontend/products" />
     </key>
   </component>
   <component name="RunManager">
@@ -1224,7 +759,7 @@
       <updated>1499418692081</updated>
       <workItem from="1499418693843" duration="5123000" />
       <workItem from="1499576189856" duration="6272000" />
-      <workItem from="1499606969843" duration="29934000" />
+      <workItem from="1499606969843" duration="34695000" />
     </task>
     <task id="LOCAL-00001" summary="更改了项目权限">
       <created>1499613502126</created>
@@ -1237,21 +772,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41329000" />
+    <option name="totallyTimeSpent" value="46090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1273" height="723" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2575142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2575142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1295,124 +830,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controller/frontend/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#76#0#PHP" expanded="true" />
-            <marker date="1499695722000" expanded="true" signature="744:768" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/theroc.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/frontend/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <element signature="e#40#76#0#PHP" expanded="true" />
-            <marker date="1499695722000" expanded="true" signature="744:768" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/cms/index/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/theroc.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/frontend/home/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/cms/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/frontend/index/test_upload.volt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/yubian/resources/views/computer/src/components/business/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1599,14 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/frontend/less/common.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/frontend/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1639,15 +1048,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/yubian/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/bg.js">
+    <entry file="file://$PROJECT_DIR$/public/plugin/element-ui1/lib/umd/locale/bg.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1655,7 +1056,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/plugin/element-ui/package.json">
+    <entry file="file://$PROJECT_DIR$/public/plugin/element-ui1/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1671,6 +1072,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/home/topBar.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/modules/topBar.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/modules/footer.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/less/home/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/yubian/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/less/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/frontend/js/home/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1679,30 +1136,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/frontend/less/home/index.less">
+    <entry file="file://$PROJECT_DIR$/public/plugin/element-ui/lib/umd/locale/bg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/products/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/less/products/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/js/products/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/less/products/detail.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/js/products/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/products/detail.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/home/index1.volt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/frontend/home/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+        <state relative-caret-position="130">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/frontend/home/index1.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/frontend/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="190">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
           <folding>
             <element signature="e#40#76#0#PHP" expanded="true" />
-            <marker date="1499695722000" expanded="true" signature="744:768" ph="..." />
+            <marker date="1500092337000" expanded="true" signature="941:965" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/frontend/productsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
