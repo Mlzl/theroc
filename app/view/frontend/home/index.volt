@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/frontend/css/home/index.css" >
 </head>
 <body>
-    <div id="home"v-cloak>
+    <div id="home" v-cloak>
         <!--头部导航栏-->
         {% include "topBar.volt" %}
         <!--轮播图-->
