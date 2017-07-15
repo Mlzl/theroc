@@ -49,11 +49,11 @@ $di->setShared(
     "volt",
     function ($view, $di) {
         $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
-//        $volt->setOptions(
-//            [
-//                "compiledPath"      => "../app/cache/",
-//            ]
-//        );
+        $volt->setOptions(
+            [
+                "compiledPath"      => "../app/cache/",
+            ]
+        );
         return $volt;
     }
 );

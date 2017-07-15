@@ -7,15 +7,8 @@
 namespace Roc\FrontendController;
 
 
-class UserController{
-    public function loginAction(){
-
-    }
-    public function registerAction(){
-
-    }
-
-    public function testAction(){
-
+class UserController extends FrontendController{
+    public function indexAction(){
+        $this->view->render('user','index');
     }
 }

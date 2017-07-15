@@ -11,7 +11,7 @@
 <body>
     <div id="home"v-cloak>
         <!--头部导航栏-->
-        {% include "modules/topBar.volt" %}
+        {% include "topBar.volt" %}
         <!--轮播图-->
         <div class="carouselArea">
             <el-carousel height="342px">
@@ -59,7 +59,7 @@
             </div>
         </div>
         <!--底部-->
-        {% include "modules/footer.volt" %}
+        {% include "footer.volt" %}
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->

@@ -9,16 +9,10 @@ use Roc\Library\UploadFile;
  * User: ambi
  * Date: 2017/6/21
  */
-class IndexController extends FrontendController {
+class HomeController extends FrontendController {
 
     public function indexAction(){
-        $this->view->render('home','index1');
-    }
-    public function productsAction(){
-        $this->view->render('products','index');
-    }
-    public function productsDetailAction(){
-        $this->view->render('products','detail');
+        $this->view->render('home','index');
     }
 
 
