@@ -1,5 +1,5 @@
 <div class="topBar">
-    <img src="" class="logo"/>
+    <img src="/images/logo.png" class="logo"/>
     <ul class="topBar_menu">
         <li>HOME</li>
         <li>PRODUCTS</li>
@@ -7,7 +7,9 @@
         <li>CONTANT US</li>
     </ul>
     <div class="topBar_right">
-        <input type="text" />
-
+        <p class="search">
+            <input type="text" />
+        </p>
+        <i class="user_icon"></i>
     </div>
 </div>
