@@ -16,6 +16,13 @@ class Language{
     const USER_NAME_EMPTY   =   'user_name_empty';
     const EMAIL_HAD_BE_USED =   'email_had_be_used';
     const REGISTER_ERROR    =   'register_error';
+    const LOST_PARAMS    =   'lost params';
+    const MONEY_FORMAT_ERROR    =   'money format error';
+    const FAILED_OPERATION  =   'failed operation';
+    const ITEM_NOT_EXISTS = 'item not exists';
+    const LOST_CLASS_ID = 'lost class id';
+    const DATA_NOT_EXISTS   =   'data not exists';
+
 
     public static function getMessage($message){
         $t = English::getMessage($message);

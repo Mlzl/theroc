@@ -28,4 +28,10 @@ class Password{
     public static function encrypt($password, $salt){
         return md5($password.$salt);
     }
+
+    public static function getMD5Uid($uid){
+        $secret = 'sdf347o8h3ul2fea2kn';
+        return md5($secret.$uid.$secret);
+    }
+
 }

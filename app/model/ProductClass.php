@@ -3,6 +3,7 @@
 /**
  * User: ambi
  * Date: 2017/6/26
+ * 产品类别
  */
 class ProductClass extends Model{
     public function getSource(){
@@ -17,7 +18,7 @@ class ProductClass extends Model{
         return $this->save($item);
     }
 
-    public function findClassByPid($pid=0){
+    public static function findClassByPid($pid=0){
         $classes = self::find(array(
             'conditions'=>'pid=:pid:',
             'bind'=>array('pid'=>$pid)

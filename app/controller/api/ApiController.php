@@ -15,4 +15,19 @@ class ApiController extends Controller {
         echo 'api';
         exit;
     }
+
+
+    public function updateItem(&$model, $data=array()){
+        if(!$data){
+            return true;
+        }
+        foreach ($data as $key=>$value){
+            if($value === null){
+                continue;
+            }
+            $model->$key = $value;
+        }
+        return $model->update();
+    }
+
 }
