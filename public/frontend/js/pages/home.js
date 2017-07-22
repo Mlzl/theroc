@@ -1,6 +1,6 @@
 
 var home=new Vue({
-    el:'#home',
+    el:'#home_main',
     delimiters:['~{','}'],
     data:{
         test:'test'

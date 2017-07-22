@@ -1,7 +1,7 @@
 @import "../common/reset";
 @import "../common/common";
 
-#products{
+#product_main{
   .carouselArea{
     min-width: 1366px;
     height: 342px;
@@ -22,6 +22,11 @@
           float:left;
           margin:0 2px 0 0;
           background:#ccc;
+          &:hover{
+            .secondary{
+              display:block;
+            }
+          }
           >img{
             width:60px;
             height:60px;
@@ -30,6 +35,7 @@
             margin: 10px 0 0 0;
           }
           .secondary{
+            display:none;
             height:100px;
             text-align:left;
             position:absolute;

@@ -1,6 +1,6 @@
 
-var contactUs=new Vue({
-    el:'#contactUs',
+var contact=new Vue({
+    el:'#contact_main',
     delimiters:['~{','}'],
     data:{
         test:'test'

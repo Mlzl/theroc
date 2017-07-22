@@ -94,24 +94,24 @@ table {
 [v-cloak] {
   display: none;
 }
-.topBar {
+#topBar {
   min-width: 1366px;
   height: 56px;
   position: relative;
 }
-.topBar .logo {
+#topBar .logo {
   width: 36px;
   height: 30px;
   position: absolute;
   top: 13px;
   left: 15px;
 }
-.topBar .topBar_menu {
+#topBar .topBar_menu {
   width: 528px;
   height: 56px;
   margin: 0 auto;
 }
-.topBar .topBar_menu li {
+#topBar .topBar_menu li {
   cursor: pointer;
   height: 40px;
   line-height: 56px;
@@ -120,26 +120,26 @@ table {
   float: left;
   position: relative;
 }
-.topBar .topBar_menu li:hover {
+#topBar .topBar_menu li:hover {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
-.topBar .topBar_right {
+#topBar .topBar_right {
   position: absolute;
   top: 15px;
   right: 130px;
 }
-.topBar .topBar_right .search {
+#topBar .topBar_right .search {
   display: inline-block;
   position: relative;
 }
-.topBar .topBar_right .search input {
+#topBar .topBar_right .search input {
   width: 180px;
   height: 26px;
   border-radius: 14px;
   border: solid 1px #5a5a5a;
 }
-.topBar .topBar_right .user_icon {
+#topBar .topBar_right .user_icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -220,4 +220,29 @@ table {
 .footer .contact .email > h4 {
   font-size: 16px;
   margin: 0 0 20px 0;
+}
+#product_search_main .product_list {
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+#product_search_main .product_list .oneProduct {
+  display: inline-block;
+  width: 271px;
+  height: 331px;
+  margin: 0 12px 10px 0;
+}
+#product_search_main .product_list .oneProduct .oneProduct_img {
+  width: 271px;
+  height: 271px;
+}
+#product_search_main .product_list .oneProduct .oneProduct_img > img {
+  width: 271px;
+  height: 271px;
+}
+#product_search_main .product_list .oneProduct .oneProduct_desc {
+  box-sizing: border-box;
+  width: 271px;
+  height: 60px;
+  padding: 10px;
+  background-color: #585858;
 }

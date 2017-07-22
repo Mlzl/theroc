@@ -1,6 +1,6 @@
 
-var products=new Vue({
-    el:'#products',
+var product=new Vue({
+    el:'#product_main',
     delimiters:['~{','}'],
     data:{
         test:'test'
