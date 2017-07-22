@@ -13,6 +13,10 @@
   zoom: 1;
 }
 
+input{
+  box-sizing: border-box;
+}
+
 #support{
   min-width: 1366px;
   width:100%;
@@ -53,86 +57,177 @@
           text-align: left;
           color: #ffffff;
         }
-         .productForm{
-           margin-top: 13px;
-            .searchText{
-              float:left;
-              box-sizing: border-box;
-              padding-left:14px;
-              height: 38px;
-              width: 88%;
-              line-height: 38px;
-              border: 1px solid #ffffff;
-            }
-             .submit{
-               float:left;
-               outline: 0;
-               height: 38px;
-               width: 12%;
-             }
+        .productForm{
+          margin-top: 13px;
+          .searchText{
+            float:left;
+            box-sizing: border-box;
+            padding-left:14px;
+            height: 38px;
+            width: 88%;
+            line-height: 38px;
+            border: 1px solid #ffffff;
+          }
+          .submit{
+            float:left;
+            outline: 0;
+            height: 38px;
+            width: 12%;
+          }
         }
       }
 
     }
     .service-nav{
-        ul{
-          display: block;
-          width: 1120px;
+      ul {
+        display: block;
+        width: 1120px;
+        height: 93px;
+        //letter-spacing:-8px;
+        list-style: none;
+        background-color: #efefef;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          //float: left;
+          color: #5a5a5a;
+          width: 50%;
           height: 93px;
-          //letter-spacing:-8px;
-          list-style: none;
-          background-color: #efefef;
-          li{
-            display: inline-block;
-            color:#5a5a5a;
-            width: 50%;
-            height: 93px;
-            a{
-              display: block;
-              height: 93px;
-              padding: 8px 1px;
-              font-family: MicrosoftYaHei;
-              font-size: 16px;
-              text-align: center;
-              vertical-align: middle;
-              color: #5a5a5a;
-              text-decoration: none;
-            }
-            &:hover{
-              background-color: #25ba80;
-              color:#ffffff;
-            }
-
+          .refunds-icon {
+            background: url("../../image/download.png") 20px 20px no-repeat;
           }
-
+          .warranty-icon {
+            background: url("../../image/supportBg.jpg") 20px 20px no-repeat;
+          }
+          i{
+            display: block;
+            margin:16px auto 0 auto;
+            height: 40px;
+            width: 40px;
+          }
+          p{
+            height: 18px;
+            margin-top:10px;
+            line-height:18px;
+            text-align: center;
+          }
+          &:hover {
+            background-color: #25ba80;
+            p{
+              color:#fff;
+            }
+            cursor: pointer;
+            .refunds-icon {
+              background: url("../../image/download.png") 40px 40px no-repeat;
+            }
+            .warranty-icon {
+              background: url("../../image/download.png") 40px 40px no-repeat;
+            }
+          }
         }
+        .active {
+          background-color: #25ba80;
+          cursor: pointer;
+          p{
+            color:#fff;
+          }
+          .refunds-icon {
+            background: url("../../image/download.png") 40px 40px no-repeat;
+          }
+          .warranty-icon {
+            background: url("../../image/download.png") 40px 40px no-repeat;
+          }
+        }
+      }
     }
     .module-container{
       .refunds{
         width:993px;
-        background-color: red;
-        margin:0 auto;
-        .refunds-header{
+        margin:10px auto;
+        .refunds-header {
           text-align: center;
-          margin-top:111px;
-          margin-bottom:72px;
-          .header-text{
+          margin-top: 111px;
+          margin-bottom: 72px;
+          .logo{
+            img{
+              width: 48px;
+              height:40px;
+            }
+          }
+          .header-text {
             font-size: 30px;
             text-align: center;
             color: #585858;
+            margin-left: 66px;
+            line-height:48px;
           }
-          .refunds-form{
-            .contant{
-              item-title{
-                font-size:18px;
-              }
-              input{
+        }
+        .refunds-form {
+          width: 993px;
+          .item-title {
+            font-size: 18px;
+            color: #333333;
+          }
+          .inp-normal {
+            width: 983px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+          .required{
+            color:#ff0000;
+          }
+          .container, .order, .issue, .images, .form-footer {
+            div {
+              margin-top: 19px;
+            }
+          }
+          .issue {
+            .detail {
+              width: 983px;
+              height: 80px;
+            }
+          }
+          .images {
+            .imageContainer {
+              border: 1px solid #ccc;
+              width: 80px;
+              height: 80px;
+            }
+          }
+          .form-footer {
+            height: 45px;
+            margin-bottom: 121px;
+            .footer-btns {
+              float: right;
+              .input-code {
+                vertical-align: middle;
+                width: 246px;
+                height: 37px;
+                border: 1px solid #ccc;
                 border-radius: 4px;
-                background-color: #cccccc;
-                border: solid 1px #cccccc;
               }
-              .inp-normal{
-                width: 100%;
+              .code {
+                vertical-align: middle;
+                display: inline-block;
+                width: 100px;
+                height: 37px;
+                border: 1px solid #ccc;
+              }
+              .btn {
+                vertical-align: middle;
+                width: 100px;
+                height: 35px;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 4px;
+                border:1px solid transparent;
+              }
+              .submit {
+                background-color: #25ba80;
+              }
+              .reset {
+                background-color: #999999;
               }
 
             }
@@ -158,3 +253,5 @@
   }
 
 }
+
+

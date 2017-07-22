@@ -107,7 +107,7 @@ table {
   left: 15px;
 }
 .topBar .topBar_menu {
-  width: 528px;
+  width: 560px;
   height: 56px;
   margin: 0 auto;
 }
@@ -231,6 +231,9 @@ table {
 .clearfix {
   zoom: 1;
 }
+input {
+  box-sizing: border-box;
+}
 #support {
   min-width: 1366px;
   width: 100%;
@@ -302,50 +305,142 @@ table {
 }
 #support .support-content .service-nav ul li {
   display: inline-block;
+  vertical-align: top;
   color: #5a5a5a;
   width: 50%;
   height: 93px;
 }
-#support .support-content .service-nav ul li a {
+#support .support-content .service-nav ul li .refunds-icon {
+  background: url("../../image/download.png") 20px 20px no-repeat;
+}
+#support .support-content .service-nav ul li .warranty-icon {
+  background: url("../../image/supportBg.jpg") 20px 20px no-repeat;
+}
+#support .support-content .service-nav ul li i {
   display: block;
-  height: 93px;
-  padding: 8px 1px;
-  font-family: MicrosoftYaHei;
-  font-size: 16px;
+  margin: 16px auto 0 auto;
+  height: 40px;
+  width: 40px;
+}
+#support .support-content .service-nav ul li p {
+  height: 18px;
+  margin-top: 10px;
+  line-height: 18px;
   text-align: center;
-  vertical-align: middle;
-  color: #5a5a5a;
-  text-decoration: none;
 }
 #support .support-content .service-nav ul li:hover {
   background-color: #25ba80;
-  color: #ffffff;
+  cursor: pointer;
+}
+#support .support-content .service-nav ul li:hover p {
+  color: #fff;
+}
+#support .support-content .service-nav ul li:hover .refunds-icon {
+  background: url("../../image/download.png") 40px 40px no-repeat;
+}
+#support .support-content .service-nav ul li:hover .warranty-icon {
+  background: url("../../image/download.png") 40px 40px no-repeat;
+}
+#support .support-content .service-nav ul .active {
+  background-color: #25ba80;
+  cursor: pointer;
+}
+#support .support-content .service-nav ul .active p {
+  color: #fff;
+}
+#support .support-content .service-nav ul .active .refunds-icon {
+  background: url("../../image/download.png") 40px 40px no-repeat;
+}
+#support .support-content .service-nav ul .active .warranty-icon {
+  background: url("../../image/download.png") 40px 40px no-repeat;
 }
 #support .support-content .module-container .refunds {
   width: 993px;
-  background-color: red;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 #support .support-content .module-container .refunds .refunds-header {
   text-align: center;
   margin-top: 111px;
   margin-bottom: 72px;
 }
+#support .support-content .module-container .refunds .refunds-header .logo img {
+  width: 48px;
+  height: 40px;
+}
 #support .support-content .module-container .refunds .refunds-header .header-text {
   font-size: 30px;
   text-align: center;
   color: #585858;
+  margin-left: 66px;
+  line-height: 48px;
 }
-#support .support-content .module-container .refunds .refunds-header .refunds-form .contant item-title {
+#support .support-content .module-container .refunds .refunds-form {
+  width: 993px;
+}
+#support .support-content .module-container .refunds .refunds-form .item-title {
   font-size: 18px;
+  color: #333333;
 }
-#support .support-content .module-container .refunds .refunds-header .refunds-form .contant input {
+#support .support-content .module-container .refunds .refunds-form .inp-normal {
+  width: 983px;
+  height: 40px;
   border-radius: 4px;
-  background-color: #cccccc;
-  border: solid 1px #cccccc;
+  border: 1px solid #ccc;
 }
-#support .support-content .module-container .refunds .refunds-header .refunds-form .contant .inp-normal {
-  width: 100%;
+#support .support-content .module-container .refunds .refunds-form .required {
+  color: #ff0000;
+}
+#support .support-content .module-container .refunds .refunds-form .container div,
+#support .support-content .module-container .refunds .refunds-form .order div,
+#support .support-content .module-container .refunds .refunds-form .issue div,
+#support .support-content .module-container .refunds .refunds-form .images div,
+#support .support-content .module-container .refunds .refunds-form .form-footer div {
+  margin-top: 19px;
+}
+#support .support-content .module-container .refunds .refunds-form .issue .detail {
+  width: 983px;
+  height: 80px;
+}
+#support .support-content .module-container .refunds .refunds-form .images .imageContainer {
+  border: 1px solid #ccc;
+  width: 80px;
+  height: 80px;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer {
+  height: 45px;
+  margin-bottom: 121px;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns {
+  float: right;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns .input-code {
+  vertical-align: middle;
+  width: 246px;
+  height: 37px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns .code {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100px;
+  height: 37px;
+  border: 1px solid #ccc;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns .btn {
+  vertical-align: middle;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns .submit {
+  background-color: #25ba80;
+}
+#support .support-content .module-container .refunds .refunds-form .form-footer .footer-btns .reset {
+  background-color: #999999;
 }
 #support .support-content .module-container .warranty h2 {
   text-align: center;
