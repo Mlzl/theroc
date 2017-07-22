@@ -11,6 +11,6 @@ use Roc\Library\UploadFile;
  */
 class SupportController extends FrontendController {
     public function indexAction(){
-        $this->view->render('support','index');
+        $this->view->render('pages','support');
     }
 }

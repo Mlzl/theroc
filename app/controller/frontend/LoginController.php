@@ -11,6 +11,6 @@ use Roc\Library\UploadFile;
  */
 class LoginController extends FrontendController {
     public function indexAction(){
-        $this->view->render('login','index');
+        $this->view->render('pages','login');
     }
 }

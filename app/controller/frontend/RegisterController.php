@@ -11,6 +11,6 @@ use Roc\Library\UploadFile;
  */
 class RegisterController extends FrontendController {
     public function indexAction(){
-        $this->view->render('register','index');
+        $this->view->render('pages','register');
     }
 }

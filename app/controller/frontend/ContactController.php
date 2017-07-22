@@ -11,6 +11,6 @@ use Roc\Library\UploadFile;
  */
 class ContactController extends FrontendController {
     public function indexAction(){
-        $this->view->render('contact','index');
+        $this->view->render('pages','contact');
     }
 }

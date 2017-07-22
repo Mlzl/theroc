@@ -9,9 +9,8 @@ use Roc\Library\UploadFile;
  * Date: 2017/6/21
  */
 class HomeController extends FrontendController {
-
     public function indexAction(){
-        $this->view->render('home','index');
+        $this->view->render('pages','home');
     }
 
 
