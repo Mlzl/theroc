@@ -15,7 +15,7 @@ class SettingController extends BackendController {
     /**
      * 新增轮播图
      */
-    public function addBannerAction(){
+    public function api_add_bannerAction(){
         $target_url = $this->request->getPost('target_url');
         $upload_lib = new UploadFile();
         if(!$upload_lib->upload($_FILES['upload_file'])){
@@ -31,7 +31,7 @@ class SettingController extends BackendController {
         Response::success();
     }
 
-    public function deleteBannerAction(){
+    public function api_delete_bannerAction(){
         $banner_id = $this->request->get('banner_id');
         \Setting::deleteOneByField($banner_id);
         $this->logger->info("[{$this->user->user_id}] delete banner[$banner_id]");
@@ -39,7 +39,7 @@ class SettingController extends BackendController {
     }
 
 
-    public function addSpecialProductAction(){
+    public function api_add_special_productAction(){
         $product_id = $this->request->get('product_id');
         $special_label = $this->request->get('special_label');
         $allow_label = array(\Setting::PRODUCT_NAV_NAME, \Setting::PRODUCT_HOT_NAME,
@@ -67,7 +67,7 @@ class SettingController extends BackendController {
         Response::success();
     }
 
-    public function deleteSpecialProductAction(){
+    public function api_delete_special_productAction(){
         $product_id = $this->request->get('product_id');
         $special_label = $this->request->get('special_label');
         $allow_label = array(\Setting::PRODUCT_NAV_NAME, \Setting::PRODUCT_HOT_NAME,

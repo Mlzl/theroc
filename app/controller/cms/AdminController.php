@@ -13,7 +13,7 @@ use Roc\Library\Response;
 
 class AdminController extends BackendController {
 
-    public function loginAction(){
+    public function api_loginAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $captcha = $this->request->getPost('captcha');
@@ -34,7 +34,7 @@ class AdminController extends BackendController {
     }
 
 
-    public function registerAction(){
+    public function api_registerAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $captcha = $this->request->getPost('captcha');

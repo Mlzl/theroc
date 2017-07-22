@@ -8,8 +8,8 @@ use Roc\Library\Response;
  * Date: 2017/6/21
  */
 class BackendController extends Controller{
-    public function indexAction(){
-        echo 'backend';
+    public function onConstruct(){
+        $this->view->setViewsDir(APP_PATH.'view/cms');
     }
 
     public function updateItem(&$model, $data=array()){

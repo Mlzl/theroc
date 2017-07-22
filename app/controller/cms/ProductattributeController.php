@@ -13,7 +13,7 @@ use Roc\Library\Language;
 use Roc\Library\Response;
 
 class ProductattributeController extends BackendController  {
-    public function addAction(){
+    public function api_addAction(){
         $productAttribute = new \ProductAttribute();
         $name = $this->request->getPost('name');
         $product_id = $this->request->getPost('product_id');
@@ -33,7 +33,7 @@ class ProductattributeController extends BackendController  {
         Response::success(true);
     }
 
-    public function updateAction(){
+    public function api_updateAction(){
         $name = $this->request->getPost('name');
         $attribute_id = $this->request->get('attribute_id');
         $price = $this->request->getPost('price');
@@ -57,7 +57,7 @@ class ProductattributeController extends BackendController  {
         Response::success();
     }
 
-    public function deleteAction(){
+    public function api_deleteAction(){
         $attribute_id = $this->request->get('attribute_id');
         if(!$attribute_id){
             Response::error(Language::LOST_PARAMS);

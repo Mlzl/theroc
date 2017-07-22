@@ -11,7 +11,7 @@ use Roc\Library\Language;
 use Roc\Library\Response;
 
 class ProductController extends BackendController {
-    public function addProductAction(){
+    public function api_add_productAction(){
         $productModel = new \Product();
         $name = $this->request->getPost('name');
         $class_id = $this->request->getPost('class_id');
@@ -33,7 +33,7 @@ class ProductController extends BackendController {
         Response::success();
     }
 
-    public function updateProductAction(){
+    public function api_update_productAction(){
         $name = $this->request->getPost('name');
         $class_id = $this->request->getPost('class_id');
         $target_url = $this->request->getPost('target_url');
@@ -58,7 +58,7 @@ class ProductController extends BackendController {
         Response::success();
     }
 
-    public function addClassAction(){
+    public function api_add_classAction(){
         $class_name = $this->request->getPost('name');
         $pid = intval($this->request->getPost('pid'));
         if(!$class_name){
@@ -76,7 +76,7 @@ class ProductController extends BackendController {
         Response::success();
     }
 
-    public function updateClassAction(){
+    public function api_update_classAction(){
         $class_name = $this->request->getPost('name');
         $class_id = intval($this->request->getPost('class_id'));
         if(!$class_name || !$class_id){
