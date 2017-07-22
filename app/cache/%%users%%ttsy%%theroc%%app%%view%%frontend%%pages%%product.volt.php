@@ -9,7 +9,8 @@
 <body>
     <div id="product">
         <!--头部导航栏-->
-        <div id="topBar" v-cloak>
+        
+<div id="topBar" v-cloak>
     <img src="/images/logo.png" class="logo"/>
     <ul class="topBar_menu">
         <li @click="switchPages(0)">HOME</li>

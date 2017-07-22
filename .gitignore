@@ -1,2 +1,4 @@
-.idea/
-app/cache/
+
+app/cache/*.volt.php
+.idea/*
+

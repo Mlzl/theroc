@@ -94,56 +94,24 @@ table {
 [v-cloak] {
   display: none;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar {
-=======
-.topBar {
->>>>>>> Stashed changes
-=======
-.topBar {
->>>>>>> Stashed changes
   min-width: 1366px;
   height: 56px;
   position: relative;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .logo {
-=======
-.topBar .logo {
->>>>>>> Stashed changes
-=======
-.topBar .logo {
->>>>>>> Stashed changes
   width: 36px;
   height: 30px;
   position: absolute;
   top: 13px;
   left: 15px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu {
-=======
-.topBar .topBar_menu {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_menu {
->>>>>>> Stashed changes
   width: 560px;
   height: 56px;
   margin: 0 auto;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu li {
-=======
-.topBar .topBar_menu li {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_menu li {
->>>>>>> Stashed changes
   cursor: pointer;
   height: 40px;
   line-height: 56px;
@@ -152,62 +120,26 @@ table {
   float: left;
   position: relative;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu li:hover {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
 #topBar .topBar_right {
-=======
-=======
->>>>>>> Stashed changes
-.topBar .topBar_menu li:hover {
-  color: #25ba80;
-  border-bottom: 1px solid #25ba80;
-}
-.topBar .topBar_right {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   position: absolute;
   top: 15px;
   right: 130px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_right .search {
   display: inline-block;
   position: relative;
 }
 #topBar .topBar_right .search input {
-=======
-=======
->>>>>>> Stashed changes
-.topBar .topBar_right .search {
-  display: inline-block;
-  position: relative;
-}
-.topBar .topBar_right .search input {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   width: 180px;
   height: 26px;
   border-radius: 14px;
   border: solid 1px #5a5a5a;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_right .user_icon {
-=======
-.topBar .topBar_right .user_icon {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_right .user_icon {
->>>>>>> Stashed changes
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -289,8 +221,6 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .carouselArea {
   min-width: 1366px;
   height: 342px;
@@ -300,53 +230,19 @@ table {
   margin: 0 auto;
 }
 #home_main .product_nav .oneProduct_nav {
-=======
-=======
->>>>>>> Stashed changes
-#home .carouselArea {
-  min-width: 1366px;
-  height: 342px;
-}
-#home .product_nav {
-  width: 1120px;
-  margin: 0 auto;
-}
-#home .product_nav .oneProduct_nav {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   display: inline-block;
   width: 560px;
   height: 280px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_nav .oneProduct_nav .oneProduct_nav_img,
 #home_main .product_nav .oneProduct_nav .oneProduct_nav_desc {
-=======
-#home .product_nav .oneProduct_nav .oneProduct_nav_img,
-#home .product_nav .oneProduct_nav .oneProduct_nav_desc {
->>>>>>> Stashed changes
-=======
-#home .product_nav .oneProduct_nav .oneProduct_nav_img,
-#home .product_nav .oneProduct_nav .oneProduct_nav_desc {
->>>>>>> Stashed changes
   box-sizing: border-box;
   width: 280px;
   height: 280px;
   overflow: hidden;
   float: left;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_nav .oneProduct_nav .oneProduct_nav_img > img {
-=======
-#home .product_nav .oneProduct_nav .oneProduct_nav_img > img {
->>>>>>> Stashed changes
-=======
-#home .product_nav .oneProduct_nav .oneProduct_nav_img > img {
->>>>>>> Stashed changes
   width: 280px;
   height: 280px;
   transition: 2s;
@@ -357,8 +253,6 @@ table {
   -o-transition: 2s;
   /* Opera */
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_nav .oneProduct_nav .oneProduct_nav_img:hover > img {
   transform: scale(1.3);
 }
@@ -375,53 +269,18 @@ table {
 }
 #home_main .product_sell > h3,
 #home_main .product_recom > h3 {
-=======
-=======
->>>>>>> Stashed changes
-#home .product_nav .oneProduct_nav .oneProduct_nav_img:hover > img {
-  transform: scale(1.3);
-}
-#home .product_nav .oneProduct_nav .oneProduct_nav_desc {
-  padding: 20px;
-}
-#home .product_nav .oneProduct_nav .oneProduct_nav_desc > h4 {
-  font-size: 18px;
-  margin: 0 0 10px 0;
-}
-#home .product_sell,
-#home .product_recom {
-  text-align: center;
-}
-#home .product_sell > h3,
-#home .product_recom > h3 {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   height: 35px;
   line-height: 35px;
   font-size: 20px;
   color: #585858;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_sell .oneProduct,
 #home_main .product_recom .oneProduct {
-=======
-#home .product_sell .oneProduct,
-#home .product_recom .oneProduct {
->>>>>>> Stashed changes
-=======
-#home .product_sell .oneProduct,
-#home .product_recom .oneProduct {
->>>>>>> Stashed changes
   display: inline-block;
   width: 271px;
   height: 331px;
   margin: 0 12px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_sell .oneProduct .oneProduct_img,
 #home_main .product_recom .oneProduct .oneProduct_img {
   width: 271px;
@@ -434,39 +293,12 @@ table {
 }
 #home_main .product_sell .oneProduct .oneProduct_desc,
 #home_main .product_recom .oneProduct .oneProduct_desc {
-=======
-=======
->>>>>>> Stashed changes
-#home .product_sell .oneProduct .oneProduct_img,
-#home .product_recom .oneProduct .oneProduct_img {
-  width: 271px;
-  height: 271px;
-}
-#home .product_sell .oneProduct .oneProduct_img > img,
-#home .product_recom .oneProduct .oneProduct_img > img {
-  width: 271px;
-  height: 271px;
-}
-#home .product_sell .oneProduct .oneProduct_desc,
-#home .product_recom .oneProduct .oneProduct_desc {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   box-sizing: border-box;
   width: 271px;
   height: 60px;
   padding: 10px;
   background-color: #585858;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #home_main .product_recommend {
-=======
-#home .product_recommend {
->>>>>>> Stashed changes
-=======
-#home .product_recommend {
->>>>>>> Stashed changes
   margin: 0 0 60px 0;
 }

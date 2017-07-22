@@ -8,6 +8,7 @@ use Roc\Library\UploadFile;
 /**
  * User: ambi
  * Date: 2017/6/21
+ * 产品页、产品详情页、产品搜索页
  */
 class ProductController extends FrontendController {
     public function indexAction(){

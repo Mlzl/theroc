@@ -94,56 +94,24 @@ table {
 [v-cloak] {
   display: none;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar {
-=======
-.topBar {
->>>>>>> Stashed changes
-=======
-.topBar {
->>>>>>> Stashed changes
   min-width: 1366px;
   height: 56px;
   position: relative;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .logo {
-=======
-.topBar .logo {
->>>>>>> Stashed changes
-=======
-.topBar .logo {
->>>>>>> Stashed changes
   width: 36px;
   height: 30px;
   position: absolute;
   top: 13px;
   left: 15px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu {
-=======
-.topBar .topBar_menu {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_menu {
->>>>>>> Stashed changes
   width: 560px;
   height: 56px;
   margin: 0 auto;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu li {
-=======
-.topBar .topBar_menu li {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_menu li {
->>>>>>> Stashed changes
   cursor: pointer;
   height: 40px;
   line-height: 56px;
@@ -152,62 +120,26 @@ table {
   float: left;
   position: relative;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_menu li:hover {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
 #topBar .topBar_right {
-=======
-=======
->>>>>>> Stashed changes
-.topBar .topBar_menu li:hover {
-  color: #25ba80;
-  border-bottom: 1px solid #25ba80;
-}
-.topBar .topBar_right {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   position: absolute;
   top: 15px;
   right: 130px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_right .search {
   display: inline-block;
   position: relative;
 }
 #topBar .topBar_right .search input {
-=======
-=======
->>>>>>> Stashed changes
-.topBar .topBar_right .search {
-  display: inline-block;
-  position: relative;
-}
-.topBar .topBar_right .search input {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   width: 180px;
   height: 26px;
   border-radius: 14px;
   border: solid 1px #5a5a5a;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #topBar .topBar_right .user_icon {
-=======
-.topBar .topBar_right .user_icon {
->>>>>>> Stashed changes
-=======
-.topBar .topBar_right .user_icon {
->>>>>>> Stashed changes
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -289,8 +221,6 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #product_detail_main .productShow .picShow {
   display: inline-block;
   width: 50%;
@@ -408,7 +338,3 @@ table {
   margin: 0 0 7px 0;
   color: #333333;
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

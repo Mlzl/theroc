@@ -5,8 +5,8 @@ use \Phalcon\Mvc\Controller;
  * User: ambi
  * Date: 2017/6/21
  */
-class IndexController extends Controller{
+class CarouselController extends BackendController{
     public function indexAction(){
-        echo 'backend->backend';
+        $this->view->render('pages','carousel');
     }
 }

@@ -1,0 +1,30 @@
+[v-cloak] {
+  display: none;
+}
+#topBar {
+  min-width: 1366px;
+  height: 56px;
+  position: relative;
+}
+#topBar .logo {
+  width: 36px;
+  height: 30px;
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
+#topBar .topBar_right {
+  position: absolute;
+  top: 15px;
+  right: 130px;
+}
+#topBar .topBar_right .user_icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 20px;
+  background: url('/images/logo.png') no-repeat;
+  background-size: 16px 16px;
+  position: relative;
+  top: 3px;
+}

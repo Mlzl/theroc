@@ -5,6 +5,7 @@ use Roc\Library\LoginStatus;
 /**
  * User: ambi
  * Date: 2017/6/21
+ * 登陆页
  */
 class LoginController extends FrontendController {
     public function indexAction(){
