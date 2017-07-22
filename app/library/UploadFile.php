@@ -6,7 +6,7 @@
 namespace Roc\Library;
 class UploadFile extends Library{
     private $save_path = UPLOAD_IMG_PATH;
-    private $filename = null;
+    public $filename = null;
     public function __construct(){
         $this->save_path = $this->save_path . date('Ymd') .'/';
         $this->check_dir();

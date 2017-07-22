@@ -51,8 +51,48 @@ class ProductController extends ApiController {
         Response::success($comments_info);
     }
 
-    public function addCommentsAction(){
+    public function addCommentAction(){
         $content = $this->request->get('content');
+        $product_id = $this->request->get('product_id');
+        $user_id = $this->user->user_id;
+        $product_comment = new \ProductComment();
+        if(!$content || !$product_id || !$user_id){
+            Response::error(Language::LOST_PARAMS);
+        }
+        if(!\Product::getProductById($product_id)){
+            Response::error(Language::PRODUCT_NOT_EXISTS);
+        }
+        $data = array(
+            'content'=>$content,
+            'product_id'=>$product_id,
+            'create_time'=>time(),
+            'user_id'=>$user_id
+        );
+        $product_comment->save($data);
+        Response::success($product_comment->toArray());
+    }
 
+    public function getBannerAction(){
+        $banner_info = \Setting::getSetting(\Setting::BANNER_NAME);
+        if(!$banner_info){
+            $banner_info = array();
+        }
+        Response::success($banner_info);
+    }
+
+    public function getSpecialProductAction(){
+        $special_label = $this->request->get('special_label');
+        $special_setting = \Setting::getOneSetting($special_label);
+        $special_product = array();
+        if($special_setting){
+            $special_setting = unserialize($special_setting->value);
+            foreach ($special_setting as $product_id){
+                $product = \Product::getProductById($product_id);
+                if($product){
+                    $special_product[] = $product->toArray();
+                }
+            }
+        }
+        Response::success($special_product);
     }
 }

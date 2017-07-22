@@ -8,7 +8,8 @@ namespace Roc\Library;
 
 
 class Response{
-    public static function success($data){
+
+    public static function success($data=array()){
         echo json_encode(array('code'=>0, 'msg'=>'success', 'data'=>$data));
         exit();
     }

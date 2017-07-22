@@ -34,38 +34,36 @@ class ProductattributeController extends BackendController  {
     }
 
     public function updateAction(){
-        $name = $this->request->getPost('name', null, null);
+        $name = $this->request->getPost('name');
         $attribute_id = $this->request->get('attribute_id');
-        $price = $this->request->getPost('price', null, null);
-        $product_id = $this->request->getPost('product_id', null, null);
-        if($price!==null){
-            if(!InputCheck::isValidMoney($price)){
-                Response::error(Language::MONEY_FORMAT_ERROR);
-            }
+        $price = $this->request->getPost('price');
+        $product_id = $this->request->getPost('product_id');
+        if(!$name || !$attribute_id || !$price || !$product_id){
+            Response::error(Language::LOST_PARAMS);
         }
-        $productAttribute = \ProductAttribute::getOneById($attribute_id);
+        if(!InputCheck::isValidMoney($price)){
+            Response::error(Language::MONEY_FORMAT_ERROR);
+        }
+        $productAttribute = \ProductAttribute::getOneById($attribute_id, $product_id);
         if(!$productAttribute){
-            Response::error(Language::ITEM_NOT_EXISTS);
+            Response::error(Language::DATA_NOT_EXISTS);
         }
         $data = array(
             'product_id'=>$product_id,
             'name'=>$name,
             'price'=>$price,
         );
-        if($this->updateItem($productAttribute, $data)){
-            Response::success(true);
-        }
-        $this->logger->error("[$attribute_id]update attribute error.".$productAttribute->getMessage());
-        Response::error(Language::FAILED_OPERATION);
+        $this->updateItem($productAttribute, $data);
+        Response::success();
     }
 
     public function deleteAction(){
         $attribute_id = $this->request->get('attribute_id');
-        $productAttribute = \ProductAttribute::getOneById($attribute_id);
-        if(!$productAttribute){
-            Response::error(Language::ITEM_NOT_EXISTS);
+        if(!$attribute_id){
+            Response::error(Language::LOST_PARAMS);
         }
-        $productAttribute->delete();
+        \ProductAttribute::deleteOneByField($attribute_id);
+        $this->logger->info("[{$this->user->user_name}]delete product attribute id [$attribute_id]");
         Response::success(true);
     }
 }

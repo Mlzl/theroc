@@ -4,14 +4,85 @@ msg:信息
 data:需要的数据
 
 
-#获取产品列表 class_id=类别id
-/api/product/getProducts?size=xx&page=xx&class_id=xx
-
-#获取产品属性
-/api/product/getAttribute?product_id=xx&attribute_id=xx
+-------------------------产品相关--------------------------------------
 
 #获取产品分类 pid为产品分类父id  0代表一级分类无父类
 /api/product/getClass?pid=xxx
 
+#添加产品分类
+/cms/product/addClass
+post:{name, pid} ps:pid=0时代表一级分类
+
+#更新产品分类
+/cms/product/updateClass
+post:{name,class_id}
+
+#添加产品
+/cms/product/addProduct
+post:{name, class_id, target_url}
+
+#更新产品
+/cms/product/updateProduct
+post:{name, class_id, target_url, product_id}
+
+#获取产品列表 class_id=类别id
+/api/product/getProducts?size=xx&page=xx&class_id=xx
+
+#获取轮播图
+/api/product/getBanner
+
+#添加轮播图
+/cms/setting/addBanner
+post:{target_url, upload_file} ps:upload_file为上传文件名
+
+#删除轮播图
+/cms/setting/deleteBanner?banner_id=xxx
+
 #获取产品评论
 /api/product/getComments?product_id=xx&page=xx&size=xx
+
+#添加产品评论
+/api/product/addComment
+post:{content, product_id}
+
+#添加产品属性
+/cms/productattribute/add
+post:{name, product_id, price}
+
+#更新产品属性
+/cms/productattribute/update
+post:{name, product_id, price, attribute_id}
+
+#获取产品属性
+/api/product/getAttribute?product_id=xx&attribute_id=xx
+
+#获取特殊产品
+/api/product/getSpecialProduct?special_label=xx
+ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommend#推荐产品}
+
+#设置特殊产品
+/cms/setting/addSpecialProduct?product_id=xxx&special_label=xxx
+ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommend#推荐产品}
+
+#获取用户相关
+/cms/user/list?page=xx&size=xx
+
+
+-------------------------登陆相关--------------------------------------
+
+#获取验证码
+/api/user/getCaptcha
+ps:图片以base64返回
+
+#用户注册
+/api/user/register
+post:{email, password, captcha, username} #ps:password应前端md5加密后返回
+
+#用户登录
+/api/user/login
+post:{email, password, captcha} #ps:password应前端md5加密后返回
+
+#管理员登陆
+/cms/admin/login
+post:{email, password, captcha} #ps:password应前端md5加密后返回
+

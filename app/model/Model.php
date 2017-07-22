@@ -14,7 +14,8 @@ class Model extends \Phalcon\Mvc\Model{
         return $this->error_message;
     }
 
-    public function findOneByField($key, $value){
+    public static function findOneByField($key, $value){
+
         $target = self::findFirst(array(
             'conditions'=>"$key=:param1:",
             'bind'=>array('param1'=>$value)
@@ -24,4 +25,17 @@ class Model extends \Phalcon\Mvc\Model{
         }
         return false;
     }
+
+
+    public static function deleteOneByField($value, $key='id'){
+        $target = self::findFirst(array(
+            'conditions'=>"$key=:param1:",
+            'bind'=>array('param1'=>$value)
+        ));
+        if($target){
+            return $target->delete();
+        }
+        return false;
+    }
+
 }

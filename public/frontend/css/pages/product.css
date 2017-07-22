@@ -94,24 +94,56 @@ table {
 [v-cloak] {
   display: none;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar {
+=======
+.topBar {
+>>>>>>> Stashed changes
+=======
+.topBar {
+>>>>>>> Stashed changes
   min-width: 1366px;
   height: 56px;
   position: relative;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .logo {
+=======
+.topBar .logo {
+>>>>>>> Stashed changes
+=======
+.topBar .logo {
+>>>>>>> Stashed changes
   width: 36px;
   height: 30px;
   position: absolute;
   top: 13px;
   left: 15px;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .topBar_menu {
+=======
+.topBar .topBar_menu {
+>>>>>>> Stashed changes
+=======
+.topBar .topBar_menu {
+>>>>>>> Stashed changes
   width: 560px;
   height: 56px;
   margin: 0 auto;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .topBar_menu li {
+=======
+.topBar .topBar_menu li {
+>>>>>>> Stashed changes
+=======
+.topBar .topBar_menu li {
+>>>>>>> Stashed changes
   cursor: pointer;
   height: 40px;
   line-height: 56px;
@@ -120,26 +152,62 @@ table {
   float: left;
   position: relative;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .topBar_menu li:hover {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
 #topBar .topBar_right {
+=======
+=======
+>>>>>>> Stashed changes
+.topBar .topBar_menu li:hover {
+  color: #25ba80;
+  border-bottom: 1px solid #25ba80;
+}
+.topBar .topBar_right {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   position: absolute;
   top: 15px;
   right: 130px;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .topBar_right .search {
   display: inline-block;
   position: relative;
 }
 #topBar .topBar_right .search input {
+=======
+=======
+>>>>>>> Stashed changes
+.topBar .topBar_right .search {
+  display: inline-block;
+  position: relative;
+}
+.topBar .topBar_right .search input {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   width: 180px;
   height: 26px;
   border-radius: 14px;
   border: solid 1px #5a5a5a;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #topBar .topBar_right .user_icon {
+=======
+.topBar .topBar_right .user_icon {
+>>>>>>> Stashed changes
+=======
+.topBar .topBar_right .user_icon {
+>>>>>>> Stashed changes
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -221,6 +289,8 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .carouselArea {
   min-width: 1366px;
   height: 342px;
@@ -233,11 +303,38 @@ table {
   padding: 0 97px;
 }
 #product_main .product_list .category .primary {
+=======
+=======
+>>>>>>> Stashed changes
+#products .carouselArea {
+  min-width: 1366px;
+  height: 342px;
+}
+#products .product_list {
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+#products .product_list .category {
+  padding: 0 97px;
+}
+#products .product_list .category .primary {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   height: 100px;
   text-align: left;
   position: relative;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .product_list .category .primary > li {
+=======
+#products .product_list .category .primary > li {
+>>>>>>> Stashed changes
+=======
+#products .product_list .category .primary > li {
+>>>>>>> Stashed changes
   width: 100px;
   height: 100px;
   text-align: center;
@@ -245,6 +342,8 @@ table {
   margin: 0 2px 0 0;
   background: #ccc;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .product_list .category .primary > li:hover .secondary {
   display: block;
 }
@@ -257,13 +356,36 @@ table {
 }
 #product_main .product_list .category .primary > li .secondary {
   display: none;
+=======
+=======
+>>>>>>> Stashed changes
+#products .product_list .category .primary > li > img {
+  width: 60px;
+  height: 60px;
+}
+#products .product_list .category .primary > li > p {
+  margin: 10px 0 0 0;
+}
+#products .product_list .category .primary > li .secondary {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   height: 100px;
   text-align: left;
   position: absolute;
   top: 100px;
   left: 0;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .product_list .category .primary > li .secondary > li {
+=======
+#products .product_list .category .primary > li .secondary > li {
+>>>>>>> Stashed changes
+=======
+#products .product_list .category .primary > li .secondary > li {
+>>>>>>> Stashed changes
   width: 100px;
   height: 100px;
   text-align: center;
@@ -271,6 +393,8 @@ table {
   margin: 0 2px 0 0;
   background: #ccc;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .product_list .category .primary > li .secondary > li > img {
   width: 60px;
   height: 60px;
@@ -279,11 +403,28 @@ table {
   margin: 10px 0 0 0;
 }
 #product_main .product_list .oneProduct {
+=======
+=======
+>>>>>>> Stashed changes
+#products .product_list .category .primary > li .secondary > li > img {
+  width: 60px;
+  height: 60px;
+}
+#products .product_list .category .primary > li .secondary > li > p {
+  margin: 10px 0 0 0;
+}
+#products .product_list .oneProduct {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   display: inline-block;
   width: 271px;
   height: 331px;
   margin: 0 12px 10px 0;
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #product_main .product_list .oneProduct .oneProduct_img {
   width: 271px;
   height: 271px;
@@ -293,6 +434,22 @@ table {
   height: 271px;
 }
 #product_main .product_list .oneProduct .oneProduct_desc {
+=======
+=======
+>>>>>>> Stashed changes
+#products .product_list .oneProduct .oneProduct_img {
+  width: 271px;
+  height: 271px;
+}
+#products .product_list .oneProduct .oneProduct_img > img {
+  width: 271px;
+  height: 271px;
+}
+#products .product_list .oneProduct .oneProduct_desc {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   box-sizing: border-box;
   width: 271px;
   height: 60px;

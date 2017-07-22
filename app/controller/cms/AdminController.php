@@ -4,15 +4,14 @@
  * Date: 2017/7/3
  */
 
-namespace Roc\ApiController;
+namespace Roc\BackendController;
 use Roc\Library\Language;
 
 use Roc\Library\Captcha;
-use Roc\Library\LoginStatus;
 use Roc\Library\PhpMailer;
 use Roc\Library\Response;
 
-class UserController extends ApiController{
+class AdminController extends BackendController {
 
     public function loginAction(){
         $email = $this->request->getPost('email');
@@ -31,21 +30,9 @@ class UserController extends ApiController{
         if (!$user_info = $userModel->login($email, $password)){
             Response::error($userModel->getMessage());
         }
-        $loginStatusLib = new LoginStatus($this->di);
-        $loginStatusLib->setLoginStatus($user_info['user_id'], $user_info);
         Response::success($user_info);
     }
 
-    public function getCaptchaAction(){
-        $captcha = new Captcha();
-        $captcha->paintText();
-        $base64 = $captcha->getBase64Image();
-        $data = array(
-            'base64'=>$base64,
-            'img_type'=>$captcha->imageType
-        );
-        Response::success($data);
-    }
 
     public function registerAction(){
         $email = $this->request->getPost('email');

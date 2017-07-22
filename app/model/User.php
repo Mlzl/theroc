@@ -61,4 +61,13 @@ class User extends Model{
         return $user;
     }
 
+    public static function getList($page, $size){
+        $users = self::find(array(
+            'limit'=>array('number'=>$size, 'offset'=>($page-1)*$size),
+        ));
+        if(!$users){
+            return false;
+        }
+        return $users->toArray();
+    }
 }

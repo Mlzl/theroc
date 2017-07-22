@@ -22,6 +22,10 @@ class Language{
     const ITEM_NOT_EXISTS = 'item not exists';
     const LOST_CLASS_ID = 'lost class id';
     const DATA_NOT_EXISTS   =   'data not exists';
+    const PRODUCT_CLASS_NOT_EXISTS  =   'product class not exists';
+    const PARENT_CLASS_NOT_EXISTS = 'parent class not exists';
+    const PRODUCT_NOT_EXISTS  =   'product not exists';
+    const PRODUCT_LABEL_NOT_EXISTS = 'product label not exists';
 
 
     public static function getMessage($message){

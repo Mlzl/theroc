@@ -9,15 +9,11 @@ class ProductComment extends Model{
         return 'theroc_product_comment';
     }
 
-    public function addComments(){
-
-    }
-
-    public static function getCommentByProductId($product_id, $page=0, $size=20){
+    public static function getCommentByProductId($product_id, $page=1, $size=20){
         $comments = self::find(array(
             'conditions'=>'product_id=:product_id:',
             'bind'=>array('product_id'=>$product_id),
-            'limit'=>array('number'=>$size, 'offset'=>$page*$size)
+            'limit'=>array('number'=>$size, 'offset'=>($page-1)*$size)
         ));
         if(!$comments){
             return false;

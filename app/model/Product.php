@@ -16,13 +16,15 @@ class Product extends Model{
             'class_id'=>$product_info['class_id'],
             'create_time'=>time(),
             'status'=>1,
+            'target_url'=>$product_info['target_url'],
+            'label'=>$product_info['label']
         );
         return $this->save($item);
     }
 
     public function getProductByClassId($class_id, $page=1, $size=20){
         $products = self::find(array(
-            'conditions'=>'class_id=:class_id:',
+            'conditions'=>'class_id=:class_id: and status=1',
             'bind'=>array('class_id'=>$class_id),
             'limit'=>array('number'=>$page, 'offset'=>$page*$size),
         ));
@@ -32,9 +34,9 @@ class Product extends Model{
         return $products->toArray();
     }
 
-    public function getProductById($product_id){
+    public static function getProductById($product_id){
         $product = self::findFirst(array(
-            'conditions'=>'product_id=:product_id:',
+            'conditions'=>'product_id=:product_id: and status=1',
             'bind'=>array('product_id'=>$product_id)
         ));
         if($product){

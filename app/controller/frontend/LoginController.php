@@ -1,9 +1,6 @@
 <?php
 namespace Roc\FrontendController;
-use Roc\Library\SymmetricEncryption;
-use Roc\Library\Captcha;
-use Roc\Library\PhpMailer;
-use Roc\Library\UploadFile;
+use Roc\Library\LoginStatus;
 
 /**
  * User: ambi
@@ -11,6 +8,10 @@ use Roc\Library\UploadFile;
  */
 class LoginController extends FrontendController {
     public function indexAction(){
-        $this->view->render('pages','login');
+
+        $loginStatusLib = new LoginStatus($this->di);
+        $loginStatusLib->setLoginStatus(1, array('user_id'=>1, 'email'=>'1069163403@qq.com'));
+        var_dump($this->user);
+        exit();
     }
 }
