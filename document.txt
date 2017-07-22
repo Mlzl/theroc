@@ -1,0 +1,17 @@
+#返回格式 json
+code:0 或其他 ps:0代表成功
+msg:信息
+data:需要的数据
+
+
+#获取产品列表 class_id=类别id
+/api/product/getProducts?size=xx&page=xx&class_id=xx
+
+#获取产品属性
+/api/product/getAttribute?product_id=xx&attribute_id=xx
+
+#获取产品分类 pid为产品分类父id  0代表一级分类无父类
+/api/product/getClass?pid=xxx
+
+#获取产品评论
+/api/product/getComments?product_id=xx&page=xx&size=xx

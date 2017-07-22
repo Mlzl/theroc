@@ -3,7 +3,9 @@ var support=new Vue({
     el:'#support',
     delimiters:['~{','}'],
     data:{
-        test:'test'
+        page:'refunds',
+        // page:'warranty',
+        isActive:false
     },
     created:function(){
 

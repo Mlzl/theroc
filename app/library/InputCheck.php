@@ -6,7 +6,6 @@
 
 namespace Roc\Library;
 
-
 class InputCheck extends Library {
 
     public function isValidUserName($username){
@@ -17,4 +16,16 @@ class InputCheck extends Library {
         return true;
     }
 
+    public static function isValidMoney($money, $precision=2){
+        if(is_int($money)){
+            return true;
+        }
+        $pattern = "/^\d{1,}\.\d{1,$precision}$/";
+        preg_match($pattern, $money, $match);
+        var_dump($match);
+        if(preg_match($pattern, $money)){
+            return true;
+        }
+        return false;
+    }
 }

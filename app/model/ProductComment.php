@@ -13,7 +13,7 @@ class ProductComment extends Model{
 
     }
 
-    public function getCommentByProductId($product_id, $page=0, $size=20){
+    public static function getCommentByProductId($product_id, $page=0, $size=20){
         $comments = self::find(array(
             'conditions'=>'product_id=:product_id:',
             'bind'=>array('product_id'=>$product_id),

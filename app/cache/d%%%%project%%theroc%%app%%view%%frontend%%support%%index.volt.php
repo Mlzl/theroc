@@ -11,7 +11,19 @@
 <body>
     <div id="support" v-cloak>
         <!--头部导航栏-->
-        {% include "topBar.volt" %}
+        <div class="topBar">
+    <img src="" class="logo"/>
+    <ul class="topBar_menu">
+        <li>HOME</li>
+        <li>PRODUCTS</li>
+        <li>COMMUNITY</li>
+        <li>CONTANT US</li>
+    </ul>
+    <div class="topBar_right">
+        <input type="text" />
+
+    </div>
+</div>
             <div class="support-content">
                 <div class="banner-container">
                     <img  class="img" src="/frontend/image/supportBg.jpg">
@@ -176,7 +188,9 @@
                 </div>
             </div>
         <!--底部-->
-        {% include "footer.volt" %}
+        <div class="footer">
+    footer
+</div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
