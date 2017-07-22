@@ -129,3 +129,140 @@ table {
   top: 0;
   right: 0;
 }
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+#support {
+  min-width: 1366px;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: MicrosoftYaHei;
+}
+#support .support-content {
+  width: 1120px;
+  margin: 0 auto;
+}
+#support .support-content .banner-container {
+  position: relative;
+  width: 100%;
+  height: 449px;
+}
+#support .support-content .banner-container .img {
+  width: 100%;
+  height: 100%;
+}
+#support .support-content .banner-container .search {
+  box-sizing: border-box;
+  width: 561px;
+  height: 167px;
+  opacity: 0.6;
+  background-color: #7d7d7d;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 24px 40px;
+}
+#support .support-content .banner-container .search .title {
+  margin: 0;
+  height: 35px;
+  font-family: MicrosoftYaHei;
+  font-size: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+#support .support-content .banner-container .search .search-tip {
+  margin-top: 19px;
+  font-size: 16px;
+  text-align: left;
+  color: #ffffff;
+}
+#support .support-content .banner-container .search .productForm {
+  margin-top: 13px;
+}
+#support .support-content .banner-container .search .productForm .searchText {
+  float: left;
+  box-sizing: border-box;
+  padding-left: 14px;
+  height: 38px;
+  width: 88%;
+  line-height: 38px;
+  border: 1px solid #ffffff;
+}
+#support .support-content .banner-container .search .productForm .submit {
+  float: left;
+  outline: 0;
+  height: 38px;
+  width: 12%;
+}
+#support .support-content .service-nav ul {
+  display: block;
+  width: 1120px;
+  height: 93px;
+  list-style: none;
+  background-color: #efefef;
+}
+#support .support-content .service-nav ul li {
+  display: inline-block;
+  color: #5a5a5a;
+  width: 50%;
+  height: 93px;
+}
+#support .support-content .service-nav ul li a {
+  display: block;
+  height: 93px;
+  padding: 8px 1px;
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  color: #5a5a5a;
+  text-decoration: none;
+}
+#support .support-content .service-nav ul li:hover {
+  background-color: #25ba80;
+  color: #ffffff;
+}
+#support .support-content .module-container .refunds {
+  width: 993px;
+  background-color: red;
+  margin: 0 auto;
+}
+#support .support-content .module-container .refunds .refunds-header {
+  text-align: center;
+  margin-top: 111px;
+  margin-bottom: 72px;
+}
+#support .support-content .module-container .refunds .refunds-header .header-text {
+  font-size: 30px;
+  text-align: center;
+  color: #585858;
+}
+#support .support-content .module-container .refunds .refunds-header .refunds-form .contant item-title {
+  font-size: 18px;
+}
+#support .support-content .module-container .refunds .refunds-header .refunds-form .contant input {
+  border-radius: 4px;
+  background-color: #cccccc;
+  border: solid 1px #cccccc;
+}
+#support .support-content .module-container .refunds .refunds-header .refunds-form .contant .inp-normal {
+  width: 100%;
+}
+#support .support-content .module-container .warranty h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #3d3938;
+}
+#support .support-content .module-container .warranty .warranty-content,
+#support .support-content .module-container .warranty .faqs-content {
+  margin-top: 30px;
+  color: #5a5a5a;
+}

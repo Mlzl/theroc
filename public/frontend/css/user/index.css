@@ -1,131 +1,163 @@
-/*参考 淘宝官网 样式初始化*/
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-blockquote,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-pre,
-form,
-fieldset,
-legend,
-button,
-input,
-textarea,
-th,
-td {
-  margin: 0;
-  padding: 0;
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
-body {
-  font-family: STHeitiSC!important;
-  font-size: 14px!important;
-  font-weight: 300!important;
-  color: #14181b!important;
-  background-color: #fafafa!important;
+.clearfix {
+  zoom: 1;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-}
-address,
-cite,
-dfn,
-em,
-var {
-  font-style: normal;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: couriernew, courier, monospace;
-}
-small {
-  font-size: 12px;
-}
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-sup {
-  vertical-align: text-top;
-}
-sub {
-  vertical-align: text-bottom;
-}
-legend {
-  color: #000;
-}
-fieldset,
-img {
-  border: 0;
-}
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-[v-cloak] {
-  display: none;
-}
-.topBar {
-  min-width: 1366px;
-  height: 56px;
-  position: relative;
-}
-.topBar .logo {
-  width: 36px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.topBar .topBar_menu {
-  width: 528px;
-  height: 56px;
+.content {
+  min-width: 1000px;
+  width: 1366px;
+  background-color: #ffffff;
   margin: 0 auto;
 }
-.topBar .topBar_menu li {
-  cursor: pointer;
-  height: 40px;
-  line-height: 56px;
-  text-align: center;
-  margin: 0 30px;
-  float: left;
+.content a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+.content li {
+  text-align: left;
+  list-style: none;
+}
+.content .user-overview {
+  width: 81%;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  display: block;
+}
+.content .user-overview .overview-item1 {
   position: relative;
+  display: inline-block;
+  float: left;
+  margin: 13px 30px 13px 77px;
 }
-.topBar .topBar_menu li:hover {
-  color: #25ba80;
-  border-bottom: 1px solid #25ba80;
+.content .user-overview .overview-item1 .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 0px solid transparent;
 }
-.topBar .topBar_right {
+.content .user-overview .overview-item1 .uploadimg-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 33px;
+  left: 31px;
+  width: 37px;
+  height: 32px;
+}
+.content .user-overview .overview-item1 .uploadimg {
+  width: 37px;
+  height: 32px;
+}
+.content .user-overview .overview-item2 {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 126px;
+  float: left;
+  padding-top: 34px;
+  padding-left: 0;
+  margin: 0;
+}
+.content .user-overview .overview-item2 .overview-email {
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  color: #5a5a5a;
+}
+.content .user-overview .overview-item2 .photo-btn,
+.content .user-overview .overview-item2 .password-btn {
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.content .user-form {
+  width: 76%;
+  margin: 0 auto;
+}
+.content .user-form .row {
+  margin-top: 20px;
+}
+.content .user-form .row .user-name {
+  width: 100%;
+}
+.content .user-form .row .inp-normal {
+  float: left;
+  width: 27%;
+  display: table-cell;
+}
+.content .user-form .row .fill1 {
+  float: left;
+  display: table-cell;
+  width: 4%;
+  height: 40px;
+}
+.content .user-form .row .inp-big {
+  float: left;
+  width: 38%;
+  display: table-cell;
+}
+.content .user-form .row .inp-small-left {
+  float: left;
+  display: table-cell;
+  width: 16%;
+}
+.content .user-form .row .inp-small-right {
+  float: left;
+  display: table-cell;
+  width: 16%;
+}
+.content .user-form .row .fill2 {
+  float: left;
+  display: table-cell;
+  width: 6%;
+  height: 40px;
+}
+.content .user-form .long-row {
+  height: 56px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  border: solid 1px #cccccc;
+  padding-left: 20px;
+}
+.content .user-form .long-row .form-email-tip {
+  height: 13px;
+  margin-top: 11px;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  line-height: 1.07;
+  text-align: left;
+  color: #999999;
+}
+.content .user-form .long-row .form-email {
+  margin-bottom: 8px;
+  height: 15px;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  line-height: 1.07;
+  text-align: left;
+  color: #666666;
+}
+.content .user-form .form-footer {
+  height: 40px;
+  text-align: right;
+}
+.content .user-form .form-footer .submit {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #25ba80;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+.content .user-form input {
+  box-sizing: border-box;
+  border: solid 1px #cccccc;
+  border-radius: 4px;
+  padding-left: 20px;
+  height: 40px;
+  line-height: 40px;
 }

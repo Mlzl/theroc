@@ -3,7 +3,7 @@ var user=new Vue({
     el:'#user',
     delimiters:['~{','}'],
     data:{
-        test:'test'
+        email:'1446418561@qq.com'
     },
     created:function(){
 

@@ -12,7 +12,19 @@
 
     <div id="user" v-cloak>
         <!--头部导航栏-->
-        {% include "topBar.volt" %}
+        <div class="topBar">
+    <img src="" class="logo"/>
+    <ul class="topBar_menu">
+        <li>HOME</li>
+        <li>PRODUCTS</li>
+        <li>COMMUNITY</li>
+        <li>CONTANT US</li>
+    </ul>
+    <div class="topBar_right">
+        <input type="text" />
+
+    </div>
+</div>
         <div class="content">
             <div class="user-overview clearfix">
                 <div class="overview-item1">
@@ -58,7 +70,9 @@
 
         </div>
         <!--底部-->
-        {% include "footer.volt" %}
+        <div class="footer">
+    footer
+</div>
     </div>
 
 <script type="text/javascript" src="/plugin/vue.js"></script>
