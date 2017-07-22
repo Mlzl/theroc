@@ -3,14 +3,14 @@ var support=new Vue({
     el:'#support',
     delimiters:['~{','}'],
     data:{
-        page:'refunds',
-        // page:'warranty',
-        isActive:false
+         activeTab:'refunds',
     },
     created:function(){
 
     },
     methods:{
-
+        clickTab:function(tabId){
+            this.activeTab=tabId;
+        }
     }
 })
