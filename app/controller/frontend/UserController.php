@@ -6,9 +6,9 @@
 
 namespace Roc\FrontendController;
 
-
 class UserController extends FrontendController{
     public function indexAction(){
         $this->view->render('user','index');
     }
+
 }

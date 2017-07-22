@@ -20,7 +20,7 @@ class Product extends Model{
         return $this->save($item);
     }
 
-    public function getProductByClassId($class_id, $page=0, $size=20){
+    public function getProductByClassId($class_id, $page=1, $size=20){
         $products = self::find(array(
             'conditions'=>'class_id=:class_id:',
             'bind'=>array('class_id'=>$class_id),

@@ -11,7 +11,6 @@ try{
     require_once APP_PATH.'config/service.php';
     $application = new \Phalcon\Mvc\Application($di);
     $application->setDI($di);
-
     $application->handle()->send();
 }
 catch (\Exception $e){
