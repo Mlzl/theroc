@@ -224,52 +224,79 @@ table {
 #home .carouselArea {
   min-width: 1366px;
   height: 342px;
-  background: blue;
 }
 #home .product_nav {
-  text-align: center;
+  width: 1120px;
+  margin: 0 auto;
 }
-#home .product_nav .oneProduct {
+#home .product_nav .oneProduct_nav {
   display: inline-block;
   width: 560px;
   height: 280px;
 }
-#home .product_nav .oneProduct .oneProduct_img,
-#home .product_nav .oneProduct .oneProduct_desc {
+#home .product_nav .oneProduct_nav .oneProduct_nav_img,
+#home .product_nav .oneProduct_nav .oneProduct_nav_desc {
+  box-sizing: border-box;
   width: 280px;
   height: 280px;
+  overflow: hidden;
   float: left;
 }
-#home .product_nav .oneProduct .oneProduct_img {
-  background: red;
+#home .product_nav .oneProduct_nav .oneProduct_nav_img > img {
+  width: 280px;
+  height: 280px;
+  transition: 2s;
+  -moz-transition: 2s;
+  /* Firefox 4 */
+  -webkit-transition: 2s;
+  /* Safari and Chrome */
+  -o-transition: 2s;
+  /* Opera */
 }
-#home .product_sellWell,
-#home .product_recommend {
+#home .product_nav .oneProduct_nav .oneProduct_nav_img:hover > img {
+  transform: scale(1.3);
+}
+#home .product_nav .oneProduct_nav .oneProduct_nav_desc {
+  padding: 20px;
+}
+#home .product_nav .oneProduct_nav .oneProduct_nav_desc > h4 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+#home .product_sell,
+#home .product_recom {
   text-align: center;
 }
-#home .product_sellWell > h3,
-#home .product_recommend > h3 {
+#home .product_sell > h3,
+#home .product_recom > h3 {
   height: 35px;
   line-height: 35px;
   font-size: 20px;
   color: #585858;
 }
-#home .product_sellWell .oneProduct,
-#home .product_recommend .oneProduct {
+#home .product_sell .oneProduct,
+#home .product_recom .oneProduct {
   display: inline-block;
   width: 271px;
   height: 331px;
   margin: 0 12px;
 }
-#home .product_sellWell .oneProduct .oneProduct_img,
-#home .product_recommend .oneProduct .oneProduct_img {
+#home .product_sell .oneProduct .oneProduct_img,
+#home .product_recom .oneProduct .oneProduct_img {
   width: 271px;
   height: 271px;
 }
-#home .product_sellWell .oneProduct .oneProduct_desc,
-#home .product_recommend .oneProduct .oneProduct_desc {
+#home .product_sell .oneProduct .oneProduct_img > img,
+#home .product_recom .oneProduct .oneProduct_img > img {
+  width: 271px;
+  height: 271px;
+}
+#home .product_sell .oneProduct .oneProduct_desc,
+#home .product_recom .oneProduct .oneProduct_desc {
+  box-sizing: border-box;
   width: 271px;
   height: 60px;
+  padding: 10px;
   background-color: #585858;
 }
 #home .product_recommend {

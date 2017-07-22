@@ -31,45 +31,43 @@
         <div class="carouselArea">
             <el-carousel height="342px">
                 <el-carousel-item v-for="item in 4" :key="item">
-                    <h3>~{ item }</h3>
+                    <img src="/images/ali.jpg" />
                 </el-carousel-item>
             </el-carousel>
         </div>
         <!--产品导航模块-->
         <div class="product_nav">
-            <div class="oneProduct" v-for="n in 4">
-                <p class="oneProduct_img">
-
+            <div class="oneProduct_nav" v-for="n in 4">
+                <p class="oneProduct_nav_img">
+                    <img src="/images/ali.jpg" />
                 </p>
-                <p class="oneProduct_desc">
-                    产品详情产品详情产品详情产品详情
-                    产品详情产品详情产品详情
-                </p>
+                <div class="oneProduct_nav_desc">
+                    <h4>产品标题</h4>
+                    <p>产品详情</p>
+                </div>
             </div>
         </div>
         <!--热销产品模块-->
-        <div class="product_sellWell">
+        <div class="product_sell">
             <h3>热销产品</h3>
             <div class="oneProduct" v-for="n in 4">
                 <p class="oneProduct_img">
-
+                    <img src="/images/ali.jpg" />
                 </p>
                 <p class="oneProduct_desc">
-                    产品详情产品详情产品详情产品详情
-                    产品详情产品详情产品详情
+                    产品标题
                 </p>
             </div>
         </div>
         <!--推荐产品模块-->
-        <div class="product_recommend">
+        <div class="product_recom">
             <h3>推荐产品</h3>
             <div class="oneProduct" v-for="n in 4">
                 <p class="oneProduct_img">
-
+                    <img src="/images/ali.jpg" />
                 </p>
                 <p class="oneProduct_desc">
-                    产品详情产品详情产品详情产品详情
-                    产品详情产品详情产品详情
+                    产品标题
                 </p>
             </div>
         </div>
