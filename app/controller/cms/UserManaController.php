@@ -4,10 +4,10 @@ use \Phalcon\Mvc\Controller;
 /**
  * User: ambi
  * Date: 2017/6/21
- * 轮播图页
+ * 用户管理页
  */
-class CarouselController extends BackendController{
+class UserManaController extends BackendController{
     public function indexAction(){
-        $this->view->render('pages','carousel');
+        $this->view->render('pages','userMana');
     }
 }

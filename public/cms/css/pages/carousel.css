@@ -121,3 +121,47 @@ table {
   position: relative;
   top: 3px;
 }
+#sideBar {
+  width: 180px;
+  height: 600px;
+  padding: 10px 20px;
+  background-color: #222222;
+  position: absolute;
+  top: 56px;
+  left: 0;
+}
+#sideBar > li {
+  cursor: default;
+  height: 50px;
+  line-height: 50px;
+  color: #95a0aa;
+  text-align: center;
+  position: relative;
+}
+#sideBar > li:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+#sideBar > li span {
+  line-height: 80px;
+  font-size: 16px;
+}
+#sideBar > li.active {
+  color: #ceb887;
+  font-weight: 500;
+}
+.ali {
+  display: inline-block;
+  width: 25px;
+  height: 17px;
+  background: url('/images/ali.jpg') no-repeat;
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+#carousel_main {
+  min-width: 1146px;
+  height: 600px;
+  position: absolute;
+  top: 56px;
+  left: 220px;
+}
