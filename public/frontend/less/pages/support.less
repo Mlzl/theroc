@@ -1,7 +1,6 @@
 @import "../common/reset";
 @import "../common/common";
 
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -12,246 +11,234 @@
 .clearfix {
   zoom: 1;
 }
-
-input{
+input {
   box-sizing: border-box;
 }
-
-#support{
-  min-width: 1366px;
-  width:100%;
-  background-color: #ffffff;
-  font-family: MicrosoftYaHei;
-  .support-content{
-    width: 1120px;
-    margin: 0 auto;
-    .banner-container{
-      position: relative;
+#support_main {
+  width: 1120px;
+  margin: 0 auto;
+  .banner-container {
+    position: relative;
+    width: 100%;
+    height: 449px;
+    .img {
       width: 100%;
-      height: 449px;
-      .img{
-        width: 100%;
-        height: 100%;
-      }
-      .search{
-        box-sizing: border-box;
-        width: 561px;
-        height: 167px;
-        opacity: 0.6;
-        background-color: #7d7d7d;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        padding:24px 40px;
-        .title{
-          margin:0;
-          height: 35px;
-          font-family: MicrosoftYaHei;
-          font-size: 30px;
-          text-align: left;
-          color: #ffffff;
-        }
-        .search-tip{
-          margin-top: 19px;
-          font-size: 16px;
-          text-align: left;
-          color: #ffffff;
-        }
-        .productForm{
-          margin-top: 13px;
-          .searchText{
-            float:left;
-            box-sizing: border-box;
-            padding-left:14px;
-            height: 38px;
-            width: 88%;
-            line-height: 38px;
-            border: 1px solid #ffffff;
-          }
-          .submit{
-            float:left;
-            outline: 0;
-            height: 38px;
-            width: 12%;
-          }
-        }
-      }
-
+      height: 100%;
     }
-    .service-nav{
-      ul {
-        display: block;
-        width: 1120px;
-        height: 93px;
-        //letter-spacing:-8px;
-        list-style: none;
-        background-color: #efefef;
-        li {
-          display: inline-block;
-          vertical-align: top;
-          //float: left;
-          color: #5a5a5a;
-          width: 50%;
-          height: 93px;
-          .refunds-icon {
-            background: url("../../image/download.png") 20px 20px no-repeat;
-          }
-          .warranty-icon {
-            background: url("../../image/supportBg.jpg") 20px 20px no-repeat;
-          }
-          i{
-            display: block;
-            margin:16px auto 0 auto;
-            height: 40px;
-            width: 40px;
-          }
-          p{
-            height: 18px;
-            margin-top:10px;
-            line-height:18px;
-            text-align: center;
-          }
-          &:hover {
-            background-color: #25ba80;
-            p{
-              color:#fff;
-            }
-            cursor: pointer;
-            .refunds-icon {
-              background: url("../../image/download.png") 40px 40px no-repeat;
-            }
-            .warranty-icon {
-              background: url("../../image/download.png") 40px 40px no-repeat;
-            }
-          }
+    .search {
+      box-sizing: border-box;
+      width: 561px;
+      height: 167px;
+      opacity: 0.6;
+      background-color: #7d7d7d;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 24px 40px;
+      .title {
+        margin: 0;
+        height: 35px;
+        font-family: MicrosoftYaHei;
+        font-size: 30px;
+        text-align: left;
+        color: #ffffff;
+      }
+      .search-tip {
+        margin-top: 19px;
+        font-size: 16px;
+        text-align: left;
+        color: #ffffff;
+      }
+      .productForm {
+        margin-top: 13px;
+        .searchText {
+          float: left;
+          box-sizing: border-box;
+          padding-left: 14px;
+          height: 38px;
+          width: 88%;
+          line-height: 38px;
+          border: 1px solid #ffffff;
         }
-        .active {
-          background-color: #25ba80;
-          cursor: pointer;
-          p{
-            color:#fff;
-          }
-          .refunds-icon {
-            background: url("../../image/download.png") 40px 40px no-repeat;
-          }
-          .warranty-icon {
-            background: url("../../image/download.png") 40px 40px no-repeat;
-          }
+        .submit {
+          float: left;
+          outline: 0;
+          height: 38px;
+          width: 12%;
         }
       }
     }
-    .module-container{
-      .refunds{
-        width:993px;
-        margin:10px auto;
-        .refunds-header {
-          text-align: center;
-          margin-top: 111px;
-          margin-bottom: 72px;
-          .logo{
-            img{
-              width: 48px;
-              height:40px;
-            }
-          }
-          .header-text {
-            font-size: 30px;
-            text-align: center;
-            color: #585858;
-            margin-left: 66px;
-            line-height:48px;
-          }
-        }
-        .refunds-form {
-          width: 993px;
-          .item-title {
-            font-size: 18px;
-            color: #333333;
-          }
-          .inp-normal {
-            width: 983px;
-            height: 40px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-          }
-          .required{
-            color:#ff0000;
-          }
-          .container, .order, .issue, .images, .form-footer {
-            div {
-              margin-top: 19px;
-            }
-          }
-          .issue {
-            .detail {
-              width: 983px;
-              height: 80px;
-            }
-          }
-          .images {
-            .imageContainer {
-              border: 1px solid #ccc;
-              width: 80px;
-              height: 80px;
-            }
-          }
-          .form-footer {
-            height: 45px;
-            margin-bottom: 121px;
-            .footer-btns {
-              float: right;
-              .input-code {
-                vertical-align: middle;
-                width: 246px;
-                height: 37px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-              }
-              .code {
-                vertical-align: middle;
-                display: inline-block;
-                width: 100px;
-                height: 37px;
-                border: 1px solid #ccc;
-              }
-              .btn {
-                vertical-align: middle;
-                width: 100px;
-                height: 35px;
-                font-size: 16px;
-                color: #fff;
-                border-radius: 4px;
-                border:1px solid transparent;
-              }
-              .submit {
-                background-color: #25ba80;
-              }
-              .reset {
-                background-color: #999999;
-              }
-
-            }
-          }
-        }
-      }
-      .warranty{
-        h2{
-          text-align: center;
-          font-size: 2.4rem;
-          font-weight: 400;
-          color: #3d3938;
-        }
-        .warranty-content,.faqs-content{
-          margin-top:30px;
-          color: #5a5a5a;
-        }
-      }
-    }
-
-
 
   }
+  .service-nav {
+    display: block;
+    width: 1120px;
+    height: 93px;
+    //letter-spacing:-8px;
+    list-style: none;
+    background-color: #efefef;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      //float: left;
+      color: #5a5a5a;
+      width: 49%;
+      height: 93px;
+      .refunds-icon {
+        background: url("/frontend/image/download.png")  no-repeat;
+        background-size:40px 40px;
+      }
+      .warranty-icon {
+        background: url("/frontend/image/supportBg.jpg") no-repeat;
+        background-size:40px 40px;
+      }
+      i {
+        display: block;
+        margin: 16px auto 0 auto;
+        height: 40px;
+        width: 40px;
+      }
+      p {
+        height: 18px;
+        margin-top: 10px;
+        line-height: 18px;
+        text-align: center;
+      }
+      &:hover {
+        background-color: #25ba80;
+        p {
+          color: #fff;
+        }
+        cursor: pointer;
+        .refunds-icon {
+          background: url("../../image/download.png") 40px 40px no-repeat;
+        }
+        .warranty-icon {
+          background: url("../../image/download.png") 40px 40px no-repeat;
+        }
+      }
+    }
+    .active {
+      background-color: #25ba80;
+      cursor: pointer;
+      p {
+        color: #fff;
+      }
+      .refunds-icon {
+        background: url("../../image/download.png") 40px 40px no-repeat;
+      }
+      .warranty-icon {
+        background: url("../../image/download.png") 40px 40px no-repeat;
+      }
+    }
+  }
+  .module-container {
+    .refunds {
+      width: 993px;
+      margin: 10px auto;
+      .refunds-header {
+        text-align: center;
+        margin-top: 111px;
+        margin-bottom: 72px;
+        .logo {
+          img {
+            width: 48px;
+            height: 40px;
+          }
+        }
+        .header-text {
+          font-size: 30px;
+          text-align: center;
+          color: #585858;
+          margin-left: 66px;
+          line-height: 48px;
+        }
+      }
+      .refunds-form {
+        width: 993px;
+        .item-title {
+          font-size: 18px;
+          color: #333333;
+        }
+        .inp-normal {
+          width: 983px;
+          height: 40px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+        .required {
+          color: #ff0000;
+        }
+        .container, .order, .issue, .images, .form-footer {
+          div {
+            margin-top: 19px;
+          }
+        }
+        .issue {
+          .detail {
+            width: 983px;
+            height: 80px;
+          }
+        }
+        .images {
+          .imageContainer {
+            border: 1px solid #ccc;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .form-footer {
+          height: 45px;
+          margin-bottom: 121px;
+          .footer-btns {
+            float: right;
+            .input-code {
+              vertical-align: middle;
+              width: 246px;
+              height: 37px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+            .code {
+              vertical-align: middle;
+              display: inline-block;
+              width: 100px;
+              height: 37px;
+              border: 1px solid #ccc;
+            }
+            .btn {
+              vertical-align: middle;
+              width: 100px;
+              height: 35px;
+              font-size: 16px;
+              color: #fff;
+              border-radius: 4px;
+              border: 1px solid transparent;
+            }
+            .submit {
+              background-color: #25ba80;
+            }
+            .reset {
+              background-color: #999999;
+            }
 
+          }
+        }
+      }
+    }
+    .warranty {
+      h2 {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #3d3938;
+      }
+      .warranty-content, .faqs-content {
+        margin-top: 30px;
+        color: #5a5a5a;
+      }
+    }
+  }
 }
 
 

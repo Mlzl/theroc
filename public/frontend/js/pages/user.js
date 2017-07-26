@@ -1,6 +1,6 @@
 
 var user=new Vue({
-    el:'#user',
+    el:'#user_main',
     delimiters:['~{','}'],
     data:{
         email:'1446418561@qq.com'

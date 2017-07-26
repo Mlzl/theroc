@@ -1,9 +1,9 @@
 
 var support=new Vue({
-    el:'#support',
+    el:'#support_main',
     delimiters:['~{','}'],
     data:{
-         activeTab:'refunds',
+         activeTab:'refunds-tab',
     },
     created:function(){
 

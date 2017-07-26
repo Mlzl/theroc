@@ -221,3 +221,24 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
+#contact_main > h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#contact_main > p {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#contact_main .contantUs {
+  width: 80%;
+  height: 400px;
+  margin: 10px auto;
+  background: #f2f2f2;
+}
+#contact_main .contantUs .emailUs,
+#contact_main .contantUs .callUs {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}

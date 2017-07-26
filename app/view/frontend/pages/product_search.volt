@@ -27,7 +27,7 @@
         {% include "smart/footer.volt" %}
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script src="/plugin/element-ui/lib/index.js"></script>
+    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/product_search.js"></script>
 </body>
