@@ -2,32 +2,32 @@
   display: none;
 }
 
-#topBar{
+#topBar {
   min-width: 1366px;
   height: 56px;
-  position:relative;
-  .logo{
+  position: relative;
+  .logo {
     width: 36px;
     height: 30px;
-    position:absolute;
-    top:13px;
-    left:15px;
+    position: absolute;
+    top: 13px;
+    left: 15px;
   }
-  .topBar_menu{
-    width:560px;
+  .topBar_menu {
+    width: 560px;
     height: 56px;
-    margin:0 auto;
-    li{
-      cursor:pointer;
-      height:40px;
-      line-height:56px;
-      text-align:center;
-      margin:0 30px;
-      float:left;
-      position:relative;
-      &:hover{
-        color:#25ba80;
-        border-bottom:1px solid #25ba80;
+    margin: 0 auto;
+    li {
+      cursor: pointer;
+      height: 40px;
+      line-height: 56px;
+      text-align: center;
+      margin: 0 30px;
+      float: left;
+      position: relative;
+      &:hover {
+        color: #25ba80;
+        border-bottom: 1px solid #25ba80;
       }
       //&:after{
       //  content:' ';
@@ -40,94 +40,138 @@
       //}
     }
   }
-  .topBar_right{
-    position:absolute;
-    top:15px;
-    right:130px;
-    .search{
-      display:inline-block;
-      position:relative;
-      input{
+  .topBar_right {
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    .search {
+      display: inline-block;
+      position: relative;
+      input {
+        box-sizing: border-box;
         width: 180px;
         height: 26px;
+        text-indent: 15px;
+        padding: 0 30px 0 0;
         border-radius: 14px;
         border: solid 1px #5a5a5a;
+        outline: none;
+      }
+      .search_icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url('/images/search_icon.png') no-repeat;
+        position: absolute;
+        top: 5px;
+        right: 8px;
       }
     }
-    .user_icon{
-      display:inline-block;
+    .user_icon {
+      display: inline-block;
+      cursor: pointer;
       width: 16px;
       height: 16px;
-      margin:0 0 0 20px;
-      background:url('/images/logo.png') no-repeat;
-      background-size:16px 16px;
-      position:relative;
-      top:3px;
+      margin: 0 0 0 20px;
+      background: url('/images/user_icon.png') no-repeat;
+      background-size: 16px 16px;
+      position: relative;
+      top: 3px;
     }
   }
 }
-.footer{
+
+#footer {
   box-sizing: border-box;
   min-width: 1366px;
   height: 480px;
-  padding:85px 0 0 130px;
+  padding: 85px 0 0 130px;
   background-color: #585858;
-  .subscribe,.about,.support,.contact{
-    display:inline-block;
-    color:#fff;
+  .subscribe, .about, .support, .contact {
+    display: inline-block;
+    color: #fff;
     font-size: 12px;
-    vertical-align:top;
-    >h4{
+    vertical-align: top;
+    > h4 {
       font-size: 16px;
-      margin:0 0 20px 0;
+      margin: 0 0 20px 0;
     }
   }
-  .subscribe{
-    width:33%;
-    .email_submit{
-      >input{
+  .subscribe {
+    width: 33%;
+    .email_submit {
+      > input {
         width: 277px;
         height: 40px;
-        text-indent:10px;
-        border:none;
+        text-indent: 10px;
+        border: none;
         border-radius: 2px;
-        margin:10px 0;
+        margin: 10px 0;
       }
-      >button{
+      > button {
         width: 78px;
         height: 30px;
-        color:#fff;
+        color: #fff;
         font-size: 14px;
-        font-weight:normal;
-        padding:0;
+        font-weight: normal;
+        padding: 0;
         border: solid 1px #989898;
         background-color: #585858;
       }
     }
-
+    .link {
+      margin:40px 0 0 0;
+      i{
+        display:inline-block;
+        cursor:pointer;
+        width:36px;
+        height:36px;
+        background-repeat: no-repeat;
+        background-size:36px 36px;
+        margin:0 10px 0 0;
+      }
+      .facebook_icon{
+        background:url('/images/facebook_icon.png');
+      }
+      .twitter_icon{
+        background:url('/images/twitter_icon.png');
+      }
+      .google_icon{
+        background:url('/images/google_icon.png');
+      }
+      .youtobe_icon{
+        background:url('/images/youtobe_icon.png');
+      }
+      .instagram_icon{
+        background:url('/images/instagram_icon.png');
+      }
+      .periscope_icon{
+        background:url('/images/periscope_icon.png');
+      }
+    }
   }
-  .about,.support{
-    width:22%;
-    >ul{
-      li{
-        margin:0 0 20px 0;
-        span{
-          cursor:pointer;
-          &:hover{
-            color:#00a7e1;
+  .about, .support {
+    width: 22%;
+    > ul {
+      li {
+        margin: 0 0 20px 0;
+        span {
+          cursor: pointer;
+          &:hover {
+            color: #00a7e1;
           }
         }
 
       }
     }
   }
-  .contact{
-    width:22%;
-    .call,.email{
-      margin:0 0 40px 0;
-      >h4{
+  .contact {
+    width: 22%;
+    .call, .email {
+      margin: 0 0 40px 0;
+      > h4 {
         font-size: 16px;
-        margin:0 0 20px 0;
+        margin: 0 0 20px 0;
       }
     }
   }

@@ -10,6 +10,7 @@
     <div class="topBar_right">
         <p class="search">
             <input type="text" />
+            <i class="search_icon"></i>
         </p>
         <i class="user_icon"></i>
     </div>

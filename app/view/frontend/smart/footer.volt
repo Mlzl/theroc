@@ -1,4 +1,4 @@
-<div class="footer">
+<div id="footer" v-cloak>
     <div class="subscribe">
         <h4>Subscribe</h4>
         <div class="email_submit">
@@ -7,7 +7,7 @@
             <el-button>SUBMIT</el-button>
         </div>
         <div class="link">
-
+            <i v-for="item in linkIcon" :class="item"></i>
         </div>
     </div>
     <div class="about">

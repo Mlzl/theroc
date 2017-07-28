@@ -18,3 +18,17 @@ var topBar=new Vue({
         }
     }
 })
+
+var footer=new Vue({
+    el:'#footer',
+    delimiters:['~{','}'],
+    data:{
+        linkIcon:['facebook_icon','twitter_icon','google_icon','youtobe_icon','instagram_icon','periscope_icon']
+    },
+    created:function(){
+
+    },
+    methods:{
+
+    }
+})
