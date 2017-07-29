@@ -1,15 +1,17 @@
+{% include "common/seo.volt" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>user</title>
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
+    <title>{{title}}</title>
     <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
     <!-- private -->
     <link rel="stylesheet" href="/frontend/css/pages/user.css" >
 </head>
 <body>
-
     <div id="user">
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}

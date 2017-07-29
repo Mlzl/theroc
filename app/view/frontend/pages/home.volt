@@ -1,9 +1,12 @@
+{% include "common/seo.volt" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
-    <title>Title</title>
+    <title>{{title}}</title>
     <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
     <!-- private -->
