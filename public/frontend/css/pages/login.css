@@ -295,8 +295,8 @@ table {
 #login .container .main .welcome {
   font-size: 48px;
   padding-left: 63px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 35px;
 }
 #login .container .main ul {
   list-style: none;
@@ -308,7 +308,7 @@ table {
   height: 48px;
 }
 #login .container .main ul li {
-  margin-bottom: 29px;
+  margin-bottom: 25px;
 }
 #login .container .main ul li .form-td {
   float: left;
@@ -347,6 +347,7 @@ table {
 }
 #login .container .main ul .li1,
 #login .container .main ul .li2 {
+  height: 50px;
   border: 1px solid #5a5a5a;
   border-radius: 3px;
 }
@@ -366,18 +367,26 @@ table {
   font-size: 18px;
   border: 0 solid transparent;
 }
+#login .container .main ul .li1 input:focus,
+#login .container .main ul .li2 input:focus {
+  outline: none;
+}
 #login .container .main ul .li1 .username-icon {
-  height: 40px;
-  width: 40px;
-  margin: 5px;
+  height: 25px;
+  width: 25px;
+  margin: 12px;
 }
 #login .container .main ul .li2 .password-icon {
-  height: 40px;
-  width: 40px;
-  margin: 5px;
+  width: 20px;
+  height: 24px;
+  margin: 14px;
 }
-#login .container .main ul .li3 span:first-child {
-  border-bottom: 1px solid #5a5a5a;
+#login .container .main ul .li3 span:first-child a {
+  text-decoration: underline;
+  color: #5a5a5a;
+}
+#login .container .main ul .li3 span:nth-of-type(2) input {
+  vertical-align: middle;
 }
 #login .container .main ul .li6 {
   height: 50px;

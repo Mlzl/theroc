@@ -32,8 +32,8 @@
       .welcome{
         font-size: 48px;
         padding-left:63px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 35px;
       }
       ul{
         list-style: none;
@@ -44,7 +44,7 @@
           height: 48px;
         }
         li {
-          margin-bottom:29px;
+          margin-bottom:25px;
           .form-td {
             float: left;
           }
@@ -83,6 +83,7 @@
           }
         }
         .li1,.li2{
+          height: 50px;
           border: 1px solid #5a5a5a;
           border-radius: 3px;
           .line{
@@ -99,24 +100,35 @@
             font-size:18px;
             border:0 solid transparent;
           }
+          input:focus{
+            outline:none;
+          }
         }
         .li1{
           .username-icon {
-            height: 40px;
-            width: 40px;
-            margin: 5px;
+            height: 25px;
+            width: 25px;
+            margin: 12px;
           }
         }
         .li2{
           .password-icon{
-            height: 40px;
-            width: 40px;
-            margin: 5px;
+            width: 20px;
+            height: 24px;
+            margin: 14px;
           }
         }
         .li3{
           span:first-child{
-            border-bottom: 1px solid #5a5a5a;
+            a{
+              text-decoration:underline;
+              color:#5a5a5a;
+            }
+          }
+          span:nth-of-type(2){
+            input{
+              vertical-align: middle;
+            }
           }
         }
         .li6{

@@ -12,5 +12,6 @@ var support=new Vue({
         clickTab:function(tabId){
             this.activeTab=tabId;
         }
+
     }
 })

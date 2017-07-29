@@ -344,16 +344,17 @@ input {
 #support_main .service-nav li {
   display: inline-block;
   vertical-align: top;
+  float: left;
   color: #5a5a5a;
-  width: 49%;
+  width: 50%;
   height: 93px;
 }
 #support_main .service-nav li .refunds-icon {
-  background: url("/frontend/image/download.png") no-repeat;
+  background: url("../../../images/refunds_exchanges.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .service-nav li .warranty-icon {
-  background: url("/frontend/image/supportBg.jpg") no-repeat;
+  background: url("../../../images/warranty.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .service-nav li i {
@@ -376,10 +377,12 @@ input {
   color: #fff;
 }
 #support_main .service-nav li:hover .refunds-icon {
-  background: url("../../image/download.png") 40px 40px no-repeat;
+  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
+  background-size: 40px 40px;
 }
 #support_main .service-nav li:hover .warranty-icon {
-  background: url("../../image/download.png") 40px 40px no-repeat;
+  background: url("../../../images/warranty_1.png") no-repeat;
+  background-size: 40px 40px;
 }
 #support_main .service-nav .active {
   background-color: #25ba80;
@@ -389,10 +392,12 @@ input {
   color: #fff;
 }
 #support_main .service-nav .active .refunds-icon {
-  background: url("../../image/download.png") 40px 40px no-repeat;
+  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
+  background-size: 40px 40px;
 }
 #support_main .service-nav .active .warranty-icon {
-  background: url("../../image/download.png") 40px 40px no-repeat;
+  background: url("../../../images/warranty_1.png") no-repeat;
+  background-size: 40px 40px;
 }
 #support_main .module-container .refunds {
   width: 993px;
@@ -426,9 +431,11 @@ input {
   height: 40px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  padding-left: 13px;
 }
 #support_main .module-container .refunds .refunds-form .required {
   color: #ff0000;
+  font-size: 22px;
 }
 #support_main .module-container .refunds .refunds-form .container div,
 #support_main .module-container .refunds .refunds-form .order div,
@@ -459,6 +466,7 @@ input {
   height: 37px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  padding-left: 11px;
 }
 #support_main .module-container .refunds .refunds-form .form-footer .footer-btns .code {
   vertical-align: middle;
@@ -482,14 +490,19 @@ input {
 #support_main .module-container .refunds .refunds-form .form-footer .footer-btns .reset {
   background-color: #999999;
 }
+#support_main .module-container .warranty {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
 #support_main .module-container .warranty h2 {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 18px;
   font-weight: 400;
   color: #3d3938;
 }
 #support_main .module-container .warranty .warranty-content,
 #support_main .module-container .warranty .faqs-content {
   margin-top: 30px;
+  margin-bottom: 30px;
   color: #5a5a5a;
 }

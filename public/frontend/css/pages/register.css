@@ -304,12 +304,23 @@ table {
   border: 1px solid #5a5a5a;
   margin-bottom: 29px;
 }
-#register .container .main form ul li img {
-  vertical-align: middle;
+#register .container .main form ul li .user-icon {
   width: 25px;
   height: 25px;
+  vertical-align: middle;
   margin: 12px;
-  border: 1px solid red;
+}
+#register .container .main form ul li .password-icon {
+  width: 20px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 14px;
+}
+#register .container .main form ul li .again-icon {
+  width: 23px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 12px;
 }
 #register .container .main form ul li .vline {
   vertical-align: middle;
@@ -329,6 +340,9 @@ table {
   font-size: 18px;
   line-height: 47px;
   padding-left: 25px;
+}
+#register .container .main form ul li input:focus {
+  outline: none;
 }
 #register .container .main form .register-footer .registerBtn {
   width: 100%;

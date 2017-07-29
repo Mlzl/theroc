@@ -10,20 +10,20 @@
     <div id="login" v-cloak>
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
-         <form class="container">
+         <div class="container">
              <div class="main">
                 <p class="welcome">Welcome</p>
                 <ul >
                     <li class="clearfix li1">
                         <span class="form-td">
-                            <img class="username-icon" src="" alt="">
+                            <img class="username-icon" src="/images/user.png" alt="">
                         </span>
                         <span class="line form-td"></span>
                         <input class="form-td username" type="text" placeholder="Email Address">
                     </li>
                     <li class="clearfix li2">
                         <span class="form-td">
-                             <img class="password-icon" src="" alt="">
+                             <img class="password-icon"  src="/images/password.png" alt="">
                         </span>
                         <span class="line form-td"></span>
                         <input type="text" class="form-td" placeholder="Password">
@@ -51,7 +51,7 @@
                     </li>
                 </ul>
              </div>
-         </form>
+         </div>
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>

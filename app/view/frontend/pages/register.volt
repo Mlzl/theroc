@@ -19,17 +19,17 @@
                         </div>
                         <ul>
                             <li>
-                                <img class="user-icon" src="" alt="">
+                                <img class="user-icon" src="/images/user.png" alt="user picture">
                                 <span class="vline"></span>
                                 <input type="text" placeholder="Email Address">
                             </li>
                             <li>
-                                <img class="password-icon" src="" alt="">
+                                <img class="password-icon"src="/images/password.png" alt="password picture">
                                 <span class="vline"></span>
                                 <input type="text" placeholder="Password">
                             </li>
                             <li>
-                                <img class="again-icon" src="" alt="">
+                                <img class="again-icon" src="/images/again.png" alt="again picture">
                                 <span class="vline"></span>
                                 <input type="text" placeholder="Password">
                             </li>

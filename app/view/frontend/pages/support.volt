@@ -57,13 +57,13 @@
                         <div class="item-title">Issue Details</div>
                         <div><textarea name="detail" id="" class="detail"></textarea></div>
                     </div>
-                    <div class="images">
+                    <div class="images item-title">
                         <div>Images</div>
                         <div class="imageContainer"></div>
                     </div>
                     <div class="form-footer clearfix">
                         <div class="footer-btns">
-                            <input type="text" class="input-code" placeholder="Copy The CAPTCHA">
+                            <input type="text" id="vertify_code" class="input-code" placeholder="Copy The CAPTCHA">
                             <span class="code"></span>
                             <button class="btn submit">SUBMIT</button>
                             <button class="btn reset">RESET</button>
