@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>user</title>
+    <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
+    <!-- private -->
     <link rel="stylesheet" href="/frontend/css/pages/user.css" >
 </head>
 <body>
@@ -58,9 +60,12 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
+    <!-- element ui -->
+    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/user.js"></script>
 </body>

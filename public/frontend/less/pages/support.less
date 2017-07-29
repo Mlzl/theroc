@@ -188,9 +188,46 @@ input {
         }
         .images {
           .imageContainer {
-            border: 1px solid #ccc;
-            width: 80px;
-            height: 80px;
+            >span{
+              display:inline-block;
+              width: 80px;
+              height: 80px;
+              vertical-align:middle;
+              margin:0 10px 0 0;
+            }
+            .theImage{
+              position:relative;
+              .close_icon{
+                display:inline-block;
+                cursor:pointer;
+                width:15px;
+                height:15px;
+                background:url('/images/ali.jpg') no-repeat;
+                background-size:15px 15px;
+                position:absolute;
+                top:-8px;
+                right:-7px;
+              }
+              img{
+                width:80px;
+                height:80px;
+              }
+            }
+            .imageUpload_btn{
+              cursor:pointer;
+
+              line-height:80px;
+              text-align:center;
+              border: 1px solid #ccc;
+              .add_icon{
+                display:inline-block;
+                width:20px;
+                height:20px;
+                background:url('/images/ali.jpg') no-repeat;
+                background-size:20px 20px;
+              }
+            }
+
           }
         }
         .form-footer {
@@ -198,21 +235,6 @@ input {
           margin-bottom: 121px;
           .footer-btns {
             float: right;
-            .input-code {
-              vertical-align: middle;
-              width: 246px;
-              height: 37px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              padding-left:11px;
-            }
-            .code {
-              vertical-align: middle;
-              display: inline-block;
-              width: 100px;
-              height: 37px;
-              border: 1px solid #ccc;
-            }
             .btn {
               vertical-align: middle;
               width: 100px;

@@ -448,10 +448,43 @@ input {
   width: 983px;
   height: 80px;
 }
-#support_main .module-container .refunds .refunds-form .images .imageContainer {
-  border: 1px solid #ccc;
+#support_main .module-container .refunds .refunds-form .images .imageContainer > span {
+  display: inline-block;
   width: 80px;
   height: 80px;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage {
+  position: relative;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage .close_icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 15px 15px;
+  position: absolute;
+  top: -8px;
+  right: -7px;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage img {
+  width: 80px;
+  height: 80px;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn {
+  cursor: pointer;
+  line-height: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn .add_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 20px 20px;
 }
 #support_main .module-container .refunds .refunds-form .form-footer {
   height: 45px;
@@ -459,21 +492,6 @@ input {
 }
 #support_main .module-container .refunds .refunds-form .form-footer .footer-btns {
   float: right;
-}
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .input-code {
-  vertical-align: middle;
-  width: 246px;
-  height: 37px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding-left: 11px;
-}
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .code {
-  vertical-align: middle;
-  display: inline-block;
-  width: 100px;
-  height: 37px;
-  border: 1px solid #ccc;
 }
 #support_main .module-container .refunds .refunds-form .form-footer .footer-btns .btn {
   vertical-align: middle;
