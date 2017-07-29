@@ -62,6 +62,8 @@
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>-->
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/home.js"></script>
 </body>

@@ -57,6 +57,7 @@
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/login.js"></script>
 </body>
 </html>

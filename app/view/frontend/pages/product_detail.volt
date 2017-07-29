@@ -72,6 +72,7 @@
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/product_detail.js"></script>
 </body>
