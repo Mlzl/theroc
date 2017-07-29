@@ -265,14 +265,13 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
-#register .container {
-  font-family: Microsoft YaHei;
-  position: relative;
+#register_main {
   min-width: 1366px;
   height: 700px;
   background: url("../../image/Koala.jpg");
+  position: relative;
 }
-#register .container .main {
+#register_main .register_box {
   position: absolute;
   width: 570px;
   height: 575px;
@@ -280,49 +279,49 @@ table {
   right: 121px;
   top: 74px;
 }
-#register .container .main form {
+#register_main .register_box form {
   margin-left: 64px;
   width: 447px;
 }
-#register .container .main form .register-header {
+#register_main .register_box form .register-header {
   height: 40px;
   line-height: 40px;
   margin-top: 74px;
   margin-bottom: 51px;
 }
-#register .container .main form .register-header .title {
+#register_main .register_box form .register-header .title {
   font-size: 48px;
 }
-#register .container .main form ul {
+#register_main .register_box form ul {
   width: 447px;
   margin: 0 auto;
   list-style: none;
 }
-#register .container .main form ul li {
+#register_main .register_box form ul li {
   box-sizing: border-box;
   height: 49px;
   border: 1px solid #5a5a5a;
   margin-bottom: 29px;
 }
-#register .container .main form ul li .user-icon {
+#register_main .register_box form ul li .user-icon {
   width: 25px;
   height: 25px;
   vertical-align: middle;
   margin: 12px;
 }
-#register .container .main form ul li .password-icon {
+#register_main .register_box form ul li .password-icon {
   width: 20px;
   height: 24px;
   vertical-align: middle;
   margin: 14px;
 }
-#register .container .main form ul li .again-icon {
+#register_main .register_box form ul li .again-icon {
   width: 23px;
   height: 24px;
   vertical-align: middle;
   margin: 12px;
 }
-#register .container .main form ul li .vline {
+#register_main .register_box form ul li .vline {
   vertical-align: middle;
   display: inline-block;
   width: 1px;
@@ -330,7 +329,7 @@ table {
   height: 39px;
   margin: 5px 0 5px 0;
 }
-#register .container .main form ul li input {
+#register_main .register_box form ul li input {
   vertical-align: top;
   box-sizing: border-box;
   width: 380px;
@@ -341,10 +340,10 @@ table {
   line-height: 47px;
   padding-left: 25px;
 }
-#register .container .main form ul li input:focus {
+#register_main .register_box form ul li input:focus {
   outline: none;
 }
-#register .container .main form .register-footer .registerBtn {
+#register_main .register_box form .register-footer .registerBtn {
   width: 100%;
   border-radius: 3px;
   background-color: #25ba80;

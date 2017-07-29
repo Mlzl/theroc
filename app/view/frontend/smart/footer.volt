@@ -13,14 +13,14 @@
     <div class="about">
         <h4>About</h4>
         <ul>
-            <li><span @click="switchPages(3,$event)">Contact us</span></li>
+            <li><span @click="switchPages(0,$event)">Contact us</span></li>
         </ul>
     </div>
     <div class="support">
         <h4>Support</h4>
         <ul>
-            <li><span @click="switchPages(4,$event)">Refund & Exchange</span></li>
-            <li><span @click="switchPages(5,$event)">Warranty</span></li>
+            <li><span @click="switchPages(1,$event)">Refund & Exchange</span></li>
+            <li><span @click="switchPages(2,$event)">Warranty</span></li>
         </ul>
     </div>
     <div class="contact">

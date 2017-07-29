@@ -12,6 +12,6 @@
             <input type="text" />
             <i class="search_icon"></i>
         </p>
-        <i class="user_icon"></i>
+        <i class="user_icon" @click="switchPages(4,$event)"></i>
     </div>
 </div>

@@ -9,11 +9,12 @@ var topBar=new Vue({
 
     },
     methods:{
-        switchPages:function(type){  //切换页面，0首页、1产品页、2博客、3联系我们
+        switchPages:function(type){  //切换页面，0首页、1产品页、2博客、3联系我们、4登陆
             var page=type==0?'home':
                         type==1?'product':
                             type==2?'community':
-                                type==3?'contact':'';
+                                type==3?'contact':
+                                    type==4?'login':'';
             window.location.href='/'+page;
         }
     }
@@ -29,10 +30,10 @@ var footer=new Vue({
 
     },
     methods:{
-        switchPages:function(type){  //切换页面，3联系我们、4 5支持中心
-            var page= type==3?'contact':
-                        type==4?'support?tab=0':
-                            type==5?'support?tab=1':'';
+        switchPages:function(type){  //切换页面，0联系我们、1 2支持中心
+            var page= type==0?'contact':
+                        type==1?'support?tab=0':
+                            type==2?'support?tab=1':'';
             window.location.href='/'+page;
         },
         toOtherLink:function(link,e){  //跳转至其他外链
