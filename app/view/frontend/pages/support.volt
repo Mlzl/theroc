@@ -18,7 +18,10 @@
                 <div class="search-tip">Search By Product Name</div>
                 <form action="" method="get" class="productForm clearfix">
                     <input type="text" class="searchText">
-                    <button class="submit"></button>
+                    <!--<button class="submit"></button>-->
+                    <span class="submit_btn">
+                        <img  class="searchImg" src="/images/search.png" alt="search">
+                    </span>
                 </form>
 
             </div>
@@ -63,8 +66,6 @@
                     </div>
                     <div class="form-footer clearfix">
                         <div class="footer-btns">
-                            <input type="text" id="vertify_code" class="input-code" placeholder="Copy The CAPTCHA">
-                            <span class="code"></span>
                             <button class="btn submit">SUBMIT</button>
                             <button class="btn reset">RESET</button>
                         </div>
