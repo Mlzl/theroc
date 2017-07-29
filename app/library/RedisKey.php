@@ -14,5 +14,5 @@ class RedisKey
      */
     const REGISTER_TOKEN_KEY = 'theroc:register:token:';
 
-    const USER_LOGIN_KEY = '';
+    const USER_LOGIN_KEY = 'theroc:login:user:info:';
 }

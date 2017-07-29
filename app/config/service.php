@@ -4,8 +4,7 @@
  * Date: 2016/12/19
  */
 
-
-$config = require "config.php";
+$config =require APP_PATH. "config/config.php";
 require 'router.php';
 $loader = new \Phalcon\Loader();
 $loader->registerNamespaces(array(

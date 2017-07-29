@@ -17,10 +17,10 @@ class UserController extends ApiController{
     public function loginAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $captcha = $this->request->getPost('captcha');
+        /*$captcha = $this->request->getPost('captcha');
         if(!Captcha::verify($captcha)){
             Response::error(Language::CAPTCHA_ERROR);
-        }
+        }*/
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
         }
