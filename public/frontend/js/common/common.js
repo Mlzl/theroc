@@ -29,6 +29,34 @@ var footer=new Vue({
 
     },
     methods:{
-
+        switchPages:function(type){  //切换页面，3联系我们、4 5支持中心
+            var page= type==3?'contact':
+                        type==4?'support?tab=0':
+                            type==5?'support?tab=1':'';
+            window.location.href='/'+page;
+        },
+        toOtherLink:function(link,e){  //跳转至其他外链
+            switch(link)
+            {
+                case 'facebook_icon':
+                    window.open("https://www.facebook.com");
+                    break;
+                case 'twitter_icon':
+                    window.open("https://twitter.com");
+                    break;
+                case 'google_icon':
+                    window.open("https://www.google.com.hk");
+                    break;
+                case 'youtobe_icon':
+                    window.open("https://www.youtube.com");
+                    break;
+                case 'instagram_icon':
+                    window.open("https://www.instagram.com");
+                    break;
+                case 'periscope_icon':
+                    window.open("https://www.periscope.com/");
+                    break;
+            }
+        }
     }
 })
