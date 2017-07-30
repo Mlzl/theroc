@@ -67,6 +67,11 @@ ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommen
 #获取用户相关
 /cms/user/list?page=xx&size=xx
 
+#获取七牛上传token
+/api/auth/getQiNiuToken
+
+#北美上传相关wiki
+https://developer.qiniu.com/kodo/manual/1671/region-endpoint
 
 -------------------------登陆相关--------------------------------------
 
