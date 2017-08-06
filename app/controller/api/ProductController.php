@@ -43,6 +43,19 @@ class ProductController extends ApiController {
         Response::success($class_info);
     }
 
+    public function getAllClassAction(){
+        $class_info = \ProductClass::getAllClass();
+        $classes = array();
+        foreach ($class_info as $item){
+            if($item['pid'] == 0){
+                $classes[$item['id']] = $item;
+            }else{
+                $classes[$item['pid']]['child'][] = $item;
+            }
+        }
+        Response::success($classes);
+    }
+
     public function getCommentsAction(){
         $product_id = $this->request->get('product_id');
         $size = $this->request->get('size', null, 10);
