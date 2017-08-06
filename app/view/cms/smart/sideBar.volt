@@ -27,8 +27,4 @@
         <i class="ali"></i>
         <span>用户管理</span>
     </li>
-    <li @click="switchPages(7)">
-        <i class="ali"></i>
-        <span>数据分析</span>
-    </li>
 </ul>

@@ -29,8 +29,7 @@ var sideBar=new Vue({
                         type==3?'blogMana':
                             type==4?'emailStorage':
                                 type==5?'commentMana':
-                                    type==6?'userMana':
-                                        type==7?'dataAnalysis':'';
+                                    type==6?'userMana':'';
             window.location.href='/cms/'+page;
         }
     }

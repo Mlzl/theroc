@@ -205,10 +205,107 @@ table {
 .el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
   background: #E9F6FF!important;
 }
-#commentMana_main {
+#product_detail_main {
   min-width: 1146px;
   height: 600px;
+  background: #F1F1F1;
   position: absolute;
   top: 56px;
   left: 220px;
+}
+#product_detail_main .head {
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+#product_detail_main .head .tab_ul {
+  height: 40px;
+  margin: 20px 0 20px 40px;
+}
+#product_detail_main .head .tab_ul li {
+  width: 128px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+  float: left;
+}
+#product_detail_main .head .tab_ul li:nth-of-type(1) {
+  border-left: solid 1px #cccccc;
+}
+#product_detail_main .head .tab_ul li:nth-of-type(2) {
+  border-right: solid 1px #cccccc;
+}
+#product_detail_main .head .tab_ul li.active {
+  color: #25ba80;
+  border: solid 1px #25ba80;
+}
+#product_detail_main .head .operation_btn {
+  position: absolute;
+  top: 0;
+  right: 88px;
+}
+#product_detail_main .baseData,
+#product_detail_main .imageText {
+  box-sizing: border-box;
+  width: 1106px;
+  height: 642px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+#product_detail_main .baseData .baseData_see > p,
+#product_detail_main .baseData .baseData_edit > p {
+  min-height: 40px;
+  line-height: 40px;
+}
+#product_detail_main .baseData .baseData_see > p span,
+#product_detail_main .baseData .baseData_edit > p span {
+  display: inline-block;
+  vertical-align: top;
+}
+#product_detail_main .baseData .baseData_see > p > span:nth-of-type(1),
+#product_detail_main .baseData .baseData_edit > p > span:nth-of-type(1) {
+  width: 100px;
+}
+#product_detail_main .baseData .baseData_see > p .classify_attr > span {
+  margin: 0 30px 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img > span {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img > span img {
+  width: 80px;
+  height: 80px;
+}
+#product_detail_main .baseData .baseData_edit > p .classify_attr > input {
+  width: 80px;
+  margin: 0 30px 0 0;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 0 0;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span img {
+  width: 80px;
+  height: 80px;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span:nth-of-type(2) {
+  position: relative;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span:nth-of-type(2) .close_icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 10px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

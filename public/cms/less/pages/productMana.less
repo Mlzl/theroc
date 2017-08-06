@@ -7,4 +7,116 @@
   position:absolute;
   top:56px;
   left:220px;
+  .main_left{
+    width: 260px;
+    height:820px;
+    background:#fff;
+    position:absolute;
+    top:0;
+    left:10px;
+  }
+  .main_right{
+    width: 829px;
+    height:820px;
+    padding:0 30px;
+    margin:0 0 0 251px;
+    position:absolute;
+    top:0;
+    left:0;
+    .main_right_header{
+      height:40px;
+      line-height:40px;
+      position:relative;
+      >h3{
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .add_btn{
+        width: 55px;
+        height: 25px;
+        color:#fff;
+        padding:0;
+        border-radius: 4px;
+        border: solid 1px #25ba80;
+        background:#25ba80;
+        position:absolute;
+        top:8px;
+        right:0;
+      }
+    }
+    .product_table{
+      width: 829px;
+      height: 670px;
+      border-radius: 4px;
+      background:#F1F1F1;
+      .product_thead,.product_tbody{
+        >p{
+          background:#fff;
+          >span{
+            display:inline-block;
+            text-indent:10px;
+            vertical-align: top;
+            &:nth-of-type(1){
+              width:59px;
+            }
+            &:nth-of-type(2){
+              width:190px;
+            }
+            &:nth-of-type(3){
+              width:170px;
+            }
+            &:nth-of-type(4){
+              width:139px;
+            }
+            &:nth-of-type(5){
+              width:150px;
+            }
+          }
+        }
+      }
+      .product_thead{
+        height:40px;
+        line-height:40px;
+        margin:0 0 4px 0;
+      }
+      .product_tbody{
+        color: #2c3347;
+        height:630px;
+        >p{
+          height:50px;
+          line-height:50px;
+          margin:0 0 4px 0;
+          position:relative;
+          >span{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .detail_btn,.delete_btn{
+          width: 55px;
+          height: 25px;
+          color:#25ba80;
+          padding:0;
+          border-radius: 4px;
+          border: solid 1px #25ba80;
+        }
+      }
+    }
+  }
 }
+.addProduct_dialog{
+  width:340px;
+  height:210px;
+  .addProduct_dialog_main{
+    input{
+      height: 32px;
+      line-height:32px;
+      font-size:12px;
+      margin:0 0 12px 0;
+    }
+  }
+}
+
+
