@@ -29,38 +29,30 @@
                 <div class="category">
                     <ul class="primary">
                         <li>
-                            <img src="" />
-                            <p>产品分类1</p>
+                            产品分类1
                             <ul class="secondary">
                                 <li>
-                                    <img src="" />
-                                    <p>二级分类1</p>
+                                    二级分类1
                                 </li>
                                 <li>
-                                    <img src="" />
-                                    <p>二级分类2</p>
+                                    二级分类2
                                 </li>
                                 <li>
-                                    <img src="" />
-                                    <p>二级分类3</p>
+                                    二级分类3
                                 </li>
                                 <li>
-                                    <img src="" />
-                                    <p>二级分类4</p>
+                                    二级分类4
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <img src="" />
-                            <p>产品分类2</p>
+                            产品分类2
                         </li>
                         <li>
-                            <img src="" />
-                            <p>产品分类3</p>
+                            产品分类3
                         </li>
                         <li>
-                            <img src="" />
-                            <p>产品分类4</p>
+                            产品分类4
                         </li>
                     </ul>
                 </div>

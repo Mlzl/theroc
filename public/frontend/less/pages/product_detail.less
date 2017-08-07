@@ -3,6 +3,7 @@
 
 #product_detail_main {
   .productShow {
+    margin:0 0 47px 0;
     .picShow {
       display: inline-block;
       width: 50%;
@@ -46,24 +47,31 @@
         color: #25ba80;
         margin: 0 0 26px 0;
       }
-      > div {
+      > ul {
         margin: 0 0 26px 0;
-        > span {
+        > li {
           display: inline-block;
-          width: 100px;
+          cursor:pointer;
+          padding:3px 5px;
+          border:1px solid #ccc;
+          border-radius:2px;
+          margin: 0 20px 0 0;
         }
-        > ul {
-          > li {
-            display: inline-block;
-            margin: 0 20px 0 0;
-          }
-        }
+      }
+      >button{
+        width: 186px;
+        height: 50px;
+        color:#fff;
+        border:none;
+        border-radius: 3px;
+        background-color: #25ba80;
       }
     }
   }
   .productDesc {
     width: 955px;
     margin: 0 auto;
+    background:#fff;
     .productDesc_header {
       height: 38px;
       line-height: 38px;
@@ -72,6 +80,7 @@
       border: solid 1px #e8e8e8;
       margin: 0 0 5px 0;
       li {
+        cursor:default;
         width: 138px;
         text-align: center;
         float: left;
@@ -91,6 +100,8 @@
       height: 200px;
     }
     .comment {
+      padding:0 0 70px 0;
+      position:relative;
       > h3 {
         font-size: 36px;
         color: #333333;
@@ -124,6 +135,17 @@
             color: #333333;
           }
         }
+      }
+      .comment_btn{
+        width: 186px;
+        height: 50px;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        background-color: #25ba80;
+        position:absolute;
+        bottom:10px;
+        right:20px;
       }
     }
   }

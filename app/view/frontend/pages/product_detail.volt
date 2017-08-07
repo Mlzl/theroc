@@ -30,29 +30,26 @@
                     <h3>PowerCore Fusion 5000mAh Portable Charger</h3>
                     <p>自定义属性</p>
                     <p>$25.99</p>
-                    <div>
-                        <span>color</span>
-                        <ul>
-                            <li>red</li>
-                            <li>blue</li>
-                            <li>green</li>
-                        </ul>
-                    </div>
-                    <el-button>i want buy</el-button>
+                    <ul>
+                        <li>red</li>
+                        <li>blue</li>
+                        <li>green</li>
+                    </ul>
+                    <el-button>BUY NOW</el-button>
                 </div>
             </div>
             <!--图文详情和买家评价-->
             <div class="productDesc">
                 <ul class="productDesc_header">
-                    <li :class="{active:active==1}" @click="activeChange(1)">Highlights</li>
-                    <li :class="{active:active==2}" @click="activeChange(2)">comments</li>
+                    <li :class="{active:tab==0}" @click="tabChange(0)">Highlights</li>
+                    <li :class="{active:tab==1}" @click="tabChange(1)">comments</li>
                 </ul>
                 <!--图文详情-->
-                <div class="imageText">
+                <div v-show="tab==0" class="imageText">
                     这里是图文详情
                 </div>
                 <!--买家评价-->
-                <div class="comment">
+                <div v-show="tab==1" class="comment">
                     <h3>comments</h3>
                     <ul class="comment_list">
                         <li class="oneComment" v-for="n in 5">
@@ -68,7 +65,7 @@
                     <el-pagination small style="text-align:center"
                                    layout="prev, pager, next" :total="50" >
                     </el-pagination>
-                    <el-button>i want comment</el-button>
+                    <el-button class="comment_btn">I WANT COMMENT</el-button>
                 </div>
             </div>
         </div>

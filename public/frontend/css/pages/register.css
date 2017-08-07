@@ -223,7 +223,7 @@ table {
   background: url('/images/facebook_icon.png');
 }
 #footer .subscribe .link .twitter_icon {
-  background: url('/images/twitter.png');
+  background: url('/images/twitter_icon.png');
 }
 #footer .subscribe .link .google_icon {
   background: url('/images/google_icon.png');
@@ -264,6 +264,19 @@ table {
 #footer .contact .email > h4 {
   font-size: 16px;
   margin: 0 0 20px 0;
+}
+.el-pager li:hover,
+.el-pagination button:hover {
+  color: #25ba80;
+}
+.el-pagination button.disabled {
+  color: #e4e4e4;
+}
+.el-pager li.active {
+  cursor: default;
+  color: #fff;
+  border-color: #25ba80;
+  background: #25ba80;
 }
 #register_main {
   min-width: 1366px;

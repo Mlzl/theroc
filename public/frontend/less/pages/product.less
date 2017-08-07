@@ -7,52 +7,50 @@
     height: 342px;
   }
   .product_list{
+    color:#5a5a5a;
     text-align:center;
     margin:0 0 60px 0;
     .category{
       padding:0 97px;
+      margin:0 0 40px 0;
       .primary{
-        height:100px;
+        height:30px;
         text-align:left;
         position:relative;
         >li{
-          width:100px;
-          height:100px;
+          cursor:pointer;
+          height:30px;
+          line-height:30px;
           text-align:center;
+          padding:0 5px;
+          margin:0 10px;
           float:left;
-          margin:0 2px 0 0;
-          background:#ccc;
           &:hover{
+            color: #25ba80;
             .secondary{
               display:block;
+              color:#5a5a5a;
             }
           }
-          >img{
-            width:60px;
-            height:60px;
-          }
-          >p{
-            margin: 10px 0 0 0;
-          }
           .secondary{
-            height:100px;
+            display:none;
+            height:30px;
             text-align:left;
+            background:#E8E8E8;
             position:absolute;
-            top:100px;
+            top:30px;
             left:0;
             >li{
-              width:100px;
-              height:100px;
+              height:20px;
+              line-height:20px;
               text-align:center;
+              padding:0 5px;
+              margin:5px 10px;
               float:left;
-              margin:0 2px 0 0;
-              background:#ccc;
-              >img{
-                width:60px;
-                height:60px;
-              }
-              >p{
-                margin: 10px 0 0 0;
+              &:hover{
+                color:#fff;
+                border-radius: 12px;
+                background-color: #25ba80;
               }
             }
           }
@@ -64,6 +62,13 @@
       width:271px;
       height:331px;
       margin:0 12px 10px 0;
+      &:hover{
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        box-shadow: 0 4px 30px rgba(0,0,0,.15)
+      }
       .oneProduct_img{
         width:271px;
         height:271px;
@@ -77,7 +82,7 @@
         width:271px;
         height:60px;
         padding:10px;
-        background-color: #585858;
+        background-color: #E8E8E8;
       }
     }
   }

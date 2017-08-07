@@ -223,7 +223,7 @@ table {
   background: url('/images/facebook_icon.png');
 }
 #footer .subscribe .link .twitter_icon {
-  background: url('/images/twitter.png');
+  background: url('/images/twitter_icon.png');
 }
 #footer .subscribe .link .google_icon {
   background: url('/images/google_icon.png');
@@ -265,6 +265,19 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
+.el-pager li:hover,
+.el-pagination button:hover {
+  color: #25ba80;
+}
+.el-pagination button.disabled {
+  color: #e4e4e4;
+}
+.el-pager li.active {
+  cursor: default;
+  color: #fff;
+  border-color: #25ba80;
+  background: #25ba80;
+}
 #product_search_main .product_list {
   text-align: center;
   margin: 0 0 60px 0;
@@ -274,6 +287,13 @@ table {
   width: 271px;
   height: 331px;
   margin: 0 12px 10px 0;
+}
+#product_search_main .product_list .oneProduct:hover {
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 #product_search_main .product_list .oneProduct .oneProduct_img {
   width: 271px;
@@ -288,5 +308,5 @@ table {
   width: 271px;
   height: 60px;
   padding: 10px;
-  background-color: #585858;
+  background-color: #E8E8E8;
 }
