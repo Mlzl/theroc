@@ -15,7 +15,7 @@ var support=new Vue({
         clickTab:function(tabId){  //点击tab
             this.activeTab=tabId;
         },
-        initImageUpload(){  //图片上传
+        initImageUpload:function(){  //图片上传
             let _this=this;
             //引入Plupload 、qiniu.js后
             var uploader = Qiniu.uploader({
@@ -120,7 +120,7 @@ var support=new Vue({
             // domain 为七牛空间（bucket)对应的域名，选择某个空间后，可通过"空间设置->基本设置->域名设置"查看获取
             // uploader 为一个plupload对象，继承了所有plupload的方法，参考http://plupload.com/docs
         },
-        imageUpload(e){  //图片上传
+        imageUpload:function(e){  //图片上传
             let imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },

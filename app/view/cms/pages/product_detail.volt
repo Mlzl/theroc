@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.quilljs.com/1.3.1/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
     <link rel="stylesheet" href="/cms/css/pages/product_detail.css" >
 </head>
 <body>
     <div id="product_detail">
+        <!--隐藏部分-->
+        <div id="imageUploadDiv" style="display:none;">
+            <p id="imageUploadBtn">上传图片</p>
+        </div>
         <!--头部栏-->
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
@@ -31,7 +36,7 @@
             <!--基本资料-->
             <div v-show="tab==0" class="baseData">
                 <!--预览状态-->
-                <div v-if="!isEdit" class="baseData_see">
+                <div v-show="!isEdit" class="baseData_see">
                     <p>
                         <span>标题</span>
                         <span>PowerCore Fusion 5000mAh Portable Charger</span>
@@ -50,13 +55,13 @@
                     </p>
                     <p class="cover_img">
                         <span>封面图:</span>
-                        <span>
-                            <img v-for="n in 4"  src=""/>
+                        <span v-for="n in 4">
+                            <img src=""/>
                         </span>
                     </p>
                 </div>
                 <!--编辑状态-->
-                <div v-else class="baseData_edit" >
+                <div v-show="isEdit" class="baseData_edit" >
                     <p>
                         <span>标题</span>
                         <input type="text" />
@@ -87,17 +92,23 @@
             </div>
             <!--图文详情-->
             <div v-show="tab==1" class="imageText">
-                <div v-if="!isEdit" class="imageText_see">
+                <div v-show="!isEdit" class="imageText_see">
                     imageText_see
                 </div>
-                <div v-else class="imageText_edit">
-                    imageText_edit
+                <div v-show="isEdit" class="imageText_edit">
+                    <div id="editor">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
+    <!-- qiniu -->
+    <script src="https://cdn.staticfile.org/plupload/2.1.9/moxie.js"></script>
+    <script src="https://cdn.staticfile.org/plupload/2.1.9/plupload.dev.js"></script>
+    <script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
