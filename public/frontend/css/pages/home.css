@@ -148,6 +148,7 @@ table {
   width: 15px;
   height: 15px;
   background: url('/images/search_icon.png') no-repeat;
+  background-size: 15px 15px;
   position: absolute;
   top: 5px;
   right: 8px;
@@ -215,27 +216,31 @@ table {
   cursor: pointer;
   width: 36px;
   height: 36px;
-  background-repeat: no-repeat;
-  background-size: 36px 36px;
   margin: 0 10px 0 0;
 }
 #footer .subscribe .link .facebook_icon {
-  background: url('/images/facebook_icon.png');
+  background: url('/images/facebook_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .twitter_icon {
-  background: url('/images/twitter_icon.png');
+  background: url('/images/twitter_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .google_icon {
-  background: url('/images/google_icon.png');
+  background: url('/images/google_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .youtobe_icon {
-  background: url('/images/youtobe_icon.png');
+  background: url('/images/youtobe_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .instagram_icon {
-  background: url('/images/instagram_icon.png');
+  background: url('/images/instagram_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .periscope_icon {
-  background: url('/images/periscope_icon.png');
+  background: url('/images/periscope_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .about,
 #footer .support {
@@ -264,6 +269,42 @@ table {
 #footer .contact .email > h4 {
   font-size: 16px;
   margin: 0 0 20px 0;
+}
+.el-dialog {
+  padding: 15px 25px 0 25px;
+  margin: 0;
+}
+.el-dialog__header {
+  font-weight: 300!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  padding: 0!important;
+}
+.el-dialog__body {
+  padding: 0!important;
+}
+.el-dialog__footer {
+  height: 40px!important;
+  line-height: 40px!important;
+  text-align: center!important;
+  padding: 0!important;
+}
+.el-dialog__footer button {
+  width: 85px!important;
+  height: 28px!important;
+  font-size: 12px!important;
+  border-radius: 4px!important;
+  padding: 0!important;
+}
+.el-dialog__footer button:nth-of-type(1) {
+  color: #25ba80!important;
+  border: solid 1px #25ba80!important;
+}
+.el-dialog__footer button:nth-of-type(2) {
+  color: #fff!important;
+  border: none!important;
+  margin: 0 0 0 5px!important;
+  background: #25ba80!important;
 }
 .el-pager li:hover,
 .el-pagination button:hover {

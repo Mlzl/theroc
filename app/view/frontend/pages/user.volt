@@ -20,7 +20,7 @@
                 <div class="overview-item1">
                     <img src="/frontend/image/Koala.jpg" alt="" class="photo">
                     <div class="uploadimg-btn">
-                        <img src="/frontend/image/download.png" alt="" class="uploadimg">
+                        <img src="/images/upload_icon.png" class="uploadimg">
                     </div>
                 </div>
                 <ul class="overview-item2">

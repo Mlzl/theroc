@@ -65,9 +65,21 @@
                     <el-pagination small style="text-align:center"
                                    layout="prev, pager, next" :total="50" >
                     </el-pagination>
-                    <el-button class="comment_btn">I WANT COMMENT</el-button>
+                    <el-button class="comment_btn" @click="showAddComment(true)">I WANT COMMENT</el-button>
                 </div>
             </div>
+            <!--添加评价 弹出框-->
+            <el-dialog title="我要评价" v-model="addComment_show" custom-class="addComment_dialog"
+                       :show-close=false :close-on-click-modal=false>
+                <div class="addComment_dialog_main">
+                    <el-input placeholder="请输入产品标题"></el-input>
+                    <el-input placeholder="请输入自定义属性"></el-input>
+                </div>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="showAddComment(false)">取 消</el-button>
+                    <el-button type="primary" @click="">确 定</el-button>
+                </span>
+            </el-dialog>
         </div>
         <!--底部-->
         {% include "smart/footer.volt" %}
