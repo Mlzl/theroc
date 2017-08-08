@@ -1,45 +1,45 @@
 
-var data=[{
-    id: 1,
-    name: '一级 1',
-    children: [{
-        id: 4,
-        name: '二级 1-1',
-        children: [{
-            id: 9,
-            name: '三级 1-1-1'
-        }, {
-            id: 10,
-            name: '三级 1-1-2'
-        }]
-    }]
-}, {
-    id: 2,
-    name: '一级 2',
-    children: [{
-        id: 5,
-        name: '二级 2-1'
-    }, {
-        id: 6,
-        name: '二级 2-2'
-    }]
-}, {
-    id: 3,
-    name: '一级 3',
-    children: [{
-        id: 7,
-        name: '二级 3-1'
-    }, {
-        id: 8,
-        name: '二级 3-2'
-    }]
-}];
+// var data=[{
+//     id: 1,
+//     name: '一级 1',
+//     children: [{
+//         id: 4,
+//         name: '二级 1-1',
+//         children: [{
+//             id: 9,
+//             name: '三级 1-1-1'
+//         }, {
+//             id: 10,
+//             name: '三级 1-1-2'
+//         }]
+//     }]
+// }, {
+//     id: 2,
+//     name: '一级 2',
+//     children: [{
+//         id: 5,
+//         name: '二级 2-1'
+//     }, {
+//         id: 6,
+//         name: '二级 2-2'
+//     }]
+// }, {
+//     id: 3,
+//     name: '一级 3',
+//     children: [{
+//         id: 7,
+//         name: '二级 3-1'
+//     }, {
+//         id: 8,
+//         name: '二级 3-2'
+//     }]
+// }];
 
 var productMana_main=new Vue({
     el:'#productMana_main',
     delimiters:['~{','}'],
     data:{
-        data:data,  //左侧树数据
+        allClass:[],  //分类,左侧树数据
         defaultProps: {
             children: 'children',
             label: 'name'
@@ -66,9 +66,23 @@ var productMana_main=new Vue({
         addProduct_show:false,  //添加产品弹出框 显示隐藏
     },
     created:function(){
-
+        this.getAllClass();
     },
     methods:{
+        getAllClass:function(){  //获取分类
+            var _this=this;
+            this.$http.get('/api/product/getAllClass').then(function(res){
+                if(res.code==0){
+                    var allClass=res.data;
+
+                    _this.allClass=allClass;
+                }else{
+
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         handleNodeClick:function(data) {
             // console.log(data);
 

@@ -113,10 +113,11 @@ table {
 }
 #topBar .topBar_right .user_icon {
   display: inline-block;
+  cursor: pointer;
   width: 16px;
   height: 16px;
   margin: 0 0 0 20px;
-  background: url('/images/logo.png') no-repeat;
+  background: url('/images/quit_icon.png') no-repeat;
   background-size: 16px 16px;
   position: relative;
   top: 3px;
@@ -148,6 +149,48 @@ table {
 #sideBar > li.active {
   color: #ceb887;
   font-weight: 500;
+}
+#sideBar .areaGraph_icon,
+#sideBar .cog_icon,
+#sideBar .tables_icon,
+#sideBar .email_icon,
+#sideBar .pencil_icon,
+#sideBar .location_icon,
+#sideBar .monitor_icon {
+  display: inline-block;
+  width: 25px;
+  height: 17px;
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+#sideBar .areaGraph_icon {
+  background: url('/images/areaGraph_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .cog_icon {
+  background: url('/images/cog_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .tables_icon {
+  background: url('/images/tables_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .email_icon {
+  background: url('/images/email_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .pencil_icon {
+  background: url('/images/pencil_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .location_icon {
+  background: url('/images/location_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .monitor_icon {
+  background: url('/images/monitor_icon.png') no-repeat;
+  background-size: 25px 17px;
 }
 .ali {
   display: inline-block;
