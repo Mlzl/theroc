@@ -14,4 +14,12 @@ class Library
     public function getErrorMsg(){
         return $this->error_msg;
     }
+
+    public static function array2js($data){
+        $json = '';
+        foreach ($data as $value) {
+            $json .= json_encode($value) . ',';
+        }
+        return '[' . substr($json,0,strlen($json) - 1) . ']';
+    }
 }

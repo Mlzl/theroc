@@ -9,6 +9,7 @@ namespace Roc\ApiController;
 
 use Phalcon\Cache\Frontend\Data;
 use Roc\Library\Language;
+use Roc\Library\Library;
 use Roc\Library\Response;
 
 class ProductController extends ApiController {
@@ -53,7 +54,7 @@ class ProductController extends ApiController {
                 $classes[$item['pid']]['child'][] = $item;
             }
         }
-        $classes = array_values($classes);
+        $classes = Library::array2js(array_values($classes));
         Response::success($classes);
     }
 
