@@ -48,11 +48,12 @@ class ProductController extends ApiController {
         $classes = array();
         foreach ($class_info as $item){
             if($item['pid'] == 0){
-                $classes[] = $item;
+                $classes[$item['id']] = $item;
             }else{
                 $classes[$item['pid']]['child'][] = $item;
             }
         }
+        $classes = array_values($classes);
         Response::success($classes);
     }
 
