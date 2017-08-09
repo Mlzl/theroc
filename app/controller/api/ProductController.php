@@ -17,11 +17,14 @@ class ProductController extends ApiController {
         $size = $this->request->get('size', null, 20);
         $page = $this->request->get('page', null, 1);
         $class_id = $this->request->get('class_id');
-        if(!$class_id){
-            Response::error(Language::LOST_CLASS_ID);
-        }
         $product_model = new \Product();
-        $products_info = $product_model->getProductByClassId($class_id, $page, $size);
+
+        if($class_id == 0){
+            $products_info = $product_model->getProduct($page, $size);
+        }else{
+            $products_info = $product_model->getProductByClassId($class_id, $page, $size);
+
+        }
         Response::success($products_info);
     }
 
