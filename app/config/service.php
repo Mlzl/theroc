@@ -50,7 +50,7 @@ $di->setShared(
         $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
         $volt->setOptions(
             [
-                "compiledPath"      => "../app/cache/",
+                "compiledPath"      => APP_PATH."cache/",
             ]
         );
         return $volt;
