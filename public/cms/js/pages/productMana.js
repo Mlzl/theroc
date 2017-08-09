@@ -1,47 +1,15 @@
 
-// var data=[{
-//     id: 1,
-//     name: '一级 1',
-//     children: [{
-//         id: 4,
-//         name: '二级 1-1',
-//         children: [{
-//             id: 9,
-//             name: '三级 1-1-1'
-//         }, {
-//             id: 10,
-//             name: '三级 1-1-2'
-//         }]
-//     }]
-// }, {
-//     id: 2,
-//     name: '一级 2',
-//     children: [{
-//         id: 5,
-//         name: '二级 2-1'
-//     }, {
-//         id: 6,
-//         name: '二级 2-2'
-//     }]
-// }, {
-//     id: 3,
-//     name: '一级 3',
-//     children: [{
-//         id: 7,
-//         name: '二级 3-1'
-//     }, {
-//         id: 8,
-//         name: '二级 3-2'
-//     }]
-// }];
-
 var productMana_main=new Vue({
     el:'#productMana_main',
     delimiters:['~{','}'],
     data:{
-        allClass:[],  //分类,左侧树数据
+        tree_data:[{
+            id:'0',
+            name:'全部',
+            child:[]
+        }],  //分类,左侧树数据
         defaultProps: {
-            children: 'children',
+            children: 'child',
             label: 'name'
         },
         defaultexpandedKeys:['0'],
@@ -51,7 +19,7 @@ var productMana_main=new Vue({
             children: []
         },
         curNodeKey:'0',  //当前选中节点
-        curNodeUserList:[],  //当前树节点用户列表
+
         userPageSize:15,  //当前树节点用户列表每页显示条数
         // userCurPage:1,  //当前树节点用户列表当前页
         userTotalPage:0,  //当前树节点用户列表总页数
@@ -62,7 +30,8 @@ var productMana_main=new Vue({
         treePullMenuShow:false,  //树节点下拉菜单 显示隐藏
         memberOperMenuShow:false,  //每个成员操作菜单 显示隐藏
         addDepartShow:false,  //添加部门弹出框 显示隐藏
-
+        //
+        curProductList:[],  //当前分类产品列表
         addProduct_show:false,  //添加产品弹出框 显示隐藏
     },
     created:function(){
@@ -72,10 +41,12 @@ var productMana_main=new Vue({
         getAllClass:function(){  //获取分类
             var _this=this;
             this.$http.get('/api/product/getAllClass').then(function(res){
-                if(res.code==0){
-                    var allClass=res.data;
+                var _res=res.body;
+                var data=JSON.parse(_res.data);
+                if(_res.code==0){
+                    var allClass=data;
 
-                    _this.allClass=allClass;
+                    _this.tree_data[0].child=allClass;
                 }else{
 
                 }

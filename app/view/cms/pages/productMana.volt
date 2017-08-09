@@ -14,7 +14,7 @@
         {% include "smart/sideBar.volt" %}
         <div id="productMana_main">
             <div class="main_left">
-                <el-tree :data="allClass" :props="defaultProps" node-key="id"
+                <el-tree :data="tree_data" :props="defaultProps" node-key="id"
                          :default-expanded-keys="defaultexpandedKeys"
                          :highlight-current=true :expand-on-click-node=false
                          :current-node-key="curNodeKey"
