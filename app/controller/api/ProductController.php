@@ -54,7 +54,7 @@ class ProductController extends ApiController {
                 $classes[$item['pid']]['child'][] = $item;
             }
         }
-        $classes = array_values($classes);
+        $classes = Library::array2js(array_values($classes));
         Response::success($classes);
     }
 
