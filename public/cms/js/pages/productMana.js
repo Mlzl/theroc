@@ -3,6 +3,21 @@ var productMana_main=new Vue({
     el:'#productMana_main',
     delimiters:['~{','}'],
     data:{
+
+        defaultexpandedKeys:['0'],
+
+        curNodeKey:'0',  //当前选中节点
+
+
+        userTotalPage:0,  //当前树节点用户列表总页数
+        curNodeUserListLoading:true,  //当前树节点用户列表loading 显示隐藏
+        curClickUser:{},  //当前点击用户
+        departNewName:'',  //修改的部门新名称
+        addDepartName:'',  //添加的新部门名称
+        treePullMenuShow:false,  //树节点下拉菜单 显示隐藏
+        memberOperMenuShow:false,  //每个成员操作菜单 显示隐藏
+        addDepartShow:false,  //添加部门弹出框 显示隐藏
+        //左侧树数据（分类）
         tree_data:[{
             id:'0',
             name:'全部',
@@ -12,51 +27,138 @@ var productMana_main=new Vue({
             children: 'child',
             label: 'name'
         },
-        defaultexpandedKeys:['0'],
         curNode:{  //当前点击节点
-            id:'1',
-            name:'一级 1',
-            children: []
+            id:'0',
+            name:'全部',
+            child: []
         },
-        curNodeKey:'0',  //当前选中节点
-
-        userPageSize:15,  //当前树节点用户列表每页显示条数
-        // userCurPage:1,  //当前树节点用户列表当前页
-        userTotalPage:0,  //当前树节点用户列表总页数
-        curNodeUserListLoading:true,  //当前树节点用户列表loading 显示隐藏
-        curClickUser:{},  //当前点击用户
-        departNewName:'',  //修改的部门新名称
-        addDepartName:'',  //添加的新部门名称
-        treePullMenuShow:false,  //树节点下拉菜单 显示隐藏
-        memberOperMenuShow:false,  //每个成员操作菜单 显示隐藏
-        addDepartShow:false,  //添加部门弹出框 显示隐藏
         //
         curProductList:[],  //当前分类产品列表
+        curProductList_size:15,  //当前分类产品列表每页显示条数
+        curProductList_page:1,  //当前分类产品列表当前页
+        //添加、修改分类
+        addOrModify:0,  //添加或修改，0添加，1修改
+        addClass_show:false,  //添加分类弹出框 显示隐藏
+        class_name:'',  //分类名称
+        //添加产品
         addProduct_show:false,  //添加产品弹出框 显示隐藏
+        product_name:'',  //产品标题
+        custom_attr:'',  //自定义属性
     },
     created:function(){
         this.getAllClass();
+        this.getCurProductList()
     },
     methods:{
+        //异步请求方法
         getAllClass:function(){  //获取分类
             var _this=this;
             this.$http.get('/api/product/getAllClass').then(function(res){
                 var _res=res.body;
-                var data=JSON.parse(_res.data);
                 if(_res.code==0){
-                    var allClass=data;
+                    var allClass=_res.data;
 
                     _this.tree_data[0].child=allClass;
                 }else{
-
+                    _this.$message(_res.msg);
                 }
             }, function(err){
                 console.log(err);
             });
         },
+        getCurProductList:function(){  //获取当前分类产品列表
+            var _this=this;
+            var class_id=this.curNode.id;
+            var curProductList_size=this.curProductList_size;
+            var curProductList_page=this.curProductList_page;
+            var url='/api/product/getProducts?class_id='+class_id+'&size='+curProductList_size+'&page='+curProductList_page;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        addClass:function(){  //添加分类
+            var _this=this;
+            var _data={
+                name:this.class_name,
+                pid:this.curNode.id
+            }
+            console.log(_data)
+            this.$http.post('/cms/product/api_add_class',_data,
+                {
+                    headers:{'Accept': 'application/json', 'Content-type': "application/json"},
+                }).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        modifyClass:function(){  //修改分类
+            var _this=this;
+            var _data={
+                name:this.class_name,
+                class_id:this.curNode.id
+            }
+            console.log(_data)
+            this.$http.post('/cms/product/api_update_class',_data).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        addProduct:function(){  //添加产品
+            var _this=this;
+            var _data={
+                name:this.product_name,
+                class_id:this.curNode.id
+            }
+            console.log(_data)
+            this.$http.post('/cms/product/api_add_product',_data).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        //普通方法
         handleNodeClick:function(data) {
             // console.log(data);
-
+            this.curNode=data;
+            this.getCurProductList()
+        },
+        addOrModifyClass:function(e){  //添加or修改分类
+            var addOrModify=this.addOrModify;
+            if(addOrModify==0){  //添加
+                this.addClass();
+            }else{  //修改
+                this.modifyClass();
+            }
+        },
+        showAddClass:function(addClass_show,addOrModify){  //显示隐藏 添加分类弹出框
+            this.addClass_show=addClass_show;
+            if(addOrModify){  //0添加1修改
+                this.addOrModify=addOrModify;
+            }
         },
         showAddProduct:function(addProduct_show){  //显示隐藏 添加产品弹出框
             this.addProduct_show=addProduct_show;
@@ -64,72 +166,8 @@ var productMana_main=new Vue({
         toDetailPage:function(e){  //to产品详情页
             window.location.href='/cms/productMana/detail';
         },
-        // async getStructure(){  //获取组织的树
-        //     let _this=this,response,_response;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/list', {
-        //             method: 'GET',
-        //             headers: getHeaders_noLog(),
-        //             credentials: 'same-origin',
-        //             // body:JSON.stringify({
-        //             //
-        //             // })
-        //         });
-        //         _response = await response.json();
-        //         _this.dataLoading=false;
-        //         if(_response.code ===0 ){
-        //             let structureData=[{
-        //                 id:'0',
-        //                 name:'全部',
-        //                 children:[]
-        //             }];
-        //             structureData[0].children=_response.data;
-        //             _this.data=structureData;
-        //             _this.memberMove_Data=JSON.parse(JSON.stringify(_response.data))
-        //
-        //             //默认显示全部成员
-        //             let idArray=[],ids='';
-        //             getNodesIdArray(structureData,idArray);
-        //             ids=idArray.join(',');
-        //             _this.getCurNodeUserList(ids)
-        //
-        //         }else if(_response.code===200){
-        //             _this.curNodeUserListLoading=false;
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async getCurNodeUserList(ids){  //获取当前树节点用户列表
-        //     let _this=this,response,_response;
-        //     let page_limit=this.userPageSize,
-        //         page=_this.userCurPage;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/user/list?page_limit='+page_limit+'&page='+page, {
-        //             method: 'POST',
-        //             headers: getHeaders_noLog(),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 ids:ids,
-        //                 page_limit:page_limit,
-        //                 page:page
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         _this.curNodeUserListLoading=false;
-        //         console.log(_this.curNodeUserListLoading)
-        //         console.log(_this.dataLoading)
-        //         if(_response.code ===0 ){
-        //             let curNodeUserList=_response.data.data;
-        //             _this.curNodeUserList=curNodeUserList;
-        //             _this.userTotalPage=_response.data.total;
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
+
+
         // async modifyDepartName(log){  //修改部门名称
         //     let _this=this,response,_response;
         //     let curNode=this.curNode;

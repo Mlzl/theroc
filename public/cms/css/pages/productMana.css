@@ -282,17 +282,21 @@ table {
   font-size: 22px;
   font-weight: 500;
 }
-#productMana_main .main_right .main_right_header .add_btn {
-  width: 55px;
+#productMana_main .main_right .main_right_header .operation_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#productMana_main .main_right .main_right_header .operation_btn .addClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .modifyClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .deleteClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .addProduct_btn {
   height: 25px;
   color: #fff;
-  padding: 0;
+  padding: 0 10px;
   border-radius: 4px;
   border: solid 1px #25ba80;
   background: #25ba80;
-  position: absolute;
-  top: 8px;
-  right: 0;
 }
 #productMana_main .main_right .product_table {
   width: 829px;
@@ -358,6 +362,16 @@ table {
   padding: 0;
   border-radius: 4px;
   border: solid 1px #25ba80;
+}
+.addClass_dialog {
+  width: 340px;
+  height: 155px;
+}
+.addClass_dialog .addClass_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }
 .addProduct_dialog {
   width: 340px;
