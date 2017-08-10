@@ -13,12 +13,16 @@ data:需要的数据
 /api/product/getAllClass
 
 #添加产品分类
-/cms/product/addClass
+/cms/product/api_add_class
 post:{name, pid} ps:pid=0时代表一级分类
 
 #更新产品分类
-/cms/product/updateClass
+/cms/product/api_update_class
 post:{name,class_id}
+
+#删除产品分类
+/cms/product/api_delete_class
+post:{class_id}
 
 #添加产品
 /cms/product/api_add_product
