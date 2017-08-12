@@ -9,9 +9,14 @@ class ProductPicture extends Model{
         return 'theroc_product_picture';
     }
 
-    public function addPicture(){
-
+    public function addPicture($picture_info){
+        $data = array(
+            'product_id'=>$picture_info['product_id'],
+            'path'=>$picture_info['path']
+        );
+        $this->save($data);
     }
+
     public function getPictureByProductId($product_id){
         $pictures = self::find(array(
             'conditions'=>'product_id=:product_id:',

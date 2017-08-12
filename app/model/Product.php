@@ -17,7 +17,8 @@ class Product extends Model{
             'create_time'=>time(),
             'status'=>1,
             'target_url'=>$product_info['target_url'],
-            'label'=>$product_info['label']
+            'label'=>$product_info['label'],
+            'img_txt_detail'=>$product_info['img_txt_detail']
         );
         return $this->save($item);
     }
