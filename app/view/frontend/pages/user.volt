@@ -1,13 +1,17 @@
+{% include "common/seo.volt" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>user</title>
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
+    <title>{{title}}</title>
+    <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
+    <!-- private -->
     <link rel="stylesheet" href="/frontend/css/pages/user.css" >
 </head>
 <body>
-
     <div id="user">
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
@@ -16,7 +20,7 @@
                 <div class="overview-item1">
                     <img src="/frontend/image/Koala.jpg" alt="" class="photo">
                     <div class="uploadimg-btn">
-                        <img src="/frontend/image/download.png" alt="" class="uploadimg">
+                        <img src="/images/upload_icon.png" class="uploadimg">
                     </div>
                 </div>
                 <ul class="overview-item2">
@@ -58,9 +62,12 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
+    <!-- element ui -->
+    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/user.js"></script>
 </body>

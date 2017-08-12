@@ -148,6 +148,7 @@ table {
   width: 15px;
   height: 15px;
   background: url('/images/search_icon.png') no-repeat;
+  background-size: 15px 15px;
   position: absolute;
   top: 5px;
   right: 8px;
@@ -215,27 +216,31 @@ table {
   cursor: pointer;
   width: 36px;
   height: 36px;
-  background-repeat: no-repeat;
-  background-size: 36px 36px;
   margin: 0 10px 0 0;
 }
 #footer .subscribe .link .facebook_icon {
-  background: url('/images/facebook_icon.png');
+  background: url('/images/facebook_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .twitter_icon {
-  background: url('/images/twitter_icon.png');
+  background: url('/images/twitter_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .google_icon {
-  background: url('/images/google_icon.png');
+  background: url('/images/google_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .youtobe_icon {
-  background: url('/images/youtobe_icon.png');
+  background: url('/images/youtobe_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .instagram_icon {
-  background: url('/images/instagram_icon.png');
+  background: url('/images/instagram_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .periscope_icon {
-  background: url('/images/periscope_icon.png');
+  background: url('/images/periscope_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .about,
 #footer .support {
@@ -265,6 +270,55 @@ table {
   font-size: 16px;
   margin: 0 0 20px 0;
 }
+.el-dialog {
+  padding: 15px 25px 0 25px;
+  margin: 0;
+}
+.el-dialog__header {
+  font-weight: 300!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  padding: 0!important;
+}
+.el-dialog__body {
+  padding: 0!important;
+}
+.el-dialog__footer {
+  height: 40px!important;
+  line-height: 40px!important;
+  text-align: center!important;
+  padding: 0!important;
+}
+.el-dialog__footer button {
+  width: 85px!important;
+  height: 28px!important;
+  font-size: 12px!important;
+  border-radius: 4px!important;
+  padding: 0!important;
+}
+.el-dialog__footer button:nth-of-type(1) {
+  color: #25ba80!important;
+  border: solid 1px #25ba80!important;
+}
+.el-dialog__footer button:nth-of-type(2) {
+  color: #fff!important;
+  border: none!important;
+  margin: 0 0 0 5px!important;
+  background: #25ba80!important;
+}
+.el-pager li:hover,
+.el-pagination button:hover {
+  color: #25ba80;
+}
+.el-pagination button.disabled {
+  color: #e4e4e4;
+}
+.el-pager li.active {
+  cursor: default;
+  color: #fff;
+  border-color: #25ba80;
+  background: #25ba80;
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -275,16 +329,13 @@ table {
 .clearfix {
   zoom: 1;
 }
-#login {
-  font-family: Microsoft YaHei;
+#login_main {
   min-width: 1366px;
-}
-#login .container {
-  position: relative;
   height: 700px;
   background: url("../../image/Koala.jpg");
+  position: relative;
 }
-#login .container .main {
+#login_main .login_box {
   position: absolute;
   width: 570px;
   height: 575px;
@@ -292,35 +343,35 @@ table {
   right: 121px;
   top: 74px;
 }
-#login .container .main .welcome {
+#login_main .login_box .welcome {
   font-size: 48px;
   padding-left: 63px;
   margin-top: 30px;
   margin-bottom: 35px;
 }
-#login .container .main ul {
+#login_main .login_box ul {
   list-style: none;
   margin: 0 60px;
   font-size: 18px;
 }
-#login .container .main ul input {
+#login_main .login_box ul input {
   box-sizing: border-box;
   height: 48px;
 }
-#login .container .main ul li {
+#login_main .login_box ul li {
   margin-bottom: 25px;
 }
-#login .container .main ul li .form-td {
+#login_main .login_box ul li .form-td {
   float: left;
 }
-#login .container .main ul li .rememberPassword {
+#login_main .login_box ul li .rememberPassword {
   float: right;
 }
-#login .container .main ul li .checkbox {
+#login_main .login_box ul li .checkbox {
   width: 18px;
   height: 18px;
 }
-#login .container .main ul li .loginBtn {
+#login_main .login_box ul li .loginBtn {
   box-sizing: border-box;
   width: 100%;
   height: 50px;
@@ -330,7 +381,7 @@ table {
   font-size: 20px;
   border: 0px solid transparent;
 }
-#login .container .main ul li .hline {
+#login_main .login_box ul li .hline {
   width: 45%;
   border-bottom: 1px solid #9e9f9f;
   padding: 0;
@@ -339,56 +390,56 @@ table {
   display: inline-block;
   vertical-align: middle;
 }
-#login .container .main ul li .or {
+#login_main .login_box ul li .or {
   width: 10%;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
 }
-#login .container .main ul .li1,
-#login .container .main ul .li2 {
+#login_main .login_box ul .li1,
+#login_main .login_box ul .li2 {
   height: 50px;
   border: 1px solid #5a5a5a;
   border-radius: 3px;
 }
-#login .container .main ul .li1 .line,
-#login .container .main ul .li2 .line {
+#login_main .login_box ul .li1 .line,
+#login_main .login_box ul .li2 .line {
   display: inline-block;
   width: 1px;
   height: 39px;
   background-color: #5a5a5a;
   margin: 5px 0;
 }
-#login .container .main ul .li1 input,
-#login .container .main ul .li2 input {
+#login_main .login_box ul .li1 input,
+#login_main .login_box ul .li2 input {
   width: 390px;
   padding-left: 25px;
   line-height: 1px;
   font-size: 18px;
   border: 0 solid transparent;
 }
-#login .container .main ul .li1 input:focus,
-#login .container .main ul .li2 input:focus {
+#login_main .login_box ul .li1 input:focus,
+#login_main .login_box ul .li2 input:focus {
   outline: none;
 }
-#login .container .main ul .li1 .username-icon {
+#login_main .login_box ul .li1 .username-icon {
   height: 25px;
   width: 25px;
   margin: 12px;
 }
-#login .container .main ul .li2 .password-icon {
+#login_main .login_box ul .li2 .password-icon {
   width: 20px;
   height: 24px;
   margin: 14px;
 }
-#login .container .main ul .li3 span:first-child a {
+#login_main .login_box ul .li3 span:first-child a {
   text-decoration: underline;
   color: #5a5a5a;
 }
-#login .container .main ul .li3 span:nth-of-type(2) input {
+#login_main .login_box ul .li3 span:nth-of-type(2) input {
   vertical-align: middle;
 }
-#login .container .main ul .li6 {
+#login_main .login_box ul .li6 {
   height: 50px;
   border-radius: 3px;
   border: solid 1px #25ba80;

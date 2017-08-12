@@ -34,6 +34,17 @@ class Product extends Model{
         return $products->toArray();
     }
 
+    public function getProduct($page=1, $size=20){
+        $products = self::find(array(
+            'conditions'=>'status=1',
+            'limit'=>array('number'=>$page, 'offset'=>$page*$size),
+        ));
+        if(!$products){
+            return false;
+        }
+        return $products->toArray();
+    }
+
     public static function getProductById($product_id){
         $product = self::findFirst(array(
             'conditions'=>'product_id=:product_id: and status=1',

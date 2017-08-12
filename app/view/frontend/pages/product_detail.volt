@@ -1,9 +1,14 @@
+{% include "common/seo.volt" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
+    <title>{{title}}</title>
+    <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
+    <!-- private -->
     <link rel="stylesheet" href="/frontend/css/pages/product_detail.css" >
 </head>
 <body>
@@ -25,29 +30,26 @@
                     <h3>PowerCore Fusion 5000mAh Portable Charger</h3>
                     <p>自定义属性</p>
                     <p>$25.99</p>
-                    <div>
-                        <span>color</span>
-                        <ul>
-                            <li>red</li>
-                            <li>blue</li>
-                            <li>green</li>
-                        </ul>
-                    </div>
-                    <el-button>i want buy</el-button>
+                    <ul>
+                        <li>red</li>
+                        <li>blue</li>
+                        <li>green</li>
+                    </ul>
+                    <el-button>BUY NOW</el-button>
                 </div>
             </div>
             <!--图文详情和买家评价-->
             <div class="productDesc">
                 <ul class="productDesc_header">
-                    <li :class="{active:active==1}" @click="activeChange(1)">Highlights</li>
-                    <li :class="{active:active==2}" @click="activeChange(2)">comments</li>
+                    <li :class="{active:tab==0}" @click="tabChange(0)">Highlights</li>
+                    <li :class="{active:tab==1}" @click="tabChange(1)">comments</li>
                 </ul>
                 <!--图文详情-->
-                <div class="imageText">
+                <div v-show="tab==0" class="imageText">
                     这里是图文详情
                 </div>
                 <!--买家评价-->
-                <div class="comment">
+                <div v-show="tab==1" class="comment">
                     <h3>comments</h3>
                     <ul class="comment_list">
                         <li class="oneComment" v-for="n in 5">
@@ -63,16 +65,31 @@
                     <el-pagination small style="text-align:center"
                                    layout="prev, pager, next" :total="50" >
                     </el-pagination>
-                    <el-button>i want comment</el-button>
+                    <el-button class="comment_btn" @click="showAddComment(true)">I WANT COMMENT</el-button>
                 </div>
             </div>
+            <!--添加评价 弹出框-->
+            <el-dialog title="我要评价" v-model="addComment_show" custom-class="addComment_dialog"
+                       :show-close=false :close-on-click-modal=false>
+                <div class="addComment_dialog_main">
+                    <el-input placeholder="请输入产品标题"></el-input>
+                    <el-input placeholder="请输入自定义属性"></el-input>
+                </div>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="showAddComment(false)">取 消</el-button>
+                    <el-button type="primary" @click="">确 定</el-button>
+                </span>
+            </el-dialog>
         </div>
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
+    <!-- element ui -->
+    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/product_detail.js"></script>
 </body>

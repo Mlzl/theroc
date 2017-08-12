@@ -9,6 +9,7 @@ namespace Roc\ApiController;
 
 use Phalcon\Cache\Frontend\Data;
 use Roc\Library\Language;
+use Roc\Library\Library;
 use Roc\Library\Response;
 
 class ProductController extends ApiController {
@@ -16,11 +17,14 @@ class ProductController extends ApiController {
         $size = $this->request->get('size', null, 20);
         $page = $this->request->get('page', null, 1);
         $class_id = $this->request->get('class_id');
-        if(!$class_id){
-            Response::error(Language::LOST_CLASS_ID);
-        }
         $product_model = new \Product();
-        $products_info = $product_model->getProductByClassId($class_id, $page, $size);
+
+        if($class_id == 0){
+            $products_info = $product_model->getProduct($page, $size);
+        }else{
+            $products_info = $product_model->getProductByClassId($class_id, $page, $size);
+
+        }
         Response::success($products_info);
     }
 
@@ -41,6 +45,20 @@ class ProductController extends ApiController {
         $pid = $this->request->get('pid');
         $class_info = \ProductClass::findClassByPid($pid);
         Response::success($class_info);
+    }
+
+    public function getAllClassAction(){
+        $class_info = \ProductClass::getAllClass();
+        $classes = array();
+        foreach ($class_info as $item){
+            if($item['pid'] == 0){
+                $classes[$item['id']] = $item;
+            }else{
+                $classes[$item['pid']]['child'][] = $item;
+            }
+        }
+        $classes =(array_values($classes));
+        Response::success($classes);
     }
 
     public function getCommentsAction(){

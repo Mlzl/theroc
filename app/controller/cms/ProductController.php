@@ -92,4 +92,14 @@ class ProductController extends BackendController {
         $this->updateItem($product_class, $data);
         Response::success();
     }
+
+    public function api_delete_classAction(){
+        $class_id = intval($this->request->getPost('class_id'));
+        if(!$class_id){
+            Response::error(Language::LOST_CLASS_ID);
+        }
+        \ProductClass::deleteOneByField($class_id);//删除类
+        \ProductClass::deleteOneByField($class_id, 'pid');//删除子类
+        Response::success();
+    }
 }

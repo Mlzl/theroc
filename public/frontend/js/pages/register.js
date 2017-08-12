@@ -1,6 +1,6 @@
 
 var register=new Vue({
-    el:'#register',
+    el:'#register_main',
     delimiters:['~{','}'],
     data:{
         test:'test'

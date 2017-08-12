@@ -148,6 +148,7 @@ table {
   width: 15px;
   height: 15px;
   background: url('/images/search_icon.png') no-repeat;
+  background-size: 15px 15px;
   position: absolute;
   top: 5px;
   right: 8px;
@@ -215,27 +216,31 @@ table {
   cursor: pointer;
   width: 36px;
   height: 36px;
-  background-repeat: no-repeat;
-  background-size: 36px 36px;
   margin: 0 10px 0 0;
 }
 #footer .subscribe .link .facebook_icon {
-  background: url('/images/facebook_icon.png');
+  background: url('/images/facebook_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .twitter_icon {
-  background: url('/images/twitter_icon.png');
+  background: url('/images/twitter_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .google_icon {
-  background: url('/images/google_icon.png');
+  background: url('/images/google_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .youtobe_icon {
-  background: url('/images/youtobe_icon.png');
+  background: url('/images/youtobe_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .instagram_icon {
-  background: url('/images/instagram_icon.png');
+  background: url('/images/instagram_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .subscribe .link .periscope_icon {
-  background: url('/images/periscope_icon.png');
+  background: url('/images/periscope_icon.png') no-repeat;
+  background-size: 36px 36px;
 }
 #footer .about,
 #footer .support {
@@ -264,6 +269,58 @@ table {
 #footer .contact .email > h4 {
   font-size: 16px;
   margin: 0 0 20px 0;
+}
+.el-dialog {
+  padding: 15px 25px 0 25px;
+  margin: 0;
+}
+.el-dialog__header {
+  font-weight: 300!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  padding: 0!important;
+}
+.el-dialog__body {
+  padding: 0!important;
+}
+.el-dialog__footer {
+  height: 40px!important;
+  line-height: 40px!important;
+  text-align: center!important;
+  padding: 0!important;
+}
+.el-dialog__footer button {
+  width: 85px!important;
+  height: 28px!important;
+  font-size: 12px!important;
+  border-radius: 4px!important;
+  padding: 0!important;
+}
+.el-dialog__footer button:nth-of-type(1) {
+  color: #25ba80!important;
+  border: solid 1px #25ba80!important;
+}
+.el-dialog__footer button:nth-of-type(2) {
+  color: #fff!important;
+  border: none!important;
+  margin: 0 0 0 5px!important;
+  background: #25ba80!important;
+}
+.el-pager li:hover,
+.el-pagination button:hover {
+  color: #25ba80;
+}
+.el-pagination button.disabled {
+  color: #e4e4e4;
+}
+.el-pager li.active {
+  cursor: default;
+  color: #fff;
+  border-color: #25ba80;
+  background: #25ba80;
+}
+#product_detail_main .productShow {
+  margin: 0 0 47px 0;
 }
 #product_detail_main .productShow .picShow {
   display: inline-block;
@@ -309,20 +366,29 @@ table {
   color: #25ba80;
   margin: 0 0 26px 0;
 }
-#product_detail_main .productShow .attrShow > div {
+#product_detail_main .productShow .attrShow > ul {
   margin: 0 0 26px 0;
 }
-#product_detail_main .productShow .attrShow > div > span {
+#product_detail_main .productShow .attrShow > ul > li {
   display: inline-block;
-  width: 100px;
-}
-#product_detail_main .productShow .attrShow > div > ul > li {
-  display: inline-block;
+  cursor: pointer;
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
   margin: 0 20px 0 0;
+}
+#product_detail_main .productShow .attrShow > button {
+  width: 186px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #25ba80;
 }
 #product_detail_main .productDesc {
   width: 955px;
   margin: 0 auto;
+  background: #fff;
 }
 #product_detail_main .productDesc .productDesc_header {
   height: 38px;
@@ -333,6 +399,7 @@ table {
   margin: 0 0 5px 0;
 }
 #product_detail_main .productDesc .productDesc_header li {
+  cursor: default;
   width: 138px;
   text-align: center;
   float: left;
@@ -349,6 +416,10 @@ table {
 }
 #product_detail_main .productDesc .imageText {
   height: 200px;
+}
+#product_detail_main .productDesc .comment {
+  padding: 0 0 70px 0;
+  position: relative;
 }
 #product_detail_main .productDesc .comment > h3 {
   font-size: 36px;
@@ -381,4 +452,25 @@ table {
 #product_detail_main .productDesc .comment .comment_list .oneComment > p:nth-of-type(3) {
   margin: 0 0 7px 0;
   color: #333333;
+}
+#product_detail_main .productDesc .comment .comment_btn {
+  width: 186px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #25ba80;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.addComment_dialog {
+  width: 340px;
+  height: 210px;
+}
+.addComment_dialog .addComment_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }

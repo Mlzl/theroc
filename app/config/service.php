@@ -4,8 +4,7 @@
  * Date: 2016/12/19
  */
 
-
-$config = require "config.php";
+$config =require APP_PATH. "config/config.php";
 require 'router.php';
 $loader = new \Phalcon\Loader();
 $loader->registerNamespaces(array(
@@ -51,7 +50,7 @@ $di->setShared(
         $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
         $volt->setOptions(
             [
-                "compiledPath"      => "../app/cache/",
+                "compiledPath"      => APP_PATH."cache/",
             ]
         );
         return $volt;

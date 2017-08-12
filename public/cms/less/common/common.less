@@ -19,10 +19,11 @@
     right:130px;
     .user_icon{
       display:inline-block;
+      cursor:pointer;
       width: 16px;
       height: 16px;
       margin:0 0 0 20px;
-      background:url('/images/logo.png') no-repeat;
+      background:url('/images/quit_icon.png') no-repeat;
       background-size:16px 16px;
       position:relative;
       top:3px;
@@ -57,6 +58,42 @@
     color:#ceb887;
     font-weight:500;
   }
+  .areaGraph_icon,.cog_icon,.tables_icon,.email_icon,.pencil_icon,.location_icon,.monitor_icon{
+    display:inline-block;
+    width:25px;
+    height:17px;
+    position: absolute;
+    top: 31px;
+    left: 0;
+  }
+  .areaGraph_icon{
+    background:url('/images/areaGraph_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .cog_icon{
+    background:url('/images/cog_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .tables_icon{
+    background:url('/images/tables_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .email_icon{
+    background:url('/images/email_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .pencil_icon{
+    background:url('/images/pencil_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .location_icon{
+    background:url('/images/location_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
+  .monitor_icon{
+    background:url('/images/monitor_icon.png') no-repeat;
+    background-size:25px 17px;
+  }
 }
 
 .ali{
@@ -67,4 +104,51 @@
   position: absolute;
   top: 31px;
   left: 0;
+}
+/*弹出框 强改样式*/
+.el-dialog{
+  padding:15px 25px 0 25px;
+  margin:0;
+}
+.el-dialog__header{
+  font-weight: 300!important;
+  height:40px!important;
+  line-height:40px!important;
+  padding:0!important;
+}
+.el-dialog__body {
+  padding:0!important;
+}
+.el-dialog__footer{
+  height: 40px!important;
+  line-height: 40px!important;
+  text-align: center!important;
+  padding:0!important;
+}
+.el-dialog__footer button{
+  width: 85px!important;
+  height: 28px!important;
+  font-size:12px!important;
+  border-radius: 4px!important;
+  padding:0!important;
+}
+.el-dialog__footer button:nth-of-type(1){
+  color:#25ba80!important;
+  border: solid 1px #25ba80!important;
+}
+.el-dialog__footer button:nth-of-type(2){
+  color:#fff!important;
+  border: none!important;
+  margin:0 0 0 5px!important;
+  background:#25ba80!important;
+}
+/*树 强改样式*/
+.el-tree{
+  border:none!important;
+}
+.el-tree-node__content:hover{
+  background:#e9f6ff!important;
+}
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
+  background:#E9F6FF!important;
 }

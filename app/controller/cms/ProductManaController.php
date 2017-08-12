@@ -10,4 +10,7 @@ class ProductManaController extends BackendController{
     public function indexAction(){
         $this->view->render('pages','productMana');
     }
+    public function detailAction(){
+        $this->view->render('pages','product_detail');
+    }
 }

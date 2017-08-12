@@ -1,10 +1,15 @@
+{% include "common/seo.volt" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{description}}">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">-->
-    <title>Title</title>
+    <title>{{title}}</title>
+    <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
+    <!-- private -->
     <link rel="stylesheet" href="/frontend/css/pages/home.css" >
 </head>
 <body>
@@ -60,10 +65,13 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>-->
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
+    <!-- element ui -->
+    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/home.js"></script>
 </body>

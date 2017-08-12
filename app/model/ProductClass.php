@@ -28,4 +28,12 @@ class ProductClass extends Model{
         }
         return $classes->toArray();
     }
+
+    public static function getAllClass(){
+        $classes = self::find();
+        if(!$classes){
+            return false;
+        }
+        return $classes->toArray();
+    }
 }

@@ -113,10 +113,11 @@ table {
 }
 #topBar .topBar_right .user_icon {
   display: inline-block;
+  cursor: pointer;
   width: 16px;
   height: 16px;
   margin: 0 0 0 20px;
-  background: url('/images/logo.png') no-repeat;
+  background: url('/images/quit_icon.png') no-repeat;
   background-size: 16px 16px;
   position: relative;
   top: 3px;
@@ -149,6 +150,48 @@ table {
   color: #ceb887;
   font-weight: 500;
 }
+#sideBar .areaGraph_icon,
+#sideBar .cog_icon,
+#sideBar .tables_icon,
+#sideBar .email_icon,
+#sideBar .pencil_icon,
+#sideBar .location_icon,
+#sideBar .monitor_icon {
+  display: inline-block;
+  width: 25px;
+  height: 17px;
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+#sideBar .areaGraph_icon {
+  background: url('/images/areaGraph_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .cog_icon {
+  background: url('/images/cog_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .tables_icon {
+  background: url('/images/tables_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .email_icon {
+  background: url('/images/email_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .pencil_icon {
+  background: url('/images/pencil_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .location_icon {
+  background: url('/images/location_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
+#sideBar .monitor_icon {
+  background: url('/images/monitor_icon.png') no-repeat;
+  background-size: 25px 17px;
+}
 .ali {
   display: inline-block;
   width: 25px;
@@ -158,10 +201,185 @@ table {
   top: 31px;
   left: 0;
 }
+/*弹出框 强改样式*/
+.el-dialog {
+  padding: 15px 25px 0 25px;
+  margin: 0;
+}
+.el-dialog__header {
+  font-weight: 300!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  padding: 0!important;
+}
+.el-dialog__body {
+  padding: 0!important;
+}
+.el-dialog__footer {
+  height: 40px!important;
+  line-height: 40px!important;
+  text-align: center!important;
+  padding: 0!important;
+}
+.el-dialog__footer button {
+  width: 85px!important;
+  height: 28px!important;
+  font-size: 12px!important;
+  border-radius: 4px!important;
+  padding: 0!important;
+}
+.el-dialog__footer button:nth-of-type(1) {
+  color: #25ba80!important;
+  border: solid 1px #25ba80!important;
+}
+.el-dialog__footer button:nth-of-type(2) {
+  color: #fff!important;
+  border: none!important;
+  margin: 0 0 0 5px!important;
+  background: #25ba80!important;
+}
+/*树 强改样式*/
+.el-tree {
+  border: none!important;
+}
+.el-tree-node__content:hover {
+  background: #e9f6ff!important;
+}
+.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
+  background: #E9F6FF!important;
+}
 #productMana_main {
   min-width: 1146px;
   height: 600px;
   position: absolute;
   top: 56px;
   left: 220px;
+}
+#productMana_main .main_left {
+  width: 260px;
+  height: 820px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+#productMana_main .main_right {
+  width: 829px;
+  height: 820px;
+  padding: 0 30px;
+  margin: 0 0 0 251px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#productMana_main .main_right .main_right_header {
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+#productMana_main .main_right .main_right_header > h3 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+}
+#productMana_main .main_right .main_right_header .operation_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#productMana_main .main_right .main_right_header .operation_btn .addClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .modifyClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .deleteClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .addProduct_btn {
+  height: 25px;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: solid 1px #25ba80;
+  background: #25ba80;
+}
+#productMana_main .main_right .product_table {
+  width: 829px;
+  height: 670px;
+  border-radius: 4px;
+  background: #F1F1F1;
+}
+#productMana_main .main_right .product_table .product_thead > p,
+#productMana_main .main_right .product_table .product_tbody > p {
+  background: #fff;
+}
+#productMana_main .main_right .product_table .product_thead > p > span,
+#productMana_main .main_right .product_table .product_tbody > p > span {
+  display: inline-block;
+  text-indent: 10px;
+  vertical-align: top;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(1),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(1) {
+  width: 59px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(2),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(2) {
+  width: 190px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(3),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(3) {
+  width: 170px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(4),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(4) {
+  width: 139px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(5),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(5) {
+  width: 150px;
+}
+#productMana_main .main_right .product_table .product_thead {
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 4px 0;
+}
+#productMana_main .main_right .product_table .product_tbody {
+  color: #2c3347;
+  height: 630px;
+}
+#productMana_main .main_right .product_table .product_tbody > p {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 0 4px 0;
+  position: relative;
+}
+#productMana_main .main_right .product_table .product_tbody > p > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#productMana_main .main_right .product_table .product_tbody .detail_btn,
+#productMana_main .main_right .product_table .product_tbody .delete_btn {
+  width: 55px;
+  height: 25px;
+  color: #25ba80;
+  padding: 0;
+  border-radius: 4px;
+  border: solid 1px #25ba80;
+}
+.addClass_dialog {
+  width: 340px;
+  height: 155px;
+}
+.addClass_dialog .addClass_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
+}
+.addProduct_dialog {
+  width: 340px;
+  height: 210px;
+}
+.addProduct_dialog .addProduct_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }

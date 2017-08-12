@@ -1,6 +1,6 @@
 
 var login=new Vue({
-    el:'#login',
+    el:'#login_main',
     delimiters:['~{','}'],
     data:{
         test:'test'
