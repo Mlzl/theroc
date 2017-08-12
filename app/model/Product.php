@@ -27,7 +27,7 @@ class Product extends Model{
         $products = self::find(array(
             'conditions'=>'class_id=:class_id: and status=1',
             'bind'=>array('class_id'=>$class_id),
-            'limit'=>array('number'=>$page, 'offset'=>$page*$size),
+            'limit'=>array('number'=>$size, 'offset'=>($page-1)*$size),
         ));
         if(!$products){
             return false;
@@ -38,7 +38,7 @@ class Product extends Model{
     public function getProduct($page=1, $size=20){
         $products = self::find(array(
             'conditions'=>'status=1',
-            'limit'=>array('number'=>$page, 'offset'=>$page*$size),
+            'limit'=>array('number'=>$size, 'offset'=>($page-1)*$size),
         ));
         if(!$products){
             return false;
