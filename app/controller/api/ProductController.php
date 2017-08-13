@@ -19,6 +19,13 @@ class ProductController extends ApiController {
         if(!$product_id){
             Response::error(Language::PARAM_ERROR);
         }
+        $product_info = \Product::getProductById($product_id);
+        if(!$product_info){
+            Response::error(Language::PRODUCT_NOT_EXISTS);
+        }
+        $product_info = $product_info->toArray();
+        $product_info['attr'] = \ProductAttribute::getAttributeByProductId($product_id);
+        Response::success($product_info);
     }
 
     public function getProductsAction(){

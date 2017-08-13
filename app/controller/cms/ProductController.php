@@ -67,6 +67,19 @@ class ProductController extends BackendController {
         Response::success();
     }
 
+    public function update_product_statusAction(){
+        $status = $this->request->get('update_status');
+        $product_id = $this->request->get('product_id');
+        if(!is_numeric($status) || !in_array($status, \Product::PRODUCT_STATUS) || !$product_id){
+            Response::error(Language::PARAM_ERROR);
+        }
+        $productModel = \Product::getProductById($product_id);
+        if(!$productModel){
+            Response::error(Language::PRODUCT_NOT_EXISTS);
+        }
+        $this->updateItem($productModel, array('status'=>$status));
+    }
+
     public function api_add_classAction(){
         $class_name = $this->request->getPost('name');
         $pid = intval($this->request->getPost('pid'));
