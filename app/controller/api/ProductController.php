@@ -43,6 +43,13 @@ class ProductController extends ApiController {
                 array('conditions'=>'class_id=:class_id: and status=1', 'bind'=>array('class_id'=>$class_id)
                 ));
         }
+        foreach ($products_info as &$product){
+            $attributes = \ProductAttribute::getAttributeByProductId($product['product_id']);
+            if(!$attributes){
+                $attributes = array();
+            }
+            $product['attr'] = $attributes;
+        }
         $data = array(
             'list'=>$products_info,
             'total'=>$total
