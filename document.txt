@@ -86,6 +86,12 @@ ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommen
 #获取用户相关
 /cms/user/list?page=xx&size=xx
 
+#用户信息更新接口
+/api/user/update_profile
+作用
+1、更新字段{user_name, country, state, city, zip_code, sex, cellphone, avatar},
+2、修改密码{password, old_password} # 都是md5格式
+
 #获取七牛上传token
 /api/auth/getQiNiuToken
 

@@ -24,7 +24,7 @@ class BackendController extends Controller{
         }
         $res = $model->update();
         if(!$res){
-            Response::error($model->getMessage);
+            Response::error($model->getMessage());
         }
         return true;
     }

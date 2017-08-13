@@ -27,6 +27,7 @@ class Language{
     const PRODUCT_NOT_EXISTS  =   'product not exists';
     const PRODUCT_LABEL_NOT_EXISTS = 'product label not exists';
     const PARAM_ERROR   = 'params error';
+    const PASSWORD_ERROR = 'password error';
 
 
     public static function getMessage($message){
