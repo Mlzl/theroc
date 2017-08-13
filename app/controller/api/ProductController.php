@@ -13,6 +13,14 @@ use Roc\Library\Library;
 use Roc\Library\Response;
 
 class ProductController extends ApiController {
+
+    public function getProductDetailAction(){
+        $product_id = intval($this->request->get('product_id'));
+        if(!$product_id){
+            Response::error(Language::PARAM_ERROR);
+        }
+    }
+
     public function getProductsAction(){
         $size = $this->request->get('size', null, 20);
         $page = $this->request->get('page', null, 1);
@@ -54,7 +62,9 @@ class ProductController extends ApiController {
             if($item['pid'] == 0){
                 $classes[$item['id']] = $item;
             }else{
-                $classes[$item['pid']]['child'][] = $item;
+                if(isset($classes[$item['pid']])){
+                    $classes[$item['pid']]['child'][] = $item;
+                }
             }
         }
         $classes =(array_values($classes));
@@ -91,9 +101,14 @@ class ProductController extends ApiController {
     }
 
     public function getBannerAction(){
-        $banner_info = \Setting::getSetting(\Setting::BANNER_NAME);
-        if(!$banner_info){
-            $banner_info = array();
+        $banner_type = $this->request->get('banner_type');
+
+        $banner_info = array();
+
+        if($banner_type == \Setting::PRO_BANNER){
+            $banner_info = \Setting::getSetting(\Setting::PRO_BANNER);
+        }elseif($banner_type == \Setting::HOME_BANNER){
+            $banner_info = \Setting::getSetting(\Setting::HOME_BANNER);
         }
         Response::success($banner_info);
     }

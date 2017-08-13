@@ -12,6 +12,9 @@ data:需要的数据
 #获取产品全部分类
 /api/product/getAllClass
 
+#获取banner
+/api/product/getBanner?banner_type=[pro_banner,home_banner]
+
 #添加产品分类
 /cms/product/api_add_class
 post:{name, pid} ps:pid=0时代表一级分类
@@ -28,6 +31,14 @@ post:{class_id}
 /cms/product/api_add_product
 post:{name, class_id, target_url,product_label,img_txt_detail}
 
+
+#添加轮播图
+/cms/setting/api_add_banner
+post:{banner_type, picture_url, target_url} # banner_type in [home_banner, pro_banner]
+
+#删除轮播图
+/cms/setting/api_delete_banner?banner_id=xxx
+
 #更新产品
 /cms/product/api_update_product
 post:{name, class_id, target_url, product_id,img_txt_detail,product_label}
@@ -35,15 +46,6 @@ post:{name, class_id, target_url, product_id,img_txt_detail,product_label}
 #获取产品列表 class_id=类别id
 /api/product/getProducts?size=xx&page=xx&class_id=xx
 
-#获取轮播图
-/api/product/getBanner
-
-#添加轮播图
-/cms/setting/api_add_banner
-post:{target_url, upload_file} ps:upload_file为上传文件名
-
-#删除轮播图
-/cms/setting/api_delete_banner?banner_id=xxx
 
 #获取产品评论
 /api/product/api_get_comments?product_id=xx&page=xx&size=xx
@@ -63,12 +65,12 @@ post:{name, product_id, price, attribute_id}
 #获取产品属性
 /api/product/api_get_attribute?product_id=xx&attribute_id=xx
 
-#获取特殊产品
-/api/product/api_get_special_product?special_label=xx
+#获取特殊设置
+/api/product/getSpecialSetting?special_label=xx
 ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommend#推荐产品}
 
 #设置特殊产品
-/cms/setting/api_add_special_product?product_id=xxx&special_label=xxx
+/cms/setting/api_add_special_product?value=xxx&special_label=xxx
 ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommend#推荐产品}
 
 #获取用户相关

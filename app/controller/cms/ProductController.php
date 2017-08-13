@@ -18,6 +18,7 @@ class ProductController extends BackendController {
         $target_url = $this->request->getPost('target_url');
         $product_label = $this->request->getPost('product_label');
         $product_img_txt_detail = $this->request->getPost('img_txt_detail');
+        $picture_url = $this->request->getPost('picture_url');
         if(!$name || !$class_id || !$target_url){
             Response::error(Language::LOST_PARAMS);
         }
@@ -28,8 +29,9 @@ class ProductController extends BackendController {
             'name'=>$name,
             'class_id'=>$class_id,
             'target_url'=>$target_url,
-            'label'=>$product_label,
-            'img_txt_detail'=>$product_img_txt_detail
+            'label'=>strval($product_label),
+            'img_txt_detail'=>strval($product_img_txt_detail),
+            'picture_url'=>strval($picture_url)
         );
         $productModel->addProduct($data);
         Response::success();
@@ -42,6 +44,8 @@ class ProductController extends BackendController {
         $product_id = $this->request->getPost('product_id');
         $product_label = $this->request->getPost('product_label');
         $product_img_txt_detail = $this->request->getPost('img_txt_detail');
+        $picture_url = $this->request->getPost('picture_url');
+
         if(!$name || !$class_id || !$target_url){
             Response::error(Language::LOST_PARAMS);
         }
@@ -56,7 +60,8 @@ class ProductController extends BackendController {
             'class_id'=>$class_id,
             'target_url'=>$target_url,
             'label'=>$product_label,
-            'img_txt_detail'=>$product_img_txt_detail
+            'img_txt_detail'=>$product_img_txt_detail,
+            'picture_url'=>$picture_url
         );
         $this->updateItem($product_model, $data);
         Response::success();

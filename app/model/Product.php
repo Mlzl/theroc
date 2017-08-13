@@ -15,10 +15,11 @@ class Product extends Model{
             'name'=>$product_info['name'],
             'class_id'=>$product_info['class_id'],
             'create_time'=>time(),
-            'status'=>1,
+            'status'=>2,//0删除 1上架 2下架
             'target_url'=>$product_info['target_url'],
             'label'=>$product_info['label'],
-            'img_txt_detail'=>$product_info['img_txt_detail']
+            'img_txt_detail'=>$product_info['img_txt_detail'],
+            'picture_url'=>$product_info['picture_url']
         );
         return $this->save($item);
     }

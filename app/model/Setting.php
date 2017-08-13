@@ -9,7 +9,12 @@ class Setting extends Model{
     /**
      * 产品轮播图
      */
-    const BANNER_NAME = 'banner';
+    const PRO_BANNER= 'pro_banner';
+
+    /**
+     * 主页轮播图
+     */
+    const HOME_BANNER = 'home_banner';
 
     /**
      * 产品导航

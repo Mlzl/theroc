@@ -17,17 +17,17 @@ class SettingController extends BackendController {
      */
     public function api_add_bannerAction(){
         $target_url = $this->request->getPost('target_url');
-        $upload_lib = new UploadFile();
-        if(!$upload_lib->upload($_FILES['upload_file'])){
-            Response::error($upload_lib->getErrorMsg());
-        }
-        $image_path = $upload_lib->filename;
-        if(!$target_url || !$image_path){
+        $picture_url = $this->request->getPost('picture_url');
+        $banner_type = $this->request->getPost('banner_type');
+        if(!$target_url || !$picture_url){
             Response::error(Language::LOST_PARAMS);
         }
+        if(!in_array($banner_type, array(\Setting::HOME_BANNER, \Setting::PRO_BANNER))){
+            Response::error(Language::PARAM_ERROR);
+        }
         $setting_model = new \Setting();
-        $setting_model->addSetting(\Setting::BANNER_NAME,
-            array('target_url'=>$target_url, 'image_path'=>$image_path));
+        $setting_model->addSetting($banner_type,
+            array('target_url'=>$target_url, 'picture_url'=>$picture_url));
         Response::success();
     }
 
