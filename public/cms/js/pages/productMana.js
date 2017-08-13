@@ -44,6 +44,7 @@ var productMana_main=new Vue({
         addProduct_show:false,  //添加产品弹出框 显示隐藏
         product_name:'',  //产品标题
         custom_attr:'',  //自定义属性
+        target_url:'',  //跳链url
     },
     created:function(){
         this.getAllClass();
@@ -89,14 +90,14 @@ var productMana_main=new Vue({
                 name:this.class_name,
                 pid:this.curNode.id
             }
-            console.log(_data)
-            this.$http.post('/cms/product/api_add_class',_data,
-                {
-                    headers:{'Accept': 'application/json', 'Content-type': "application/json"},
-                }).then(function(res){
+            var url='/cms/product/api_add_class';
+            // console.log(_data)
+            this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-
+                    _this.getAllClass();
+                    _this.addClass_show=false;
+                    _this.$message('添加成功');
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -110,11 +111,34 @@ var productMana_main=new Vue({
                 name:this.class_name,
                 class_id:this.curNode.id
             }
-            console.log(_data)
-            this.$http.post('/cms/product/api_update_class',_data).then(function(res){
+            var url='/cms/product/api_update_class'
+            // console.log(_data)
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-
+                    _this.getAllClass();
+                    _this.addClass_show=false;
+                    _this.$message('修改成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        deleteClass:function(){  //删除分类
+            var _this=this;
+            var _data={
+                class_id:this.curNode.id
+            }
+            var url='/cms/product/api_delete_class'
+            // console.log(_data)
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.getAllClass();
+                    _this.addClass_show=false;
+                    _this.$message('删除成功');
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -125,14 +149,18 @@ var productMana_main=new Vue({
         addProduct:function(){  //添加产品
             var _this=this;
             var _data={
+                class_id:this.curNode.id,
                 name:this.product_name,
-                class_id:this.curNode.id
+                product_label:this.custom_attr,
+                target_url:this.target_url
             }
-            console.log(_data)
-            this.$http.post('/cms/product/api_add_product',_data).then(function(res){
+            var url='/cms/product/api_add_product';
+            // console.log(_data)
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-
+                    _this.addProduct_show=false;
+                    _this.$message('添加成功');
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -146,7 +174,7 @@ var productMana_main=new Vue({
             this.curNode=data;
             this.getCurProductList()
         },
-        addOrModifyClass:function(e){  //添加or修改分类
+        addOrModifyClass_btn:function(e){  //添加or修改分类btn
             var addOrModify=this.addOrModify;
             if(addOrModify==0){  //添加
                 this.addClass();
@@ -154,10 +182,27 @@ var productMana_main=new Vue({
                 this.modifyClass();
             }
         },
+        deleteClass_btn:function(e){  //删除分类btn
+            var _this=this;
+            this.$confirm('确定删除该分类吗?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                _this.deleteClass();
+            }).catch(() => {
+
+            });
+        },
         showAddClass:function(addClass_show,addOrModify){  //显示隐藏 添加分类弹出框
             this.addClass_show=addClass_show;
-            if(addOrModify){  //0添加1修改
+            if(addOrModify!=undefined){  //0添加1修改
                 this.addOrModify=addOrModify;
+            }
+            if(addOrModify==1){
+                this.class_name=this.curNode.name;
+            }else{
+                this.class_name='';
             }
         },
         showAddProduct:function(addProduct_show){  //显示隐藏 添加产品弹出框
@@ -167,231 +212,6 @@ var productMana_main=new Vue({
             window.location.href='/cms/productMana/detail';
         },
 
-
-        // async modifyDepartName(log){  //修改部门名称
-        //     let _this=this,response,_response;
-        //     let curNode=this.curNode;
-        //     let departNewName=this.departNewName;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/'+curNode.id+'/update', {
-        //             method: 'POST',
-        //             headers: getHeaders(log),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 name:departNewName
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         if(_response.code ===0 ){
-        //             _this.getStructure()
-        //             _this.$message.success('修改成功');
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async addDepartSave(log){  //添加新部门 保存
-        //     let _this=this,response,_response;
-        //     let addDepartName=this.addDepartName;
-        //     let curNode=this.curNode;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/create', {
-        //             method: 'POST',
-        //             headers: getHeaders(log),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 name:addDepartName,
-        //                 parent_id:curNode.id
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         if(_response.code ===0 ){
-        //             _this.addDepartShow=false;
-        //             let newNode=_response.data;
-        //             let data=_this.data;
-        //             addTreeChild(data,curNode.id,newNode)
-        //             // _this.getStructure()
-        //             _this.$message.success('添加成功');
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async deleteDepartSave(log){  //删除部门
-        //     let _this=this,response,_response;
-        //     let curNode=this.curNode;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/'+curNode.id+'/delete', {
-        //             method: 'POST',
-        //             headers: getHeaders(log),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         if(_response.code ===0 ){
-        //             _this.getStructure()
-        //             // let data=_this.data;
-        //             this.treePullMenuShow=false;
-        //             _this.$message.success('删除成功');
-        //         } else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async memberMoveSave(log,userId,departId){  //成员移动到弹出框 保存
-        //     let _this=this,response,_response;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/user/'+userId+'/update', {
-        //             method: 'POST',
-        //             headers: getHeaders(log),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 structure_id:departId
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         if(_response.code ===0 ){
-        //             _this.$store.commit('showMemberMove',false)
-        //             _this.$message.success('移动成功');
-        //             _this.memberOperMenuShow=false;
-        //             let idArray=[],ids;
-        //             let treeNodes=[];
-        //             let curNode=this.curNode;
-        //             treeNodes.push(curNode);
-        //             getNodesIdArray(treeNodes,idArray);
-        //             ids=idArray.join(',');
-        //             this.getCurNodeUserList(ids)
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async forbidOrAllow(log,status){  //禁用或启用企业成员
-        //     let _this=this,response,_response;
-        //     let userId=this.curClickUser.id;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/user/'+userId+'/update', {
-        //             method: 'POST',
-        //             headers: getHeaders(log),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 status:status
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         if(_response.code ===0 ){
-        //             if(status==1){
-        //                 _this.$message.success('启用成功');
-        //             }else if(status==2){
-        //                 _this.$message.success('禁用成功');
-        //             }
-        //             _this.memberOperMenuShow=false;
-        //             _this.curClickUser.status=status;
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // async searchMember(){  //搜索成员
-        //     let _this=this,response,_response;
-        //     this.curNodeUserListLoading=true;
-        //     let page_limit=this.userPageSize,
-        //         page=_this.userCurPage;
-        //
-        //     try {
-        //         response = await fetch('api1/structure/user/search?page_limit='+page_limit+'&page='+page, {
-        //             method: 'POST',
-        //             headers: getHeaders_noLog(),
-        //             credentials: 'same-origin',
-        //             body:JSON.stringify({
-        //                 content:_this.searchVal
-        //             })
-        //         });
-        //         _response = await response.json();
-        //         _this.curNodeUserListLoading=false;
-        //         if(_response.code ===0 ){
-        //             let curNodeUserList=_response.data.data;
-        //             _this.curNodeUserList=curNodeUserList;
-        //             _this.userTotalPage=_response.data.total;
-        //         }else{
-        //             _this.$message.error(_response.msg);
-        //         }
-        //     } catch(err) {}
-        // },
-        // modifyDepartNameBtn(e){  ////修改部门名称 回车
-        //     let departNewName=this.departNewName;
-        //     let log='更改某部门名称为【'+departNewName+'】';
-        //     this.modifyDepartName(log);
-        // },
-        // addDepartSaveBtn(e){  //添加新部门 保存按钮
-        //     let addDepartName=this.addDepartName;
-        //     let log='添加新部门【'+addDepartName+'】';
-        //     this.addDepartSave(log)
-        // },
-        // deleteDepartSaveBtn(e){  //删除部门 点击
-        //     let curNode=this.curNode;
-        //     let log='删除部门【'+curNode.name+'】';
-        //     this.deleteDepartSave(log)
-        // },
-        // memberMoveSaveBtn(e){
-        //     let curClickUser=this.curClickUser;
-        //     let memberMove_curNode=this.memberMove_curNode;
-        //     if(memberMove_curNode==null){
-        //         this.$message.warning('请选择部门')
-        //     }else{
-        //         let log='将【'+curClickUser.name+'】移动到【'+memberMove_curNode.name+'】';
-        //         // console.log(log)
-        //         this.memberMoveSave(log,curClickUser.id,memberMove_curNode.id)
-        //     }
-        // },
-        // comMemberContentClick(e){  //点击成员内容的一些操作
-        //     this.treePullMenuShow=false;
-        //     this.memberOperMenuShow=false;
-        // },
-
-        // showTreePullMenu(e){  //树节点下拉菜单 显示
-        //     e.stopPropagation()
-        //     let treePullMenu=document.getElementById('treePullMenu');
-        //     let clientX=e.clientX;
-        //     let clientY=e.clientY;
-        //     let scrollX=document.body.scrollLeft;
-        //     let scrollY=document.body.scrollTop;
-        //     treePullMenu.style.left=(clientX+scrollX)+'px';
-        //     treePullMenu.style.top=(clientY+scrollY)+'px';
-        //     this.treePullMenuShow=true;
-        // },
-        // showMemberOperMenu(curClickUser,e){  //每个成员操作 显示隐藏
-        //     this.curClickUser=curClickUser;
-        //     let memberOperMenu=document.getElementById('memberOperMenu');
-        //     let clientX=e.clientX;
-        //     let clientY=e.clientY;
-        //     let scrollX=document.body.scrollLeft;
-        //     let scrollY=document.body.scrollTop;
-        //     memberOperMenu.style.left=clientX+scrollX+'px';
-        //     memberOperMenu.style.top=clientY+scrollY+'px';
-        //     this.memberOperMenuShow=true;
-        // },
-        // showAddDepartDialog(addDepartShow,e){  //添加部门弹出框 显示隐藏
-        //     this.addDepartShow=addDepartShow;
-        //     this.treePullMenuShow=false;
-        // },
-        // showMemberMoveDialog(memberMoveShow,e){  //成员移动到弹出框 显示隐藏
-        //     this.$store.commit('showMemberMove',memberMoveShow)
-        // },
-        // showMemberData(curClickUser,memberDataShow,e){  //成员资料页面 显示隐藏
-        //     this.curClickUser=curClickUser;
-        //     this.$store.commit('showMemberData',memberDataShow)
-        // },
-        // showSaleApply(saleApplyShow,e){  //销售申请页面 显示隐藏
-        //     this.$store.commit('showSaleApply',saleApplyShow)
-        // },
         // userCurChange(val){  //商家列表翻页时
         //     this.$store.commit('changeUserCurPage',val)
         //     let curNode=this.curNode;

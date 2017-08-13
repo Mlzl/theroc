@@ -26,11 +26,11 @@ post:{class_id}
 
 #添加产品
 /cms/product/api_add_product
-post:{name, class_id, target_url}
+post:{name, class_id, target_url,product_label,img_txt_detail}
 
 #更新产品
 /cms/product/api_update_product
-post:{name, class_id, target_url, product_id}
+post:{name, class_id, target_url, product_id,img_txt_detail,product_label}
 
 #获取产品列表 class_id=类别id
 /api/product/getProducts?size=xx&page=xx&class_id=xx

@@ -27,7 +27,7 @@
                     <div class="operation_btn">
                         <el-button class="addClass_btn" @click="showAddClass(true,0)">添加分类</el-button>
                         <el-button class="modifyClass_btn" @click="showAddClass(true,1)">修改分类</el-button>
-                        <el-button class="deleteClass_btn" @click="">删除分类</el-button>
+                        <el-button class="deleteClass_btn" @click="deleteClass_btn">删除分类</el-button>
                         <el-button class="addProduct_btn" @click="showAddProduct(true)">添加产品</el-button>
                     </div>
                 </div>
@@ -61,22 +61,23 @@
                 <!--</el-pagination>-->
             </div>
             <!--添加、修改分类 弹出框-->
-            <el-dialog title="添加分类" v-model="addClass_show" custom-class="addClass_dialog"
+            <el-dialog :title="addOrModify==0?'添加分类':'修改分类'" v-model="addClass_show" custom-class="addClass_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addClass_dialog_main">
                     <el-input v-model="class_name" placeholder="请输入分类名称"></el-input>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddClass(false)">取 消</el-button>
-                    <el-button type="primary" @click="addOrModifyClass">确 定</el-button>
+                    <el-button type="primary" @click="addOrModifyClass_btn">确 定</el-button>
                 </span>
             </el-dialog>
             <!--添加产品 弹出框-->
             <el-dialog title="添加产品" v-model="addProduct_show" custom-class="addProduct_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addProduct_dialog_main">
-                    <el-input v-modl="product_name" placeholder="请输入产品标题"></el-input>
+                    <el-input v-model="product_name" placeholder="请输入产品标题"></el-input>
                     <el-input v-model="custom_attr" placeholder="请输入自定义属性"></el-input>
+                    <el-input v-model="target_url" placeholder="请输入跳链url"></el-input>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddProduct(false)">取 消</el-button>
