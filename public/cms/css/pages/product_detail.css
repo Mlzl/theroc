@@ -325,6 +325,11 @@ table {
 #product_detail_main .baseData .baseData_edit > p > span:nth-of-type(1) {
   width: 100px;
 }
+#product_detail_main .baseData .baseData_see > p .el-input,
+#product_detail_main .baseData .baseData_edit > p .el-input {
+  display: inline-block;
+  width: 438px;
+}
 #product_detail_main .baseData .baseData_see > p .classify_attr > span {
   margin: 0 30px 0 0;
 }
@@ -336,10 +341,6 @@ table {
 #product_detail_main .baseData .baseData_see .cover_img > span img {
   width: 80px;
   height: 80px;
-}
-#product_detail_main .baseData .baseData_edit > p .classify_attr > input {
-  width: 80px;
-  margin: 0 30px 0 0;
 }
 #product_detail_main .baseData .baseData_edit .cover_img > span {
   width: 80px;

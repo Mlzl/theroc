@@ -38,20 +38,20 @@
                 <!--预览状态-->
                 <div v-show="!isEdit" class="baseData_see">
                     <p>
-                        <span>标题</span>
-                        <span>PowerCore Fusion 5000mAh Portable Charger</span>
+                        <span>标题:</span>
+                        <span>~{productDetail.name}</span>
                     </p>
                     <p>
-                        <span>分类属性</span>
+                        <span>分类属性:</span>
                         <span class="classify_attr">
-                            <span>红色</span><span>50$</span><br/>
-                            <span>白色</span><span>55$</span><br/>
-                            <span>黑色</span><span>60$</span><br/>
+                            <template v-for="(item,index) in productDetail.attr" >
+                                <span>~{item.name}</span><span>~{item.price}$</span><br/>
+                            </template>
                         </span>
                     </p>
                     <p>
-                        <span>自定义属性</span>
-                        <span>自定义属性</span>
+                        <span>自定义属性:</span>
+                        <span>~{productDetail.label}</span>
                     </p>
                     <p class="cover_img">
                         <span>封面图:</span>
@@ -64,29 +64,28 @@
                 <div v-show="isEdit" class="baseData_edit" >
                     <p>
                         <span>标题</span>
-                        <input type="text" />
-                        <!--<el-input v-model=""></el-input>-->
+                        <el-input v-model="productDetail_edit.name"></el-input>
                     </p>
-                    <p>
-                        <span>分类属性</span>
-                        <span class="classify_attr">
-                            <input type="text" /><input type="text" /><br/>
-                            <input type="text" /><input type="text" /><br/>
-                            <input type="text" /><input type="text" /><br/>
-                        </span>
-                    </p>
+                    <!--<p>-->
+                        <!--<span>分类属性</span>-->
+                        <!--<span class="classify_attr">-->
+                            <!--<input type="text" /><input type="text" /><br/>-->
+                            <!--<input type="text" /><input type="text" /><br/>-->
+                            <!--<input type="text" /><input type="text" /><br/>-->
+                        <!--</span>-->
+                    <!--</p>-->
                     <p>
                         <span>自定义属性</span>
-                        <input type="text" />
+                        <el-input v-model="productDetail_edit.label"></el-input>
                     </p>
                     <p class="cover_img">
                         <span>封面图:</span>
-                        <span>
+                        <span v-for="(item,index) in productDetail_edit._picture_url">
                           <i class="close_icon"></i>
-                          <img src="" />
+                          <img :src="item" />
                         </span>
-                        <span>
-                            <img src="" />
+                        <span style="cursor:pointer;" @click="imageUpload">
+                            <img src="/images/ali.jpg" />
                         </span>
                     </p>
                 </div>
@@ -104,12 +103,16 @@
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
     <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
     <!-- qiniu -->
-    <script src="https://cdn.staticfile.org/plupload/2.1.9/moxie.js"></script>
-    <script src="https://cdn.staticfile.org/plupload/2.1.9/plupload.dev.js"></script>
-    <script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>
+    <!--<script src="https://cdn.staticfile.org/plupload/2.1.9/moxie.js"></script>-->
+    <!--<script src="https://cdn.staticfile.org/plupload/2.1.9/plupload.dev.js"></script>-->
+    <!--<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>-->
+    <script src="/plugin/plupload-2.3.1/moxie.js"></script>
+    <script src="/plugin/plupload-2.3.1/plupload.dev.js"></script>
+    <script src="/plugin/qiniu-1.0.21/qiniu.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
