@@ -3,26 +3,15 @@ var productMana_main=new Vue({
     el:'#productMana_main',
     delimiters:['~{','}'],
     data:{
-
-        defaultexpandedKeys:['0'],
-
-        curNodeKey:'0',  //当前选中节点
-
-
-        userTotalPage:0,  //当前树节点用户列表总页数
-        curNodeUserListLoading:true,  //当前树节点用户列表loading 显示隐藏
-        curClickUser:{},  //当前点击用户
-        departNewName:'',  //修改的部门新名称
-        addDepartName:'',  //添加的新部门名称
-        treePullMenuShow:false,  //树节点下拉菜单 显示隐藏
-        memberOperMenuShow:false,  //每个成员操作菜单 显示隐藏
-        addDepartShow:false,  //添加部门弹出框 显示隐藏
+        // curNodeUserListLoading:true,  //当前树节点用户列表loading 显示隐藏
         //左侧树数据（分类）
-        tree_data:[{
+        tree_data:[{  //分类,左侧树数据
             id:'0',
             name:'全部',
             child:[]
-        }],  //分类,左侧树数据
+        }],
+        defaultexpandedKeys:['0'],
+        curNodeKey:'0',  //当前选中节点
         defaultProps: {
             children: 'child',
             label: 'name'
@@ -32,19 +21,25 @@ var productMana_main=new Vue({
             name:'全部',
             child: []
         },
-        //
+        //产品列表
         curProductList:[],  //当前分类产品列表
-        curProductList_size:15,  //当前分类产品列表每页显示条数
+        curProductList_size:10,  //当前分类产品列表每页显示条数
         curProductList_page:1,  //当前分类产品列表当前页
-        //添加、修改分类
+        curProductList_total:0,  //当前分类产品列表总条数
+        curClickProduct:{},  //当前点击产品
+        //添加、修改分类 弹出框
         addOrModify:0,  //添加或修改，0添加，1修改
         addClass_show:false,  //添加分类弹出框 显示隐藏
         class_name:'',  //分类名称
-        //添加产品
+        //添加产品 弹出框
         addProduct_show:false,  //添加产品弹出框 显示隐藏
         product_name:'',  //产品标题
         custom_attr:'',  //自定义属性
         target_url:'',  //跳链url
+        //添加价格 弹出框
+        addPrice_show:false,  //添加价格弹出框 显示隐藏
+        price_attr:'',  //价格属性
+        price:'',  //价格
     },
     created:function(){
         this.getAllClass();
@@ -76,7 +71,23 @@ var productMana_main=new Vue({
             this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
+                    var curProductList=_res.data.list;
+                    var curProductList_total=_res.data.total;
+                    for(var i=0,len=curProductList.length;i<len;i++){
+                        var attr=curProductList[i].attr;
+                        pubMethod.bubbleSort(attr,'price');
+                        if(attr.length==0){
+                            curProductList[i].price='-';
+                        }else if(attr.length==1){
+                            curProductList[i].price='$'+attr[0].price;
+                        }else{
+                            curProductList[i].price='$'+attr[0].price+'~$'+attr[attr.length-1].price;
+                        }
+                    }
 
+                    _this.curProductList=curProductList;
+                    _this.curProductList_total=curProductList_total;
+                    console.log(curProductList)
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -159,7 +170,29 @@ var productMana_main=new Vue({
             this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
+                    _this.getCurProductList();
                     _this.addProduct_show=false;
+                    _this.$message('添加成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        addPrice:function(){  //添加价格
+            var _this=this;
+            var _data={
+                product_id:this.curClickProduct.product_id,
+                name:this.price_attr,
+                price:this.price
+            }
+            var url='/cms/productattribute/api_add';
+            this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.getCurProductList();
+                    _this.addPrice_show=false;
                     _this.$message('添加成功');
                 }else{
                     _this.$message(_res.msg);
@@ -208,20 +241,16 @@ var productMana_main=new Vue({
         showAddProduct:function(addProduct_show){  //显示隐藏 添加产品弹出框
             this.addProduct_show=addProduct_show;
         },
-        toDetailPage:function(e){  //to产品详情页
-            window.location.href='/cms/productMana/detail';
+        showAddPrice:function(addPrice_show,curClickProduct){  //显示隐藏 添加价格弹出框
+            this.addPrice_show=addPrice_show;
+            this.curClickProduct=curClickProduct;
         },
-
-        // userCurChange(val){  //商家列表翻页时
-        //     this.$store.commit('changeUserCurPage',val)
-        //     let curNode=this.curNode;
-        //     this.$store.commit('showSaleApply',false)
-        //     let idArray=[],ids;
-        //     let treeNodes=[];
-        //     treeNodes.push(curNode);
-        //     getNodesIdArray(treeNodes,idArray);
-        //     ids=idArray.join(',');
-        //     this.getCurNodeUserList(ids)
-        // },
+        curProductChange(val){  //产品列表翻页时
+            this.curProductList_page=val;
+            this.getCurProductList();
+        },
+        toDetailPage:function(product_id,e){  //to产品详情页
+            window.location.href='/cms/productMana/detail?product_id='+product_id;
+        },
     }
 })

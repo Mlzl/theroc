@@ -2,7 +2,7 @@ var topBar=new Vue({
     el:'#topBar',
     delimiters:['~{','}'],
     data:{
-        test:'test'
+
     },
     created:function(){
 
@@ -34,3 +34,22 @@ var sideBar=new Vue({
         }
     }
 })
+
+//公共方法
+var pubMethod={
+    bubbleSort:function(arr,attr){  //冒泡排序
+        var i = arr.length, j;
+        var tempExchangVal;
+        while (i > 0) {
+            for (j = 0; j < i - 1; j++) {
+                if (parseFloat(arr[j][attr]) > parseFloat(arr[j + 1][attr])) {
+                    tempExchangVal = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tempExchangVal;
+                }
+            }
+            i--;
+        }
+        // return arr;
+    }
+}

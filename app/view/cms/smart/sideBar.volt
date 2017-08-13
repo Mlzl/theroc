@@ -1,9 +1,10 @@
+
 <ul id="sideBar" v-cloak>
     <li @click="switchPages(0)">
         <i class="areaGraph_icon"></i>
         <span>轮播图</span>
     </li>
-    <li @click="switchPages(1)">
+    <li class="active" @click="switchPages(1)">
         <i class="cog_icon"></i>
         <span>产品管理</span>
     </li>

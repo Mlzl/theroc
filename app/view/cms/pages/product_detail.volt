@@ -65,6 +65,7 @@
                     <p>
                         <span>标题</span>
                         <input type="text" />
+                        <!--<el-input v-model=""></el-input>-->
                     </p>
                     <p>
                         <span>分类属性</span>

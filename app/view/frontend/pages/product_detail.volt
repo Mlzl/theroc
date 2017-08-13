@@ -62,8 +62,8 @@
                             <p>I love Anker products and this all-in-one Battery charger/AC - USB adapter fulfills the need to travel with a USB charger and portable battery. I've lost track of how many portable batteries I have but Anker keeps putting out innovative products that keeps me coming back!The construction quality is great and has a good feel to it. This small unit replaces the need to bring a USB/AC charger and a small portable USB charger. All you need is the cable now. On short trips, I would have no need to bring anything else.</p>
                         </li>
                     </ul>
-                    <el-pagination small style="text-align:center"
-                                   layout="prev, pager, next" :total="50" >
+                    <el-pagination style="text-align:center"
+                                   small layout="prev, pager, next" :total="50" >
                     </el-pagination>
                     <el-button class="comment_btn" @click="showAddComment(true)">I WANT COMMENT</el-button>
                 </div>

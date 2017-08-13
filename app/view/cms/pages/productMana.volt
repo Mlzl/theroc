@@ -1,3 +1,4 @@
+{% set page = 1 %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,28 +38,39 @@
                             <span>序号</span>
                             <span>标题</span>
                             <span>自定义属性</span>
+                            <span>跳转url</span>
                             <span>价格</span>
+                            <!--<span>状态</span>-->
                             <span>操作</span>
                         </p>
                     </div>
                     <div class="product_tbody">
-                        <p v-for="n in 4">
-                            <span>1</span>
-                            <span>我是产品标题</span>
-                            <span>我是产品自定义属性</span>
-                            <span>￥50~￥55</span>
+                        <p v-for="(item,index) in curProductList">
+                            <span>~{index+1}</span>
+                            <span>~{item.name}</span>
+                            <span>~{item.label}</span>
                             <span>
-                                <el-button class="detail_btn" @click="toDetailPage">详情</el-button>
+                                <a :href="item.target_url" target="_blank">~{item.target_url}</a>
+                            </span>
+                            <span>~{item.price}</span>
+                            <!--<span style="cursor:pointer">-->
+                                <!--~{item.status==1?'上架':item.status==2?'下架':''}-->
+                            <!--</span>-->
+                            <span>
+                                <el-button class="addPrice_btn" @click="showAddPrice(true,item)">添加价格</el-button>
+                                <el-button class="detail_btn" @click="toDetailPage(item.product_id)">详情</el-button>
                                 <el-button class="delete_btn">删除</el-button>
                             </span>
                         </p>
                     </div>
                 </div>
-                <!--<el-pagination style="display:flex;justify-content:center;margin:12px 0 0 0;"-->
-                               <!--small layout="prev, pager, next"-->
-                               <!--:page-size="userPageSize" :current-page="userCurPage" :total="userTotalPage"-->
-                               <!--@current-change="userCurChange">-->
-                <!--</el-pagination>-->
+                <el-pagination style="text-align:center"
+                               small layout="prev, pager, next"
+                               :page-size="curProductList_size"
+                               :current-page="curProductList_page"
+                               :total="curProductList_total"
+                               @current-change="curProductChange">
+                </el-pagination>
             </div>
             <!--添加、修改分类 弹出框-->
             <el-dialog :title="addOrModify==0?'添加分类':'修改分类'" v-model="addClass_show" custom-class="addClass_dialog"
@@ -82,6 +94,18 @@
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddProduct(false)">取 消</el-button>
                     <el-button type="primary" @click="addProduct">确 定</el-button>
+                </span>
+            </el-dialog>
+            <!--添加价格 弹出框-->
+            <el-dialog title="添加价格" v-model="addPrice_show" custom-class="addPrice_dialog"
+                       :show-close=false :close-on-click-modal=false>
+                <div class="addPrice_dialog_main">
+                    <el-input v-model="price_attr" placeholder="请输入价格属性"></el-input>
+                    <el-input type="number" step="1" v-model="price" placeholder="请输入价格"></el-input>
+                </div>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="showAddPrice(false)">取 消</el-button>
+                    <el-button type="primary" @click="addPrice">确 定</el-button>
                 </span>
             </el-dialog>
         </div>

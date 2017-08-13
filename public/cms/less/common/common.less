@@ -50,7 +50,6 @@
       margin:0 0 10px 0;
     }
     span{
-      line-height:80px;
       font-size:16px;
     }
   }
@@ -60,39 +59,39 @@
   }
   .areaGraph_icon,.cog_icon,.tables_icon,.email_icon,.pencil_icon,.location_icon,.monitor_icon{
     display:inline-block;
-    width:25px;
-    height:17px;
+    width:18px;
+    height:18px;
     position: absolute;
-    top: 31px;
-    left: 0;
+    top: 16px;
+    left: 8px;
   }
   .areaGraph_icon{
     background:url('/images/areaGraph_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .cog_icon{
     background:url('/images/cog_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .tables_icon{
     background:url('/images/tables_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .email_icon{
     background:url('/images/email_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .pencil_icon{
     background:url('/images/pencil_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .location_icon{
     background:url('/images/location_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
   .monitor_icon{
     background:url('/images/monitor_icon.png') no-repeat;
-    background-size:25px 17px;
+    background-size:18px 18px;
   }
 }
 
@@ -151,4 +150,17 @@
 }
 .el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
   background:#E9F6FF!important;
+}
+//分页强改样式
+.el-pager li:hover,.el-pagination button:hover{
+  color:#25ba80;
+}
+.el-pagination button.disabled{
+  color: #e4e4e4;
+}
+.el-pager li.active{
+  cursor:default;
+  color:#fff;
+  border-color: #25ba80;
+  background:#25ba80;
 }
