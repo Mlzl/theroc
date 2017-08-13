@@ -38,6 +38,23 @@ class SettingController extends BackendController {
         Response::success();
     }
 
+    public function api_update_bannerAction(){
+        $banner_id = $this->request->get('banner_id');
+        $target_url = $this->request->getPost('target_url');
+        $picture_url = $this->request->getPost('picture_url');
+        if(!$banner_id || !$target_url || !$picture_url){
+            Response::error(Language::LOST_PARAMS);
+        }
+        $banner_model = \Setting::findOneByField('id', $banner_id);
+        if(!$banner_model){
+            Response::error(Language::DATA_NOT_EXISTS);
+        }
+        $banner_model->update(array('value'=>
+            serialize(array('target_url'=>$target_url, 'picture_url'=>$picture_url)))
+        );
+        Response::success();
+    }
+
 
     public function api_add_special_productAction(){
         $product_id = $this->request->get('product_id');

@@ -36,11 +36,18 @@ class ProductController extends ApiController {
 
         if($class_id == 0){
             $products_info = $product_model->getProduct($page, $size);
+            $total = \Product::count(array('status=1'));
         }else{
             $products_info = $product_model->getProductByClassId($class_id, $page, $size);
-
+            $total = \Product::count(
+                array('conditions'=>'class_id=:class_id: and status=1', 'bind'=>array('class_id'=>$class_id)
+                ));
         }
-        Response::success($products_info);
+        $data = array(
+            'list'=>$products_info,
+            'total'=>$total
+        );
+        Response::success($data);
     }
 
     public function getAttributeAction(){
@@ -79,11 +86,19 @@ class ProductController extends ApiController {
     }
 
     public function getCommentsAction(){
-        $product_id = $this->request->get('product_id');
+        $product_id = intval($this->request->get('product_id'));
         $size = $this->request->get('size', null, 10);
         $page = $this->request->get('page', null, 1);
+        if(!$product_id){
+            Response::error(Language::PARAM_ERROR);
+        }
         $comments_info = \ProductComment::getCommentByProductId($product_id, $page, $size);
-        Response::success($comments_info);
+        $data = array(
+            'list'=>$comments_info,
+            'total'=>\ProductComment::count(array('conditions'=>'product_id=:product_id:',
+                'bind'=>array('product_id'=>$product_id)))
+        );
+        Response::success($data);
     }
 
     public function addCommentAction(){

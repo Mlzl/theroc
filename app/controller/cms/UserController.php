@@ -13,6 +13,10 @@ class UserController extends BackendController {
         $page = $this->request->get('page', null, 1);
         $size = $this->request->get('size', null, 20);
         $users = \User::getList($page, $size);
-        Response::success($users);
+        $data = array(
+            'list'=>$users,
+            'total'=>\User::count()
+        );
+        Response::success($data);
     }
 }

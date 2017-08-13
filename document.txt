@@ -44,6 +44,11 @@ post:{banner_type, picture_url, target_url} # banner_type in [home_banner, pro_b
 #删除轮播图
 /cms/setting/api_delete_banner?banner_id=xxx
 
+#更新轮播图
+/cms/setting/api_update_banner
+post:{picture_url, target_url， banner_id}
+
+
 #更新产品
 /cms/product/api_update_product
 post:{name, class_id, target_url, product_id,img_txt_detail,product_label}
