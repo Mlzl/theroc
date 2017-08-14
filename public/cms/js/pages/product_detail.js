@@ -4,6 +4,7 @@ var product_detail_main=new Vue({
     delimiters:['~{','}'],
     data:{
         tab:0,  //选项卡，0基本资料、1图文详情
+        loading:false,  //是否加载中
         isEdit:false,  //是否处于编辑状态
         productDetail:{},  //产品详情
         productDetail_edit:{},  //产品详情 编辑
@@ -60,20 +61,23 @@ var product_detail_main=new Vue({
         },
         editData_save:function(){  //编辑基本资料 保存
             var _this=this;
+            var productDetail_edit=this.productDetail_edit;
             var _data={
-                product_id:'',
-                name:'',
-                product_label:'',
-                target_url:''
+                product_id:productDetail_edit.product_id,
+                class_id:productDetail_edit.class_id,
+                name:productDetail_edit.name,
+                product_label:productDetail_edit.label,
+                target_url:productDetail_edit.target_url,
+                picture_url:productDetail_edit._picture_url.join(',')
             }
             var url='/cms/product/api_update_product';
             // console.log(_data)
             this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    // _this.getAllClass();
-                    // _this.addClass_show=false;
-                    // _this.$message('添加成功');
+                    _this.getProductDetail();
+                    _this.isEdit=false;
+                    _this.$message('保存成功');
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -169,6 +173,7 @@ var product_detail_main=new Vue({
                     },
                     'BeforeUpload': function(up, file) {
                         // 每个文件上传前,处理相关的事情
+                        _this.loading=true;
                     },
                     'UploadProgress': function(up, file) {
                         // 每个文件上传时,处理相关的事情
@@ -178,7 +183,7 @@ var product_detail_main=new Vue({
                         // var domain = up.getOption('domain');
                         // var res = parseJSON(info.response);
                         // var sourceLink = domain + res.key; 获取上传成功后的文件的Url
-
+                        _this.loading=false;
                         var res = JSON.parse(info);
 
                         _this.productDetail_edit._picture_url.push('http://otw5eymk3.bkt.gdipper.com/'+res.key)

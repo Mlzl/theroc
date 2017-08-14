@@ -330,8 +330,16 @@ table {
   display: inline-block;
   width: 438px;
 }
+#product_detail_main .baseData .baseData_see > p .el-input input,
+#product_detail_main .baseData .baseData_edit > p .el-input input {
+  height: 30px;
+  line-height: 30px;
+}
 #product_detail_main .baseData .baseData_see > p .classify_attr > span {
   margin: 0 30px 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img {
+  margin: 10px 0 0 0;
 }
 #product_detail_main .baseData .baseData_see .cover_img > span {
   width: 80px;
@@ -342,19 +350,20 @@ table {
   width: 80px;
   height: 80px;
 }
+#product_detail_main .baseData .baseData_edit .cover_img {
+  margin: 10px 0 0 0;
+}
 #product_detail_main .baseData .baseData_edit .cover_img > span {
   width: 80px;
   height: 80px;
   margin: 0 10px 0 0;
+  position: relative;
 }
 #product_detail_main .baseData .baseData_edit .cover_img > span img {
   width: 80px;
   height: 80px;
 }
-#product_detail_main .baseData .baseData_edit .cover_img > span:nth-of-type(2) {
-  position: relative;
-}
-#product_detail_main .baseData .baseData_edit .cover_img > span:nth-of-type(2) .close_icon {
+#product_detail_main .baseData .baseData_edit .cover_img .close_icon {
   cursor: pointer;
   display: inline-block;
   width: 10px;

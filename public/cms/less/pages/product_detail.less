@@ -65,6 +65,10 @@
         .el-input{
           display:inline-block;
           width:438px;
+          input{
+            height:30px;
+            line-height:30px;
+          }
         }
       }
     }
@@ -77,6 +81,7 @@
         }
       }
       .cover_img{
+        margin:10px 0 0 0;
         >span{
           width:80px;
           height:80px;
@@ -98,28 +103,27 @@
         //}
       }
       .cover_img{
+        margin:10px 0 0 0;
         >span{
           width:80px;
           height:80px;
           margin:0 10px 0 0;
+          position:relative;
           img{
             width:80px;
             height:80px;
           }
         }
-        >span:nth-of-type(2){
-          position:relative;
-          .close_icon{
-            cursor:pointer;
-            display:inline-block;
-            width:10px;
-            height:10px;
-            background:url('/images/ali.jpg') no-repeat;
-            background-size:10px 10px;
-            position:absolute;
-            top:0;
-            right:0;
-          }
+        .close_icon{
+          cursor:pointer;
+          display:inline-block;
+          width:10px;
+          height:10px;
+          background:url('/images/ali.jpg') no-repeat;
+          background-size:10px 10px;
+          position:absolute;
+          top:0;
+          right:0;
         }
       }
     }

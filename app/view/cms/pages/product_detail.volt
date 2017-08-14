@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://cdn.quilljs.com/1.3.1/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="/plugin/quill-1.3.1/quill.snow.css">
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
     <link rel="stylesheet" href="/cms/css/pages/product_detail.css" >
 </head>
@@ -17,7 +17,9 @@
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
         {% include "smart/sideBar.volt" %}
-        <div id="product_detail_main">
+        <div id="product_detail_main"
+             v-loading="loading"
+             element-loading-text="拼命加载中">
             <div class="head">
                 <ul class="tab_ul">
                     <li :class="{active:tab==0}" @click="switchTab(0)">基本资料</li>
@@ -59,8 +61,8 @@
                     </p>
                     <p class="cover_img">
                         <span>封面图:</span>
-                        <span v-for="n in 4">
-                            <img src=""/>
+                        <span v-for="(item,index) in productDetail._picture_url">
+                            <img :src="item"/>
                         </span>
                     </p>
                 </div>
@@ -113,7 +115,8 @@
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
+    <!-- quill -->
+    <script src="/plugin/quill-1.3.1/quill.js"></script>
     <!-- plupload -->
     <script src="/plugin/plupload-2.1.x/moxie.js"></script>
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
