@@ -30,7 +30,7 @@ var product_detail_main=new Vue({
                 if(_res.code==0){
                     var productDetail=_res.data;
                     var picture_url=productDetail.picture_url;
-                    productDetail._picture_url=picture_url.trim()==''?[]:picture_url.split(',');
+                    productDetail._picture_url=picture_url?picture_url.split(','):[];
                     // console.log(productDetail)
 
                     _this.productDetail=productDetail;
@@ -58,12 +58,43 @@ var product_detail_main=new Vue({
                 console.log(err);
             });
         },
+        editData_save:function(){  //编辑基本资料 保存
+            var _this=this;
+            var _data={
+                product_id:'',
+                name:'',
+                product_label:'',
+                target_url:''
+            }
+            var url='/cms/product/api_update_product';
+            // console.log(_data)
+            this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    // _this.getAllClass();
+                    // _this.addClass_show=false;
+                    // _this.$message('添加成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         //普通方法
         switchTab:function(tab){  //切换选项卡
             this.tab=tab;
         },
         switchEdit:function(isEdit){  //更改编辑状态
             this.isEdit=isEdit;
+            var tab=this.tab;
+            if(tab==0){  //基本资料
+                this.productDetail_edit=JSON.parse(JSON.stringify(this.productDetail))
+            }else if(tab==1){  //图文详情
+
+            }else if(tab==2){  //评价管理
+
+            }
         },
         initQuill:function(){  //初始化quill富文本编辑器
             var _this=this;
@@ -102,8 +133,8 @@ var product_detail_main=new Vue({
                 }
             });
         },
-        initImageUpload(upload_token){  //图片上传
-            let _this=this;
+        initImageUpload:function(upload_token){  //图片上传
+            var _this=this;
             //引入Plupload 、qiniu.js后
             var uploader = Qiniu.uploader({
                 runtimes: 'html5,flash,html4',    //上传模式,依次退化
@@ -144,19 +175,13 @@ var product_detail_main=new Vue({
                     },
                     'FileUploaded': function(up, file, info) {
                         // 每个文件上传成功后,处理相关的事情
-                        // 其中 info 是文件上传成功后，服务端返回的json，形式如
-                        // {
-                        //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
-                        //    "key": "gogopher.jpg"
-                        //  }
-                        // 参考http://developer.qiniu.com/docs/v6/api/overview/up/response/simple-response.html
+                        // var domain = up.getOption('domain');
+                        // var res = parseJSON(info.response);
+                        // var sourceLink = domain + res.key; 获取上传成功后的文件的Url
 
-                        var domain = up.getOption('domain');
                         var res = JSON.parse(info);
-                        var sourceLink = domain + res.key; //获取上传成功后的文件的Url
 
-
-
+                        _this.productDetail_edit._picture_url.push('http://otw5eymk3.bkt.gdipper.com/'+res.key)
                         _this.$message.success('上传成功');
                     },
                     'Error': function(up, err, errTip) {
@@ -186,9 +211,28 @@ var product_detail_main=new Vue({
             // domain 为七牛空间（bucket)对应的域名，选择某个空间后，可通过"空间设置->基本设置->域名设置"查看获取
             // uploader 为一个plupload对象，继承了所有plupload的方法，参考http://plupload.com/docs
         },
-        imageUpload(e){  //图片上传
-            let imageUploadBtn=document.getElementById('imageUploadBtn');
+        imageUpload:function(e){  //图片上传
+            var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
+        deleteCoverImg:function(item,e){  //删除封面图
+            var _picture_url=this.productDetail_edit._picture_url;
+            for(var i=0,len=_picture_url.length;i<len;i++){
+                if(_picture_url[i]==item){
+                    _picture_url.splice(i,1);
+                    break;
+                }
+            }
+        },
+        save_btn:function(e){
+            var tab=this.tab;
+            if(tab==0){
+                this.editData_save();
+            }else if(tab==1){
+
+            }else if(tab==2){
+
+            }
+        }
     }
 })

@@ -29,7 +29,7 @@
                     </template>
                     <template v-else>
                         <el-button @click="switchEdit(false)">取消</el-button>
-                        <el-button type="primary">保存</el-button>
+                        <el-button type="primary" @click="save_btn">保存</el-button>
                     </template>
                 </div>
             </div>
@@ -53,6 +53,10 @@
                         <span>自定义属性:</span>
                         <span>~{productDetail.label}</span>
                     </p>
+                    <p>
+                        <span>跳转url:</span>
+                        <span>~{productDetail.target_url}</span>
+                    </p>
                     <p class="cover_img">
                         <span>封面图:</span>
                         <span v-for="n in 4">
@@ -63,7 +67,7 @@
                 <!--编辑状态-->
                 <div v-show="isEdit" class="baseData_edit" >
                     <p>
-                        <span>标题</span>
+                        <span>标题:</span>
                         <el-input v-model="productDetail_edit.name"></el-input>
                     </p>
                     <!--<p>-->
@@ -75,13 +79,17 @@
                         <!--</span>-->
                     <!--</p>-->
                     <p>
-                        <span>自定义属性</span>
+                        <span>自定义属性:</span>
                         <el-input v-model="productDetail_edit.label"></el-input>
+                    </p>
+                    <p>
+                        <span>跳转url:</span>
+                        <el-input v-model="productDetail_edit.target_url"></el-input>
                     </p>
                     <p class="cover_img">
                         <span>封面图:</span>
                         <span v-for="(item,index) in productDetail_edit._picture_url">
-                          <i class="close_icon"></i>
+                          <i class="close_icon" @click="deleteCoverImg(item)"></i>
                           <img :src="item" />
                         </span>
                         <span style="cursor:pointer;" @click="imageUpload">
@@ -106,13 +114,11 @@
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
     <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
+    <!-- plupload -->
+    <script src="/plugin/plupload-2.1.x/moxie.js"></script>
+    <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
     <!-- qiniu -->
-    <!--<script src="https://cdn.staticfile.org/plupload/2.1.9/moxie.js"></script>-->
-    <!--<script src="https://cdn.staticfile.org/plupload/2.1.9/plupload.dev.js"></script>-->
-    <!--<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>-->
-    <script src="/plugin/plupload-2.3.1/moxie.js"></script>
-    <script src="/plugin/plupload-2.3.1/plupload.dev.js"></script>
-    <script src="/plugin/qiniu-1.0.21/qiniu.js"></script>
+    <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
