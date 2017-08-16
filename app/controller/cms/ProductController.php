@@ -46,7 +46,7 @@ class ProductController extends BackendController {
         $product_img_txt_detail = $this->request->getPost('img_txt_detail');
         $picture_url = $this->request->getPost('picture_url');
 
-        if(!$name || !$class_id || !$target_url){
+        if(!$product_id){
             Response::error(Language::LOST_PARAMS);
         }
         if(!\ProductClass::findOneByField('id', $class_id)){
