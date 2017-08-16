@@ -1,4 +1,5 @@
 
+var quill;
 var product_detail_main=new Vue({
     el:'#product_detail_main',
     delimiters:['~{','}'],
@@ -33,7 +34,7 @@ var product_detail_main=new Vue({
                     var picture_url=productDetail.picture_url;
                     productDetail._picture_url=picture_url?picture_url.split(','):[];
                     // console.log(productDetail)
-
+                    quill.root.innerHTML=productDetail.img_txt_detail
                     _this.productDetail=productDetail;
                     _this.productDetail_edit=JSON.parse(JSON.stringify(productDetail));
                 }else{
@@ -85,6 +86,31 @@ var product_detail_main=new Vue({
                 console.log(err);
             });
         },
+        imageText_save:function(){  //编辑图文详情 保存
+            var _this=this;
+            var productDetail_edit=this.productDetail_edit;
+            var quill_html = quill.root.innerHTML;
+            // console.log(quill_inner)
+            var _data={
+                product_id:productDetail_edit.product_id,
+                class_id:productDetail_edit.class_id,
+                img_txt_detail:quill_html
+            }
+            var url='/cms/product/api_update_product';
+            // console.log(_data)
+            this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.getProductDetail();
+                    _this.isEdit=false;
+                    _this.$message('保存成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         //普通方法
         switchTab:function(tab){  //切换选项卡
             this.tab=tab;
@@ -102,7 +128,7 @@ var product_detail_main=new Vue({
         },
         initQuill:function(){  //初始化quill富文本编辑器
             var _this=this;
-            var quill = new Quill('#editor', {
+            quill = new Quill('#editor', {
                 theme: 'snow',
                 modules: {
                     toolbar: {
@@ -185,8 +211,16 @@ var product_detail_main=new Vue({
                         // var sourceLink = domain + res.key; 获取上传成功后的文件的Url
                         _this.loading=false;
                         var res = JSON.parse(info);
+                        var tab=_this.tab;
+                        var prefix_url='http://otw5eymk3.bkt.gdipper.com/';
 
-                        _this.productDetail_edit._picture_url.push('http://otw5eymk3.bkt.gdipper.com/'+res.key)
+                        if(tab==0){  //基本资料
+                            _this.productDetail_edit._picture_url.push(prefix_url+res.key)
+                        }else if(tab==1){  //图文详情
+                            var range = quill.getSelection(true);
+                            var length = range.index;
+                            quill.insertEmbed(length, 'image', prefix_url+res.key);
+                        }
                         _this.$message.success('上传成功');
                     },
                     'Error': function(up, err, errTip) {
@@ -229,12 +263,12 @@ var product_detail_main=new Vue({
                 }
             }
         },
-        save_btn:function(e){
+        save_btn:function(e){  //保存 按钮
             var tab=this.tab;
-            if(tab==0){
+            if(tab==0){  //基本资料
                 this.editData_save();
-            }else if(tab==1){
-
+            }else if(tab==1){  //图文详情
+                this.imageText_save();
             }else if(tab==2){
 
             }
