@@ -78,6 +78,7 @@ class ProductController extends BackendController {
             Response::error(Language::PRODUCT_NOT_EXISTS);
         }
         $this->updateItem($productModel, array('status'=>$status));
+        Response::success();
     }
 
     public function api_add_classAction(){
