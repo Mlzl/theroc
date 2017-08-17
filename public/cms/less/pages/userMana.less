@@ -3,8 +3,50 @@
 
 #userMana_main{
   min-width:1146px;
-  height:600px;
   position:absolute;
   top:56px;
   left:220px;
+  right:0;
+  bottom:0;
+  background-color: #f1f1f1;
+  font-size:14px;
+  div.user_table{
+    >div.thead{
+      height:40px;
+      background-color: #ffffff;
+        >span{
+          float: left;
+          width:14%;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+        }
+        >span:nth-of-type(6){
+          width:16%;
+        }
+    }
+    >div.tbody{
+      height:80px;
+      background-color: #ffffff;
+      p {
+        margin-top: 6px;
+        span {
+          float: left;
+          width: 14%;
+          height: 80px;
+          text-align: center;
+          line-height: 80px;
+          > img {
+            display: block;
+            width: 48px;
+            height: 48px;
+            margin: 16px auto;
+          }
+        }
+        span:nth-of-type(6) {
+          width: 16%;
+        }
+      }
+    }
+  }
 }

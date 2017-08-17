@@ -104,6 +104,7 @@
   top: 31px;
   left: 0;
 }
+
 /*弹出框 强改样式*/
 .el-dialog{
   padding:15px 25px 0 25px;
@@ -164,3 +165,132 @@
   border-color: #25ba80;
   background:#25ba80;
 }
+
+
+
+
+/**
+  product menu
+ */
+.product_menu{
+  height: 90px;
+  background-color: #f1f1f1;
+  .tab{
+    float: left;
+    margin-left: 40px;
+    margin-top: 30px;
+    height: 40px;
+    .tab_item{
+      float: left;
+      width: 128px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #cccccc;
+    }
+    .active_item{
+      border:1px solid #25ba80;
+      color: #25ba80;
+    }
+  }
+  .btn_group{
+    float: right;
+    height: 40px;
+    margin-top:38px;
+    .btn{
+      width: 60px;
+      height: 32px;
+      border-radius: 4px;
+      background-color: #25ba80;
+      margin-right: 88px;
+      color:#fff;
+      border: none;
+    }
+  }
+}
+/**
+  product table
+ */
+.product_table{
+  background-color: #f1f1f1;
+  .thead{
+    height: 40px;
+    background-color: #ffffff;
+    color:#666666;
+    >span{
+      display: inline-block;
+      float: left;
+      width: 25%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+  .tbody{
+    >p {
+      height: 80px;
+      background-color:#fff;
+      margin-top: 6px;
+      >span.field{
+        display: inline-block;
+        float: left;
+        width: 25%;
+        height: 80px;
+        text-align: center;
+      }
+      >span:nth-of-type(1){
+        line-height: 80px;
+      }
+      >span:nth-of-type(2){
+        line-height: 80px;
+        input{
+          width: 200px;
+          height: 36px;
+          margin: 22px auto;
+          text-align: center;
+          border:1px solid #25ba80;
+        }
+      }
+      >span:nth-of-type(3){
+        .img_wrapper{
+          position: relative;
+          display: block;
+          width: 60px;
+          height:60px;
+          margin:10px auto;
+          >img{
+            width: 100%;
+            height: 100%;
+          }
+          >span.mask{
+            position: absolute;
+            left: 0;
+            top:0;
+            background-color:rgba(51,51,51,0.7);
+            img{
+              width: 28px;
+              height: 28px;
+              margin:15px;
+            }
+          }
+        }
+      }
+      span:nth-of-type(4){
+        line-height: 80px;
+        .btn{
+          padding:9px 15px;
+          border: 1px solid #25ba80;
+
+          color:#25ba80;
+          border-radius: 4px;
+        }
+        .btn:hover{
+          color:#5a5a5a;
+          border:1px solid #5a5a5a;
+        }
+      }
+    }
+  }
+}
+
+

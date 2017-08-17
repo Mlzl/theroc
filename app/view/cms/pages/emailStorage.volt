@@ -12,8 +12,20 @@
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
         {% include "smart/sideBar.volt" %}
-        <div id="emailStorage_main">
-            emailStorage_main
+        <div id="emailStorage_main" v-cloak>
+           <div class="product_table">
+                <div class="thead">
+                    <span>序号</span>
+                    <span>Email</span>
+                </div>
+               <div class="tbody">
+                   <p v-for="(email,index) in emailStorage">
+                       <span class="field">~{index}</span>
+                       <span class="field">~{email}</span>
+                   </p>
+               </div>
+           </div>
+
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>

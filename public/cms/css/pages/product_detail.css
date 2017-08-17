@@ -378,61 +378,120 @@ table {
   color: #5a5a5a;
   border: 1px solid #5a5a5a;
 }
-#carousel_main {
+#product_detail_main {
   min-width: 1146px;
+  height: 600px;
+  background: #F1F1F1;
   position: absolute;
   top: 56px;
   left: 220px;
-  bottom: 0;
-  right: 0;
-  background-color: #f1f1f1;
-  font-size: 14px;
 }
-#carousel_main .clearfix:after {
-  content: ".";
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
+#product_detail_main .head {
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+  position: relative;
 }
-#carousel_main .el-dialog {
-  width: 560px;
-  border-radius: 20px;
-}
-#carousel_main .el-dialog input {
-  width: 500px;
+#product_detail_main .head .tab_ul {
   height: 40px;
-  line-height: 40px;
-  text-align: left;
-  font-size: 18px;
-  color: #5a5a5a;
-  padding-left: 10px;
+  margin: 20px 0 20px 40px;
 }
-#carousel_main .el-dialog p {
-  background: url("/images/nopic.png") no-repeat;
-  background-size: 256px 146px;
-  width: 258px;
-  height: 146px;
-  margin-left: 136px;
-  margin-top: 10px;
-}
-#carousel_main .el-dialog p > img {
-  width: 100%;
-  height: 100%;
-}
-#carousel_main .el-dialog .dialog-footer {
+#product_detail_main .head .tab_ul li {
+  width: 128px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
-  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+  float: left;
 }
-#carousel_main .el-dialog .dialog-footer button {
-  width: 100px;
-  height: 32px;
+#product_detail_main .head .tab_ul li:nth-of-type(1) {
+  border-left: solid 1px #cccccc;
 }
-#carousel_main .el-dialog .dialog-footer .el-button--default {
+#product_detail_main .head .tab_ul li:nth-of-type(2) {
+  border-right: solid 1px #cccccc;
+}
+#product_detail_main .head .tab_ul li.active {
   color: #25ba80;
-  border: 1px solid #25ba80;
+  border: solid 1px #25ba80;
 }
-#carousel_main .el-dialog .dialog-footer .el-button--primary {
-  color: #fff;
-  background-color: #25ba80;
+#product_detail_main .head .operation_btn {
+  position: absolute;
+  top: 0;
+  right: 88px;
+}
+#product_detail_main .baseData,
+#product_detail_main .imageText {
+  box-sizing: border-box;
+  width: 1106px;
+  height: 642px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+#product_detail_main .baseData .baseData_see > p,
+#product_detail_main .baseData .baseData_edit > p {
+  min-height: 40px;
+  line-height: 40px;
+}
+#product_detail_main .baseData .baseData_see > p span,
+#product_detail_main .baseData .baseData_edit > p span {
+  display: inline-block;
+  vertical-align: top;
+}
+#product_detail_main .baseData .baseData_see > p > span:nth-of-type(1),
+#product_detail_main .baseData .baseData_edit > p > span:nth-of-type(1) {
+  width: 100px;
+}
+#product_detail_main .baseData .baseData_see > p .el-input,
+#product_detail_main .baseData .baseData_edit > p .el-input {
+  display: inline-block;
+  width: 438px;
+}
+#product_detail_main .baseData .baseData_see > p .el-input input,
+#product_detail_main .baseData .baseData_edit > p .el-input input {
+  height: 30px;
+  line-height: 30px;
+}
+#product_detail_main .baseData .baseData_see > p .classify_attr > span {
+  margin: 0 30px 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img {
+  margin: 10px 0 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img > span {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 0 0;
+}
+#product_detail_main .baseData .baseData_see .cover_img > span img {
+  width: 80px;
+  height: 80px;
+}
+#product_detail_main .baseData .baseData_edit .cover_img {
+  margin: 10px 0 0 0;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 0 0;
+  position: relative;
+}
+#product_detail_main .baseData .baseData_edit .cover_img > span img {
+  width: 80px;
+  height: 80px;
+}
+#product_detail_main .baseData .baseData_edit .cover_img .close_icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 10px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#product_detail_main .imageText .imageText_edit {
+  height: 450px;
 }

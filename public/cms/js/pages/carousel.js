@@ -7,26 +7,15 @@ var carousel_main=new Vue({
         addCarousel:false,
         homeProductList:null,
         productProductList:null,
+        targetProductList:null,
         dialogTitle:'添加首页轮播图',
         oldItem:{}, //编辑时保存旧项，用于还原
         targetIndex:null,   //编辑时的索引
         addItem:{}, //新增对象,
-        actionType:null,
+        actionType:null
     },
     created:function(){
         this.getBanner('carousel_home');
-        this.homeProductList=[{
-            id:'id',
-            target_url:'www.baidu.com',
-            picture_url:'/images/user.png',
-            state:'read'
-        },{
-            id:'id2',
-            target_url:'www.google.com',
-            picture_url:'/images/user.png',
-            state:'read'
-        }];
-        this.homeProductList[1].picture_url ='/images/no_pic.png ';
 
     },
     mounted:function() {
@@ -121,7 +110,7 @@ var carousel_main=new Vue({
                         // if(up.total.uploaded==uploadFiles.length-1){  //全部文件上传成功
                         //     _this.$store.commit('setFilesUploadSuccess');
                         // }
-                        var res=JSON.parse(info.response);
+                        var res=JSON.parse(info);
                         var imgUrl='http://otw5eymk3.bkt.gdipper.com/'+res.key;
                         if(_this.actionType==='add'){
                             _this.addItem.picture_url=imgUrl;
@@ -179,20 +168,13 @@ var carousel_main=new Vue({
             var that=this;
             this.$http.get('/api/product/getBanner',{params:{banner_type:banner_type}}).then(function(res){
                 var _res=res.body;
-                if(banner_type=='carousel_home'){
-                    that.homeProductList=_res.data;
-                    that.markList(that.homeProductList);
-                }
-                else{
-                    that.productProductList=_res.data;
-                    that.markList(that.productProductList);
-                }
+                that.converseData(that._res.data);
             }, function(err){
                 console.log(err);
             });
         },
         clickMyUpload:function(actionType){
-            this.activeType=actionType;
+            this.actionType=actionType;
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
@@ -201,15 +183,22 @@ var carousel_main=new Vue({
             this.getBanner(tabId);
         },
         /**
-         *   增加编辑状态
+         *   转化成前台格式
          */
-        markList:function(list){
-            for(var i=0;i<list.length;i++){
-                list[i].state='read';
+        converseData:function(list){
+            if(tabId==='carousel_home') {
+                this.productProductList
+                for (var i = 0; i < list.length; i++) {
+                    list[i].state = 'read';
+                }
             }
         },
         //弹窗
         showDialog:function(){
+            this.addItem={
+                target_url:'',
+                picture_url:undefined
+            };
             if(this.activeTab==='carousel_home')
             {
                dialogTitle='添加首页轮播图';
@@ -219,21 +208,16 @@ var carousel_main=new Vue({
                 dialogTitle='添加产品轮播图';
                 this.addItem.banner_type='pro_banner';
             }
-            this.addCarousel=!this.addCarousel;
+            this.addCarousel=true;
+        },
+        closeDialog:function(){
+           this.addCarousel=false;
         },
         //编辑
         edit:function(index){
-            if(this.activeTab==='carousel_home')
-                {
-                    this.homeProductList[index].state = 'edit';
-                    this.oldItem=this.homeProductList[index];
-                    this.targetIndex=index;
-                }
-            else{
-                this.productProductList[index].state = 'edit';
-                this.oldItem=this.productProductList[index];
-                this.targetIndex=index;
-            }
+            this.targetProductList[index].state = 'edit';
+            this.oldItem=this.targetProductList[index];
+            this.targetIndex=index;
         },
         del:function(index){
 
@@ -259,13 +243,32 @@ var carousel_main=new Vue({
             this.$http.post('/cms/setting/api_update_banner',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    that.getBanner();
-                }else{
+
+                }
+                else{
                     that.$message(_res.msg);
                 }
             }, function(err){
                 console.log(err);
             });
+        },
+        /**
+         * 增加
+         */
+        addCarouselMethod:function(){
+            var data=this.addItem;
+            var that=this;
+            this.$http.post('/cms/setting/api_add_banner',data,{emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code===0){
+                    that.getBanner();
+                    that.addCarousel=false;
+
+                }
+            }, function(err){
+                console.log(err);
+            });
         }
+
     }
 })

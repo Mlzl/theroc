@@ -96,6 +96,7 @@
                     <el-button type="primary" @click="addProduct">确 定</el-button>
                 </span>
             </el-dialog>
+<<<<<<< Updated upstream
             <!--添加价格 弹出框-->
             <el-dialog title="添加价格" v-model="addPrice_show" custom-class="addPrice_dialog"
                        :show-close=false :close-on-click-modal=false>
@@ -108,6 +109,9 @@
                     <el-button type="primary" @click="addPrice">确 定</el-button>
                 </span>
             </el-dialog>
+=======
+
+>>>>>>> Stashed changes
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>

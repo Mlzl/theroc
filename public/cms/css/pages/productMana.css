@@ -378,61 +378,153 @@ table {
   color: #5a5a5a;
   border: 1px solid #5a5a5a;
 }
-#carousel_main {
+#productMana_main {
   min-width: 1146px;
+  height: 600px;
   position: absolute;
   top: 56px;
   left: 220px;
-  bottom: 0;
-  right: 0;
-  background-color: #f1f1f1;
-  font-size: 14px;
 }
-#carousel_main .clearfix:after {
-  content: ".";
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
+#productMana_main .main_left {
+  width: 260px;
+  height: 820px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 10px;
 }
-#carousel_main .el-dialog {
-  width: 560px;
-  border-radius: 20px;
+#productMana_main .main_right {
+  width: 829px;
+  height: 820px;
+  padding: 0 30px;
+  margin: 0 0 0 251px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-#carousel_main .el-dialog input {
-  width: 500px;
+#productMana_main .main_right .main_right_header {
   height: 40px;
   line-height: 40px;
-  text-align: left;
-  font-size: 18px;
-  color: #5a5a5a;
-  padding-left: 10px;
+  position: relative;
 }
-#carousel_main .el-dialog p {
-  background: url("/images/nopic.png") no-repeat;
-  background-size: 256px 146px;
-  width: 258px;
-  height: 146px;
-  margin-left: 136px;
-  margin-top: 10px;
+#productMana_main .main_right .main_right_header > h3 {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
 }
-#carousel_main .el-dialog p > img {
-  width: 100%;
-  height: 100%;
+#productMana_main .main_right .main_right_header .operation_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-#carousel_main .el-dialog .dialog-footer {
-  text-align: center;
-  margin-bottom: 30px;
-}
-#carousel_main .el-dialog .dialog-footer button {
-  width: 100px;
-  height: 32px;
-}
-#carousel_main .el-dialog .dialog-footer .el-button--default {
-  color: #25ba80;
-  border: 1px solid #25ba80;
-}
-#carousel_main .el-dialog .dialog-footer .el-button--primary {
+#productMana_main .main_right .main_right_header .operation_btn .addClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .modifyClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .deleteClass_btn,
+#productMana_main .main_right .main_right_header .operation_btn .addProduct_btn {
+  height: 25px;
   color: #fff;
-  background-color: #25ba80;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: solid 1px #25ba80;
+  background: #25ba80;
+}
+#productMana_main .main_right .product_table {
+  width: 829px;
+  height: 670px;
+  border-radius: 4px;
+  background: #F1F1F1;
+}
+#productMana_main .main_right .product_table .product_thead > p,
+#productMana_main .main_right .product_table .product_tbody > p {
+  background: #fff;
+}
+#productMana_main .main_right .product_table .product_thead > p > span,
+#productMana_main .main_right .product_table .product_tbody > p > span {
+  display: inline-block;
+  text-indent: 10px;
+  vertical-align: top;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(1),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(1) {
+  width: 59px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(2),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(2) {
+  width: 170px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(3),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(3) {
+  width: 85px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(4),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(4) {
+  width: 169px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(5),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(5) {
+  width: 99px;
+}
+#productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(6),
+#productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(6) {
+  width: 190px;
+}
+#productMana_main .main_right .product_table .product_thead {
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 4px 0;
+}
+#productMana_main .main_right .product_table .product_tbody {
+  color: #2c3347;
+  height: 630px;
+}
+#productMana_main .main_right .product_table .product_tbody > p {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 0 4px 0;
+  position: relative;
+}
+#productMana_main .main_right .product_table .product_tbody > p > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#productMana_main .main_right .product_table .product_tbody button {
+  height: 25px;
+  color: #25ba80;
+  padding: 0 5px;
+  border-radius: 4px;
+  border: solid 1px #25ba80;
+}
+#productMana_main .main_right .product_table .product_tbody button:not( :nth-of-type(1)) {
+  margin: 0 0 0 2px;
+}
+.addClass_dialog {
+  width: 340px;
+  height: 155px;
+}
+.addClass_dialog .addClass_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
+}
+.addProduct_dialog {
+  width: 340px;
+  height: 245px;
+}
+.addProduct_dialog .addProduct_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
+}
+.addPrice_dialog {
+  width: 340px;
+  height: 200px;
+}
+.addPrice_dialog .addPrice_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }

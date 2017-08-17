@@ -12,8 +12,29 @@
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
         {% include "smart/sideBar.volt" %}
-        <div id="userMana_main">
-            userMana_main
+        <div id="userMana_main" v-cloak>
+            <div class="table user_table">
+                <div class="thead">
+                    <span>序号</span>
+                    <span>昵称</span>
+                    <span>性别</span>
+                    <span>头像</span>
+                    <span>出生日期</span>
+                    <span>地址</span>
+                    <span>邮编</span>
+                </div>
+                <div class="tbody">
+                    <p v-for="(userInfo,index) in userInfoList">
+                        <span >~{index+1}</span>
+                        <span >~{userInfo.nickName}</span>
+                        <span>~{userInfo.sex}</span>
+                        <span >~{userInfo.birthDate}</span>
+                        <span><img :src="userInfo.photo" alt=""></span>
+                        <span>~{userInfo.address}</span>
+                        <span>~{userInfo.code}</span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>

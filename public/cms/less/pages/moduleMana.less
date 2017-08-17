@@ -1,10 +1,71 @@
 @import "../common/reset";
 @import "../common/common";
 
+
 #moduleMana_main{
   min-width:1146px;
-  height:600px;
+  //height:600px;
   position:absolute;
   top:56px;
   left:220px;
+  bottom:0;
+  right: 0;
+  background-color: #f1f1f1;
+  font-size:14px;
+  .el-dialog{
+    width: 542px;
+    border-radius: 20px;
+    .form {
+      textarea {
+        width: 462px;
+        height: 132px;
+        border-radius: 2px;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      input {
+        width: 462px;
+        height: 32px;
+        border-radius: 2px;
+        line-height: 32px;
+        text-align: left;
+        color: #5a5a5a;
+        padding-left: 10px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+      }
+      p {
+        margin-bottom: 10px;
+        > img {
+          width: 300px;
+          height: 150px;
+          display: block;
+          margin: 15px auto;
+        }
+      }
+    }
+    .dialog-footer{
+      text-align: center;
+      button{
+        width:100px;
+        height:32px;
+      }
+      .el-button--default{
+        color: #25ba80;
+        border:1px solid #25ba80;
+      }
+      .el-button--primary{
+        color: #fff;
+        background-color:#25ba80;
+      }
+    }
+  }
+
+  /**
+   个性化
+   */
+  .el-dialog__body{
+    padding: 30px 40px!important;
+  }
+
 }

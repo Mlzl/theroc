@@ -19,7 +19,10 @@
         </div>
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
-        <div id="support_main" v-cloak>
+        <!--隐藏部分-->
+        <div id="imageUploadDiv" style="display:none;">
+            <p id="imageUploadBtn">上传图片</p>
+        </div><div id="support_main" v-cloak>
             <div class="banner-container">
                 <img class="img" src="/frontend/image/supportBg.jpg">
                 <div class="search">

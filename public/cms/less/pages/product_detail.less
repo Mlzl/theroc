@@ -1,0 +1,139 @@
+@import "../common/reset";
+@import "../common/common";
+
+#product_detail_main{
+  min-width:1146px;
+  height:600px;
+  background:#F1F1F1;
+  position:absolute;
+  top:56px;
+  left:220px;
+  .head{
+    height:80px;
+    line-height:80px;
+    overflow: hidden;
+    position:relative;
+    .tab_ul{
+      height:40px;
+      margin:20px 0 20px 40px;
+      li{
+        width: 128px;
+        height: 38px;
+        line-height:38px;
+        text-align:center;
+        background-color: #ffffff;
+        border-top: solid 1px #cccccc;
+        border-bottom: solid 1px #cccccc;
+        float:left;
+        &:nth-of-type(1){
+          border-left: solid 1px #cccccc;
+        }
+        &:nth-of-type(2){
+          border-right: solid 1px #cccccc;
+        }
+      }
+      li.active{
+        color: #25ba80;
+        border: solid 1px #25ba80;
+      }
+    }
+    .operation_btn{
+      position:absolute;
+      top:0;
+      right:88px;
+    }
+  }
+  .baseData,.imageText{
+    box-sizing:border-box;
+    width: 1106px;
+    height: 642px;
+    padding:30px;
+    background-color: #ffffff;
+  }
+  .baseData{
+    .baseData_see,.baseData_edit{
+      >p{
+        min-height:40px;
+        line-height:40px;
+        span{
+          display:inline-block;
+          vertical-align:top;
+        }
+        >span:nth-of-type(1){
+          width:100px;
+        }
+        .el-input{
+          display:inline-block;
+          width:438px;
+          input{
+            height:30px;
+            line-height:30px;
+          }
+        }
+      }
+    }
+    .baseData_see{
+      >p{
+        .classify_attr{
+          >span{
+            margin:0 30px 0 0;
+          }
+        }
+      }
+      .cover_img{
+        margin:10px 0 0 0;
+        >span{
+          width:80px;
+          height:80px;
+          margin:0 10px 0 0;
+          img{
+            width:80px;
+            height:80px;
+          }
+        }
+      }
+    }
+    .baseData_edit{
+      >p{
+        //.classify_attr{
+        //  >input{
+        //    width:80px;
+        //    margin:0 30px 0 0;
+        //  }
+        //}
+      }
+      .cover_img{
+        margin:10px 0 0 0;
+        >span{
+          width:80px;
+          height:80px;
+          margin:0 10px 0 0;
+          position:relative;
+          img{
+            width:80px;
+            height:80px;
+          }
+        }
+        .close_icon{
+          cursor:pointer;
+          display:inline-block;
+          width:10px;
+          height:10px;
+          background:url('/images/ali.jpg') no-repeat;
+          background-size:10px 10px;
+          position:absolute;
+          top:0;
+          right:0;
+        }
+      }
+    }
+  }
+  .imageText{
+    .imageText_see{
+
+    }
+    .imageText_edit{
+      height:450px;
+    }
+  }
+}
