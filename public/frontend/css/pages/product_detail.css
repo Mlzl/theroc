@@ -320,16 +320,31 @@ table {
   background: #25ba80;
 }
 .el-button {
-  color: #25ba80!important;
-  padding: 0!important;
+  color: #25ba80;
+  padding: 0;
+}
+.el-button:focus {
+  color: #25ba80;
+  border: 1px solid #25ba80;
 }
 .el-button--default {
-  color: #25ba80!important;
-  border: 1px solid #25ba80!important;
+  color: #25ba80;
+  border: 1px solid #25ba80;
+}
+.el-button--default:hover {
+  color: #25ba80;
+  border: 1px solid #25ba80;
 }
 .el-button--primary {
-  background: #25ba80!important;
-  border: 1px solid #25ba80!important;
+  color: #fff;
+  border: 1px solid #25ba80;
+  background: #25ba80;
+}
+.el-button--primary:hover,
+.el-button--primaryfocus {
+  color: #fff;
+  border: 1px solid #25ba80;
+  background: #25ba80;
 }
 #product_detail_main .productShow {
   margin: 0 0 47px 0;
@@ -352,11 +367,18 @@ table {
 }
 #product_detail_main .productShow .picShow > ul li {
   display: inline-block;
+  cursor: pointer;
   margin: 0 10px 0 0;
+}
+#product_detail_main .productShow .picShow > ul li:hover {
+  border: 1px solid #ccc;
 }
 #product_detail_main .productShow .picShow > ul li img {
   width: 80px;
   height: 80px;
+}
+#product_detail_main .productShow .picShow > ul li.active {
+  border: 1px solid #ccc;
 }
 #product_detail_main .productShow .attrShow {
   display: inline-block;
@@ -388,6 +410,9 @@ table {
   border: 1px solid #ccc;
   border-radius: 2px;
   margin: 0 20px 0 0;
+}
+#product_detail_main .productShow .attrShow > ul > li.active {
+  background: blue;
 }
 #product_detail_main .productShow .attrShow > button {
   width: 186px;
@@ -425,9 +450,6 @@ table {
   background: #fff;
   position: relative;
   top: -1px;
-}
-#product_detail_main .productDesc .imageText {
-  height: 200px;
 }
 #product_detail_main .productDesc .comment {
   padding: 0 0 70px 0;

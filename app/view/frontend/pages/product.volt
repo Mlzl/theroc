@@ -28,41 +28,25 @@
             <div class="product_list">
                 <div class="category">
                     <ul class="primary">
-                        <li>
-                            产品分类1
+                        <li v-for="(item1,index1) in allClass">
+                            ~{item1.name}
                             <ul class="secondary">
-                                <li>
-                                    二级分类1
-                                </li>
-                                <li>
-                                    二级分类2
-                                </li>
-                                <li>
-                                    二级分类3
-                                </li>
-                                <li>
-                                    二级分类4
+                                <li v-for="(item2,index2) in item1.child">
+                                    ~{item2.name}
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            产品分类2
-                        </li>
-                        <li>
-                            产品分类3
-                        </li>
-                        <li>
-                            产品分类4
-                        </li>
                     </ul>
                 </div>
-                <div class="oneProduct" v-for="n in 12">
-                    <p class="oneProduct_img">
-                        <img src="/images/ali.jpg" />
-                    </p>
-                    <p class="oneProduct_desc">
-                        产品标题
-                    </p>
+                <div class="theProduct">
+                    <div class="oneProduct" v-for="(item,index) in curProductList" @click="toDetailPage(item.product_id)">
+                        <p class="oneProduct_img">
+                            <img :src="item._picture_url[0]" />
+                        </p>
+                        <p class="oneProduct_desc">
+                            ~{item.name}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -104,8 +104,7 @@
             </div>
             <!--图文详情-->
             <div v-show="tab==1" class="imageText">
-                <div v-show="!isEdit" class="imageText_see" v-html="productDetail.img_txt_detail">
-                </div>
+                <div v-show="!isEdit" class="imageText_see" v-html="productDetail.img_txt_detail"></div>
                 <div v-show="isEdit" class="imageText_edit">
                     <div id="editor">
                     </div>
