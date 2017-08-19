@@ -20,8 +20,8 @@
             <!--轮播图-->
             <div class="carouselArea">
                 <el-carousel height="342px">
-                    <el-carousel-item v-for="item in 4" :key="item">
-                        <img src="/images/ali.jpg" />
+                    <el-carousel-item v-for="item in bannerList" :key="item">
+                        <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)/>
                     </el-carousel-item>
                 </el-carousel>
             </div>

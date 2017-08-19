@@ -8,6 +8,12 @@
 </head>
 <body>
     <div id="moduleMana">
+
+        <!--隐藏部分-->
+        <div id="imageUploadDiv" style="display:none;">
+            <p id="imageUploadBtn">上传图片</p>
+        </div>
+
         <!--头部栏-->
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
@@ -41,7 +47,7 @@
                                 <span class="img_wrapper">
                                     <img :src="item.imgSrc" alt="product">
                                     <span class="mask" v-show="item.state==='edit'">
-                                        <img src="/images/upload.png" alt="上传">
+                                        <img src="/images/upload.png" alt="上传" @click="clickMyUpload('edit')">
                                     </span>
                                 </span>
                         </span>
@@ -72,7 +78,7 @@
                                 <span class="img_wrapper">
                                     <img :src="item.imgSrc" alt="product">
                                     <span class="mask" v-show="item.state==='edit'" @click="showDialog()">
-                                        <img src="/images/upload.png" alt="上传">
+                                        <img src="/images/upload.png" alt="上传" @click="clickMyUpload('edit')">
                                     </span>
                                 </span>
                             </span>
@@ -103,7 +109,7 @@
                             <span class="img_wrapper">
                                     <img :src="item.imgSrc" alt="product">
                                     <span class="mask" v-show="item.state==='edit'" @click="showDialog()">
-                                        <img src="/images/upload.png" alt="上传">
+                                        <img src="/images/upload.png" alt="上传" @click="clickMyUpload('add')">
                                     </span>
                             </span>
                         </span>
@@ -121,7 +127,7 @@
                 <div class="form">
                     <p><input type="text" placeholder="产品链接"></p>
                     <p><textarea name="" id=""></textarea></p>
-                    <p class="img">
+                    <p class="img" @click="clickMyUpload('add')">
                         <img src="/images/ali.jpg" alt="轮播图">
                     </p>
                 </div>
@@ -133,7 +139,14 @@
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
+    <!-- qiniu -->
+    <!-- plupload -->
+    <script src="/plugin/plupload-2.1.x/moxie.js"></script>
+    <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
+    <!-- qiniu -->
+    <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/moduleMana.js"></script>
 </body>

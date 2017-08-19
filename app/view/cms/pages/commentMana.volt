@@ -28,12 +28,9 @@
                         <span>~{item.title}</span>
                         <span>~{item.appraiser}</span>
                         <span>~{item.starNum}</span>
-                        <!--<span>-->
-                            <!--<p class="starWrapper">-->
-                                <!--&lt;!&ndash;<img v-for="dd in item.starNum" src="/images/star.png" alt="星星" />&ndash;&gt;-->
-                                <!--<img src="/images/star.png" alt="星星" />-->
-                            <!--</p>-->
-                        <!--</span>-->
+                        <span>
+                            <img v-for="dd in item.starNum" src="/images/star.png" alt="星星" />
+                        </span>
                         <span>~{item.content}</span>
                         <span class="state"><i :class="{ on: item.state==='on',off: item.state==='off'}"  @click="changeState(index)"></i></span>
                     </p>

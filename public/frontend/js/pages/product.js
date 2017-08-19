@@ -11,12 +11,28 @@ var product=new Vue({
             child: []
         },
         curProductList:[],  //当前分类产品列表
+        bannerList:[]  //轮播图
     },
     created:function(){
+        this.getBanner();
         this.getAllClass();
         this.getCurProductList();
     },
     methods:{
+        //获取轮播图
+        getBanner:function(){
+            var that = this;
+            this.$http.get('/api/product/getBanner', {params: {banner_type: 'pro_banner'}}).then(function (res) {
+                var _res = res.body;
+                that.bannerList=_res.data;
+            }, function (err) {
+                console.log(err);
+            });
+        },
+        //跳至链接
+        locateHref:function(href){
+            window.location.href=href;
+        },
         //异步方法
         getAllClass:function(){  //获取分类
             var _this=this;

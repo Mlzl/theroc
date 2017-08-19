@@ -46,7 +46,7 @@
                             <span class="img_wrapper">
                                 <img :src="item.picture_url" alt="product">
                                 <span class="mask" v-show="item.state==='edit'">
-                                    <img src="/images/upload.png" alt="上传" @click="clickMyUpload(edit)">
+                                    <img src="/images/upload.png" alt="上传" @click="clickMyUpload('edit')">
                                 </span>
                             </span>
                         </span>
