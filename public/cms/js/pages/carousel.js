@@ -15,7 +15,7 @@ var carousel_main=new Vue({
         actionType:null
     },
     created:function(){
-        this.getBanner('carousel_home');
+        this.getBanner();
 
     },
     mounted:function() {
@@ -116,12 +116,7 @@ var carousel_main=new Vue({
                             _this.addItem.picture_url=imgUrl;
                         }
                         else{
-                            if(_this.activeTab==='carousel_home') {
-                                _this.homeProductList[_this.targetIndex].picture_url = imgUrl;
-                            }
-                            else{
-                                _this.homeProductList[_this.targetIndex].picture_url = imgUrl;
-                            }
+                            _this.targetProductList[_this.targetIndex].picture_url = imgUrl;
                         }
 
                         _this.$message.success('上传成功');
@@ -157,9 +152,9 @@ var carousel_main=new Vue({
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
-        getBanner:function(tabId){
+        getBanner:function(){
             var banner_type;
-            if(tabId==='carousel_home'){
+            if(this.activeTab==='carousel_home'){
                 banner_type='home_banner';
             }
             else{
@@ -168,7 +163,8 @@ var carousel_main=new Vue({
             var that=this;
             this.$http.get('/api/product/getBanner',{params:{banner_type:banner_type}}).then(function(res){
                 var _res=res.body;
-                that.converseData(that._res.data);
+                that.converseData(_res.data);
+                that.setTargetList();
             }, function(err){
                 console.log(err);
             });
@@ -180,18 +176,52 @@ var carousel_main=new Vue({
         },
         openTab:function(tabId){
             this.activeTab=tabId;
-            this.getBanner(tabId);
+            this.getBanner();
+            this.reset();
+        },
+        /**
+         * 重置一些变量
+         */
+        reset:function(){
+            this.oldItem={};
+            this.targetIndex=null;
+            this.addItem={};
+            this.actionType=null;
         },
         /**
          *   转化成前台格式
          */
         converseData:function(list){
-            if(tabId==='carousel_home') {
-                this.productProductList
+            if(this.activeTab==='carousel_home') {
+                this.homeProductList=[];
                 for (var i = 0; i < list.length; i++) {
-                    list[i].state = 'read';
+                    this.homeProductList.push({
+                        state:'read',
+                        banner_id:list[i].id,
+                        target_url:list[i].value.target_url,
+                        picture_url:list[i].value.picture_url
+                    });
                 }
             }
+            else{
+                this.productProductList=[];
+                for (var i = 0; i < list.length; i++) {
+                    this.productProductList.push({
+                        state:'read',
+                        banner_id:list[i].id,
+                        target_url:list[i].value.target_url,
+                        picture_url:list[i].value.picture_url
+                    });
+                }
+            }
+        },
+        setTargetList:function(){
+          if(this.activeTab==='carousel_home'){
+              this.targetProductList=this.homeProductList;
+          }
+          else{
+              this.targetProductList=this.productProductList;
+          }
         },
         //弹窗
         showDialog:function(){
@@ -215,38 +245,45 @@ var carousel_main=new Vue({
         },
         //编辑
         edit:function(index){
+            if(this.targetIndex!=null) {
+                //还原上条编辑状态记录
+                Vue.set(this.targetProductList,this.targetIndex,JSON.parse(JSON.stringify(this.oldItem)));
+            }
+            this.oldItem=JSON.parse(JSON.stringify(this.targetProductList[index]));
             this.targetProductList[index].state = 'edit';
-            this.oldItem=this.targetProductList[index];
             this.targetIndex=index;
         },
         del:function(index){
-
+            var data={
+                banner_id:this.targetProductList[index].banner_id
+            };
+            var that=this;
+            this.$http.get('/cms/setting/api_delete_banner',{params:data}).then(function(res){
+                var _res=res.body;
+                if(_res.code===0){
+                    that.targetProductList.splice(index,1);
+                }
+            }, function(err){
+                console.log(err);
+            });
         },
         cancel:function(index){
-            if(this.activeTab==='carousel_home')
-            {
-                this.homeProductList[index].state = 'read';
-            }
-            else{
-                this.productProductList[index].state = 'read';
-            }
+            Vue.set(this.targetProductList,index,this.oldItem);
+            this.targetIndex=null;
+            this.oldItem=null;
         },
         save:function(index){
             var that=this;
             // POST /someUrl
-            if(this.activeTab==='carousel_home'){
-                var data=this.homeProductList[index];
-            }
-            else {
-                var data = this.productProductList[index];
-            }
+            var data=this.targetProductList[index];
             this.$http.post('/cms/setting/api_update_banner',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-
+                    that.getBanner();
                 }
                 else{
                     that.$message(_res.msg);
+
                 }
             }, function(err){
                 console.log(err);
@@ -263,7 +300,6 @@ var carousel_main=new Vue({
                 if(_res.code===0){
                     that.getBanner();
                     that.addCarousel=false;
-
                 }
             }, function(err){
                 console.log(err);

@@ -40,7 +40,7 @@
                         <span class="field">~{index+1}</span>
                         <span class="field">
                             <span v-show="item.state==='read'">~{item.target_url}</span>
-                            <input v-show="item.state==='edit'" type="text" :value="item.target_url">
+                            <input v-show="item.state==='edit'" type="text" v-model="item.target_url">
                         </span>
                         <span class="field">
                             <span class="img_wrapper">
@@ -71,7 +71,7 @@
                         <span class="field">~{index+1}</span>
                         <span class="field">
                             <span v-show="item.state==='read'">~{item.target_url}</span>
-                            <input v-show="item.state==='edit'" type="text" :value="item.target_url">
+                            <input v-show="item.state==='edit'" type="text" v-model="item.target_url">
                         </span>
                         <span class="field">
                             <span class="img_wrapper">
