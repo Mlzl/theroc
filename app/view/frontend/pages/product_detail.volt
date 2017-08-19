@@ -20,22 +20,28 @@
             <div class="productShow">
                 <div class="picShow">
                     <p>
-                        <img src="/images/ali.jpg" />
+                        <img :src="curCoverImg" />
                     </p>
                     <ul>
-                        <li v-for="n in 4"><img src="/images/ali.jpg" /></li>
+                        <li :class="{active:coverImg_index==index}"
+                            v-for="(item,index) in productDetail._picture_url"
+                            @click="switchCoverImg(item,index)">
+                            <img :src="item" />
+                        </li>
                     </ul>
                 </div>
                 <div class="attrShow">
-                    <h3>PowerCore Fusion 5000mAh Portable Charger</h3>
-                    <p>自定义属性</p>
-                    <p>$25.99</p>
+                    <h3>~{productDetail.name}</h3>
+                    <p>~{productDetail.label}</p>
+                    <p>$~{curPrice}</p>
                     <ul>
-                        <li>red</li>
-                        <li>blue</li>
-                        <li>green</li>
+                        <li :class="{active:curClassifyAttr_index==index}"
+                            v-for="(item,index) in productDetail.attr"
+                            @click="switchClassifyAttr(item,index)">
+                            ~{item.name}
+                        </li>
                     </ul>
-                    <el-button>BUY NOW</el-button>
+                    <el-button @click="toTargetUrl(productDetail.target_url)">BUY NOW</el-button>
                 </div>
             </div>
             <!--图文详情和买家评价-->
@@ -45,9 +51,7 @@
                     <li :class="{active:tab==1}" @click="tabChange(1)">comments</li>
                 </ul>
                 <!--图文详情-->
-                <div v-show="tab==0" class="imageText">
-                    这里是图文详情
-                </div>
+                <div v-show="tab==0" class="imageText" v-html="productDetail.img_txt_detail"></div>
                 <!--买家评价-->
                 <div v-show="tab==1" class="comment">
                     <h3>comments</h3>

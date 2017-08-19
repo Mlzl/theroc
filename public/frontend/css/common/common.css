@@ -226,3 +226,30 @@
   border-color: #25ba80;
   background: #25ba80;
 }
+.el-button {
+  color: #25ba80;
+  padding: 0;
+}
+.el-button:focus {
+  color: #25ba80;
+  border: 1px solid #25ba80;
+}
+.el-button--default {
+  color: #25ba80;
+  border: 1px solid #25ba80;
+}
+.el-button--default:hover {
+  color: #25ba80;
+  border: 1px solid #25ba80;
+}
+.el-button--primary {
+  color: #fff;
+  border: 1px solid #25ba80;
+  background: #25ba80;
+}
+.el-button--primary:hover,
+.el-button--primaryfocus {
+  color: #fff;
+  border: 1px solid #25ba80;
+  background: #25ba80;
+}

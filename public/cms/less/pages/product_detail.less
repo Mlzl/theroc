@@ -9,27 +9,36 @@
   top:56px;
   left:220px;
   .head{
-    height:80px;
-    line-height:80px;
+    height:72px;
+    line-height:72px;
     overflow: hidden;
     position:relative;
     .tab_ul{
-      height:40px;
+      height:32px;
       margin:20px 0 20px 40px;
       li{
-        width: 128px;
-        height: 38px;
-        line-height:38px;
+        cursor:default;
+        height: 30px;
+        line-height:30px;
         text-align:center;
+        padding:0 20px;
         background-color: #ffffff;
-        border-top: solid 1px #cccccc;
-        border-bottom: solid 1px #cccccc;
+        //border-top: solid 1px #cccccc;
+        //border-bottom: solid 1px #cccccc;
         float:left;
         &:nth-of-type(1){
+          border-top: solid 1px #cccccc;
+          border-bottom: solid 1px #cccccc;
           border-left: solid 1px #cccccc;
         }
         &:nth-of-type(2){
+          border: solid 1px #cccccc;
+        }
+        &:nth-of-type(3){
+          border-top: solid 1px #cccccc;
+          border-bottom: solid 1px #cccccc;
           border-right: solid 1px #cccccc;
+
         }
       }
       li.active{
@@ -41,9 +50,13 @@
       position:absolute;
       top:0;
       right:88px;
+      button{
+        width:60px;
+        height:28px;
+      }
     }
   }
-  .baseData,.imageText{
+  .baseData,.imageText,.commentList{
     box-sizing:border-box;
     width: 1106px;
     height: 642px;
@@ -129,11 +142,71 @@
     }
   }
   .imageText{
-    .imageText_see{
-
+    .imageText_see,.imageText_edit{
+      height:520px;
+      overflow:auto;
     }
-    .imageText_edit{
-      height:450px;
+  }
+  .commentList{
+    .product_table{
+      width: 1025px;
+      height: 570px;
+      border-radius: 4px;
+      background:#F1F1F1;
+      .product_thead,.product_tbody{
+        >p{
+          background:#fff;
+          >span{
+            display:inline-block;
+            text-indent:10px;
+            vertical-align: top;
+            &:nth-of-type(1){
+              width:59px;
+            }
+            &:nth-of-type(2){
+              width:170px;
+            }
+            &:nth-of-type(3){
+              width:85px;
+            }
+            &:nth-of-type(4){
+              width:169px;
+            }
+            &:nth-of-type(5){
+              width:99px;
+            }
+            &:nth-of-type(6){
+              width:190px;
+            }
+          }
+        }
+      }
+      .product_thead{
+        height:40px;
+        line-height:40px;
+        margin:0 0 4px 0;
+      }
+      .product_tbody{
+        color: #2c3347;
+        height:630px;
+        >p{
+          height:50px;
+          line-height:50px;
+          margin:0 0 4px 0;
+          position:relative;
+          >span{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          >span:nth-of-type(6){
+            img{
+              width:40px;
+              height:24px;
+            }
+          }
+        }
+      }
     }
   }
 }

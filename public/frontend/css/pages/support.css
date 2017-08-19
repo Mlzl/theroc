@@ -356,154 +356,260 @@ table {
 .clearfix {
   zoom: 1;
 }
-#user_main {
-  min-width: 1000px;
-  width: 1366px;
-  background-color: #ffffff;
-  margin: 0 auto;
-}
-#user_main a {
-  text-decoration: none;
-  color: #5a5a5a;
-}
-#user_main li {
-  text-align: left;
-  list-style: none;
-}
-#user_main .user-overview {
-  width: 81%;
-  margin: 0 auto;
-  background-color: #f8f8f8;
-  display: block;
-}
-#user_main .user-overview .overview-item1 {
-  position: relative;
-  display: inline-block;
-  float: left;
-  margin: 13px 30px 13px 77px;
-}
-#user_main .user-overview .overview-item1 .photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  border: 0px solid transparent;
-}
-#user_main .user-overview .overview-item1 .uploadimg-btn {
-  position: absolute;
-  top: 33px;
-  left: 31px;
-  width: 37px;
-  height: 32px;
-}
-#user_main .user-overview .overview-item1 .uploadimg {
-  width: 37px;
-  height: 32px;
-}
-#user_main .user-overview .overview-item2 {
-  display: inline-block;
+input {
   box-sizing: border-box;
-  height: 126px;
-  float: left;
-  padding-top: 34px;
-  padding-left: 0;
-  margin: 0;
 }
-#user_main .user-overview .overview-item2 .overview-email {
-  font-family: MicrosoftYaHei;
-  font-size: 16px;
-  color: #5a5a5a;
-}
-#user_main .user-overview .overview-item2 .photo-btn,
-#user_main .user-overview .overview-item2 .password-btn {
-  font-size: 14px;
-  color: #5a5a5a;
-}
-#user_main .user-form {
-  width: 76%;
+#support_main {
+  width: 1120px;
   margin: 0 auto;
 }
-#user_main .user-form .row {
-  margin-top: 20px;
-}
-#user_main .user-form .row .user-name {
+#support_main .banner-container {
+  position: relative;
   width: 100%;
+  height: 449px;
 }
-#user_main .user-form .row .inp-normal {
-  float: left;
-  width: 27%;
-  display: table-cell;
+#support_main .banner-container .img {
+  width: 100%;
+  height: 100%;
 }
-#user_main .user-form .row .fill1 {
-  float: left;
-  display: table-cell;
-  width: 4%;
-  height: 40px;
+#support_main .banner-container .search {
+  box-sizing: border-box;
+  width: 561px;
+  height: 167px;
+  opacity: 0.6;
+  background-color: #7d7d7d;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 24px 40px;
 }
-#user_main .user-form .row .inp-big {
-  float: left;
-  width: 38%;
-  display: table-cell;
-}
-#user_main .user-form .row .inp-small-left {
-  float: left;
-  display: table-cell;
-  width: 16%;
-}
-#user_main .user-form .row .inp-small-right {
-  float: left;
-  display: table-cell;
-  width: 16%;
-}
-#user_main .user-form .row .fill2 {
-  float: left;
-  display: table-cell;
-  width: 6%;
-  height: 40px;
-}
-#user_main .user-form .long-row {
-  height: 56px;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  border: solid 1px #cccccc;
-  padding-left: 10px;
-}
-#user_main .user-form .long-row .form-email-tip {
-  height: 13px;
-  font-size: 14px;
-  line-height: 1.07;
-  text-align: left;
-  color: #999999;
-  margin-top: 11px;
-}
-#user_main .user-form .long-row .form-email {
-  height: 15px;
-  font-size: 14px;
-  line-height: 1.07;
-  text-align: left;
-  color: #666666;
-  margin-top: 8px;
-}
-#user_main .user-form .form-footer {
-  height: 40px;
-  text-align: right;
-}
-#user_main .user-form .form-footer .submit {
-  display: inline-block;
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: #25ba80;
+#support_main .banner-container .search .title {
+  margin: 0;
+  height: 35px;
   font-family: MicrosoftYaHei;
-  font-size: 14px;
-  line-height: 40px;
-  text-align: center;
+  font-size: 30px;
+  text-align: left;
   color: #ffffff;
 }
-#user_main .user-form input {
+#support_main .banner-container .search .search-tip {
+  margin-top: 19px;
+  font-size: 16px;
+  text-align: left;
+  color: #ffffff;
+}
+#support_main .banner-container .search .productForm {
+  margin-top: 13px;
+}
+#support_main .banner-container .search .productForm .searchText {
+  float: left;
   box-sizing: border-box;
+  padding-left: 14px;
+  height: 38px;
+  color: #fff;
+  width: 88%;
+  line-height: 38px;
+  background-color: rgba(2, 0, 0, 0.5);
+  border: 1px solid #ffffff;
+}
+#support_main .banner-container .search .productForm .submit_btn {
+  box-sizing: border-box;
+  float: left;
+  outline: 0;
+  height: 38px;
+  width: 12%;
+  border: 1px solid #fff;
+}
+#support_main .banner-container .search .productForm .submit_btn .searchImg {
+  width: 21px;
+  heigth: 27px;
+}
+#support_main .service-nav {
+  display: block;
+  width: 1120px;
+  height: 93px;
+  list-style: none;
+  background-color: #efefef;
+}
+#support_main .service-nav li {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  color: #5a5a5a;
+  width: 50%;
+  height: 93px;
+}
+#support_main .service-nav li .refunds-icon {
+  background: url("../../../images/refunds_exchanges.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .service-nav li .warranty-icon {
+  background: url("../../../images/warranty.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .service-nav li i {
+  display: block;
+  margin: 16px auto 0 auto;
   height: 40px;
-  line-height: 40px;
-  text-indent: 10px;
-  border: solid 1px #cccccc;
+  width: 40px;
+}
+#support_main .service-nav li p {
+  height: 18px;
+  margin-top: 10px;
+  line-height: 18px;
+  text-align: center;
+}
+#support_main .service-nav li:hover {
+  background-color: #25ba80;
+  cursor: pointer;
+}
+#support_main .service-nav li:hover p {
+  color: #fff;
+}
+#support_main .service-nav li:hover .refunds-icon {
+  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .service-nav li:hover .warranty-icon {
+  background: url("../../../images/warranty_1.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .service-nav .active {
+  background-color: #25ba80;
+  cursor: pointer;
+}
+#support_main .service-nav .active p {
+  color: #fff;
+}
+#support_main .service-nav .active .refunds-icon {
+  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .service-nav .active .warranty-icon {
+  background: url("../../../images/warranty_1.png") no-repeat;
+  background-size: 40px 40px;
+}
+#support_main .module-container .refunds {
+  width: 993px;
+  margin: 10px auto;
+}
+#support_main .module-container .refunds .refunds-header {
+  text-align: center;
+  margin-top: 111px;
+  margin-bottom: 72px;
+}
+#support_main .module-container .refunds .refunds-header .logo img {
+  width: 48px;
+  height: 40px;
+}
+#support_main .module-container .refunds .refunds-header .header-text {
+  font-size: 30px;
+  text-align: center;
+  color: #585858;
+  margin-left: 66px;
+  line-height: 48px;
+}
+#support_main .module-container .refunds .refunds-form {
+  width: 993px;
+}
+#support_main .module-container .refunds .refunds-form .item-title {
+  font-size: 18px;
+  color: #333333;
+}
+#support_main .module-container .refunds .refunds-form .inp-normal {
+  width: 983px;
+  height: 40px;
   border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-left: 13px;
+}
+#support_main .module-container .refunds .refunds-form .required {
+  color: #ff0000;
+  font-size: 22px;
+}
+#support_main .module-container .refunds .refunds-form .container div,
+#support_main .module-container .refunds .refunds-form .order div,
+#support_main .module-container .refunds .refunds-form .issue div,
+#support_main .module-container .refunds .refunds-form .images div,
+#support_main .module-container .refunds .refunds-form .form-footer div {
+  margin-top: 19px;
+}
+#support_main .module-container .refunds .refunds-form .issue .detail {
+  width: 983px;
+  height: 80px;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer > span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage {
+  position: relative;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage .close_icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 15px 15px;
+  position: absolute;
+  top: -8px;
+  right: -7px;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .theImage img {
+  width: 80px;
+  height: 80px;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn {
+  cursor: pointer;
+  line-height: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+#support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn .add_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('/images/ali.jpg') no-repeat;
+  background-size: 20px 20px;
+}
+#support_main .module-container .refunds .refunds-form .form-footer {
+  height: 45px;
+  margin-bottom: 121px;
+}
+#support_main .module-container .refunds .refunds-form .form-footer .footer-btns {
+  float: right;
+}
+#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .btn {
+  vertical-align: middle;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .submit {
+  background-color: #25ba80;
+}
+#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .reset {
+  background-color: #999999;
+}
+#support_main .module-container .warranty {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+#support_main .module-container .warranty h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #3d3938;
+}
+#support_main .module-container .warranty .warranty-content,
+#support_main .module-container .warranty .faqs-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #5a5a5a;
 }

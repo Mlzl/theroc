@@ -201,6 +201,21 @@ var productMana_main=new Vue({
                 console.log(err);
             });
         },
+        deleteProduct:function(){  //删除产品
+            var _this=this;
+            var url='/cms/product/update_product_status?update_status=0&product_id='+this.curClickProduct.product_id;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.getCurProductList();
+                    _this.$message('删除成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         //普通方法
         handleNodeClick:function(data) {
             // console.log(data);
@@ -251,6 +266,19 @@ var productMana_main=new Vue({
         },
         toDetailPage:function(product_id,e){  //to产品详情页
             window.location.href='/cms/productMana/detail?product_id='+product_id;
+        },
+        deleteProduct_btn:function(curClickProduct,e){  //删除产品btn
+            var _this=this;
+            this.curClickProduct=curClickProduct;
+            this.$confirm('确定删除该产品吗?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                _this.deleteProduct();
+            }).catch(() => {
+
+            });
         },
     }
 })

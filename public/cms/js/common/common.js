@@ -16,7 +16,7 @@ var sideBar=new Vue({
     el:'#sideBar',
     delimiters:['~{','}'],
     data:{
-        test:'test'
+        tab:sessionStorage.sideBar_tab || 0,
     },
     created:function(){
 
@@ -30,6 +30,7 @@ var sideBar=new Vue({
                                 type==4?'commentMana':
                                     type==5?'userMana':
                                         type==6?'blogMana':'';
+            sessionStorage.sideBar_tab=type;
             window.location.href='/cms/'+page;
         }
     }

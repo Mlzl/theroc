@@ -19,15 +19,17 @@
         {% include "smart/sideBar.volt" %}
         <div id="product_detail_main"
              v-loading="loading"
-             element-loading-text="拼命加载中">
+             element-loading-text="拼命加载中"
+             v-cloak>
             <div class="head">
                 <ul class="tab_ul">
                     <li :class="{active:tab==0}" @click="switchTab(0)">基本资料</li>
                     <li :class="{active:tab==1}" @click="switchTab(1)">图文详情</li>
+                    <li :class="{active:tab==2}" @click="switchTab(2)">评价列表</li>
                 </ul>
                 <div class="operation_btn">
                     <template v-if="!isEdit">
-                        <el-button type="text" @click="switchEdit(true)">编辑</el-button>
+                        <el-button @click="switchEdit(true)">编辑</el-button>
                     </template>
                     <template v-else>
                         <el-button @click="switchEdit(false)">取消</el-button>
@@ -102,10 +104,36 @@
             </div>
             <!--图文详情-->
             <div v-show="tab==1" class="imageText">
-                <div v-show="!isEdit" class="imageText_see" v-html="productDetail.img_txt_detail">
-                </div>
+                <div v-show="!isEdit" class="imageText_see" v-html="productDetail.img_txt_detail"></div>
                 <div v-show="isEdit" class="imageText_edit">
                     <div id="editor">
+                    </div>
+                </div>
+            </div>
+            <!--评价列表-->
+            <div v-show="tab==2" class="commentList">
+                <div class="product_table">
+                    <div class="product_thead">
+                        <p>
+                            <span>序号</span>
+                            <span>标题</span>
+                            <span>评价人</span>
+                            <span>星级</span>
+                            <span>评价内容</span>
+                            <span>状态</span>
+                        </p>
+                    </div>
+                    <div class="product_tbody">
+                        <p v-for="n in 4">
+                            <span>~{n}</span>
+                            <span>111</span>
+                            <span>111</span>
+                            <span>111</span>
+                            <span>111</span>
+                            <span>
+                                <img src="/images/on.png" />
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>

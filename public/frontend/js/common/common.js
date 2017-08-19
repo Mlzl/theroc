@@ -61,3 +61,40 @@ var footer=new Vue({
         }
     }
 })
+
+//公共方法
+var pubMethod={
+    getQueryParam:function(){  //获得地址栏参数
+        var name,value;
+        var url=location.href; //取得整个地址栏
+        var num=url.indexOf("?")
+        var str=url.substr(num+1); //取得所有参数
+
+        var arr=str.split("&"); //各个参数放到数组里
+        var obj={};
+        for(var i=0,len=arr.length;i < len;i++){
+            num=arr[i].indexOf("=");
+            if(num>0){
+                name=arr[i].substring(0,num);
+                value=arr[i].substr(num+1);
+                obj[name]=value;
+            }
+        }
+        return obj;
+    },
+    bubbleSort:function(arr,attr){  //冒泡排序
+        var i = arr.length, j;
+        var tempExchangVal;
+        while (i > 0) {
+            for (j = 0; j < i - 1; j++) {
+                if (parseFloat(arr[j][attr]) > parseFloat(arr[j + 1][attr])) {
+                    tempExchangVal = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tempExchangVal;
+                }
+            }
+            i--;
+        }
+        // return arr;
+    }
+}
