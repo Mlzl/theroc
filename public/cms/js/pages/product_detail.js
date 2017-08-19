@@ -9,6 +9,11 @@ var product_detail_main=new Vue({
         isEdit:false,  //是否处于编辑状态
         productDetail:{},  //产品详情
         productDetail_edit:{},  //产品详情 编辑
+        //评论列表
+        commentList:[],  //评论列表
+        commentList_size:10,  //评论列表每页显示条数
+        commentList_page:1,  //评论列表当前页
+        commentList_total:0,  //评论列表总条数
     },
     computed: {
         product_id: function () {
@@ -17,6 +22,7 @@ var product_detail_main=new Vue({
     },
     created:function(){
         this.getProductDetail();
+        this.getCommentList();
     },
     mounted:function(){
         this.getQiNiuToken();
@@ -37,6 +43,27 @@ var product_detail_main=new Vue({
                     quill.root.innerHTML=productDetail.img_txt_detail
                     _this.productDetail=productDetail;
                     _this.productDetail_edit=JSON.parse(JSON.stringify(productDetail));
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        getCommentList:function(){  //获取评论列表
+            var _this=this;
+            var product_id=this.product_id;
+            var commentList_size=this.commentList_size;
+            var commentList_page=this.commentList_page;
+            var url='/api/product/api_get_comments?product_id='+product_id+'&page='+commentList_page+'&size='+commentList_size;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var commentList=_res.data.list;
+                    var commentList_total=_res.data.total;
+
+                    _this.commentList=commentList;
+                    _this.commentList_total=commentList_total;
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -272,6 +299,10 @@ var product_detail_main=new Vue({
             }else if(tab==2){
 
             }
-        }
+        },
+        commentChange(val){  //评论列表翻页时
+            this.commentList_page=val;
+            this.getCommentList();
+        },
     }
 })

@@ -1,0 +1,64 @@
+@import "../common/reset";
+@import "../common/common";
+
+#returnMana_main{
+  min-width:1146px;
+  height:600px;
+  position:absolute;
+  top:56px;
+  left:220px;
+  .return_table{
+    width: 829px;
+    height: 670px;
+    border-radius: 4px;
+    background:#F1F1F1;
+    .return_thead,.return_tbody{
+      >p{
+        background:#fff;
+        >span{
+          display:inline-block;
+          text-indent:10px;
+          vertical-align: top;
+          &:nth-of-type(1){
+            width:59px;
+          }
+          &:nth-of-type(2){
+            width:170px;
+          }
+          &:nth-of-type(3){
+            width:85px;
+          }
+          &:nth-of-type(4){
+            width:169px;
+          }
+          &:nth-of-type(5){
+            width:99px;
+          }
+          &:nth-of-type(6){
+            width:190px;
+          }
+        }
+      }
+    }
+    .return_thead{
+      height:40px;
+      line-height:40px;
+      margin:0 0 4px 0;
+    }
+    .return_tbody{
+      color: #2c3347;
+      height:630px;
+      >p{
+        height:50px;
+        line-height:50px;
+        margin:0 0 4px 0;
+        position:relative;
+        >span{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

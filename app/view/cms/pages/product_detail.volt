@@ -136,6 +136,13 @@
                         </p>
                     </div>
                 </div>
+                <el-pagination style="text-align:center"
+                               small layout="prev, pager, next"
+                               :page-size="commentList_size"
+                               :current-page="commentList_page"
+                               :total="commentList_total"
+                               @current-change="commentChange">
+                </el-pagination>
             </div>
         </div>
     </div>

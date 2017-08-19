@@ -18,7 +18,7 @@
     </li>
     <li :class="{active:tab==4}" @click="switchPages(4)">
         <i class="pencil_icon"></i>
-        <span>评价管理</span>
+        <span>退款管理</span>
     </li>
     <li :class="{active:tab==5}" @click="switchPages(5)">
         <i class="location_icon"></i>
