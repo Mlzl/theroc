@@ -4,7 +4,7 @@ var product_detail_main=new Vue({
     el:'#product_detail_main',
     delimiters:['~{','}'],
     data:{
-        tab:0,  //选项卡，0基本资料、1图文详情
+        tab:0,  //选项卡，0基本资料、1图文详情、2评价列表
         loading:false,  //是否加载中
         isEdit:false,  //是否处于编辑状态
         productDetail:{},  //产品详情

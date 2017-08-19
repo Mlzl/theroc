@@ -13,7 +13,7 @@
         {% include "smart/topBar.volt" %}
         <!--侧边栏-->
         {% include "smart/sideBar.volt" %}
-        <div id="productMana_main">
+        <div id="productMana_main" v-cloak>
             <div class="main_left">
                 <el-tree :data="tree_data" :props="defaultProps" node-key="id"
                          :default-expanded-keys="defaultexpandedKeys"
@@ -27,9 +27,11 @@
                     <h3>123</h3>
                     <div class="operation_btn">
                         <el-button class="addClass_btn" @click="showAddClass(true,0)">添加分类</el-button>
-                        <el-button class="modifyClass_btn" @click="showAddClass(true,1)">修改分类</el-button>
-                        <el-button class="deleteClass_btn" @click="deleteClass_btn">删除分类</el-button>
-                        <el-button class="addProduct_btn" @click="showAddProduct(true)">添加产品</el-button>
+                        <template v-if="curNode.id!=0">
+                            <el-button class="modifyClass_btn" @click="showAddClass(true,1)">修改分类</el-button>
+                            <el-button class="deleteClass_btn" @click="deleteClass_btn">删除分类</el-button>
+                            <el-button class="addProduct_btn" @click="showAddProduct(true)">添加产品</el-button>
+                        </template>
                     </div>
                 </div>
                 <div class="product_table">
@@ -59,7 +61,7 @@
                             <span>
                                 <el-button class="addPrice_btn" @click="showAddPrice(true,item)">添加价格</el-button>
                                 <el-button class="detail_btn" @click="toDetailPage(item.product_id)">详情</el-button>
-                                <el-button class="delete_btn">删除</el-button>
+                                <el-button class="delete_btn" @click="deleteProduct_btn(item)">删除</el-button>
                             </span>
                         </p>
                     </div>
@@ -96,7 +98,6 @@
                     <el-button type="primary" @click="addProduct">确 定</el-button>
                 </span>
             </el-dialog>
-<<<<<<< Updated upstream
             <!--添加价格 弹出框-->
             <el-dialog title="添加价格" v-model="addPrice_show" custom-class="addPrice_dialog"
                        :show-close=false :close-on-click-modal=false>
@@ -109,9 +110,6 @@
                     <el-button type="primary" @click="addPrice">确 定</el-button>
                 </span>
             </el-dialog>
-=======
-
->>>>>>> Stashed changes
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>

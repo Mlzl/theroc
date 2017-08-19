@@ -319,6 +319,18 @@ table {
   border-color: #25ba80;
   background: #25ba80;
 }
+.el-button {
+  color: #25ba80!important;
+  padding: 0!important;
+}
+.el-button--default {
+  color: #25ba80!important;
+  border: 1px solid #25ba80!important;
+}
+.el-button--primary {
+  background: #25ba80!important;
+  border: 1px solid #25ba80!important;
+}
 #product_main .carouselArea {
   min-width: 1366px;
   height: 342px;
