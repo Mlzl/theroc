@@ -516,10 +516,7 @@ table {
 }
 #productMana_main .main_right .product_table .product_tbody button {
   height: 25px;
-  color: #25ba80;
   padding: 0 5px;
-  border-radius: 4px;
-  border: solid 1px #25ba80;
 }
 #productMana_main .main_right .product_table .product_tbody button:not( :nth-of-type(1)) {
   margin: 0 0 0 2px;

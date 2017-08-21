@@ -1,3 +1,5 @@
+import { ImageResize } from '/common/ImageResize.js';
+Quill.register('modules/imageResize', ImageResize);
 
 var quill;
 var product_detail_main=new Vue({
@@ -55,7 +57,7 @@ var product_detail_main=new Vue({
             var product_id=this.product_id;
             var commentList_size=this.commentList_size;
             var commentList_page=this.commentList_page;
-            var url='/api/product/api_get_comments?product_id='+product_id+'&page='+commentList_page+'&size='+commentList_size;
+            var url='/api/product/getComments?product_id='+product_id+'&page='+commentList_page+'&size='+commentList_size;
             this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
@@ -186,6 +188,9 @@ var product_detail_main=new Vue({
                                 }
                             }
                         }
+                    },
+                    imageResize: {
+                        displaySize: true
                     }
                 }
             });

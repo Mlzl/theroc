@@ -27,7 +27,7 @@
                     <li :class="{active:tab==1}" @click="switchTab(1)">图文详情</li>
                     <li :class="{active:tab==2}" @click="switchTab(2)">评价列表</li>
                 </ul>
-                <div class="operation_btn">
+                <div class="operation_btn" v-if="tab!=2">
                     <template v-if="!isEdit">
                         <el-button @click="switchEdit(true)">编辑</el-button>
                     </template>
@@ -116,7 +116,6 @@
                     <div class="product_thead">
                         <p>
                             <span>序号</span>
-                            <span>标题</span>
                             <span>评价人</span>
                             <span>星级</span>
                             <span>评价内容</span>
@@ -124,14 +123,15 @@
                         </p>
                     </div>
                     <div class="product_tbody">
-                        <p v-for="n in 4">
-                            <span>~{n}</span>
-                            <span>111</span>
-                            <span>111</span>
-                            <span>111</span>
-                            <span>111</span>
+                        <p v-for="(item,index) in commentList">
+                            <span>~{index+1}</span>
+                            <span>~{item.user_name}</span>
                             <span>
-                                <img src="/images/on.png" />
+                                <img v-for="n in item.stat_num" src="/images/star_icon.png" style="width:18px;height:17px"/>
+                            </span>
+                            <span>~{item.content}</span>
+                            <span>
+                                <el-button class="delete_btn" @click="">删除</el-button>
                             </span>
                         </p>
                     </div>
@@ -156,6 +156,7 @@
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
     <!-- qiniu -->
     <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
+    <!--<script src="/common/ImageResize.js"></script>-->
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
