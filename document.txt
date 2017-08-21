@@ -58,11 +58,14 @@ post:{name, class_id, target_url, product_id,img_txt_detail,product_label}
 
 
 #获取产品评论
-/api/product/api_get_comments?product_id=xx&page=xx&size=xx
+/api/product/getComments?product_id=xx&page=xx&size=xx
 
 #添加产品评论
-/api/product/api_add_comment
-post:{content, product_id}
+/api/product/addComment
+post:{content, product_id, stat_num}
+
+#添加产品评论
+/cms/product/api_delete_comments?comment_id=xxx
 
 #添加产品属性
 /cms/productattribute/api_add

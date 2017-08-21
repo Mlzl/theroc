@@ -100,6 +100,10 @@ class ProductController extends ApiController {
             Response::error(Language::PARAM_ERROR);
         }
         $comments_info = \ProductComment::getCommentByProductId($product_id, $page, $size);
+        foreach ($comments_info as &$comments){
+            $user_info = \User::findOneByField('user_id', $comments['user_id']);
+            $comments['user_name'] = $user_info->user_name;
+        }
         $data = array(
             'list'=>$comments_info,
             'total'=>\ProductComment::count(array('conditions'=>'product_id=:product_id:',
@@ -111,10 +115,14 @@ class ProductController extends ApiController {
     public function addCommentAction(){
         $content = $this->request->get('content');
         $product_id = $this->request->get('product_id');
+        $stat_num = intval($this->request->get('stat_num'));
         $user_id = $this->user->user_id;
         $product_comment = new \ProductComment();
         if(!$content || !$product_id || !$user_id){
             Response::error(Language::LOST_PARAMS);
+        }
+        if($stat_num<1 || $stat_num>5){
+            Response::error(Language::PARAM_ERROR);
         }
         if(!\Product::getProductById($product_id)){
             Response::error(Language::PRODUCT_NOT_EXISTS);
@@ -123,11 +131,14 @@ class ProductController extends ApiController {
             'content'=>$content,
             'product_id'=>$product_id,
             'create_time'=>time(),
-            'user_id'=>$user_id
+            'user_id'=>$user_id,
+            'stat_num'=>$stat_num
         );
         $product_comment->save($data);
         Response::success($product_comment->toArray());
     }
+
+
 
     public function getBannerAction(){
         $banner_type = $this->request->get('banner_type');

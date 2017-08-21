@@ -124,4 +124,13 @@ class ProductController extends BackendController {
         \ProductClass::deleteOneByField($class_id, 'pid');//删除子类
         Response::success();
     }
+
+    public function api_delete_commentsAction(){
+        $comment_id = intval($this->request->get('comment_id'));
+        if(!$comment_id){
+            Response::error(Language::PARAM_ERROR);
+        }
+        \ProductComment::deleteOneByField('id', $comment_id);
+        Response::success();
+    }
 }
