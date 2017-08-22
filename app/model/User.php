@@ -12,6 +12,11 @@ class User extends Model{
         return 'theroc_user';
     }
 
+    public function activateAccount(){
+        $this->update(array('status'=>self::NORMAL));
+        return true;
+    }
+
     public function addUser($user=array()){
         $data = array(
             'user_name'=>$user['user_name'],

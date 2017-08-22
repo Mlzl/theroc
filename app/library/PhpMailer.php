@@ -23,11 +23,14 @@ class PhpMailer{
         }
         return $mailer;
     }
-    public static function sendRegisterMail($mail, $name){
+    public static function sendRegisterMail($mail, $name, $token){
         $mailer = self::getMailerInstance();
         $mailer->addAddress($mail, $name);     // Add a recipient
         $mailer->Subject = 'Here is the mail test';
-        $mailer->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mailer->Body    =<<<EOT
+This is the HTML message body <b>in bold!</b>
+<a href='http://www.theroc.com/user/activateAccount?email=$mail&token=$token'></a>";
+EOT;
         if(!$mailer->send()){
             var_dump($mailer->ErrorInfo);
         }

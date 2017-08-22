@@ -2,6 +2,7 @@
 namespace Roc\BackendController;
 use \Phalcon\Mvc\Controller;
 use Roc\Library\Response;
+use Roc\Library\LoginStatus;
 
 /**
  * User: ambi
@@ -10,6 +11,8 @@ use Roc\Library\Response;
 class BackendController extends Controller{
     public function onConstruct(){
         $this->view->setViewsDir(APP_PATH.'view/cms');
+        $loginLib = new LoginStatus($this->di);
+        $loginLib->registerUserToDi(10000000,'1069163403@qq.com', 'mlzl', 1);
     }
 
     public function updateItem(&$model, $data=array()){

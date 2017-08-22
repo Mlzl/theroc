@@ -13,8 +13,13 @@ use Roc\Library\LoginStatus;
 use Roc\Library\Password;
 use Roc\Library\PhpMailer;
 use Roc\Library\Response;
+use Roc\Library\Utility;
 
 class UserController extends ApiController{
+
+    public function onConstruct(){
+
+    }
 
     public function loginAction(){
         $email = $this->request->getPost('email');
@@ -68,7 +73,9 @@ class UserController extends ApiController{
             'email'     =>$email,
         );
         if($userModel->addUser($data)){
-            //PhpMailer::sendRegisterMail($email, $username);
+            $utility = new Utility($this->di);
+            $token = $utility->geneRegisterToken($email);
+            PhpMailer::sendRegisterMail($email, $username, $token);
             Response::success($userModel->toArray());
         }
         Response::error(Language::REGISTER_ERROR);
