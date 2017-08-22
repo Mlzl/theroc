@@ -26,10 +26,10 @@ class PhpMailer{
     public static function sendRegisterMail($mail, $name, $token){
         $mailer = self::getMailerInstance();
         $mailer->addAddress($mail, $name);     // Add a recipient
-        $mailer->Subject = 'Here is the mail test';
+        $mailer->Subject = 'from the';
         $mailer->Body    =<<<EOT
 This is the HTML message body <b>in bold!</b>
-<a href='http://www.theroc.com/user/activateAccount?email=$mail&token=$token'></a>";
+<a href='http://www.theroc.com/login/activateAccount?email=$mail&token=$token'>点击激活</a>";
 EOT;
         if(!$mailer->send()){
             var_dump($mailer->ErrorInfo);

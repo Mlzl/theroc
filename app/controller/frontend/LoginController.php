@@ -15,9 +15,18 @@ class LoginController extends FrontendController {
     public function activateAccountAction(){
         $token = $this->request->get('token');
         $email = $this->request->get('email');
+        $user = \User::findUserByEmail($email);
+        if(!$user){
+            exit('user not exists');
+        }
+        if($user->status == 1){
+            exit('user has activate');
+        }
+        if($user->status == 2){
+            exit('user has been ban');
+        }
         $utility = new Utility($this->di);
         if($utility->checkRegisterToken($token, $email)){
-            $user = \User::findUserByEmail($email);
             if($user){
                 $user->activateAccount();
                 exit("success");

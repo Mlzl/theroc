@@ -33,6 +33,7 @@ class Utility{
         if($_token != $token){
             return false;
         }
+        $this->di->get('redis')->del(RedisKey::REGISTER_TOKEN_KEY.$email);
         return true;
     }
 }
