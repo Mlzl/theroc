@@ -1,5 +1,3 @@
-import { ImageResize } from '/common/ImageResize.js';
-Quill.register('modules/imageResize', ImageResize);
 
 var quill;
 var product_detail_main=new Vue({

@@ -404,11 +404,17 @@ table {
   border: 1px solid #25ba80;
   background: #25ba80;
 }
+.el-loading-spinner .path {
+  stroke: #25ba80;
+}
+.el-loading-spinner .el-loading-text {
+  color: #25ba80;
+}
 #product_detail_main {
   min-width: 1146px;
   height: 600px;
   background: #F1F1F1;
-  position: absolute;
+  position: absolute!important;
   top: 56px;
   left: 220px;
 }
@@ -523,7 +529,7 @@ table {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url('/images/ali.jpg') no-repeat;
+  background: url('/images/close_icon.png') no-repeat;
   background-size: 10px 10px;
   position: absolute;
   top: 0;

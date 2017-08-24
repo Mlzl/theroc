@@ -404,6 +404,12 @@ table {
   border: 1px solid #25ba80;
   background: #25ba80;
 }
+.el-loading-spinner .path {
+  stroke: #25ba80;
+}
+.el-loading-spinner .el-loading-text {
+  color: #25ba80;
+}
 #productMana_main {
   min-width: 1146px;
   height: 600px;
@@ -472,7 +478,7 @@ table {
 }
 #productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(1),
 #productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(1) {
-  width: 59px;
+  width: 50px;
 }
 #productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(2),
 #productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(2) {
@@ -488,7 +494,7 @@ table {
 }
 #productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(5),
 #productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(5) {
-  width: 99px;
+  width: 110px;
 }
 #productMana_main .main_right .product_table .product_thead > p > span:nth-of-type(6),
 #productMana_main .main_right .product_table .product_tbody > p > span:nth-of-type(6) {

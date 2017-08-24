@@ -311,3 +311,9 @@
   border: 1px solid #25ba80;
   background: #25ba80;
 }
+.el-loading-spinner .path {
+  stroke: #25ba80;
+}
+.el-loading-spinner .el-loading-text {
+  color: #25ba80;
+}

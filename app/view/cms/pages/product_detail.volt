@@ -96,8 +96,8 @@
                           <i class="close_icon" @click="deleteCoverImg(item)"></i>
                           <img :src="item" />
                         </span>
-                        <span style="cursor:pointer;" @click="imageUpload">
-                            <img src="/images/ali.jpg" />
+                        <span style="cursor:pointer;border:1px solid #ccc" @click="imageUpload">
+                            <img src="/images/add_icon.png" style="width:40px;height:40px;margin:20px;"/>
                         </span>
                     </p>
                 </div>
@@ -156,7 +156,7 @@
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
     <!-- qiniu -->
     <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
-    <!--<script src="/common/ImageResize.js"></script>-->
+    <script src="/plugin/image-resize.min.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
