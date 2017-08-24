@@ -3,7 +3,6 @@ var productMana_main=new Vue({
     el:'#productMana_main',
     delimiters:['~{','}'],
     data:{
-        // curNodeUserListLoading:true,  //当前树节点用户列表loading 显示隐藏
         //左侧树数据（分类）
         tree_data:[{  //分类,左侧树数据
             id:'0',
@@ -23,7 +22,7 @@ var productMana_main=new Vue({
         },
         //产品列表
         curProductList:[],  //当前分类产品列表
-        curProductList_size:10,  //当前分类产品列表每页显示条数
+        curProductList_size:11,  //当前分类产品列表每页显示条数
         curProductList_page:1,  //当前分类产品列表当前页
         curProductList_total:0,  //当前分类产品列表总条数
         curClickProduct:{},  //当前点击产品

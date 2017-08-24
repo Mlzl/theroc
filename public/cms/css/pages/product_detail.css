@@ -124,7 +124,7 @@ table {
 }
 #sideBar {
   width: 190px;
-  height: 600px;
+  height: 700px;
   padding: 10px 10px;
   background-color: #222222;
   position: absolute;
@@ -412,7 +412,7 @@ table {
 }
 #product_detail_main {
   min-width: 1146px;
-  height: 600px;
+  height: 720px;
   background: #F1F1F1;
   position: absolute!important;
   top: 56px;
@@ -537,12 +537,12 @@ table {
 }
 #product_detail_main .imageText .imageText_see,
 #product_detail_main .imageText .imageText_edit {
-  height: 520px;
+  height: 550px;
   overflow: auto;
 }
 #product_detail_main .commentList .product_table {
   width: 1025px;
-  height: 570px;
+  height: 605px;
   border-radius: 4px;
   background: #F1F1F1;
 }
@@ -583,7 +583,6 @@ table {
 }
 #product_detail_main .commentList .product_table .product_tbody {
   color: #2c3347;
-  height: 630px;
 }
 #product_detail_main .commentList .product_table .product_tbody > p {
   height: 50px;

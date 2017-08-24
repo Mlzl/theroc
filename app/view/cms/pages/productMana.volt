@@ -65,14 +65,14 @@
                             </span>
                         </p>
                     </div>
+                    <el-pagination style="text-align:center"
+                                   small layout="prev, pager, next"
+                                   :page-size="curProductList_size"
+                                   :current-page="curProductList_page"
+                                   :total="curProductList_total"
+                                   @current-change="curProductChange">
+                    </el-pagination>
                 </div>
-                <el-pagination style="text-align:center"
-                               small layout="prev, pager, next"
-                               :page-size="curProductList_size"
-                               :current-page="curProductList_page"
-                               :total="curProductList_total"
-                               @current-change="curProductChange">
-                </el-pagination>
             </div>
             <!--添加、修改分类 弹出框-->
             <el-dialog :title="addOrModify==0?'添加分类':'修改分类'" v-model="addClass_show" custom-class="addClass_dialog"
