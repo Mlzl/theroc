@@ -53,29 +53,29 @@ class UserController extends ApiController{
     public function registerAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $username = $this->request->getPost('username');
+        //$username = $this->request->getPost('username');
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
         }
         if(!$password){
             Response::error(Language::PASSWORD_EMPTY);
         }
-        if(!$username){
-            Response::error(Language::USER_NAME_EMPTY);
-        }
+//        if(!$username){
+//            Response::error(Language::USER_NAME_EMPTY);
+//        }
         if(\User::findUserByEmail($email)){
             Response::error(Language::EMAIL_HAD_BE_USED);
         }
         $userModel = new \User();
         $data = array(
-            'user_name' =>$username,
+            //'user_name' =>$username,
             'password'  =>$password,
             'email'     =>$email,
         );
         if($userModel->addUser($data)){
             $utility = new Utility($this->di);
             $token = $utility->geneRegisterToken($email);
-            PhpMailer::sendRegisterMail($email, $username, $token);
+            PhpMailer::sendRegisterMail($email, $email, $token);
             Response::success($userModel->toArray());
         }
         Response::error(Language::REGISTER_ERROR);
