@@ -32,7 +32,8 @@ This is the HTML message body <b>in bold!</b>
 <a href='http://www.theroc.com/login/activateAccount?email=$mail&token=$token'>点击激活</a>";
 EOT;
         if(!$mailer->send()){
-            var_dump($mailer->ErrorInfo);
+            return $mailer->ErrorInfo;
         }
+        return true;
     }
 }

@@ -74,7 +74,9 @@ class UserController extends ApiController{
         if($userModel->addUser($data)){
             $utility = new Utility($this->di);
             $token = $utility->geneRegisterToken($email);
-            PhpMailer::sendRegisterMail($email, $email, $token);
+            if(($res = PhpMailer::sendRegisterMail($email, $email, $token)) !==true){
+                Response::error($res);
+            }
             Response::success($userModel->toArray());
         }
         Response::error(Language::REGISTER_ERROR);
