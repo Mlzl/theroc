@@ -7,9 +7,7 @@
 namespace Roc\ApiController;
 
 
-use Phalcon\Cache\Frontend\Data;
 use Roc\Library\Language;
-use Roc\Library\Library;
 use Roc\Library\Response;
 
 class ProductController extends ApiController {

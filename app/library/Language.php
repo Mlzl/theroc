@@ -30,6 +30,8 @@ class Language{
     const PASSWORD_ERROR = 'password error';
     const EMAIL_FORMAT_INVALID = "email format invalid";
     const NO_LOGIN_STATUS ="you had not login";
+    const GENE_CAPTCHA_FAILED ="generating captcha failed";
+    const FORGET_PWD_CAPTCHA_ERROR = "captcha out of date or error";
 
 
     public static function getMessage($message){

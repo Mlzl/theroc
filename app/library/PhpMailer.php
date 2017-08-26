@@ -36,4 +36,18 @@ EOT;
         }
         return true;
     }
+
+    public static function sendCaptcha($mail, $captcha){
+        $mailer = self::getMailerInstance();
+        $mailer->addAddress($mail);     // Add a recipient
+        $mailer->Subject = 'from the roc';
+        $mailer->Body    =<<<EOT
+your captcha is [<strong>$captcha</strong>]<br/>
+it will out of date after <strong>5</strong>minutes
+EOT;
+        if(!$mailer->send()){
+            return $mailer->ErrorInfo;
+        }
+        return true;
+    }
 }

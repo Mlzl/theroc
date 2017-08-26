@@ -20,7 +20,7 @@ class Utility{
         }
         $token = md5($this->token_md5_prefix . $email) . md5($this->token_md5_prefix . time()) . md5(md5(time()));
         if($this->di->get('redis')->set(RedisKey::REGISTER_TOKEN_KEY.$email, $token, TimeStep::ONE_DAY)){
-            return$token;
+            return $token;
         }
         return false;
     }
@@ -34,6 +34,27 @@ class Utility{
             return false;
         }
         $this->di->get('redis')->del(RedisKey::REGISTER_TOKEN_KEY.$email);
+        return true;
+    }
+
+    public function getForgetPwdCaptcha($email){
+        $captcha = md5(time().$email.mt_rand(1,1000));
+        $captcha = substr($captcha, 10, 2) . substr($captcha, 10 ,1) . mt_rand(1,9) . substr($captcha, 20, 2);
+        if($this->di->get('redis')->set(RedisKey::FORGET_PWD_CAPTCHA.$email, $captcha, TimeStep::FIVE_MINUTE)){
+            return $captcha;
+        }
+        return false;
+    }
+
+    public function checkForgetPwdCaptcha($email, $captcha){
+        $_captcha = $this->di->get('redis')->get(RedisKey::FORGET_PWD_CAPTCHA.$email);
+        if(!$_captcha){
+            return false;
+        }
+        if($_captcha != $captcha){
+            return false;
+        }
+        $this->di->get('redis')->del(RedisKey::FORGET_PWD_CAPTCHA.$email);
         return true;
     }
 }

@@ -140,4 +140,46 @@ class UserController extends ApiController{
         }
         Response::success();
     }
+
+    public function sendForgetPwdEmailAction(){
+        $email = $this->request->getPost('email');
+        if(!$email){
+            Response::error(Language::EMAIL_EMPTY);
+        }
+        $userModel = \User::findUserByEmail($email);
+        if(!$userModel){
+            Response::error(Language::USER_NOT_EXISTS);
+        }
+        $utility = new Utility($this->di);
+        $captcha = $utility->getForgetPwdCaptcha($email);
+        if(!$captcha){
+            Response::error(Language::GENE_CAPTCHA_FAILED);
+        }
+        if($msg = PhpMailer::sendCaptcha($email, $captcha) !== true){
+            Response::error($msg);
+        }
+        Response::success();
+    }
+
+    public function updatePwdByEmailAction(){
+        $email = $this->request->getPost('email');
+        $captcha = $this->request->getPost('captcha');
+        $pwd = $this->request->getPost('password');
+        if(!$email || !$captcha || !$pwd){
+            Response::error(Language::LOST_PARAMS);
+        }
+        $utility = new Utility($this->di);
+        if(!$utility->checkForgetPwdCaptcha($email, $captcha)){
+            Response::error(Language::FORGET_PWD_CAPTCHA_ERROR);
+        }
+        $userModel = \User::findUserByEmail($email);
+        if(!$userModel){
+            Response::error(Language::USER_NOT_EXISTS);
+        }
+        $pwd = Password::encrypt($pwd, $userModel->salt);
+        if($this->updateItem($userModel, array('password'=>$pwd))){
+            Response::success();
+        }
+        Response::error($userModel->getMessage());
+    }
 }
