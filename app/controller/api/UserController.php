@@ -5,6 +5,7 @@
  */
 
 namespace Roc\ApiController;
+use Roc\Library\InputCheck;
 use Roc\Library\Language;
 
 use Roc\Library\Captcha;
@@ -55,6 +56,9 @@ class UserController extends ApiController{
         $password = $this->request->getPost('password');
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
+        }
+        if(!InputCheck::isValidEmail($email)){
+            Response::error(Language::EMAIL_FORMAT_INVALID);
         }
         if(!$password){
             Response::error(Language::PASSWORD_EMPTY);
@@ -120,6 +124,9 @@ class UserController extends ApiController{
         $email = $this->request->getPost('email');
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
+        }
+        if(!InputCheck::isValidEmail($email)){
+            Response::error(Language::EMAIL_FORMAT_INVALID);
         }
         $email_model = \UserEmail::getEmail($email);
         if($email_model){

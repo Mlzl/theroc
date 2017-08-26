@@ -28,4 +28,15 @@ class InputCheck extends Library {
         }
         return false;
     }
+
+    public static function isValidEmail($email){
+        if(!$email){
+            return false;
+        }
+        $pattern = "/^[a-zA-Z0-9_-]{1,}@[a-zA-Z0-9]{1,}\.[a-z]{1,}$/";
+        if(preg_match($pattern, $email)){
+            return true;
+        }
+        return false;
+    }
 }

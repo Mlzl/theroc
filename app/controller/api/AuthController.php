@@ -15,4 +15,5 @@ class AuthController extends ApiController{
         $upload_token = QiniuService::getUploadToken();
         Response::success(array('upload_token'=>$upload_token));
     }
+
 }
