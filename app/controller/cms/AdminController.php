@@ -10,6 +10,7 @@ use Roc\Library\Language;
 use Roc\Library\Captcha;
 use Roc\Library\PhpMailer;
 use Roc\Library\Response;
+use Roc\Library\Utility;
 
 class AdminController extends BackendController {
 
@@ -61,7 +62,8 @@ class AdminController extends BackendController {
             'email'     =>$email,
         );
         if($userModel->addUser($data)){
-            PhpMailer::sendRegisterMail($email, $username);
+            $token = (new Utility($this->di))->geneRegisterToken($email);
+            PhpMailer::sendRegisterMail($email, $username, $token);
             Response::success($userModel->toArray());
         }
         Response::error(Language::REGISTER_ERROR);
