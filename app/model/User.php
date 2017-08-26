@@ -40,7 +40,13 @@ class User extends Model{
         $user = $user->toArray();
         $input_password = Password::encrypt($password, $user['salt']);
         if($user['status'] == self::UN_ACTIVE){
-            $this->error_message = '账号尚未激活，请到邮箱激活/联系客服';
+            $utility = new \Roc\Library\Utility($this->getDI());
+            $token = $utility->geneRegisterToken($email);
+            if(($res = \Roc\Library\PhpMailer::sendRegisterMail($email, $email, $token)) !==true){
+                $this->error_message = $res;
+            }else{
+                $this->error_message = "账号尚未激活，已发送邮件到 {$email}, 请前往邮箱激活";
+            }
             return false;
         }
         if($user['status'] == self::BANNED){
