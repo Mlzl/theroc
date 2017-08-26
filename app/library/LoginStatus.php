@@ -24,7 +24,7 @@ class LoginStatus{
             return false;
         }
         $user_info['is_admin'] = $is_admin;
-        $roc_key = md5(time().$uid.time());
+        $roc_key = md5(time().$uid.time().mt_rand(1,100000));
         setcookie($this->roc_cookie_key, $roc_key, time() + TimeStep::SEVEN_DAYS, '/', Constant::HOST);
         $roc_u = Password::getMD5Uid($uid);
         setcookie($this->uid_mk5_cookie_key, $roc_u, time() + TimeStep::SEVEN_DAYS, '/', Constant::HOST);
@@ -48,7 +48,7 @@ class LoginStatus{
             return false;
         }
         $this->registerUserToDi($user_info['user_id'], $user_info['email'], $user_info['user_name'], false);
-        
+
         return $user_info;
     }
 

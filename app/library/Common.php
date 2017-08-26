@@ -12,4 +12,9 @@ class Common{
         header("Location: /login");
         exit();
     }
+
+    public static function goHome(){
+        header("Location: /");
+        exit();
+    }
 }

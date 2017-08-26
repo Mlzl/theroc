@@ -1,5 +1,7 @@
 <?php
 namespace Roc\FrontendController;
+use Roc\Library\Common;
+use Roc\Library\LoginStatus;
 use Roc\Library\Utility;
 
 /**
@@ -10,6 +12,10 @@ use Roc\Library\Utility;
 class LoginController extends FrontendController {
 
     public function onConstruct(){
+        $loginLib = new LoginStatus($this->di);
+        if($user_info = $loginLib->isLogin()){
+            Common::goHome();
+        }
         $this->view->setViewsDir(APP_PATH.'view/frontend');
     }
 
