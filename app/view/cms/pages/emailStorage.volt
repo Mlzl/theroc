@@ -19,25 +19,25 @@
                     <span>Email</span>
                 </div>
                <div class="tbody">
-                   <p v-for="(email,index) in emailStorage">
-                       <span class="field">~{index}</span>
-                       <span class="field">~{email}</span>
+                   <p v-for="(item,index) in emailStorage">
+                       <span class="field">~{index+1}</span>
+                       <span class="field">~{item.email}</span>
                    </p>
                </div>
-               <el-pagination  class="pagination"
-                       @size-change="handleSizeChange"
-                       @current-change="handleCurrentChange"
-                       :current-page="currentPage4"
-                       :page-sizes="[10, 20, 50, 100]"
-                       :page-size="emailStorage"
-                       layout="total, sizes, prev, pager, next, jumper"
-                       :total="400">
+
+               <el-pagination style="text-align:center"
+                              small layout="prev, pager, next"
+                              :page-size="pageSize"
+                              :current-page="currentPage"
+                              :total="total"
+                              @current-change="handleCurrentChange()">
                </el-pagination>
            </div>
 
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/emailStorage.js"></script>

@@ -33,7 +33,7 @@ class LoginStatus{
         return true;
     }
 
-    public function isLogin($register_user=true){
+    public function isLogin(){
         if(empty($_COOKIE[$this->roc_cookie_key]) || empty($_COOKIE[$this->uid_mk5_cookie_key])){
             return false;
         }
@@ -47,9 +47,8 @@ class LoginStatus{
         if(empty($user_info['uid']) || $roc_u != Password::getMD5Uid($user_info['uid'])){
             return false;
         }
-        if($register_user){
-            $this->registerUserToDi($user_info['user_id'], $user_info['email'], $user_info['user_name'], false);
-        }
+        $this->registerUserToDi($user_info['user_id'], $user_info['email'], $user_info['user_name'], false);
+        
         return $user_info;
     }
 
