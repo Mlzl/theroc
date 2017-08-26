@@ -79,7 +79,7 @@
                        :show-close=false :close-on-click-modal=false>
                 <div class="addComment_dialog_main">
                     <p>
-                        <img src="/images/ali.jpg" />
+                        <img src="/images/star1_icon.jpg" />
                     </p>
                     <textarea v-model="comment_content" placeholder="请输入评价内容"></textarea>
                 </div>

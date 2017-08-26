@@ -44,7 +44,7 @@ class LoginStatus{
             return false;
         }
         $user_info = json_decode($user_info, true);
-        if(empty($user_info['uid']) || $roc_u != Password::getMD5Uid($user_info['uid'])){
+        if(empty($user_info['user_id']) || $roc_u != Password::getMD5Uid($user_info['user_id'])){
             return false;
         }
         $this->registerUserToDi($user_info['user_id'], $user_info['email'], $user_info['user_name'], false);
