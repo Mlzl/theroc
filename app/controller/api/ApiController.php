@@ -37,4 +37,16 @@ class ApiController extends Controller {
         }
         return true;
     }
+
+    public function getUserInfoAction(){
+        $user_id = $this->user->user_id;
+        $user_info = \User::findOneByField("user_id", $user_id);
+        if(!$user_info){
+            $user_info = array();
+        }
+        else{
+            $user_info = $user_info->toArray();
+        }
+        Response::success((array)$user_info);
+    }
 }

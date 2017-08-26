@@ -102,7 +102,12 @@ class ProductController extends ApiController {
         $comments_info = \ProductComment::getCommentByProductId($product_id, $page, $size);
         foreach ($comments_info as &$comments){
             $user_info = \User::findOneByField('user_id', $comments['user_id']);
-            $comments['user_name'] = $user_info->user_name;
+            if(!$user_info){
+                $user_name = "";
+            }else{
+                $user_name =  $user_info->user_name;
+            }
+            $comments['user_name'] = $user_name;
         }
         $data = array(
             'list'=>$comments_info,
