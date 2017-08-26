@@ -19,7 +19,6 @@ class User extends Model{
 
     public function addUser($user=array()){
         $data = array(
-            'user_name'=>$user['user_name'],
             'email'=>$user['email'],
             'reg_date'=>time(),
             'status'=>self::UN_ACTIVE,
