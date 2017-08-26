@@ -19,6 +19,18 @@ class LoginStatus{
     private $roc_cookie_key = 'roc_key';//登陆凭证
     private $uid_mk5_cookie_key = 'roc_u';//md5的uid
 
+    public function logout(){
+        if(empty($_COOKIE[$this->roc_cookie_key]) || empty($_COOKIE[$this->uid_mk5_cookie_key])){
+            return false;
+        }
+        $roc_key = $_COOKIE[$this->roc_cookie_key];
+        setcookie($this->roc_cookie_key, '', time(), '/', Constant::HOST);
+        setcookie($this->uid_mk5_cookie_key, '', time(), '/', Constant::HOST);
+        $this->di->get('redis')->del(RedisKey::USER_LOGIN_KEY.$roc_key);
+        $this->di->setShared('user',null);
+        return true;
+    }
+
     public function setLoginStatus($uid, $user_info, $is_admin=false){
         if(!$uid || !$user_info){
             return false;

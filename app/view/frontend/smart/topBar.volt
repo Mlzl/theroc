@@ -16,7 +16,7 @@
         <p class="user_info">
             <img src="{{user_info['avatar']}}" />
             <span>
-                {% if user_info.user_name == '' %}
+                {% if user_info['user_name'] == '' %}
                 {{user_info['email']}}
                 {% else %}
                 {{user_info['user_name']}}
@@ -26,6 +26,7 @@
         </p>
         {% else %}
         <i class="user_icon" @click="switchPages(4,$event)"></i>
+        <span>登陆</span>
         {% endif %}
     </div>
 </div>
