@@ -30,6 +30,7 @@ class Language{
     const PASSWORD_ERROR = 'password error';
 
 
+
     public static function getMessage($message){
         $t = English::getMessage($message);
         return $t ? $t :$message;

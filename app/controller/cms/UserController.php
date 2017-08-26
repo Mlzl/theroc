@@ -19,4 +19,5 @@ class UserController extends BackendController {
         );
         Response::success($data);
     }
+
 }

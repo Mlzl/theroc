@@ -53,22 +53,17 @@ class UserController extends ApiController{
     public function registerAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        //$username = $this->request->getPost('username');
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
         }
         if(!$password){
             Response::error(Language::PASSWORD_EMPTY);
         }
-//        if(!$username){
-//            Response::error(Language::USER_NAME_EMPTY);
-//        }
         if(\User::findUserByEmail($email)){
             Response::error(Language::EMAIL_HAD_BE_USED);
         }
         $userModel = new \User();
         $data = array(
-            //'user_name' =>$username,
             'password'  =>$password,
             'email'     =>$email,
         );
@@ -118,6 +113,22 @@ class UserController extends ApiController{
             'avatar'=>$avatar
         );
         $this->updateItem($user_model, $user_profile);
+        Response::success();
+    }
+
+    public function collectionEmailAction(){
+        $email = $this->request->getPost('email');
+        if(!$email){
+            Response::error(Language::EMAIL_EMPTY);
+        }
+        $email_model = \UserEmail::getEmail($email);
+        if($email_model){
+            Response::error(Language::EMAIL_HAD_BE_USED);
+        }
+        $userEmail = (new \UserEmail());
+        if(!$userEmail->addEmail($email)){
+            Response::error($userEmail->getMessage());
+        }
         Response::success();
     }
 }
