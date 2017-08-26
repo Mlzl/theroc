@@ -2,7 +2,6 @@
 
 date_default_timezone_set('Asia/Shanghai');
 ini_set('display_errors', true);
-
 try{
     define('ROOT_PATH', __DIR__ . '/../');
     define('APP_PATH', ROOT_PATH . 'app/');

@@ -3,23 +3,27 @@ var login=new Vue({
     el:'#login_main',
     delimiters:['~{','}'],
     data:{
-        email:null,
-        password:null,
+        email:'',
+        password:'',
+    },
+    created:function(){
+
     },
     methods:{
-        login:function(){
-            this.password = b64_md5(this.password);
+        login:function(){    //登录
+            var _password=hex_md5(this.password);
+            var _this=this;
             var data={
-              email:this.email,
-              password:this.password,
+                email:this.email,
+                password:_password,
             };
             this.$http.post('/api/user/login',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    that.$message('成功！');
+                    window.location.href='/';
                 }
                 else{
-                    that.$message(_res.msg);
+                    _this.$message(_res.msg);
                 }
             }, function(err){
                 console.log(err);

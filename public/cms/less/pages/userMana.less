@@ -10,47 +10,67 @@
   bottom:0;
   background-color: #f1f1f1;
   font-size:14px;
-  div.user_table{
-    >div.thead{
-      height:40px;
-      background-color: #ffffff;
+  .user_table{
+    width: 1143px;
+    height: 670px;
+    border-radius: 4px;
+    background:#F1F1F1;
+    .user_thead,.user_tbody{
+      >p{
+        background:#fff;
         >span{
-          float: left;
-          width:14%;
-          height: 40px;
-          line-height: 40px;
-          text-align: center;
-        }
-        >span:nth-of-type(6){
-          width:16%;
-        }
-    }
-    >div.tbody{
-      height:80px;
-      background-color: #ffffff;
-      p {
-        margin-top: 6px;
-        span {
-          float: left;
-          width: 14%;
-          height: 80px;
-          text-align: center;
-          line-height: 80px;
-          > img {
-            display: block;
-            width: 48px;
-            height: 48px;
-            margin: 16px auto;
+          display:inline-block;
+          text-indent:10px;
+          vertical-align: top;
+          &:nth-of-type(1){
+            width:50px;
           }
-        }
-        span:nth-of-type(6) {
-          width: 16%;
+          &:nth-of-type(2){
+            width:170px;
+          }
+          &:nth-of-type(3){
+            width:105px;
+          }
+          &:nth-of-type(4){
+            width:169px;
+          }
+          &:nth-of-type(5){
+            width:110px;
+          }
+          &:nth-of-type(6){
+            width:50px;
+          }
+          &:nth-of-type(7){
+            width:190px;
+          }
+          &:nth-of-type(8){
+            width:50px;
+          }
         }
       }
     }
-    .pagination{
-      text-align: right;
-      padding-right: 20px;
+    .user_thead{
+      height:40px;
+      line-height:40px;
+      margin:0 0 4px 0;
+    }
+    .user_tbody{
+      color: #2c3347;
+      >p{
+        height:50px;
+        line-height:50px;
+        margin:0 0 4px 0;
+        position:relative;
+        >span{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          img{
+            width:48px;
+            height:48px;
+          }
+        }
+      }
     }
   }
 }

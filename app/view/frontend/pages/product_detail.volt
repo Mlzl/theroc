@@ -78,12 +78,14 @@
             <el-dialog title="我要评价" v-model="addComment_show" custom-class="addComment_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addComment_dialog_main">
-                    <el-input placeholder="请输入产品标题"></el-input>
-                    <el-input placeholder="请输入自定义属性"></el-input>
+                    <p>
+                        <img src="/images/ali.jpg" />
+                    </p>
+                    <textarea v-model="comment_content" placeholder="请输入评价内容"></textarea>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddComment(false)">取 消</el-button>
-                    <el-button type="primary" @click="commentDeter_btn">确 定</el-button>
+                    <el-button type="primary" @click="commentDeter">确 定</el-button>
                 </span>
             </el-dialog>
         </div>

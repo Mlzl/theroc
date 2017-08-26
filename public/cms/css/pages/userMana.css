@@ -420,44 +420,74 @@ table {
   background-color: #f1f1f1;
   font-size: 14px;
 }
-#userMana_main div.user_table > div.thead {
-  height: 40px;
-  background-color: #ffffff;
+#userMana_main .user_table {
+  width: 1143px;
+  height: 670px;
+  border-radius: 4px;
+  background: #F1F1F1;
 }
-#userMana_main div.user_table > div.thead > span {
-  float: left;
-  width: 14%;
+#userMana_main .user_table .user_thead > p,
+#userMana_main .user_table .user_tbody > p {
+  background: #fff;
+}
+#userMana_main .user_table .user_thead > p > span,
+#userMana_main .user_table .user_tbody > p > span {
+  display: inline-block;
+  text-indent: 10px;
+  vertical-align: top;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(1),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(1) {
+  width: 50px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(2),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(2) {
+  width: 170px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(3),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(3) {
+  width: 105px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(4),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(4) {
+  width: 169px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(5),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(5) {
+  width: 110px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(6),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(6) {
+  width: 50px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(7),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(7) {
+  width: 190px;
+}
+#userMana_main .user_table .user_thead > p > span:nth-of-type(8),
+#userMana_main .user_table .user_tbody > p > span:nth-of-type(8) {
+  width: 50px;
+}
+#userMana_main .user_table .user_thead {
   height: 40px;
   line-height: 40px;
-  text-align: center;
+  margin: 0 0 4px 0;
 }
-#userMana_main div.user_table > div.thead > span:nth-of-type(6) {
-  width: 16%;
+#userMana_main .user_table .user_tbody {
+  color: #2c3347;
 }
-#userMana_main div.user_table > div.tbody {
-  height: 80px;
-  background-color: #ffffff;
+#userMana_main .user_table .user_tbody > p {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 0 4px 0;
+  position: relative;
 }
-#userMana_main div.user_table > div.tbody p {
-  margin-top: 6px;
+#userMana_main .user_table .user_tbody > p > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-#userMana_main div.user_table > div.tbody p span {
-  float: left;
-  width: 14%;
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-}
-#userMana_main div.user_table > div.tbody p span > img {
-  display: block;
+#userMana_main .user_table .user_tbody > p > span img {
   width: 48px;
   height: 48px;
-  margin: 16px auto;
-}
-#userMana_main div.user_table > div.tbody p span:nth-of-type(6) {
-  width: 16%;
-}
-#userMana_main div.user_table .pagination {
-  text-align: right;
-  padding-right: 20px;
 }

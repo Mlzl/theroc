@@ -17,41 +17,39 @@
         {% include "smart/topBar.volt" %}
         <div id="login_main" v-cloak>
             <div class="login_box">
-                <p class="welcome">Welcome</p>
+                <h3 class="welcome">Welcome</h3>
                 <ul>
                     <li class="clearfix li1">
                         <span class="form-td">
                             <img class="username-icon" src="/images/user.png">
                         </span>
                         <span class="line form-td"></span>
-                        <input v-model="email" class="form-td username" type="email" placeholder="Email Address">
+                        <input type="email" class="form-td username" v-model="email" placeholder="Email Address">
                     </li>
                     <li class="clearfix li2">
                         <span class="form-td">
                              <img class="password-icon" src="/images/password.png" alt="">
                         </span>
                         <span class="line form-td"></span>
-                        <input  v-model="email" type="password" class="form-td" placeholder="Password">
+                        <input type="password" class="form-td" v-model="password" placeholder="Password">
                     </li>
                     <li class="clearfix li3">
                         <span><a class="form-td" href="">Forget your password?</a></span>
-                        <span class="rememberPassword form-td">
-                            <input class="checkbox" type="checkbox">
-                            <span>Remember Me</span>
-                        </span>
+                        <!--<span class="rememberPassword form-td">-->
+                            <!--<input class="checkbox" type="checkbox">-->
+                            <!--<span>Remember Me</span>-->
+                        <!--</span>-->
                     </li>
-                    <li class="clearfix">
-                        <button class="loginBtn form-td" @click="login()">LOG IN</button>
-                    </li>
-                    <li class="li5">
+                </ul>
+                <div class="btns">
+                    <button class="loginBtn form-td" @click="login">LOG IN</button>
+                    <p>
                         <span class="hline"></span>
                         <span class="or">OR</span>
                         <span class="hline"></span>
-                    </li>
-                    <li class="li6">
-                        <span class="register">CREATE ACCOUNT</span>
-                    </li>
-                </ul>
+                    </p>
+                    <button class="registerBtn">CREATE ACCOUNT</button>
+                </div>
             </div>
         </div>
         <!--底部-->
@@ -62,6 +60,8 @@
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <!-- element ui -->
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- md5-->
+    <script type="text/javascript" src="/plugin/md5.js"></script>
     <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/login.js"></script>

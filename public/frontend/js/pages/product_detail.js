@@ -1,11 +1,9 @@
 
-
 var product_detail=new Vue({
     el:'#product_detail_main',
     delimiters:['~{','}'],
     data:{
         tab:0,  //0图文详情、1评论
-        addComment_show:false,  //添加产品弹出框 显示隐藏
         productDetail:{},  //产品详情
         curCoverImg:'',  //当前点击的封面图片
         coverImg_index:0,  //当前点击的封片图片序号
@@ -16,6 +14,10 @@ var product_detail=new Vue({
         commentList_size:10,  //评论列表每页显示条数
         commentList_page:1,  //评论列表当前页
         commentList_total:0,  //评论列表总条数
+        //添加评论 弹出框
+        addComment_show:false,  //添加评论弹出框 显示隐藏
+        star_num:0,  //评价星星数量
+        comment_content:''  //评论内容
     },
     computed: {
         product_id: function () {
@@ -73,6 +75,28 @@ var product_detail=new Vue({
                 console.log(err);
             });
         },
+        commentDeter:function(){  //添加评论 确定按钮
+            var _this=this;
+            var _data={
+                product_id:this.product_id,
+                stat_num:this.star_num,
+                content:this.comment_content,
+            }
+            var url='/api/product/addComment'
+            // console.log(_data)
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.getCommentList();
+                    _this.addComment_show=false;
+                    _this.$message('评价成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         //普通方法
         tabChange:function(tab){  //切换tab
             this.tab=tab;
@@ -91,7 +115,7 @@ var product_detail=new Vue({
             this.curPrice=curClassifyAttr.price;
             this.curClassifyAttr_index=curClassifyAttr_index;
         },
-        commentChange(val){  //评论列表翻页时
+        commentChange:function(val){  //评论列表翻页时
             this.commentList_page=val;
             this.getCommentList();
         },
