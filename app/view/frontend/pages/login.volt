@@ -24,14 +24,14 @@
                             <img class="username-icon" src="/images/user.png">
                         </span>
                         <span class="line form-td"></span>
-                        <input class="form-td username" type="text" placeholder="Email Address">
+                        <input v-model="email" class="form-td username" type="email" placeholder="Email Address">
                     </li>
                     <li class="clearfix li2">
                         <span class="form-td">
                              <img class="password-icon" src="/images/password.png" alt="">
                         </span>
                         <span class="line form-td"></span>
-                        <input type="text" class="form-td" placeholder="Password">
+                        <input  v-model="email" type="password" class="form-td" placeholder="Password">
                     </li>
                     <li class="clearfix li3">
                         <span><a class="form-td" href="">Forget your password?</a></span>
@@ -41,7 +41,7 @@
                         </span>
                     </li>
                     <li class="clearfix">
-                        <button class="loginBtn form-td">LOG IN</button>
+                        <button class="loginBtn form-td" @click="login()">LOG IN</button>
                     </li>
                     <li class="li5">
                         <span class="hline"></span>
