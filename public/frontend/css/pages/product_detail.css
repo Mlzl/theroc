@@ -457,14 +457,12 @@ table {
   position: relative;
   top: -1px;
 }
-#product_detail_main .productDesc .comment {
-  padding: 0 0 70px 0;
-  position: relative;
+#product_detail_main .productDesc .imageText {
+  padding: 20px;
 }
-#product_detail_main .productDesc .comment > h3 {
-  font-size: 36px;
-  color: #333333;
-  text-align: center;
+#product_detail_main .productDesc .comment {
+  padding: 20px 20px 50px 20px;
+  position: relative;
 }
 #product_detail_main .productDesc .comment .comment_list .oneComment {
   font-size: 16px;

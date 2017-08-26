@@ -54,20 +54,22 @@
                 <div v-show="tab==0" class="imageText" v-html="productDetail.img_txt_detail"></div>
                 <!--买家评价-->
                 <div v-show="tab==1" class="comment">
-                    <h3>comments</h3>
                     <ul class="comment_list">
-                        <li class="oneComment" v-for="n in 5">
-                            <h4>NICE</h4>
-                            <p><img src="/images/ali.jpg" v-for="n in 5" /></p>
+                        <li class="oneComment" v-for="(item,index) in commentList">
+                            <p><img src="/images/star_icon.png" v-for="n in item.stat_num" /></p>
                             <p>
-                                <span>Cody</span>
-                                <span>06/29/2017</span>
+                                <span>~{item.user_name}</span>
+                                <span>~{item._create_time}</span>
                             </p>
-                            <p>I love Anker products and this all-in-one Battery charger/AC - USB adapter fulfills the need to travel with a USB charger and portable battery. I've lost track of how many portable batteries I have but Anker keeps putting out innovative products that keeps me coming back!The construction quality is great and has a good feel to it. This small unit replaces the need to bring a USB/AC charger and a small portable USB charger. All you need is the cable now. On short trips, I would have no need to bring anything else.</p>
+                            <p>~{item.content}</p>
                         </li>
                     </ul>
                     <el-pagination style="text-align:center"
-                                   small layout="prev, pager, next" :total="50" >
+                                   small layout="prev, pager, next"
+                                   :page-size="commentList_size"
+                                   :current-page="commentList_page"
+                                   :total="commentList_total"
+                                   @current-change="commentChange">
                     </el-pagination>
                     <el-button class="comment_btn" @click="showAddComment(true)">I WANT COMMENT</el-button>
                 </div>
@@ -81,7 +83,7 @@
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddComment(false)">取 消</el-button>
-                    <el-button type="primary" @click="">确 定</el-button>
+                    <el-button type="primary" @click="commentDeter_btn">确 定</el-button>
                 </span>
             </el-dialog>
         </div>

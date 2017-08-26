@@ -11,6 +11,11 @@ var product_detail=new Vue({
         coverImg_index:0,  //当前点击的封片图片序号
         curPrice:'',  //当前显示价格
         curClassifyAttr_index:0,  //当前分类属性序号
+        //评论列表
+        commentList:[],  //评论列表
+        commentList_size:10,  //评论列表每页显示条数
+        commentList_page:1,  //评论列表当前页
+        commentList_total:0,  //评论列表总条数
     },
     computed: {
         product_id: function () {
@@ -19,6 +24,7 @@ var product_detail=new Vue({
     },
     created:function(){
         this.getProductDetail();
+        this.getCommentList();
     },
     methods:{
         //异步方法
@@ -35,6 +41,31 @@ var product_detail=new Vue({
                     _this.curPrice=productDetail.attr[0].price;
                     _this.curCoverImg=productDetail._picture_url[0];
                     _this.productDetail=productDetail;
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        getCommentList:function(){  //获取评论列表
+            var _this=this;
+            var product_id=this.product_id;
+            var commentList_size=this.commentList_size;
+            var commentList_page=this.commentList_page;
+            var url='/api/product/getComments?product_id='+product_id+'&page='+commentList_page+'&size='+commentList_size;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var commentList=_res.data.list;
+                    var commentList_total=_res.data.total;
+                    for(var i=0,len=commentList.length;i<len;i++){
+                        var _create_time=pubMethod.formatTime(new Date(commentList[i].create_time*1000));
+                        commentList[i]._create_time=_create_time;
+                    }
+
+                    _this.commentList=commentList;
+                    _this.commentList_total=commentList_total;
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -59,6 +90,10 @@ var product_detail=new Vue({
         switchClassifyAttr:function(curClassifyAttr,curClassifyAttr_index){  //切换分类属性
             this.curPrice=curClassifyAttr.price;
             this.curClassifyAttr_index=curClassifyAttr_index;
-        }
+        },
+        commentChange(val){  //评论列表翻页时
+            this.commentList_page=val;
+            this.getCommentList();
+        },
     }
 })
