@@ -8,8 +8,10 @@ class Model extends \Phalcon\Mvc\Model{
     protected $error_message;
     public function getMessage()
     {
-        foreach (parent::getMessages() as $message){
-            $this->error_message .= $message->getMessage();
+        if(parent::getMessages()){
+            foreach (parent::getMessages() as $message){
+                $this->error_message .= $message->getMessage();
+            }
         }
         return $this->error_message;
     }
