@@ -8,5 +8,8 @@ namespace Roc\Library;
 
 
 class Common{
-
+    public static function goLogin(){
+        header("Location: /login");
+        exit();
+    }
 }

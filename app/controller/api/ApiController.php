@@ -8,6 +8,7 @@ namespace Roc\ApiController;
 
 
 use Phalcon\Mvc\Controller;
+use Roc\Library\Language;
 use Roc\Library\LoginStatus;
 use Roc\Library\Response;
 
@@ -15,7 +16,9 @@ class ApiController extends Controller {
 
     public function onConstruct(){
         $loginLib = new LoginStatus($this->di);
-        $loginLib->registerUserToDi(10000000,'1069163403@qq.com', 'mlzl', 1);
+        if(!$loginLib->isLogin()){
+            Response::error(Language::NO_LOGIN_STATUS);
+        }
     }
 
     public function updateItem(&$model, $data=array()){

@@ -1,6 +1,7 @@
 <?php
 namespace Roc\FrontendController;
 use \Phalcon\Mvc\Controller;
+use Roc\Library\Common;
 use Roc\Library\LoginStatus;
 use Roc\Library\Response;
 
@@ -11,9 +12,11 @@ use Roc\Library\Response;
 class FrontendController extends Controller{
 
     public function onConstruct(){
-        $this->view->setViewsDir(APP_PATH.'view/frontend');
         $loginLib = new LoginStatus($this->di);
-        $loginLib->registerUserToDi(10000000,'1069163403@qq.com', 'mlzl', 0);
+        if(!$loginLib->isLogin()){
+            Common::goLogin();
+        }
+        $this->view->setViewsDir(APP_PATH.'view/frontend');
 
     }
 

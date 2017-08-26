@@ -8,6 +8,11 @@ use Roc\Library\Utility;
  * 登陆页
  */
 class LoginController extends FrontendController {
+
+    public function onConstruct(){
+        $this->view->setViewsDir(APP_PATH.'view/frontend');
+    }
+
     public function indexAction(){
         $this->view->render('pages','login');
     }

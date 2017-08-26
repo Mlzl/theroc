@@ -29,7 +29,7 @@ class Language{
     const PARAM_ERROR   = 'params error';
     const PASSWORD_ERROR = 'password error';
     const EMAIL_FORMAT_INVALID = "email format invalid";
-
+    const NO_LOGIN_STATUS ="you had not login";
 
 
     public static function getMessage($message){
