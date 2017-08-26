@@ -127,7 +127,7 @@ table {
 #topBar .topBar_right {
   position: absolute;
   top: 15px;
-  right: 80px;
+  right: 50px;
 }
 #topBar .topBar_right .search {
   display: inline-block;
@@ -163,6 +163,13 @@ table {
   background-size: 16px 16px;
   position: relative;
   top: 3px;
+}
+#topBar .topBar_right .user_info {
+  display: inline-block;
+}
+#topBar .topBar_right .user_info img {
+  width: 20px;
+  height: 20px;
 }
 #footer {
   box-sizing: border-box;
@@ -507,8 +514,10 @@ table {
   height: 240px;
 }
 .addComment_dialog .addComment_dialog_main p img {
+  cursor: pointer;
   width: 20px;
   height: 19px;
+  margin: 0 5px 0 0;
 }
 .addComment_dialog .addComment_dialog_main textarea {
   width: 400px;

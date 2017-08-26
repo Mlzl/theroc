@@ -12,6 +12,20 @@
             <input type="text" />
             <i class="search_icon"></i>
         </p>
+        {% if user_info is defined %}
+        <p class="user_info">
+            <img src="{{user_info['avatar']}}" />
+            <span>
+                {% if user_info.user_name == '' %}
+                {{user_info['email']}}
+                {% else %}
+                {{user_info['user_name']}}
+                {% endif  %}
+            </span>
+            <span>退出</span>
+        </p>
+        {% else %}
         <i class="user_icon" @click="switchPages(4,$event)"></i>
+        {% endif %}
     </div>
 </div>

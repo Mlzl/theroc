@@ -56,7 +56,7 @@
                 <div v-show="tab==1" class="comment">
                     <ul class="comment_list">
                         <li class="oneComment" v-for="(item,index) in commentList">
-                            <p><img src="/images/star_icon.png" v-for="n in item.stat_num" /></p>
+                            <p><img src="/images/star_icon.png" v-for="n in item._star_num" /></p>
                             <p>
                                 <span>~{item.user_name}</span>
                                 <span>~{item._create_time}</span>
@@ -79,7 +79,7 @@
                        :show-close=false :close-on-click-modal=false>
                 <div class="addComment_dialog_main">
                     <p>
-                        <img src="/images/star1_icon.jpg" />
+                        <img :src="item" v-for="(item,index) in star_arr" @click="selectStar(index)"/>
                     </p>
                     <textarea v-model="comment_content" placeholder="请输入评价内容"></textarea>
                 </div>

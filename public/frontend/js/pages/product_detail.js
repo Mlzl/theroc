@@ -17,6 +17,7 @@ var product_detail=new Vue({
         //添加评论 弹出框
         addComment_show:false,  //添加评论弹出框 显示隐藏
         star_num:0,  //评价星星数量
+        star_arr:['/images/star1_icon.png','/images/star1_icon.png','/images/star1_icon.png','/images/star1_icon.png','/images/star1_icon.png'],  //星星数组
         comment_content:''  //评论内容
     },
     computed: {
@@ -63,7 +64,10 @@ var product_detail=new Vue({
                     var commentList_total=_res.data.total;
                     for(var i=0,len=commentList.length;i<len;i++){
                         var _create_time=pubMethod.formatTime(new Date(commentList[i].create_time*1000));
+                        var _star_num=parseInt(commentList[i].stat_num);
+
                         commentList[i]._create_time=_create_time;
+                        commentList[i]._star_num=_star_num;
                     }
 
                     _this.commentList=commentList;
@@ -119,5 +123,15 @@ var product_detail=new Vue({
             this.commentList_page=val;
             this.getCommentList();
         },
+        selectStar:function(index){  //评论打星星分数
+            this.star_num=index+1;
+            var star_arr=this.star_arr;
+            for(var i=0,len=star_arr.length;i<len;i++){
+                Vue.set(star_arr, i, '/images/star1_icon.png')
+            }
+            for(var i=0;i<=index;i++){
+                Vue.set(star_arr, i, '/images/star_icon.png')
+            }
+        }
     }
 })
