@@ -23,7 +23,8 @@ var footer = new Vue({
     el: '#footer',
     delimiters: ['~{', '}'],
     data: {
-        linkIcon: ['facebook_icon', 'twitter_icon', 'google_icon', 'youtobe_icon', 'instagram_icon', 'periscope_icon']
+        linkIcon: ['facebook_icon', 'twitter_icon', 'google_icon', 'youtobe_icon', 'instagram_icon', 'periscope_icon'],
+        otherEmail:null,
     },
     created: function () {
 
@@ -56,6 +57,23 @@ var footer = new Vue({
                     window.open("https://www.periscope.com/");
                     break;
             }
+        },
+        submitEmail:function(){
+            var that=this;
+            var data={
+                email:this.otherEmail
+            };
+            this.$http.post('/api/user/collectionEmail',data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    that.$message('成功！');
+                }
+                else{
+                    that.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
         }
     }
 });
