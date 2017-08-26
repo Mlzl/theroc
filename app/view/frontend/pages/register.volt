@@ -26,21 +26,24 @@
                             <li>
                                 <img class="user-icon" src="/images/user.png" alt="user picture">
                                 <span class="vline"></span>
-                                <input type="text" placeholder="Email Address">
+                                <input v-model="email" type="email" placeholder="Email Address">
                             </li>
+                                 <p class="tip">~{emailTip}</p>
                             <li>
                                 <img class="password-icon"src="/images/password.png" alt="password picture">
                                 <span class="vline"></span>
-                                <input type="text" placeholder="Password">
+                                <input v-model="password" type="password" placeholder="Password">
                             </li>
+                              <p class="tip">~{passwordTip}</p>
                             <li>
                                 <img class="again-icon" src="/images/again.png" alt="again picture">
                                 <span class="vline"></span>
-                                <input type="text" placeholder="Password">
+                                <input v-model="repassword"  type="password" placeholder="Password">
                             </li>
+                             <p class="tip"></p>
                         </ul>
                         <div class="register-footer">
-                            <button class="registerBtn">REGISTER</button>
+                            <button class="registerBtn" @click="regist()">REGISTER</button>
                         </div>
                     </ul>
                 </form>
@@ -54,8 +57,11 @@
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <!-- element ui -->
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+   <!-- md5-->
+    <script type="text/javascript" src="/plugin/md5.js"></script>
     <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/register.js"></script>
+
 </body>
 </html>

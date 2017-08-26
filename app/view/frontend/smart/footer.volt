@@ -4,7 +4,7 @@
         <div class="email_submit">
             <p>Be the first to know bout our lastest products</p>
             <input type="text" placeholder="Enter your email address"/><br/>
-            <el-button>SUBMIT</el-button>
+            <el-button @click="sumbitEmail()">SUBMIT</el-button>
         </div>
         <div class="link">
             <i v-for="item in linkIcon" :class="item" @click="toOtherLink(item,$event)"></i>

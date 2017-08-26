@@ -34,6 +34,10 @@
                         <span>~{userInfo.code}</span>
                     </p>
                 </div>
+                <el-pagination class="pagination"
+                        layout="prev, pager, next"
+                        :total="1000">
+                </el-pagination>
             </div>
         </div>
     </div>

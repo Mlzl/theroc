@@ -388,7 +388,6 @@ table {
   box-sizing: border-box;
   height: 49px;
   border: 1px solid #5a5a5a;
-  margin-bottom: 29px;
 }
 #register_main .register_box form ul li .user-icon {
   width: 25px;
@@ -429,6 +428,13 @@ table {
 }
 #register_main .register_box form ul li input:focus {
   outline: none;
+}
+#register_main .register_box form ul .tip {
+  margin-left: 63px;
+  height: 29px;
+  color: #ff0000 !important;
+  line-height: 29px;
+  font-size: 12px;
 }
 #register_main .register_box form .register-footer .registerBtn {
   width: 100%;

@@ -21,7 +21,7 @@
             <div class="carouselArea">
                 <el-carousel height="342px">
                     <el-carousel-item v-for="item in bannerList" :key="item">
-                        <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)/>
+                        <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>
                 </el-carousel>
             </div>
