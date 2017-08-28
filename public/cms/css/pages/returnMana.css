@@ -418,10 +418,11 @@ table {
   left: 220px;
 }
 #returnMana_main .return_table {
-  width: 829px;
+  width: 98%;
   height: 670px;
   border-radius: 4px;
   background: #F1F1F1;
+  margin: 0 auto;
 }
 #returnMana_main .return_table .return_thead > p,
 #returnMana_main .return_table .return_tbody > p {
@@ -435,7 +436,8 @@ table {
 }
 #returnMana_main .return_table .return_thead > p > span:nth-of-type(1),
 #returnMana_main .return_table .return_tbody > p > span:nth-of-type(1) {
-  width: 59px;
+  width: 80px;
+  margin: 0 0 0 50px;
 }
 #returnMana_main .return_table .return_thead > p > span:nth-of-type(2),
 #returnMana_main .return_table .return_tbody > p > span:nth-of-type(2) {

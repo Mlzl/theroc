@@ -419,56 +419,119 @@ table {
   right: 0;
   background-color: #f1f1f1;
   font-size: 14px;
-  /**
-   个性化
-   */
 }
-#moduleMana_main .el-dialog {
-  width: 542px;
-  border-radius: 20px;
-}
-#moduleMana_main .el-dialog .form textarea {
-  width: 462px;
-  height: 132px;
-  border-radius: 2px;
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-#moduleMana_main .el-dialog .form input {
-  width: 462px;
+#moduleMana_main .head .tab_ul {
   height: 32px;
-  border-radius: 2px;
-  line-height: 32px;
-  text-align: left;
-  color: #5a5a5a;
-  padding-left: 10px;
-  border: 1px solid #cccccc;
-  box-sizing: border-box;
+  margin: 20px 0 20px 40px;
 }
-#moduleMana_main .el-dialog .form p {
-  margin-bottom: 10px;
-}
-#moduleMana_main .el-dialog .form p > img {
-  width: 300px;
-  height: 150px;
-  display: block;
-  margin: 15px auto;
-}
-#moduleMana_main .el-dialog .dialog-footer {
+#moduleMana_main .head .tab_ul li {
+  cursor: default;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
+  padding: 0 20px;
+  background-color: #ffffff;
+  float: left;
 }
-#moduleMana_main .el-dialog .dialog-footer button {
-  width: 100px;
-  height: 32px;
+#moduleMana_main .head .tab_ul li:nth-of-type(1) {
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+  border-left: solid 1px #cccccc;
 }
-#moduleMana_main .el-dialog .dialog-footer .el-button--default {
+#moduleMana_main .head .tab_ul li:nth-of-type(2) {
+  border: solid 1px #cccccc;
+}
+#moduleMana_main .head .tab_ul li:nth-of-type(3) {
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+  border-right: solid 1px #cccccc;
+}
+#moduleMana_main .head .tab_ul li.active {
   color: #25ba80;
-  border: 1px solid #25ba80;
+  border: solid 1px #25ba80;
 }
-#moduleMana_main .el-dialog .dialog-footer .el-button--primary {
-  color: #fff;
-  background-color: #25ba80;
+#moduleMana_main .head button {
+  width: 60px;
+  height: 28px;
+  position: absolute;
+  top: 22px;
+  right: 88px;
 }
-#moduleMana_main .el-dialog__body {
-  padding: 30px 40px!important;
+#moduleMana_main .product_table {
+  width: 98%;
+  height: 670px;
+  border-radius: 4px;
+  background: #F1F1F1;
+  margin: 0 auto;
+}
+#moduleMana_main .product_table .product_thead > p,
+#moduleMana_main .product_table .product_tbody > p {
+  background: #fff;
+}
+#moduleMana_main .product_table .product_thead > p > span,
+#moduleMana_main .product_table .product_tbody > p > span {
+  display: inline-block;
+  text-indent: 10px;
+  vertical-align: top;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(1),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(1) {
+  width: 80px;
+  margin: 0 0 0 50px;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(2),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(2) {
+  width: 270px;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(3),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(3) {
+  width: 260px;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(4),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(4) {
+  width: 169px;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(5),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(5) {
+  width: 110px;
+}
+#moduleMana_main .product_table .product_thead > p > span:nth-of-type(6),
+#moduleMana_main .product_table .product_tbody > p > span:nth-of-type(6) {
+  width: 190px;
+}
+#moduleMana_main .product_table .product_thead {
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 4px 0;
+}
+#moduleMana_main .product_table .product_tbody {
+  color: #2c3347;
+}
+#moduleMana_main .product_table .product_tbody > p {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 0 4px 0;
+  position: relative;
+}
+#moduleMana_main .product_table .product_tbody > p > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#moduleMana_main .product_table .product_tbody button {
+  height: 25px;
+  padding: 0 5px;
+}
+#moduleMana_main .product_table .product_tbody button:not( :nth-of-type(1)) {
+  margin: 0 0 0 2px;
+}
+#moduleMana_main .add_dialog {
+  width: 340px;
+  height: 155px;
+}
+#moduleMana_main .add_dialog .add_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }

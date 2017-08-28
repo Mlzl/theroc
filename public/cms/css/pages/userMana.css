@@ -421,10 +421,11 @@ table {
   font-size: 14px;
 }
 #userMana_main .user_table {
-  width: 1143px;
+  width: 98%;
   height: 670px;
   border-radius: 4px;
   background: #F1F1F1;
+  margin: 0 auto;
 }
 #userMana_main .user_table .user_thead > p,
 #userMana_main .user_table .user_tbody > p {
@@ -438,7 +439,8 @@ table {
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(1),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(1) {
-  width: 50px;
+  width: 80px;
+  margin: 0 0 0 50px;
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(2),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(2) {
@@ -450,7 +452,7 @@ table {
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(4),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(4) {
-  width: 169px;
+  width: 85px;
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(5),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(5) {
@@ -458,11 +460,11 @@ table {
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(6),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(6) {
-  width: 50px;
+  width: 170px;
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(7),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(7) {
-  width: 190px;
+  width: 80px;
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(8),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(8) {

@@ -113,7 +113,6 @@
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>-->
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
