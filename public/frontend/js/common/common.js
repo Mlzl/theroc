@@ -8,12 +8,13 @@ var topBar = new Vue({
 
     },
     methods: {
-        switchPages: function (type) {  //切换页面，0首页、1产品页、2博客、3联系我们、4登陆
+        switchPages: function (type) {  //切换页面，0首页、1产品页、2博客、3联系我们、4登陆、5用户中心
             var page = type == 0 ? '' :
                 type == 1 ? 'product' :
                     type == 2 ? 'community' :
                         type == 3 ? 'contact' :
-                            type == 4 ? 'login' : '';
+                            type == 4 ? 'login' :
+                                type == 5 ? 'user':'';
             window.location.href = '/' + page;
         }
     }

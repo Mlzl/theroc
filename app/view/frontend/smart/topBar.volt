@@ -15,7 +15,7 @@
         {% if user_info is defined %}
         <p class="user_info">
             <img src="{{user_info['avatar']}}" />
-            <span>
+            <span @click="switchPages(5)">
                 {% if user_info['user_name'] == '' %}
                 {{user_info['email']}}
                 {% else %}
