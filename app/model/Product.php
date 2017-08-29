@@ -59,4 +59,16 @@ class Product extends Model{
         }
         return false;
     }
+
+    public static function search($keyword, $page, $size){
+        $products = self::find(array(
+            'conditions'=>"name like :keyword: and status=1",
+            "bind"=>array('keyword'=>"%$keyword%"),
+            'limit'=>array('number'=>$size, 'offset'=>($page-1)*$size),
+        ));
+        if(!$products){
+            return false;
+        }
+        return $products->toArray();
+    }
 }

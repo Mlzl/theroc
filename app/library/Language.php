@@ -32,7 +32,7 @@ class Language{
     const NO_LOGIN_STATUS ="you had not login";
     const GENE_CAPTCHA_FAILED ="generating captcha failed";
     const FORGET_PWD_CAPTCHA_ERROR = "captcha out of date or error";
-
+    const ADD_REFUND_FAILED = 'add refund failed';
 
     public static function getMessage($message){
         $t = English::getMessage($message);

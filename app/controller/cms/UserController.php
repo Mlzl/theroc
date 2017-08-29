@@ -13,6 +13,10 @@ class UserController extends BackendController {
         $page = $this->request->get('page', null, 1);
         $size = $this->request->get('size', null, 20);
         $users = \User::getList($page, $size);
+        foreach ($users as &$user){
+            unset($user['salt']);
+            unset($user['password']);
+        }
         $data = array(
             'list'=>$users,
             'total'=>\User::count()

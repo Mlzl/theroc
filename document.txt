@@ -101,6 +101,18 @@ ps:special_label:{product_nav#导航产品, product_hot#热销, product_recommen
 #北美上传相关wiki
 https://developer.qiniu.com/kodo/manual/1671/region-endpoint
 
+#添加退款
+/api/service/addRefund
+#post{order_detail, product_detail, images} ps:[order_detail]必填
+
+#获取退款列表
+/cms/service/getRefundList
+#get{page,size}
+
+#搜索产品
+/api/service/searchProduct
+#get{keyword, page,size}
+
 -------------------------登陆相关--------------------------------------
 
 #获取验证码
@@ -118,4 +130,7 @@ post:{email, password, captcha} #ps:password应前端md5加密后返回
 #管理员登陆
 /cms/admin/login
 post:{email, password, captcha} #ps:password应前端md5加密后返回
+
+
+
 
