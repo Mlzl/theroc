@@ -463,7 +463,7 @@ table {
 }
 #user_main .user-form .row .inp-big {
   float: left;
-  width: 38%;
+  width: 100%;
   display: table-cell;
 }
 #user_main .user-form .row .inp-small-left {
