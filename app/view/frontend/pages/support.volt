@@ -19,10 +19,7 @@
         </div>
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
-        <!--隐藏部分-->
-        <div id="imageUploadDiv" style="display:none;">
-            <p id="imageUploadBtn">上传图片</p>
-        </div><div id="support_main" v-cloak>
+        <div id="support_main" v-cloak>
             <div class="banner-container">
                 <img class="img" src="/frontend/image/supportBg.jpg">
                 <div class="search">
@@ -215,10 +212,11 @@
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <!-- element ui -->
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
+    <!-- plupload -->
+    <script src="/plugin/plupload-2.1.x/moxie.js"></script>
+    <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
     <!-- qiniu -->
-    <script src="https://cdn.staticfile.org/plupload/2.1.9/moxie.js"></script>
-    <script src="https://cdn.staticfile.org/plupload/2.1.9/plupload.dev.js"></script>
-    <script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>
+    <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
     <!-- private -->
     <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/support.js"></script>
