@@ -83,7 +83,6 @@ class UserController extends ApiController{
     }
 
     public function update_profileAction(){
-        $user_id = intval($this->request->getPost('user_id'));
         $user_name = $this->request->getPost('user_name');
         $password = $this->request->getPost('password');
         $old_password = $this->request->getPost('old_password');
@@ -94,9 +93,7 @@ class UserController extends ApiController{
         $sex = $this->request->getPost('sex');
         $cellphone = $this->request->getPost('cellphone');
         $avatar = $this->request->getPost('avatar');
-        if(!$user_id){
-            Response::error(Language::LOST_PARAMS);
-        }
+        $user_id = $this->user->user_id;
         $user_model = \User::findOneByField('user_id', $user_id);
         if(!$user_model){
             Response::error(Language::USER_NOT_EXISTS);
