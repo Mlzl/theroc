@@ -86,7 +86,6 @@ var productMana_main=new Vue({
 
                     _this.curProductList=curProductList;
                     _this.curProductList_total=curProductList_total;
-                    console.log(curProductList)
                 }else{
                     _this.$message(_res.msg);
                 }

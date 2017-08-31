@@ -17,36 +17,37 @@
                 <div class="return_thead">
                     <p>
                         <span>序号</span>
-                        <span>姓名</span>
                         <span>email</span>
+                        <span>姓名</span>
                         <span>订单详情</span>
-                        <span>订单描述</span>
+                        <span>产品描述</span>
                         <span>图片</span>
                     </p>
                 </div>
                 <div class="return_tbody">
-                    <p v-for="n in 4">
-                        <span>~{n}</span>
-                        <span>111</span>
-                        <span>111</span>
-                        <span>111</span>
-                        <span>111</span>
+                    <p v-for="(item,index) in curReturnList">
+                        <span>~{index+1}</span>
+                        <span>~{item.email}</span>
+                        <span>~{item.user_name}</span>
+                        <span>~{item.order_detail}</span>
+                        <span>~{item.product_detail}</span>
                         <span>
-                            123
+                            <img v-for="(item1,index1) in item._images" :src="item1"/>
                         </span>
                     </p>
                 </div>
             </div>
-            <!--<el-pagination style="text-align:center"-->
-                           <!--small layout="prev, pager, next"-->
-                           <!--:page-size="curProductList_size"-->
-                           <!--:current-page="curProductList_page"-->
-                           <!--:total="curProductList_total"-->
-                           <!--@current-change="curProductChange">-->
-            <!--</el-pagination>-->
+            <el-pagination style="text-align:center"
+                           small layout="prev, pager, next"
+                           :page-size="curReturnList_size"
+                           :current-page="curReturnList_page"
+                           :total="curReturnList_total"
+                           @current-change="curProductChange">
+            </el-pagination>
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>
+    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <script src="/plugin/element-ui/lib/index.js"></script>
     <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/returnMana.js"></script>
