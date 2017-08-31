@@ -27,38 +27,34 @@
             </div>
             <!--产品导航模块-->
             <div class="product_nav">
-                <div class="oneProduct_nav" v-for="n in 4">
+                <div class="oneProduct_nav" v-for="(item,index) in productNavList">
                     <p class="oneProduct_nav_img">
-                        <img src="/images/ali.jpg" />
+                        <img :src="item._picture_url[0]" />
                     </p>
                     <div class="oneProduct_nav_desc">
-                        <h4>产品标题</h4>
-                        <p>产品详情</p>
+                        <h4>~{item.name}</h4>
+                        <!--<p>产品详情</p>-->
                     </div>
                 </div>
             </div>
             <!--热销产品模块-->
             <div class="product_sell">
                 <h3>热销产品</h3>
-                <div class="oneProduct" v-for="n in 4">
+                <div class="oneProduct" v-for="(item,index) in productHotList">
                     <p class="oneProduct_img">
-                        <img src="/images/ali.jpg" />
+                        <img :src="item._picture_url[0]" />
                     </p>
-                    <p class="oneProduct_desc">
-                        产品标题
-                    </p>
+                    <p class="oneProduct_desc">~{item.name}</p>
                 </div>
             </div>
             <!--推荐产品模块-->
             <div class="product_recom">
                 <h3>推荐产品</h3>
-                <div class="oneProduct" v-for="n in 4">
+                <div class="oneProduct" v-for="(item,index) in productRecommendList">
                     <p class="oneProduct_img">
-                        <img src="/images/ali.jpg" />
+                        <img :src="item._picture_url[0]" />
                     </p>
-                    <p class="oneProduct_desc">
-                        产品标题
-                    </p>
+                    <p class="oneProduct_desc">~{item.name}</p>
                 </div>
             </div>
         </div>
