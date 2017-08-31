@@ -536,28 +536,24 @@ input {
 #support_main .module-container .refunds .refunds-form .item-title {
   font-size: 18px;
   color: #333333;
+  margin: 19px 0 12px 0;
 }
-#support_main .module-container .refunds .refunds-form .inp-normal {
+#support_main .module-container .refunds .refunds-form .order > input,
+#support_main .module-container .refunds .refunds-form .issue > input {
   width: 983px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #ccc;
   padding-left: 13px;
 }
-#support_main .module-container .refunds .refunds-form .required {
-  color: #ff0000;
-  font-size: 22px;
-}
-#support_main .module-container .refunds .refunds-form .container div,
-#support_main .module-container .refunds .refunds-form .order div,
-#support_main .module-container .refunds .refunds-form .issue div,
-#support_main .module-container .refunds .refunds-form .images div,
-#support_main .module-container .refunds .refunds-form .form-footer div {
-  margin-top: 19px;
-}
-#support_main .module-container .refunds .refunds-form .issue .detail {
+#support_main .module-container .refunds .refunds-form .order > textarea,
+#support_main .module-container .refunds .refunds-form .issue > textarea {
+  box-sizing: border-box;
   width: 983px;
   height: 80px;
+  border-radius: 4px;
+  border: solid 1px #cccccc;
+  padding: 10px;
 }
 #support_main .module-container .refunds .refunds-form .images .imageContainer > span {
   display: inline-block;
@@ -574,8 +570,8 @@ input {
   cursor: pointer;
   width: 15px;
   height: 15px;
-  background: url('/images/ali.jpg') no-repeat;
-  background-size: 15px 15px;
+  background: url('/images/close_icon.png') no-repeat;
+  background-size: 100%;
   position: absolute;
   top: -8px;
   right: -7px;
@@ -586,38 +582,24 @@ input {
 }
 #support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn {
   cursor: pointer;
-  line-height: 80px;
-  text-align: center;
   border: 1px solid #ccc;
 }
 #support_main .module-container .refunds .refunds-form .images .imageContainer .imageUpload_btn .add_icon {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url('/images/ali.jpg') no-repeat;
-  background-size: 20px 20px;
+  background: url('/images/add_icon.png') no-repeat;
+  background-size: 100%;
+  margin: 30px;
 }
 #support_main .module-container .refunds .refunds-form .form-footer {
-  height: 45px;
-  margin-bottom: 121px;
+  text-align: right;
+  margin: 29px 0 40px 0;
 }
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns {
-  float: right;
-}
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .btn {
-  vertical-align: middle;
+#support_main .module-container .refunds .refunds-form .form-footer button {
   width: 100px;
   height: 35px;
-  font-size: 16px;
-  color: #fff;
   border-radius: 4px;
-  border: 1px solid transparent;
-}
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .submit {
-  background-color: #25ba80;
-}
-#support_main .module-container .refunds .refunds-form .form-footer .footer-btns .reset {
-  background-color: #999999;
 }
 #support_main .module-container .warranty {
   margin-top: 90px;

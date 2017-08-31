@@ -50,41 +50,32 @@
                         </span>
                         <span class="header-text">XXXX</span>
                     </div>
-                    <form class="refunds-form">
-                        <div class="container">
-                            <div class="item-title">Contant Infomation</div>
-                            <div><input type="text" class="inp-normal" placeholder="Email Address"><i class="required">*</i>
-                            </div>
-                            <div><input class="inp-normal" type="text" placeholder="Name"><i class="required">*</i></div>
-                        </div>
+                    <div class="refunds-form">
                         <div class="order">
-                            <div class="item-title">Order Details</div>
-                            <div><span><input class="inp-normal" type="text" placeholder="Please select"><i
-                                    class="required">*</i></span></div>
+                            <h3 class="item-title">Order Details</h3>
+                            <input type="text" v-model="orderValue">
                         </div>
                         <div class="issue">
-                            <div class="item-title">Issue Details</div>
-                            <div><textarea name="detail" id="" class="detail"></textarea></div>
+                            <h3 class="item-title">Issue Details</h3>
+                            <textarea v-model="issueValue"></textarea>
                         </div>
-                        <div class="images item-title">
-                            <div>Images</div>
-                            <div class="imageContainer">
-                                <span class="theImage" v-for="n in 4">
-                                    <i class="close_icon" @click=""></i>
-                                    <img src="/images/ali.jpg" />
+                        <div class="images">
+                            <h3 class="item-title">Images</h3>
+                            <p class="imageContainer">
+                                <span class="theImage" v-for="(item,index) in imageList">
+                                    <i class="close_icon" @click="deleteImage(index)"></i>
+                                    <img :src="item" />
                                 </span>
                                 <span class="imageUpload_btn" @click="imageUpload">
                                      <i class="add_icon"></i>
                                 </span>
-                            </div>
+                            </p>
                         </div>
-                        <div class="form-footer clearfix">
-                            <div class="footer-btns">
-                                <button class="btn submit">SUBMIT</button>
-                                <button class="btn reset">RESET</button>
-                            </div>
+                        <div class="form-footer">
+                            <el-button type="primary" @click="commitReturn">SUBMIT</el-button>
+                            <el-button @click="reset">RESET</el-button>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <!--保修-->
                 <div class="warranty" v-show="activeTab==='warranty-tab'">

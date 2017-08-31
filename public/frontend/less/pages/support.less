@@ -172,27 +172,23 @@ input {
         .item-title {
           font-size: 18px;
           color: #333333;
+          margin:19px 0 12px 0;
         }
-        .inp-normal {
-          width: 983px;
-          height: 40px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          padding-left: 13px;
-        }
-        .required {
-          color: #ff0000;
-          font-size: 22px;
-        }
-        .container, .order, .issue, .images, .form-footer {
-          div {
-            margin-top: 19px;
+        .order,.issue{
+          >input{
+            width: 983px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding-left: 13px;
           }
-        }
-        .issue {
-          .detail {
+          >textarea{
+            box-sizing:border-box;
             width: 983px;
             height: 80px;
+            border-radius: 4px;
+            border: solid 1px #cccccc;
+            padding:10px;
           }
         }
         .images {
@@ -211,8 +207,8 @@ input {
                 cursor:pointer;
                 width:15px;
                 height:15px;
-                background:url('/images/ali.jpg') no-repeat;
-                background-size:15px 15px;
+                background:url('/images/close_icon.png') no-repeat;
+                background-size:100%;
                 position:absolute;
                 top:-8px;
                 right:-7px;
@@ -224,42 +220,26 @@ input {
             }
             .imageUpload_btn{
               cursor:pointer;
-
-              line-height:80px;
-              text-align:center;
               border: 1px solid #ccc;
               .add_icon{
                 display:inline-block;
                 width:20px;
                 height:20px;
-                background:url('/images/ali.jpg') no-repeat;
-                background-size:20px 20px;
+                background:url('/images/add_icon.png') no-repeat;
+                background-size:100%;
+                margin:30px;
               }
             }
 
           }
         }
         .form-footer {
-          height: 45px;
-          margin-bottom: 121px;
-          .footer-btns {
-            float: right;
-            .btn {
-              vertical-align: middle;
-              width: 100px;
-              height: 35px;
-              font-size: 16px;
-              color: #fff;
-              border-radius: 4px;
-              border: 1px solid transparent;
-            }
-            .submit {
-              background-color: #25ba80;
-            }
-            .reset {
-              background-color: #999999;
-            }
-
+          text-align:right;
+          margin:29px 0 40px 0;
+          button{
+            width: 100px;
+            height: 35px;
+            border-radius: 4px;
           }
         }
       }

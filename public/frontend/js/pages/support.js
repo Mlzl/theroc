@@ -4,6 +4,9 @@ var support=new Vue({
     delimiters:['~{','}'],
     data:{
         activeTab:'refunds-tab',
+        orderValue:'',  //订单详情内容
+        issueValue:'',  //产品描述内容
+        imageList:[],  //图片列表
     },
     created:function(){
 
@@ -22,6 +25,27 @@ var support=new Vue({
                     var upload_token=_res.data.upload_token;
 
                     _this.initImageUpload(upload_token)
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        commitReturn:function(){  //提交退款
+            var _this=this;
+            var _data={
+                order_detail:this.orderValue,
+                product_detail:this.issueValue,
+                images:this.imageList.join(',')
+            }
+            var url='/api/service/addRefund'
+            // console.log(_data)
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    _this.reset();
+                    _this.$message('提交退款成功');
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -83,14 +107,8 @@ var support=new Vue({
                         var res = JSON.parse(info);
                         var tab=_this.tab;
                         var prefix_url='http://otw5eymk3.bkt.gdipper.com/';
+                        _this.imageList.push(prefix_url+res.key);
 
-                        // if(tab==0){  //基本资料
-                        //     _this.productDetail_edit._picture_url.push(prefix_url+res.key)
-                        // }else if(tab==1){  //图文详情
-                        //     var range = quill.getSelection(true);
-                        //     var length = range.index;
-                        //     quill.insertEmbed(length, 'image', prefix_url+res.key);
-                        // }
                         _this.$message.success('上传成功');
                     },
                     'Error': function(up, err, errTip) {
@@ -124,5 +142,14 @@ var support=new Vue({
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
+        deleteImage:function(index){  //删除某张图片
+            var imageList=this.imageList;
+            imageList.splice(index,1);
+        },
+        reset:function(){  //重置
+            this.orderValue='';
+            this.issueValue='';
+            this.imageList=[];
+        }
     }
 })
