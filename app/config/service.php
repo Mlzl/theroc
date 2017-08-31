@@ -32,6 +32,7 @@ $di->setShared('db',function ()use($config){
 $di->setShared('redis',function ()use($config){
     $redis = new Redis();
     $redis->connect($config['redis']['host'], $config['redis']['port']);
+    $redis->auth('Chris-123');
     return $redis;
 });
 

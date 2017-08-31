@@ -104,6 +104,11 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          img{
+            width:40px;
+            height:40px;
+            margin:5px 0 0 0;
+          }
         }
       }
       button{
@@ -119,11 +124,37 @@
     width:340px;
     height:155px;
     .add_dialog_main{
+      position:relative;
       input{
-        height: 32px;
-        line-height:32px;
+        width:100%;
+        height: 30px;
+        line-height:30px;
         font-size:12px;
+        text-indent:10px;
         margin:0 0 12px 0;
+      }
+      .searchProduct_list{
+        box-sizing: border-box;
+        width:100%;
+        height:100px;
+        padding: 5px 10px 0 10px;
+        border-radius:2px;
+        overflow:auto;
+        background: #fff;
+        position:absolute;
+        top:38px;
+        left:1px;
+        li{
+          cursor:pointer;
+          height:25px;
+          line-height:25px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          &:hover{
+            color:#25ba80;
+          }
+        }
       }
     }
   }

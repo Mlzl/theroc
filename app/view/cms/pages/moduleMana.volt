@@ -33,13 +33,15 @@
                     </p>
                 </div>
                 <div class="product_tbody">
-                    <p>
-                        <span>1</span>
-                        <span>123</span>
+                    <p v-for="(item,index) in productList">
+                        <span>~{index+1}</span>
+                        <span>~{item.name}</span>
                         <span>
-                            <a href="###" target="_blank">123</a>
+                            <a href="###" target="_blank">~{item.target_url}</a>
                         </span>
-                        <span>123</span>
+                        <span>
+                            <img :src="item._picture_url[0]" />
+                        </span>
                         <span>
                             <el-button class="delete_btn" @click="">删除</el-button>
                         </span>
@@ -47,14 +49,20 @@
                 </div>
             </div>
             <!--添加 弹出框-->
-            <el-dialog title="添加" v-model="add_show" custom-class="add_dialog"
+            <el-dialog title="添加" v-model="addShow" custom-class="add_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="add_dialog_main">
-                    <el-input v-model="product_name" placeholder="请输入产品标题"></el-input>
+                    <input v-model="productName" placeholder="请输入产品标题" @keyup.enter="searchProduct" />
+                    <ul class="searchProduct_list" v-show="showSearchBox">
+                        <li v-for="(item,index) in searchProductList"
+                            @click="selectProduct(item.product_id,item.name)">
+                            ~{item.name}
+                        </li>
+                    </ul>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAdd(false)">取 消</el-button>
-                    <el-button type="primary" @click="add_btn">确 定</el-button>
+                    <el-button type="primary" @click="addDeter_btn">确 定</el-button>
                 </span>
             </el-dialog>
         </div>
