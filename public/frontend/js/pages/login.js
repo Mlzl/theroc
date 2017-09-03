@@ -5,6 +5,10 @@ var login=new Vue({
     data:{
         email:'',
         password:'',
+        dialogFormVisible:false,
+        newPassword:null,
+        code:null,
+        dialogEmail:null
     },
     created:function(){
 
@@ -28,6 +32,12 @@ var login=new Vue({
             }, function(err){
                 console.log(err);
             });
+        },
+        forgetPassword:function(){
+            this.newPassword=null;
+            this.code=null;
+            this.dialogEmail=null;
+            this.dialogFormVisible=true;
         }
     }
 })
