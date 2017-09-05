@@ -9,7 +9,7 @@
     </ul>
     <div class="topBar_right">
         <p class="search">
-            <input type="text" />
+            <input type="text" v-model="keyword" @keyup.enter="switchPages(6)"/>
             <i class="search_icon"></i>
         </p>
         {% if user_info is defined %}

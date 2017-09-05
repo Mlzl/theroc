@@ -18,12 +18,12 @@
         <div id="product_search_main" v-cloak>
             <!--产品列表-->
             <div class="product_list">
-                <div class="oneProduct" v-for="n in 12">
+                <div class="oneProduct" v-for="(item,index) in searchProductList">
                     <p class="oneProduct_img">
-                        <img src="/images/ali.jpg" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
                     </p>
                     <p class="oneProduct_desc">
-                        产品标题
+                        ~{item.name}
                     </p>
                 </div>
             </div>
