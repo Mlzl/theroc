@@ -41,7 +41,7 @@
                 <div class="theProduct">
                     <div class="oneProduct" v-for="(item,index) in curProductList" @click="toDetailPage(item.product_id)">
                         <p class="oneProduct_img">
-                            <img :src="item._picture_url[0]" />
+                            <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
                         </p>
                         <p class="oneProduct_desc">
                             ~{item.name}

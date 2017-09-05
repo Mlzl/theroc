@@ -104,7 +104,7 @@ table {
   height: 30px;
   position: absolute;
   top: 13px;
-  left: 15px;
+  left: 78px;
 }
 #topBar .topBar_menu {
   width: 560px;
@@ -505,4 +505,35 @@ table {
   border: 1px solid #25ba80;
   margin: 0 0 25px 0;
   background: #fff;
+}
+#login_main .forgetPasswordDialog {
+  font-size: 14px;
+}
+#login_main .forgetPasswordDialog button {
+  padding: 10px 20px;
+}
+#login_main .forgetPasswordDialog .main {
+  width: 60%;
+  min-width: 150px;
+  margin: 0 auto;
+}
+#login_main .forgetPasswordDialog .main p {
+  margin-top: 10px;
+}
+#login_main .forgetPasswordDialog .main p input {
+  box-sizing: border-box;
+}
+#login_main .forgetPasswordDialog .main p .firstInput {
+  width: 60%;
+}
+#login_main .forgetPasswordDialog .main p .secondInput {
+  width: 100% ;
+}
+#login_main .forgetPasswordDialog .main p:nth-of-type(1) button {
+  float: right;
+  color: #5a5a5a;
+}
+#login_main .forgetPasswordDialog .dialog-footer button {
+  color: #fff!important;
+  font-size: 18px!important;
 }

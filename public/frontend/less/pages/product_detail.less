@@ -23,7 +23,7 @@
           cursor:pointer;
           margin: 0 10px 0 0;
           &:hover{
-            border:1px solid #ccc;
+            border:1px solid #25ba80;
           }
           img {
             width: 80px;
@@ -31,7 +31,7 @@
           }
         }
         li.active{
-          border:1px solid #ccc;
+          border:1px solid #25ba80;
         }
       }
     }
@@ -65,7 +65,9 @@
           margin: 0 20px 0 0;
         }
         >li.active{
-          background:blue;
+          color:#fff;
+          border:1px solid #25ba80;
+          background:#25ba80;
         }
       }
       >button{
@@ -108,6 +110,7 @@
     }
     .imageText {
       padding:20px;
+      overflow: hidden;
     }
     .comment {
       padding:20px 20px 50px 20px;
@@ -169,10 +172,12 @@
       }
     }
     textarea{
+      box-sizing: border-box;
       width: 400px;
       height: 100px;
       border-radius: 2px;
       border: solid 1px #cccccc;
+      padding: 10px;
       margin:5px 0;
     }
   }

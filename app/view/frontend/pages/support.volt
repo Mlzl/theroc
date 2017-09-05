@@ -21,17 +21,17 @@
         {% include "smart/topBar.volt" %}
         <div id="support_main" v-cloak>
             <div class="banner-container">
-                <img class="img" src="/frontend/image/supportBg.jpg">
-                <div class="search">
-                    <div class="title">DOWNLOAD</div>
-                    <div class="search-tip">Search By Product Name</div>
-                    <form action="" method="get" class="productForm clearfix">
-                        <input type="text" class="searchText">
-                        <button class="submit"></button>
-                    </form>
-                </div>
+                <img class="img" src="/images/supportBg.jpg">
+                <!--<div class="search">-->
+                    <!--<div class="title">DOWNLOAD</div>-->
+                    <!--<div class="search-tip">Search By Product Name</div>-->
+                    <!--<form action="" method="get" class="productForm clearfix">-->
+                        <!--<input type="text" class="searchText">-->
+                        <!--<button class="submit"></button>-->
+                    <!--</form>-->
+                <!--</div>-->
             </div>
-            <ul class="service-nav clearfix">
+            <ul class="service-nav">
                 <li :class="{active:activeTab==='refunds-tab'}" @click="clickTab('refunds-tab')">
                     <i class="refunds-icon"></i>
                     <p>Refunds&Exchanges</p>
@@ -44,12 +44,6 @@
             <div class="module-container">
                 <!--退款-->
                 <div class="refunds" v-show="activeTab==='refunds-tab'">
-                    <div class="refunds-header">
-                        <span class="logo">
-                            <img src="/images/logo.png" alt="">
-                        </span>
-                        <span class="header-text">XXXX</span>
-                    </div>
                     <div class="refunds-form">
                         <div class="order">
                             <h3 class="item-title">Order Details</h3>

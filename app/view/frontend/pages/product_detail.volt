@@ -20,7 +20,7 @@
             <div class="productShow">
                 <div class="picShow">
                     <p>
-                        <img :src="curCoverImg" />
+                        <img :src="curCoverImg?curCoverImg:'/images/default_img.jpeg'" />
                     </p>
                     <ul>
                         <li :class="{active:coverImg_index==index}"

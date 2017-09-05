@@ -104,7 +104,7 @@ table {
   height: 30px;
   position: absolute;
   top: 13px;
-  left: 15px;
+  left: 78px;
 }
 #topBar .topBar_menu {
   width: 560px;
@@ -393,14 +393,14 @@ table {
   margin: 0 10px 0 0;
 }
 #product_detail_main .productShow .picShow > ul li:hover {
-  border: 1px solid #ccc;
+  border: 1px solid #25ba80;
 }
 #product_detail_main .productShow .picShow > ul li img {
   width: 80px;
   height: 80px;
 }
 #product_detail_main .productShow .picShow > ul li.active {
-  border: 1px solid #ccc;
+  border: 1px solid #25ba80;
 }
 #product_detail_main .productShow .attrShow {
   display: inline-block;
@@ -434,7 +434,9 @@ table {
   margin: 0 20px 0 0;
 }
 #product_detail_main .productShow .attrShow > ul > li.active {
-  background: blue;
+  color: #fff;
+  border: 1px solid #25ba80;
+  background: #25ba80;
 }
 #product_detail_main .productShow .attrShow > button {
   width: 186px;
@@ -475,6 +477,7 @@ table {
 }
 #product_detail_main .productDesc .imageText {
   padding: 20px;
+  overflow: hidden;
 }
 #product_detail_main .productDesc .comment {
   padding: 20px 20px 50px 20px;
@@ -529,9 +532,11 @@ table {
   margin: 0 5px 0 0;
 }
 .addComment_dialog .addComment_dialog_main textarea {
+  box-sizing: border-box;
   width: 400px;
   height: 100px;
   border-radius: 2px;
   border: solid 1px #cccccc;
+  padding: 10px;
   margin: 5px 0;
 }

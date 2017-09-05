@@ -104,7 +104,7 @@ table {
   height: 30px;
   position: absolute;
   top: 13px;
-  left: 15px;
+  left: 78px;
 }
 #topBar .topBar_menu {
   width: 560px;
@@ -408,7 +408,6 @@ input {
 #support_main .banner-container .search .title {
   margin: 0;
   height: 35px;
-  font-family: MicrosoftYaHei;
   font-size: 30px;
   text-align: left;
   color: #ffffff;
@@ -454,6 +453,7 @@ input {
 }
 #support_main .service-nav li {
   display: inline-block;
+  cursor: pointer;
   vertical-align: top;
   float: left;
   color: #5a5a5a;
@@ -461,11 +461,11 @@ input {
   height: 93px;
 }
 #support_main .service-nav li .refunds-icon {
-  background: url("../../../images/refunds_exchanges.png") no-repeat;
+  background: url("/images/refunds_exchanges.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .service-nav li .warranty-icon {
-  background: url("../../../images/warranty.png") no-repeat;
+  background: url("/images/warranty.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .service-nav li i {
@@ -480,21 +480,6 @@ input {
   line-height: 18px;
   text-align: center;
 }
-#support_main .service-nav li:hover {
-  background-color: #25ba80;
-  cursor: pointer;
-}
-#support_main .service-nav li:hover p {
-  color: #fff;
-}
-#support_main .service-nav li:hover .refunds-icon {
-  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
-  background-size: 40px 40px;
-}
-#support_main .service-nav li:hover .warranty-icon {
-  background: url("../../../images/warranty_1.png") no-repeat;
-  background-size: 40px 40px;
-}
 #support_main .service-nav .active {
   background-color: #25ba80;
   cursor: pointer;
@@ -503,32 +488,16 @@ input {
   color: #fff;
 }
 #support_main .service-nav .active .refunds-icon {
-  background: url("../../../images/refunds_exchanges_1.png") no-repeat;
+  background: url("/images/refunds_exchanges_1.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .service-nav .active .warranty-icon {
-  background: url("../../../images/warranty_1.png") no-repeat;
+  background: url("/images/warranty_1.png") no-repeat;
   background-size: 40px 40px;
 }
 #support_main .module-container .refunds {
   width: 993px;
-  margin: 10px auto;
-}
-#support_main .module-container .refunds .refunds-header {
-  text-align: center;
-  margin-top: 111px;
-  margin-bottom: 72px;
-}
-#support_main .module-container .refunds .refunds-header .logo img {
-  width: 48px;
-  height: 40px;
-}
-#support_main .module-container .refunds .refunds-header .header-text {
-  font-size: 30px;
-  text-align: center;
-  color: #585858;
-  margin-left: 66px;
-  line-height: 48px;
+  margin: 40px auto 10px auto;
 }
 #support_main .module-container .refunds .refunds-form {
   width: 993px;
