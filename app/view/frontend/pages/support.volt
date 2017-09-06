@@ -66,7 +66,7 @@
                             </p>
                         </div>
                         <div class="form-footer">
-                            <el-button type="primary" @click="commitReturn">SUBMIT</el-button>
+                            <el-button type="primary" @click="commitReturnBtn">SUBMIT</el-button>
                             <el-button @click="reset">RESET</el-button>
                         </div>
                     </div>

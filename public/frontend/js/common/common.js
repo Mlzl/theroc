@@ -8,6 +8,9 @@ var topBar = new Vue({
 
     },
     methods: {
+        //异步方法
+
+        //普通方法
         switchPages: function (type) {  //切换页面，0首页、1产品页、2博客、3联系我们、4登陆、5用户中心
             var page = type == 0 ? '' :
                             type == 1 ? 'product' :
@@ -19,8 +22,33 @@ var topBar = new Vue({
             if(type!=6){
                 window.location.href = '/' + page;
             }else{
-                window.open('/' + page);
+                var keyword=this.keyword;
+                if(keyword==''||keyword.trim()==''){
+                    this.$message('product name can not be empty');
+                }else{
+                    window.open('/' + page);
+                }
             }
+        },
+        logout:function(e){  //登出
+            // this.delCookie('roc_u');
+            // this.delCookie('roc_key');
+            // window.location.reload();
+        },
+        getCookie:function(name) {
+            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+            if(arr=document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        },
+        delCookie:function(name) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() - 1);
+            var cval=this.getCookie(name);
+            if(cval!=null)
+                document.cookie= name + "="+cval+";expires="+exp.toGMTString();
         }
     }
 });
@@ -30,12 +58,31 @@ var footer = new Vue({
     delimiters: ['~{', '}'],
     data: {
         linkIcon: ['facebook_icon', 'twitter_icon', 'google_icon', 'youtobe_icon', 'instagram_icon', 'periscope_icon'],
-        otherEmail:null,
+        otherEmail:'',
     },
     created: function () {
 
     },
     methods: {
+        //异步方法
+        submitEmail:function(){  //提交邮箱
+            var that=this;
+            var data={
+                email:this.otherEmail
+            };
+            this.$http.post('/api/user/collectionEmail',data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    that.$message('submit success');
+                }
+                else{
+                    that.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        //普通方法
         switchPages: function (type) {  //切换页面，0联系我们、1 2支持中心
             var page = type == 0 ? 'contact' :
                 type == 1 ? 'support?tab=0' :
@@ -64,22 +111,17 @@ var footer = new Vue({
                     break;
             }
         },
-        submitEmail:function(){
-            var that=this;
-            var data={
-                email:this.otherEmail
-            };
-            this.$http.post('/api/user/collectionEmail',data, {emulateJSON:true}).then(function(res){
-                var _res=res.body;
-                if(_res.code==0){
-                    that.$message('成功！');
-                }
-                else{
-                    that.$message(_res.msg);
-                }
-            }, function(err){
-                console.log(err);
-            });
+        submitEmailBtn:function(e){  //提交邮箱 按钮
+            var email=this.otherEmail;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+            if(email==''||email.trim()==''){
+                this.$message('email can not be empty');
+            }else if(!EMAILREG.test(email.trim())){
+                this.$message('please input valid email');
+            }else{
+                this.submitEmail();
+            }
         }
     }
 });

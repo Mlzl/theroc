@@ -20,7 +20,7 @@
             <div class="product_list">
                 <div class="oneProduct" v-for="(item,index) in searchProductList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
                     </p>
                     <p class="oneProduct_desc">
                         ~{item.name}

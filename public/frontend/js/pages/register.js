@@ -8,23 +8,8 @@ var register=new Vue({
         rePassword:'',
     },
     methods:{
-        register:function(){    //点击注册
-            // if(this.email==null||pubMethod.isBlank(this.email)){
-            //     this.emailTip='email can\'t not empty!';
-            //     return;
-            // }
-            // if(this.password==null||pubMethod.isBlank(this.password)){
-            //     this.passwordTip='password can\'t not empty!';
-            //     return;
-            // }
-            // if(this.password.length<6){
-            //     this.passwordTip='the length of password must be  bigger than 6!';
-            //     return;
-            // }
-            // if(this.password!==this.repassword){
-            //     this.passwordTip='two password must be same';
-            //     return;
-            // }
+        //异步方法
+        register:function(){    //注册
             var _password=hex_md5(this.password);
             var _this=this;
             var data={
@@ -45,6 +30,27 @@ var register=new Vue({
             }, function(err){
                 console.log(err);
             });
+        },
+        //普通方法
+        registerBtn:function(e){  // 注册按钮
+            var email=this.email;
+            var password=this.password;
+            var rePassword=this.rePassword;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+            if(email==''||email.trim()==''){
+                this.$message('email can not be empty');
+            }else if(password==''||password.trim()==''){
+                this.$message('password can not be empty');
+            }else if(rePassword==''||rePassword.trim()==''){
+                this.$message('rePassword can not be empty');
+            } else if(!EMAILREG.test(email.trim())){
+                this.$message('please input valid email');
+            }else if(password.trim() != rePassword.trim()){
+                this.$message('password and rePassword must be equal');
+            } else{
+                this.register();
+            }
         }
     }
 });

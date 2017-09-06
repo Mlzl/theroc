@@ -79,7 +79,7 @@ var product_detail=new Vue({
                 console.log(err);
             });
         },
-        commentDeter:function(){  //添加评论 确定按钮
+        commentDeter:function(){  //添加评论 确定
             var _this=this;
             var _data={
                 product_id:this.product_id,
@@ -131,6 +131,15 @@ var product_detail=new Vue({
             }
             for(var i=0;i<=index;i++){
                 Vue.set(star_arr, i, '/images/star_icon.png')
+            }
+        },
+        commentDeterBtn:function(e){  //添加评论 确定按钮
+            var comment_content=this.comment_content;
+
+            if(comment_content==''||comment_content.trim()==''){
+                this.$message('comment content can not be empty');
+            }else{
+                this.commentDeter();
             }
         }
     }

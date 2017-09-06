@@ -414,13 +414,6 @@ table {
 #login_main .login_box ul li .form-td {
   float: left;
 }
-#login_main .login_box ul li .rememberPassword {
-  float: right;
-}
-#login_main .login_box ul li .checkbox {
-  width: 18px;
-  height: 18px;
-}
 #login_main .login_box ul .li1,
 #login_main .login_box ul .li2 {
   height: 50px;
@@ -476,23 +469,26 @@ table {
   border: 0px solid transparent;
   margin: 0 0 25px 0;
 }
-#login_main .login_box .btns > p {
-  margin: 0 0 25px 0;
-}
-#login_main .login_box .btns > p .hline {
-  width: 44%;
-  border-bottom: 1px solid #9e9f9f;
-  padding: 0;
-  height: 0;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-}
-#login_main .login_box .btns > p .or {
-  width: 10%;
+#login_main .login_box .btns .or_text {
   text-align: center;
+  margin: 0 0 25px 0;
+  position: relative;
+}
+#login_main .login_box .btns .or_text:before,
+#login_main .login_box .btns .or_text:after {
+  content: '';
   display: inline-block;
-  vertical-align: middle;
+  width: 44%;
+  height: 1px;
+  background: #5a5a5a;
+  position: absolute;
+  top: 7px;
+}
+#login_main .login_box .btns .or_text:before {
+  left: 0;
+}
+#login_main .login_box .btns .or_text:after {
+  right: 0;
 }
 #login_main .login_box .btns .registerBtn {
   cursor: pointer;

@@ -22,11 +22,10 @@
                 {{user_info['user_name']}}
                 {% endif  %}
             </span>
-            <span>退出</span>
+            <span @click="logout">退出</span>
         </p>
         {% else %}
         <i class="user_icon" @click="switchPages(4,$event)"></i>
-        <span>登陆</span>
         {% endif %}
     </div>
 </div>

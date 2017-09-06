@@ -150,6 +150,19 @@ var support=new Vue({
             this.orderValue='';
             this.issueValue='';
             this.imageList=[];
+        },
+        commitReturnBtn:function(e){  ////提交退款 按钮
+            var orderValue=this.orderValue;
+            var issueValue=this.issueValue;
+            var imageList=this.imageList;
+
+            if(orderValue==''||orderValue.trim()==''){
+                this.$message('order details can not be empty');
+            }else if(issueValue==''||issueValue.trim()==''){
+                this.$message('issue details can not be empty');
+            }else{
+                this.commitReturn();
+            }
         }
     }
 })

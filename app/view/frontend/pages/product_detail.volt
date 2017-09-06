@@ -20,7 +20,7 @@
             <div class="productShow">
                 <div class="picShow">
                     <p>
-                        <img :src="curCoverImg?curCoverImg:'/images/default_img.jpeg'" />
+                        <img :src="curCoverImg?curCoverImg:'/images/default_img.png'" />
                     </p>
                     <ul>
                         <li :class="{active:coverImg_index==index}"
@@ -81,11 +81,11 @@
                     <p>
                         <img :src="item" v-for="(item,index) in star_arr" @click="selectStar(index)"/>
                     </p>
-                    <textarea v-model="comment_content" placeholder="请输入评价内容"></textarea>
+                    <textarea v-model="comment_content" placeholder="please input comment content"></textarea>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddComment(false)">取 消</el-button>
-                    <el-button type="primary" @click="commentDeter">确 定</el-button>
+                    <el-button type="primary" @click="commentDeterBtn">确 定</el-button>
                 </span>
             </el-dialog>
         </div>

@@ -44,15 +44,6 @@
         .form-td {
           float: left;
         }
-
-        .rememberPassword{
-          float: right;
-        }
-        .checkbox{
-          width: 18px;
-          height:18px;
-        }
-
       }
       .li1,.li2{
         height: 50px;
@@ -117,22 +108,24 @@
         border:0px solid transparent;
         margin:0 0 25px 0;
       }
-      >p{
+      .or_text{
+        text-align: center;
         margin:0 0 25px 0;
-        .hline{
-          width: 44%;
-          border-bottom: 1px solid #9e9f9f;
-          padding: 0;
-          height: 0;
-          overflow: hidden;
-          display: inline-block;
-          vertical-align: middle;
+        position:relative;
+        &:before,&:after{
+          content:'';
+          display:inline-block;
+          width:44%;
+          height:1px;
+          background:#5a5a5a;
+          position:absolute;
+          top:7px;
         }
-        .or{
-          width: 10%;
-          text-align: center;
-          display: inline-block;
-          vertical-align: middle;
+        &:before{
+          left:0;
+        }
+        &:after{
+          right:0
         }
       }
       .registerBtn{

@@ -29,7 +29,7 @@
             <div class="product_nav">
                 <div class="oneProduct_nav" v-for="(item,index) in productNavList">
                     <p class="oneProduct_nav_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
                     </p>
                     <div class="oneProduct_nav_desc">
                         <h4>~{item.name}</h4>
@@ -41,7 +41,7 @@
                 <h3>热销产品</h3>
                 <div class="oneProduct" v-for="(item,index) in productHotList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>
@@ -51,7 +51,7 @@
                 <h3>推荐产品</h3>
                 <div class="oneProduct" v-for="(item,index) in productRecommendList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.jpeg'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>

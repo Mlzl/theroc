@@ -28,27 +28,19 @@
                     </li>
                     <li class="clearfix li2">
                         <span class="form-td">
-                             <img class="password-icon" src="/images/password.png" alt="">
+                             <img class="password-icon" src="/images/password.png">
                         </span>
                         <span class="line form-td"></span>
                         <input type="password" class="form-td" v-model="password" placeholder="Password">
                     </li>
                     <li class="clearfix li3">
                         <span><a class="form-td" href="javaScript:void(0)" @click="forgetPassword()">Forget your password?</a></span>
-                        <!--<span class="rememberPassword form-td">-->
-                            <!--<input class="checkbox" type="checkbox">-->
-                            <!--<span>Remember Me</span>-->
-                        <!--</span>-->
                     </li>
                 </ul>
                 <div class="btns">
-                    <button class="loginBtn form-td" @click="login">LOG IN</button>
-                    <p>
-                        <span class="hline"></span>
-                        <span class="or">OR</span>
-                        <span class="hline"></span>
-                    </p>
-                    <button class="registerBtn">CREATE ACCOUNT</button>
+                    <button class="loginBtn form-td" @click="loginBtn">LOG IN</button>
+                    <p class="or_text">OR</p>
+                    <button class="registerBtn" @click="toRegisterPage">CREATE ACCOUNT</button>
                 </div>
             </div>
             <!--忘记密码对话框-->
@@ -62,7 +54,6 @@
                     <el-button type="primary" >submit</el-button>
                 </div>
             </el-dialog>
-
         </div>
         <!--底部-->
         {% include "smart/footer.volt" %}
