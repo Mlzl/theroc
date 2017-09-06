@@ -12,6 +12,9 @@ use Roc\Library\Response;
 
 class ProductController extends ApiController {
 
+    public function onConstruct(){
+    }
+
     public function getProductDetailAction(){
         $product_id = intval($this->request->get('product_id'));
         if(!$product_id){
