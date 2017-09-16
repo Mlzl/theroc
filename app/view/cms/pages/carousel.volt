@@ -18,89 +18,60 @@
         {% include "smart/sideBar.volt" %}
         <!--主要区域-->
         <div id="carousel_main"  v-cloak>
-            <div class="product_menu">
-              <div class="tab clearfix">
-                    <div  class="tab_item " :class="activeTab==='carousel_home'?'active_item':''" id="carousel_home" @click="openTab('carousel_home')">首页</div>
-                    <div class="tab_item" :class="activeTab==='carousel_product'?'active_item':''" id="carousel_product" @click="openTab('carousel_product')">产品</div>
-              </div>
-                <div class="btn_group">
-                    <button class="btn" @click="showDialog()">添加</button>
-                </div>
-
+            <div class="head">
+                <ul class="tab_ul">
+                    <li :class="{active:tab===0}"  @click="switchTab(0)">首页</li>
+                    <li :class="{active:tab===1}" @click="switchTab(1)">产品</li>
+                </ul>
+                <el-button @click="showDialog">添加</el-button>
             </div>
-            <div class="home_content product_table" v-show="activeTab==='carousel_home'">
-                <div class="thead">
-                    <span>序号</span>
-                    <span>链接</span>
-                    <span>预览</span>
-                    <span>操作</span>
+            <div class="carousel_table">
+                <div class="carousel_thead">
+                    <p>
+                        <span>序号</span>
+                        <span>链接</span>
+                        <span>预览</span>
+                        <span>操作</span>
+                    </p>
                 </div>
-                <div class="tbody">
-                    <p v-for="(item,index) in homeProductList">
-                        <span class="field">~{index+1}</span>
-                        <span class="field">
-                            <span v-show="item.state==='read'">~{item.target_url}</span>
-                            <input v-show="item.state==='edit'" type="text" v-model="item.target_url">
-                        </span>
-                        <span class="field">
-                            <span class="img_wrapper">
-                                <img :src="item.picture_url" alt="product">
-                                <span class="mask" v-show="item.state==='edit'">
-                                    <img src="/images/upload.png" alt="上传" @click="clickMyUpload('edit')">
-                                </span>
+                <div class="carousel_tbody">
+                    <p v-for="(item,index) in carouselList">
+                        <span>~{index+1}</span>
+                        <template v-if="item.state===0">
+                            <span>~{item.value.target_url}</span>
+                            <span >
+                                <img :src="item.value.picture_url">
                             </span>
-                        </span>
-                        <span class="field">
-                            <span v-show="item.state==='read'" class="btn edit" @click="edit(index)">编辑</span>
-                            <span v-show="item.state==='read'" class="btn del" @click="del(index)">删除</span>
-                            <span v-show="item.state==='edit'" class="btn del" @click="cancel(index)">取消</span>
-                            <span v-show="item.state==='edit'" class="btn del" @click="save(index)">保存</span>
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="product_content product_table" v-show="activeTab==='carousel_product'">
-                <div class="thead">
-                    <span>序号</span>
-                    <span>链接</span>
-                    <span>预览</span>
-                    <span>操作</span>
-                </div>
-                <div class="tbody">
-                    <p v-for="(item,index) in productProductList">
-                        <span class="field">~{index+1}</span>
-                        <span class="field">
-                            <span v-show="item.state==='read'">~{item.target_url}</span>
-                            <input v-show="item.state==='edit'" type="text" v-model="item.target_url">
-                        </span>
-                        <span class="field">
-                            <span class="img_wrapper">
-                                <img :src="item.picture_url" alt="product">
-                                <span class="mask" v-show="item.state==='edit'">
-                                    <img src="/images/upload.png" alt="上传" @click="clickMyUpload('edit')">
-                                </span>
+                            <span>
+                                <el-button @click="edit(item)">编辑</el-button>
+                                <el-button @click="del_btn(item,index)">删除</el-button>
                             </span>
-                        </span>
-                        <span class="field">
-                            <span v-show="item.state==='read'" class="btn edit" @click="edit(index)">编辑</span>
-                            <span v-show="item.state==='read'" class="btn del" @click="del(index)">删除</span>
-                            <span v-show="item.state==='edit'" class="btn del" @click="cancel(index)">取消</span>
-                            <span v-show="item.state==='edit'" class="btn del" @click="save(index)">保存</span>
-                        </span>
+                        </template>
+                        <template v-else-if="item.state===1">
+                            <span>
+                                <input type="text" v-model="item.value.target_url">
+                            </span>
+                            <span >
+                                <img class="upload" :src="item.value.picture_url" @click="imageUpload('edit')">
+                            </span>
+                            <span>
+                                <el-button @click="save(item)">保存</el-button>
+                                <el-button @click="cancel(index)">取消</el-button>
+                            </span>
+                        </template>
                     </p>
                 </div>
             </div>
-            <!--对话框-->
-            <el-dialog :title="dialogTitle" :visible.sync="addCarousel">
-                <div>
-                    <input type="text" v-model="addItem.target_url">
-                    <p @click="clickMyUpload('add')">
-                        <img :src="addItem.picture_url" alt="轮播图" @click="clickMyUpload('add')" v-show="addItem.picture_url!=null">
-                    </p>
+            <!--添加弹出框-->
+            <el-dialog :title="添加" v-model="addCarousel" custom-class="addCarousel_dialog"
+                       :show-close=false :close-on-click-modal=false>
+                <div class="addCarousel_dialog_main">
+                    <input type="text" v-model="target_url">
+                    <img :src="picture_url" @click="imageUpload('add')">
                 </div>
                 <div slot="footer" class="dialog-footer">
                     <el-button @click="closeDialog">取 消</el-button>
-                    <el-button type="primary" @click="addCarouselMethod()">确 定</el-button>
+                    <el-button type="primary" @click="addCarousel">确 定</el-button>
                 </div>
             </el-dialog>
         </div>

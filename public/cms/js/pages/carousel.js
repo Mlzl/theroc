@@ -3,25 +3,38 @@ var carousel_main=new Vue({
     el:'#carousel_main',
     delimiters:['~{','}'],
     data:{
-        activeTab:'carousel_home',
-        addCarousel:false,
-        homeProductList:null,
-        productProductList:null,
+        tab:0,  //选项卡，0首页、1产品
+        homeCarouselList:[],  //首页轮播图列表
+        productCarouselList:[],  //产品轮播图列表
         targetProductList:null,
-        dialogTitle:'添加首页轮播图',
         oldItem:{}, //编辑时保存旧项，用于还原
         targetIndex:null,   //编辑时的索引
-        addItem:{}, //新增对象,
-        actionType:null
+        actionType:'',
+        //添加轮播图 弹出框
+        addCarousel:false,
+        targetUrl:'',
+        picture_url:'',
+    },
+    computed:{
+        carouselList:function(){
+            var tab=this.tab;
+            var homeCarouselList=this.homeCarouselList;
+            var productCarouselList=this.productCarouselList;
+            var carouselList=tab==0?homeCarouselList:
+                                tab==1?productCarouselList:[];
+
+            return carouselList;
+        }
     },
     created:function(){
-        this.getBanner();
-
+        this.getHomeCarouselList()
+        this.getProductCarouselList();
     },
     mounted:function() {
         this.getQiNiuToken();
     },
     methods:{
+        //异步方法
         getQiNiuToken:function(){
             var that=this;
             this.$http.get('/api/auth/getQiNiuToken').then(function(res){
@@ -33,6 +46,119 @@ var carousel_main=new Vue({
                 console.log(err);
             });
         },
+        getHomeCarouselList:function(){  //获得首页轮播图列表
+            var _this=this;
+            var banner_type='home_banner';
+            var url='/api/product/getBanner?banner_type='+banner_type;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var homeCarouselList=_res.data;
+                    for(var i=0,len=homeCarouselList.length;i<len;i++){
+                        homeCarouselList[i].state=0;
+                    }
+
+                    _this.homeCarouselList=homeCarouselList;
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        getProductCarouselList:function(){  //获得产品轮播图列表
+            var _this=this;
+            var banner_type='pro_banner';
+            var url='/api/product/getBanner?banner_type='+banner_type;
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var productCarouselList=_res.data;
+                    for(var i=0,len=productCarouselList.length;i<len;i++){
+                        productCarouselList[i].state=0;
+                    }
+
+                    _this.productCarouselList=productCarouselList;
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        del:function(item,index){  //删除轮播图
+            var _this=this;
+            var banner_id=item.id;
+            var url='/cms/setting/api_delete_banner?banner_id='+banner_id
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code===0){
+                    var tab=_this.tab;
+                    if(tab==0){
+                        _this.homeCarouselList.splice(index,1);
+                    }else if(tab==1){
+                        _this.productCarouselList.splice(index,1);
+                    }
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        save:function(item){
+            var _this=this;
+            var data={
+                banner_id:item.id,
+                target_url:item.value.target_url,
+                picture_url:item.value.picture_url
+            };
+            var url='/cms/setting/api_update_banner';
+            this.$http.post(url,data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var tab=_this.tab;
+                    if(tab==0){
+                        _this.getHomeCarouselList();
+                    }else if(tab==1){
+                        _this.getProductCarouselList();
+                    }
+                    _this.$message('修改成功');
+                }
+                else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        addCarousel:function(e){
+            var _this=this;
+            var tab=this.tab;
+            var url='/cms/setting/api_add_banner';
+            var banner_type=tab==0?'home_banner':
+                                tab==1?'pro_banner':'';
+            var data={
+                banner_type:banner_type,
+                target_url:this.target_url,
+                picture_url:this.picture_url,
+            };
+            this.$http.post(url,data,{emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code===0){
+                    if(tab==0){
+                        _this.getHomeCarouselList();
+                    }else if(tab==1){
+                        _this.getHomeCarouselList();
+                    }
+                    _this.addCarousel=false;
+                    _this.$message('添加成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        //普通方法
         initImageUpload:function(uptoken){  //图片上传
             var _this=this;
             //引入Plupload 、qiniu.js后
@@ -113,7 +239,7 @@ var carousel_main=new Vue({
                         var res=JSON.parse(info);
                         var imgUrl='http://otw5eymk3.bkt.gdipper.com/'+res.key;
                         if(_this.actionType==='add'){
-                            _this.addItem.picture_url=imgUrl;
+                            _this.picture_url=imgUrl;
                         }
                         else{
                             _this.targetProductList[_this.targetIndex].picture_url = imgUrl;
@@ -149,92 +275,22 @@ var carousel_main=new Vue({
             // uploader 为一个plupload对象，继承了所有plupload的方法，参考http://plupload.com/docs
         },
         imageUpload:function(e){  //图片上传
-            var imageUploadBtn=document.getElementById('imageUploadBtn');
-            imageUploadBtn.click();
-        },
-        getBanner:function(){
-            var banner_type;
-            if(this.activeTab==='carousel_home'){
-                banner_type='home_banner';
-            }
-            else{
-                banner_type='pro_banner';
-            }
-            var that=this;
-            this.$http.get('/api/product/getBanner',{params:{banner_type:banner_type}}).then(function(res){
-                var _res=res.body;
-                that.converseData(_res.data);
-                that.setTargetList();
-            }, function(err){
-                console.log(err);
-            });
-        },
-        clickMyUpload:function(actionType){
             this.actionType=actionType;
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
-        openTab:function(tabId){
-            this.activeTab=tabId;
-            this.getBanner();
-            this.reset();
+        switchTab:function(tabId){
+            this.tab=tabId;
         },
-        /**
-         * 重置一些变量
-         */
-        reset:function(){
-            this.oldItem={};
-            this.targetIndex=null;
-            this.addItem={};
-            this.actionType=null;
-        },
-        /**
-         *   转化成前台格式
-         */
-        converseData:function(list){
-            if(this.activeTab==='carousel_home') {
-                this.homeProductList=[];
-                for (var i = 0; i < list.length; i++) {
-                    this.homeProductList.push({
-                        state:'read',
-                        banner_id:list[i].id,
-                        target_url:list[i].value.target_url,
-                        picture_url:list[i].value.picture_url
-                    });
-                }
-            }
-            else{
-                this.productProductList=[];
-                for (var i = 0; i < list.length; i++) {
-                    this.productProductList.push({
-                        state:'read',
-                        banner_id:list[i].id,
-                        target_url:list[i].value.target_url,
-                        picture_url:list[i].value.picture_url
-                    });
-                }
-            }
-        },
-        setTargetList:function(){
-          if(this.activeTab==='carousel_home'){
-              this.targetProductList=this.homeProductList;
-          }
-          else{
-              this.targetProductList=this.productProductList;
-          }
-        },
-        //弹窗
-        showDialog:function(){
+        showDialog:function(){ //弹窗
             this.addItem={
                 target_url:'',
                 picture_url:undefined
             };
-            if(this.activeTab==='carousel_home')
-            {
+            if(this.tab===0) {
                dialogTitle='添加首页轮播图';
                this.addItem.banner_type='home_banner';
-            }
-            else{
+            } else{
                 dialogTitle='添加产品轮播图';
                 this.addItem.banner_type='pro_banner';
             }
@@ -243,68 +299,41 @@ var carousel_main=new Vue({
         closeDialog:function(){
            this.addCarousel=false;
         },
-        //编辑
-        edit:function(index){
-            if(this.targetIndex!=null) {
-                //还原上条编辑状态记录
-                Vue.set(this.targetProductList,this.targetIndex,JSON.parse(JSON.stringify(this.oldItem)));
+        edit:function(item){  //编辑
+            this.oldItem=JSON.parse(JSON.stringify(item));
+            var tab=this.tab;
+            var list=[];
+            if(tab==0){  //首页
+                list=this.homeCarouselList;
+            }else if(tab==1){  //产品
+                list=this.productCarouselList;
             }
-            this.oldItem=JSON.parse(JSON.stringify(this.targetProductList[index]));
-            this.targetProductList[index].state = 'edit';
-            this.targetIndex=index;
-        },
-        del:function(index){
-            var data={
-                banner_id:this.targetProductList[index].banner_id
-            };
-            var that=this;
-            this.$http.get('/cms/setting/api_delete_banner',{params:data}).then(function(res){
-                var _res=res.body;
-                if(_res.code===0){
-                    that.targetProductList.splice(index,1);
+            for(var i=0,len=list.length;i<len;i++){
+                list[i].state=0;
+                if(list[i].id==item.id){
+                    list[i].state=1;
                 }
-            }, function(err){
-                console.log(err);
-            });
+            }
         },
         cancel:function(index){
-            Vue.set(this.targetProductList,index,this.oldItem);
-            this.targetIndex=null;
-            this.oldItem=null;
+            var tab=this.tab;
+            if(tab==0){  //首页
+                Vue.set(this.homeCarouselList,index,this.oldItem);
+            }else if(tab==1){  //产品
+                Vue.set(this.productCarouselList,index,this.oldItem);
+            }
         },
-        save:function(index){
-            var that=this;
-            // POST /someUrl
-            var data=this.targetProductList[index];
-            this.$http.post('/cms/setting/api_update_banner',data, {emulateJSON:true}).then(function(res){
-                var _res=res.body;
-                if(_res.code==0){
-                    that.getBanner();
-                }
-                else{
-                    that.$message(_res.msg);
+        del_btn:function(item,index,e){  //删除轮播图 按钮
+            var _this=this;
+            this.$confirm('确定删除该轮播图吗?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                _this.del(item,index);
+            }).catch(() => {
 
-                }
-            }, function(err){
-                console.log(err);
             });
         },
-        /**
-         * 增加
-         */
-        addCarouselMethod:function(){
-            var data=this.addItem;
-            var that=this;
-            this.$http.post('/cms/setting/api_add_banner',data,{emulateJSON:true}).then(function(res){
-                var _res=res.body;
-                if(_res.code===0){
-                    that.getBanner();
-                    that.addCarousel=false;
-                }
-            }, function(err){
-                console.log(err);
-            });
-        }
-
     }
 })

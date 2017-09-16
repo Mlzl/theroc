@@ -11,56 +11,121 @@
   right: 0;
   background-color: #f1f1f1;
   font-size:14px;
-  .clearfix:after{
-    content: ".";
-    height: 0;
-    display: block;
-    clear: both;
-    visibility: hidden;
-  }
-
-
-  .el-dialog{
-     width: 560px;
-     border-radius: 20px;
-     input{
-       width: 500px;
-       height:40px;
-       line-height: 40px;
-       text-align: left;
-       font-size:18px;
-       color:#5a5a5a;
-       padding-left: 10px;
-     }
-     p{
-       background: url("/images/nopic.png") no-repeat;
-       background-size: 256px 146px;
-       width: 258px;
-       height: 146px;
-       margin-left: 136px;
-       margin-top: 10px;
-       >img{
-         width:100%;
-         height:100%;
-       }
-     }
-    .dialog-footer{
-      text-align: center;
-      margin-bottom:30px;
-      button{
-        width:100px;
-        height:32px;
+  .head{
+    height:72px;
+    line-height:72px;
+    overflow: hidden;
+    position:relative;
+    .tab_ul{
+      height:32px;
+      margin:20px 0 20px 40px;
+      li{
+        cursor:default;
+        height: 30px;
+        line-height:30px;
+        text-align:center;
+        padding:0 20px;
+        background-color: #ffffff;
+        float:left;
+        &:nth-of-type(1){
+          border-top: solid 1px #cccccc;
+          border-bottom: solid 1px #cccccc;
+          border-left: solid 1px #cccccc;
+        }
+        &:nth-of-type(2){
+          border: solid 1px #cccccc;
+        }
       }
-      .el-button--default{
+      li.active{
         color: #25ba80;
-        border:1px solid #25ba80;
+        border: solid 1px #25ba80;
       }
-      .el-button--primary{
-        color: #fff;
-        background-color:#25ba80;
+    }
+    button{
+      width:60px;
+      height:28px;
+      position:absolute;
+      top:22px;
+      right:88px;
+    }
+  }
+  .carousel_table{
+    width: 98%;
+    height: 670px;
+    border-radius: 4px;
+    background: #F1F1F1;
+    margin: 0 auto;
+    .carousel_thead,.carousel_tbody{
+      >p{
+        background:#fff;
+        >span{
+          display:inline-block;
+          text-indent:10px;
+          vertical-align: top;
+          &:nth-of-type(1){
+            width:80px;
+            margin:0 0 0 50px;
+          }
+          &:nth-of-type(2){
+            width:350px;
+          }
+          &:nth-of-type(3){
+            width:320px;
+          }
+          &:nth-of-type(4){
+            width:300px;
+          }
+        }
       }
+    }
+    .carousel_thead{
+      height:40px;
+      line-height:40px;
+      margin:0 0 4px 0;
+    }
+    .carousel_tbody{
+      color: #2c3347;
+      >p{
+        height:80px;
+        line-height:80px;
+        margin:0 0 4px 0;
+        position:relative;
+        >span{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          img{
+            width:60px;
+            height:60px;
+            margin:10px 0;
+          }
+          img.upload{
+            cursor:pointer;
+          }
+        }
+        button{
+          height: 25px;
+          padding:0 5px;
+        }
+      }
+    }
+  }
+}
+.addCarousel_dialog{
+  width: 560px;
+  border-radius: 20px;
+  .addCarousel_dialog_main{
+    input{
+      width: 500px;
+      height:40px;
+      line-height: 40px;
+      text-align: left;
+      font-size:18px;
+      color:#5a5a5a;
+      padding-left: 10px;
+    }
+    >img{
 
     }
   }
-
 }
