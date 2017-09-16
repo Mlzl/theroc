@@ -12,7 +12,7 @@ var carousel_main=new Vue({
         actionType:'',
         //添加轮播图 弹出框
         addCarousel:false,
-        targetUrl:'',
+        target_url:'',
         picture_url:'',
     },
     computed:{

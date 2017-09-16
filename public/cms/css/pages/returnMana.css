@@ -419,7 +419,7 @@ table {
 }
 #returnMana_main .return_table {
   width: 98%;
-  height: 670px;
+  height: 710px;
   border-radius: 4px;
   background: #F1F1F1;
   margin: 0 auto;
@@ -472,7 +472,6 @@ table {
 }
 #returnMana_main .return_table .return_tbody {
   color: #2c3347;
-  height: 630px;
 }
 #returnMana_main .return_table .return_tbody > p {
   height: 50px;

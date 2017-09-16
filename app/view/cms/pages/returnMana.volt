@@ -36,14 +36,14 @@
                         </span>
                     </p>
                 </div>
+                <el-pagination style="text-align:center"
+                               small layout="prev, pager, next"
+                               :page-size="curReturnList_size"
+                               :current-page="curReturnList_page"
+                               :total="curReturnList_total"
+                               @current-change="curProductChange">
+                </el-pagination>
             </div>
-            <el-pagination style="text-align:center"
-                           small layout="prev, pager, next"
-                           :page-size="curReturnList_size"
-                           :current-page="curReturnList_page"
-                           :total="curReturnList_total"
-                           @current-change="curProductChange">
-            </el-pagination>
         </div>
     </div>
     <script type="text/javascript" src="/plugin/vue.js"></script>

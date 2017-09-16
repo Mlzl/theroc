@@ -89,13 +89,13 @@
             <el-dialog title="添加产品" v-model="addProduct_show" custom-class="addProduct_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addProduct_dialog_main">
-                    <el-input v-model="product_name" placeholder="请输入产品标题"></el-input>
+                    <el-input v-model="product_name" placeholder="请输入产品标题(必填)"></el-input>
                     <el-input v-model="custom_attr" placeholder="请输入自定义属性"></el-input>
                     <el-input v-model="target_url" placeholder="请输入跳链url"></el-input>
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddProduct(false)">取 消</el-button>
-                    <el-button type="primary" @click="addProduct">确 定</el-button>
+                    <el-button type="primary" @click="addProduct_btn">确 定</el-button>
                 </span>
             </el-dialog>
             <!--添加价格 弹出框-->
@@ -107,7 +107,7 @@
                 </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="showAddPrice(false)">取 消</el-button>
-                    <el-button type="primary" @click="addPrice">确 定</el-button>
+                    <el-button type="primary" @click="addPrice_btn">确 定</el-button>
                 </span>
             </el-dialog>
         </div>

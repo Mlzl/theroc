@@ -9,8 +9,47 @@
   left:220px;
   right:0;
   bottom: 0;
-  .pagination{
-    text-align: right;
-    padding-right: 20px;
+  .email_table{
+    width:98%;
+    height: 710px;
+    border-radius: 4px;
+    background:#F1F1F1;
+    margin:0 auto;
+    .email_thead,.email_tbody{
+      >p{
+        background:#fff;
+        >span{
+          display:inline-block;
+          text-indent:10px;
+          vertical-align: top;
+          &:nth-of-type(1){
+            width:80px;
+            margin:0 0 0 50px;
+          }
+          &:nth-of-type(2){
+            width:170px;
+          }
+        }
+      }
+    }
+    .email_thead{
+      height:40px;
+      line-height:40px;
+      margin:0 0 4px 0;
+    }
+    .email_tbody{
+      color: #2c3347;
+      >p{
+        height:50px;
+        line-height:50px;
+        margin:0 0 4px 0;
+        position:relative;
+        >span{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
   }
 }

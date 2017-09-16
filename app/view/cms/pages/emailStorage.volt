@@ -13,18 +13,19 @@
         <!--侧边栏-->
         {% include "smart/sideBar.volt" %}
         <div id="emailStorage_main" v-cloak>
-           <div class="product_table">
-                <div class="thead">
-                    <span>序号</span>
-                    <span>Email</span>
+           <div class="email_table">
+                <div class="email_thead">
+                    <p>
+                        <span>序号</span>
+                        <span>Email</span>
+                    </p>
                 </div>
-               <div class="tbody">
+               <div class="email_tbody">
                    <p v-for="(item,index) in emailStorage">
                        <span class="field">~{index+1}</span>
                        <span class="field">~{item.email}</span>
                    </p>
                </div>
-
                <el-pagination style="text-align:center"
                               small layout="prev, pager, next"
                               :page-size="pageSize"

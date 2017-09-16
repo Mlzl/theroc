@@ -222,6 +222,11 @@ var productMana_main=new Vue({
         },
         addOrModifyClass_btn:function(e){  //添加or修改分类btn
             var addOrModify=this.addOrModify;
+            var class_name=this.class_name;
+            if(class_name==''||class_name.trim()==''){
+                this.$message('分类名称不能为空');
+                return;
+            }
             if(addOrModify==0){  //添加
                 this.addClass();
             }else{  //修改
@@ -277,6 +282,25 @@ var productMana_main=new Vue({
             }).catch(() => {
 
             });
+        },
+        addProduct_btn:function(e){  //添加产品 按钮
+            var product_name=this.product_name;
+            if(product_name==''||product_name.trim()==''){
+                this.$message('产品标题不能为空');
+            }else{
+                this.addProduct();
+            }
+        },
+        addPrice_btn:function(e){  //添加价格 按钮
+            var price_attr=this.price_attr;
+            var price=this.price;
+            if(price_attr==''||price_attr.trim()==''){
+                this.$message('价格属性不能为空');
+            }else if(price==''||price.trim()==''){
+                this.$message('价格不能为空');
+            }else{
+               this.addPrice();
+            }
         },
     }
 })

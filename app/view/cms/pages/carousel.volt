@@ -63,7 +63,7 @@
                 </div>
             </div>
             <!--添加弹出框-->
-            <el-dialog :title="添加" v-model="addCarousel" custom-class="addCarousel_dialog"
+            <el-dialog title="添加" v-model="addCarousel" custom-class="addCarousel_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addCarousel_dialog_main">
                     <input type="text" v-model="target_url">
@@ -81,7 +81,6 @@
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <!-- element ui -->
     <script src="/plugin/element-ui/lib/index.js"></script>
-    <!-- qiniu -->
     <!-- plupload -->
     <script src="/plugin/plupload-2.1.x/moxie.js"></script>
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>

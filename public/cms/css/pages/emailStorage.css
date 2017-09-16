@@ -418,7 +418,48 @@ table {
   right: 0;
   bottom: 0;
 }
-#emailStorage_main .pagination {
-  text-align: right;
-  padding-right: 20px;
+#emailStorage_main .email_table {
+  width: 98%;
+  height: 710px;
+  border-radius: 4px;
+  background: #F1F1F1;
+  margin: 0 auto;
+}
+#emailStorage_main .email_table .email_thead > p,
+#emailStorage_main .email_table .email_tbody > p {
+  background: #fff;
+}
+#emailStorage_main .email_table .email_thead > p > span,
+#emailStorage_main .email_table .email_tbody > p > span {
+  display: inline-block;
+  text-indent: 10px;
+  vertical-align: top;
+}
+#emailStorage_main .email_table .email_thead > p > span:nth-of-type(1),
+#emailStorage_main .email_table .email_tbody > p > span:nth-of-type(1) {
+  width: 80px;
+  margin: 0 0 0 50px;
+}
+#emailStorage_main .email_table .email_thead > p > span:nth-of-type(2),
+#emailStorage_main .email_table .email_tbody > p > span:nth-of-type(2) {
+  width: 170px;
+}
+#emailStorage_main .email_table .email_thead {
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 4px 0;
+}
+#emailStorage_main .email_table .email_tbody {
+  color: #2c3347;
+}
+#emailStorage_main .email_table .email_tbody > p {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 0 4px 0;
+  position: relative;
+}
+#emailStorage_main .email_table .email_tbody > p > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
