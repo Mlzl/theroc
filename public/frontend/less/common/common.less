@@ -29,15 +29,10 @@
         color: #25ba80;
         border-bottom: 1px solid #25ba80;
       }
-      //&:after{
-      //  content:' ';
-      //  width:43px;
-      //  height:1px;
-      //  background:#25ba80;
-      //  position:absolute;
-      //  bottom:0;
-      //  left:0;
-      //}
+    }
+    li.active{
+      color: #25ba80;
+      border-bottom: 1px solid #25ba80;
     }
   }
   .topBar_right {
@@ -90,12 +85,20 @@
       }
       >span{
         cursor:pointer;
-      }
-      >span:nth-of-type(1){
         margin:0 5px;
+        &:hover{
+          color:#25ba80;
+        }
       }
-      >span:nth-of-type(2){
-
+     .quit_icon{
+       cursor:pointer;
+       display:inline-block;
+       width:16px;
+       height:16px;
+       background: url('/images/quit_icon.png') no-repeat;
+       background-size: 16px 16px;
+       position:relative;
+       top:2px;
       }
     }
   }

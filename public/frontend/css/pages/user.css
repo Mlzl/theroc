@@ -124,6 +124,10 @@ table {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
+#topBar .topBar_menu li.active {
+  color: #25ba80;
+  border-bottom: 1px solid #25ba80;
+}
 #topBar .topBar_right {
   position: absolute;
   top: 15px;
@@ -176,9 +180,20 @@ table {
 }
 #topBar .topBar_right .user_info > span {
   cursor: pointer;
-}
-#topBar .topBar_right .user_info > span:nth-of-type(1) {
   margin: 0 5px;
+}
+#topBar .topBar_right .user_info > span:hover {
+  color: #25ba80;
+}
+#topBar .topBar_right .user_info .quit_icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('/images/quit_icon.png') no-repeat;
+  background-size: 16px 16px;
+  position: relative;
+  top: 2px;
 }
 #footer {
   box-sizing: border-box;

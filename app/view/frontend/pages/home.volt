@@ -19,7 +19,7 @@
         <div id="home_main" v-cloak>
             <!--轮播图-->
             <div class="carouselArea">
-                <el-carousel height="342px">
+                <el-carousel>
                     <el-carousel-item v-for="item in bannerList" :key="item">
                         <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>
@@ -29,7 +29,7 @@
             <div class="product_nav">
                 <div class="oneProduct_nav" v-for="(item,index) in productNavList">
                     <p class="oneProduct_nav_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
                     </p>
                     <div class="oneProduct_nav_desc">
                         <h4>~{item.name}</h4>
@@ -38,20 +38,20 @@
             </div>
             <!--热销产品模块-->
             <div class="product_sell">
-                <h3>热销产品</h3>
+                <h3>Hot-sale product</h3>
                 <div class="oneProduct" v-for="(item,index) in productHotList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>
             </div>
             <!--推荐产品模块-->
             <div class="product_recom">
-                <h3>推荐产品</h3>
+                <h3>Recommended products</h3>
                 <div class="oneProduct" v-for="(item,index) in productRecommendList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>
@@ -60,9 +60,10 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <script type="text/javascript" src="/plugin/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/plugin/jquery.cookie.js"></script>
     <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>-->
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
     <!-- element ui -->
     <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>

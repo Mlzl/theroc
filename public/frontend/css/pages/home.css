@@ -124,6 +124,10 @@ table {
   color: #25ba80;
   border-bottom: 1px solid #25ba80;
 }
+#topBar .topBar_menu li.active {
+  color: #25ba80;
+  border-bottom: 1px solid #25ba80;
+}
 #topBar .topBar_right {
   position: absolute;
   top: 15px;
@@ -176,9 +180,20 @@ table {
 }
 #topBar .topBar_right .user_info > span {
   cursor: pointer;
-}
-#topBar .topBar_right .user_info > span:nth-of-type(1) {
   margin: 0 5px;
+}
+#topBar .topBar_right .user_info > span:hover {
+  color: #25ba80;
+}
+#topBar .topBar_right .user_info .quit_icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('/images/quit_icon.png') no-repeat;
+  background-size: 16px 16px;
+  position: relative;
+  top: 2px;
 }
 #footer {
   box-sizing: border-box;
@@ -369,8 +384,9 @@ table {
   color: #25ba80;
 }
 #home_main .carouselArea {
-  min-width: 1366px;
+  min-width: 100%;
   height: 342px;
+  overflow: hidden;
 }
 #home_main .product_nav {
   width: 1120px;
@@ -460,4 +476,9 @@ table {
 }
 #home_main .product_recommend {
   margin: 0 0 60px 0;
+}
+@media screen and (max-width: 375px) {
+  #home_main .carouselArea {
+    height: 150px;
+  }
 }

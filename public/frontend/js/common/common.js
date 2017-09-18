@@ -7,11 +7,17 @@ var topBar = new Vue({
     created: function () {
 
     },
+    computed:{
+        active:function(){
+            return sessionStorage.active;
+        }
+    },
     methods: {
         //异步方法
 
         //普通方法
         switchPages: function (type) {  //切换页面，0首页、1产品页、2博客、3联系我们、4登陆、5用户中心
+            sessionStorage.active=type;
             var page = type == 0 ? '' :
                             type == 1 ? 'product' :
                                 type == 2 ? 'community' :
@@ -34,6 +40,11 @@ var topBar = new Vue({
             // this.delCookie('roc_u');
             // this.delCookie('roc_key');
             // window.location.reload();
+            // $.cookie("roc_u",null,{path:"/"});
+            // $.cookie("roc_key",null,{path:"/"});
+            $.cookie('roc_u', null);
+            $.cookie('roc_key', null);
+            window.location.reload();
         },
         getCookie:function(name) {
             var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");

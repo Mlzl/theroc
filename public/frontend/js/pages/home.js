@@ -51,7 +51,7 @@ var home=new Vue({
         },
         //普通方法
         locateHref:function(href){  //跳至链接
-            window.location.href=href;
+            window.open(href);
         },
     }
 })

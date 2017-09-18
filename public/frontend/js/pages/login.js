@@ -25,6 +25,7 @@ var login=new Vue({
             this.$http.post('/api/user/login',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
+                    sessionStorage.active=0;
                     window.location.href='/';
                 }
                 else{
