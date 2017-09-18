@@ -523,7 +523,8 @@ table {
   padding: 0 5px;
 }
 .addCarousel_dialog {
-  width: 540px;
+  width: 340px;
+  height: 155px;
 }
 .addCarousel_dialog .addCarousel_dialog_main input {
   width: 100%;

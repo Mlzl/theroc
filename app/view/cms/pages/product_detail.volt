@@ -91,7 +91,7 @@
                         <el-input v-model="productDetail_edit.target_url"></el-input>
                     </p>
                     <p class="cover_img">
-                        <span>封面图:</span>
+                        <span>封面图(360*360):</span>
                         <span v-for="(item,index) in productDetail_edit._picture_url">
                           <i class="close_icon" @click="deleteCoverImg(item)"></i>
                           <img :src="item" />

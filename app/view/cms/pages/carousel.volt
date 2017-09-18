@@ -23,14 +23,14 @@
                     <li :class="{active:tab===0}"  @click="switchTab(0)">首页</li>
                     <li :class="{active:tab===1}" @click="switchTab(1)">产品</li>
                 </ul>
-                <el-button @click="showDialog">添加</el-button>
+                <el-button @click="showAddCarousel(true)">添加</el-button>
             </div>
             <div class="carousel_table">
                 <div class="carousel_thead">
                     <p>
                         <span>序号</span>
                         <span>链接</span>
-                        <span>预览</span>
+                        <span>预览(1366*342)</span>
                         <span>操作</span>
                     </p>
                 </div>
@@ -63,14 +63,14 @@
                 </div>
             </div>
             <!--添加弹出框-->
-            <el-dialog title="添加" v-model="addCarousel" custom-class="addCarousel_dialog"
+            <el-dialog title="添加" v-model="addCarouselShow" custom-class="addCarousel_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addCarousel_dialog_main">
                     <input type="text" v-model="target_url">
-                    <img :src="picture_url" @click="imageUpload('add')">
+                    <!--<img :src="picture_url" @click="imageUpload('add')">-->
                 </div>
                 <div slot="footer" class="dialog-footer">
-                    <el-button @click="closeDialog">取 消</el-button>
+                    <el-button @click="showAddCarousel(false)">取 消</el-button>
                     <el-button type="primary" @click="addCarousel">确 定</el-button>
                 </div>
             </el-dialog>

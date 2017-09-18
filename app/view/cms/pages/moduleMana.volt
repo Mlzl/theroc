@@ -28,7 +28,7 @@
                         <span>序号</span>
                         <span>标题</span>
                         <span>跳转url</span>
-                        <span>预览</span>
+                        <span>预览(360*360)</span>
                         <span>操作</span>
                     </p>
                 </div>

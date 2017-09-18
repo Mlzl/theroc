@@ -467,7 +467,7 @@ table {
 }
 #userMana_main .user_table .user_thead > p > span:nth-of-type(8),
 #userMana_main .user_table .user_tbody > p > span:nth-of-type(8) {
-  width: 50px;
+  width: 60px;
 }
 #userMana_main .user_table .user_thead {
   height: 40px;

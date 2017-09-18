@@ -6,14 +6,12 @@ var carousel_main=new Vue({
         tab:0,  //选项卡，0首页、1产品
         homeCarouselList:[],  //首页轮播图列表
         productCarouselList:[],  //产品轮播图列表
-        targetProductList:null,
+        curClickItem:{},  //当前点击项
         oldItem:{}, //编辑时保存旧项，用于还原
-        targetIndex:null,   //编辑时的索引
-        actionType:'',
         //添加轮播图 弹出框
-        addCarousel:false,
+        addCarouselShow:false,
         target_url:'',
-        picture_url:'',
+        // picture_url:'',
     },
     computed:{
         carouselList:function(){
@@ -130,7 +128,7 @@ var carousel_main=new Vue({
                 console.log(err);
             });
         },
-        addCarousel:function(e){
+        addCarousel:function(e){  //添加轮播图
             var _this=this;
             var tab=this.tab;
             var url='/cms/setting/api_add_banner';
@@ -139,7 +137,7 @@ var carousel_main=new Vue({
             var data={
                 banner_type:banner_type,
                 target_url:this.target_url,
-                picture_url:this.picture_url,
+                picture_url:'123',
             };
             this.$http.post(url,data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
@@ -149,7 +147,7 @@ var carousel_main=new Vue({
                     }else if(tab==1){
                         _this.getHomeCarouselList();
                     }
-                    _this.addCarousel=false;
+                    _this.addCarouselShow=false;
                     _this.$message('添加成功');
                 }else{
                     _this.$message(_res.msg);
@@ -193,12 +191,6 @@ var carousel_main=new Vue({
                     'FilesAdded': function(up, files) {
                         plupload.each(files, function(file) {
                             // 文件添加进队列后,处理相关的事情
-                            // let uploadFiles=files;
-                            // for(let i=0,len=uploadFiles.length;i<len;i++){
-                            //     uploadFiles[i].percent=0;
-                            // }
-                            // _this.$store.commit('showUploadProgress',true);
-                            // _this.$store.commit('setUploadFiles',uploadFiles);
                         });
                     },
                     'BeforeUpload': function(up, file) {
@@ -207,17 +199,6 @@ var carousel_main=new Vue({
                     },
                     'UploadProgress': function(up, file) {
                         // 每个文件上传时,处理相关的事情
-                        // console.log(up)
-                        // console.log(file)
-                        //console.log(file.percent)
-                        // let uploadFiles=_this.$store.state.uploadFiles;
-                        // for(let i=0,len=uploadFiles.length;i<len;i++){
-                        //     if(uploadFiles[i].id==file.id){
-                        //         uploadFiles[i].percent=file.percent;
-                        //         break;
-                        //     }
-                        // }
-                        // _this.$store.commit('setUploadFiles',uploadFiles);
                     },
                     'FileUploaded': function(up, file, info) {
                         // 每个文件上传成功后,处理相关的事情
@@ -229,22 +210,12 @@ var carousel_main=new Vue({
                         // 参考http://developer.qiniu.com/docs/v6/api/overview/up/response/simple-response.html
 
                         // var domain = up.getOption('domain');
-                     ///   var res = JSON.parse(info);
+                        // var res = JSON.parse(info);
                         // var sourceLink = domain + res.key; //获取上传成功后的文件的Url
-                        //console.log('http://onbcey73z.bkt.clouddn.com/'+res.key)
-                        // let uploadFiles=_this.$store.state.uploadFiles;
-                        // if(up.total.uploaded==uploadFiles.length-1){  //全部文件上传成功
-                        //     _this.$store.commit('setFilesUploadSuccess');
-                        // }
                         var res=JSON.parse(info);
                         var imgUrl='http://otw5eymk3.bkt.gdipper.com/'+res.key;
-                        if(_this.actionType==='add'){
-                            _this.picture_url=imgUrl;
-                        }
-                        else{
-                            _this.targetProductList[_this.targetIndex].picture_url = imgUrl;
-                        }
 
+                        _this.curClickItem.value.picture_url=imgUrl;
                         _this.$message.success('上传成功');
                     },
                     'Error': function(up, err, errTip) {
@@ -275,31 +246,17 @@ var carousel_main=new Vue({
             // uploader 为一个plupload对象，继承了所有plupload的方法，参考http://plupload.com/docs
         },
         imageUpload:function(e){  //图片上传
-            this.actionType=actionType;
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
         switchTab:function(tabId){
             this.tab=tabId;
         },
-        showDialog:function(){ //弹窗
-            this.addItem={
-                target_url:'',
-                picture_url:undefined
-            };
-            if(this.tab===0) {
-               dialogTitle='添加首页轮播图';
-               this.addItem.banner_type='home_banner';
-            } else{
-                dialogTitle='添加产品轮播图';
-                this.addItem.banner_type='pro_banner';
-            }
-            this.addCarousel=true;
-        },
-        closeDialog:function(){
-           this.addCarousel=false;
+        showAddCarousel:function(addCarouselShow,e){  //添加弹出框 显示隐藏
+            this.addCarouselShow=addCarouselShow;
         },
         edit:function(item){  //编辑
+            this.curClickItem=item;
             this.oldItem=JSON.parse(JSON.stringify(item));
             var tab=this.tab;
             var list=[];

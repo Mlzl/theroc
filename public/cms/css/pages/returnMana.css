@@ -453,7 +453,7 @@ table {
 }
 #returnMana_main .return_table .return_thead > p > span:nth-of-type(5),
 #returnMana_main .return_table .return_tbody > p > span:nth-of-type(5) {
-  width: 99px;
+  width: 280px;
 }
 #returnMana_main .return_table .return_thead > p > span:nth-of-type(6),
 #returnMana_main .return_table .return_tbody > p > span:nth-of-type(6) {

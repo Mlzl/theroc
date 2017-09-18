@@ -37,7 +37,7 @@
                         <span>~{item.cellphone}</span>
                         <span>~{item.country}~{item.state}~{item.city}</span>
                         <span>~{item.zip_code}</span>
-                        <span>~{item.status}</span>
+                        <span>~{item.status==1?'已激活':'未激活'}</span>
                     </p>
                 </div>
                 <el-pagination style="text-align:center"
