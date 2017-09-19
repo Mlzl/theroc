@@ -18,6 +18,14 @@ var product=new Vue({
         this.getAllClass();
         this.getCurProductList();
     },
+    mounted:function(){
+        $('.primary').on('mouseover','.primary_li',function(e){
+            $('.secondary').hide();
+            $('.primary_li').css('background','#E8E8E8').css('border-top','2px solid #E8E8E8');
+            $(this).css('background','#fff').css('border-top','2px solid #25ba80');
+            $(this).find('.secondary').show();
+        })
+    },
     methods:{
         //获取轮播图
         getBanner:function(){

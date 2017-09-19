@@ -20,7 +20,7 @@
             <div class="carouselArea">
                 <el-carousel height="342px">
                     <el-carousel-item v-for="item in bannerList" :key="item">
-                        <img :src="item.value.picture_url"  @click="locateHref(item.value.target_url)"/>
+                        <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>
                 </el-carousel>
             </div>
@@ -28,7 +28,7 @@
             <div class="product_list">
                 <div class="category">
                     <ul class="primary">
-                        <li v-for="(item1,index1) in allClass">
+                        <li class="primary_li" v-for="(item1,index1) in allClass">
                             ~{item1.name}
                             <ul class="secondary">
                                 <li v-for="(item2,index2) in item1.child">
@@ -53,6 +53,7 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
+    <script type="text/javascript" src="/plugin/jquery-3.2.1.min.js"></script>
     <!-- vue -->
     <script type="text/javascript" src="/plugin/vue.js"></script>
     <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
