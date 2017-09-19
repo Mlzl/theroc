@@ -66,18 +66,11 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
-    <!-- vue -->
-    <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
-    <!-- element ui -->
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
-    <!-- plupload -->
+
+    {% include "common/commonjs.volt" %}
     <script src="/plugin/plupload-2.1.x/moxie.js"></script>
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
-    <!-- qiniu -->
     <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
-    <!-- private -->
-    <script type="text/javascript" src="/frontend/js/common/common.js"></script>
     <script type="text/javascript" src="/frontend/js/pages/user.js"></script>
 </body>
 </html>

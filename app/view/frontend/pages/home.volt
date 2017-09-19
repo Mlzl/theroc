@@ -60,15 +60,8 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
-    <script type="text/javascript" src="/plugin/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/plugin/jquery.cookie.js"></script>
-    <!-- vue -->
-    <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
-    <!-- element ui -->
-    <script type="text/javascript" src="/plugin/element-ui/lib/index.js"></script>
-    <!-- private -->
-    <script type="text/javascript" src="/frontend/js/common/common.js"></script>
+
+    {% include "common/commonjs.volt" %}
     <script type="text/javascript" src="/frontend/js/pages/home.js"></script>
 </body>
 </html>

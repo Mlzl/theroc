@@ -146,18 +146,13 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script type="text/javascript" src="/plugin/vue-resource/dist/vue-resource.js"></script>
-    <script src="/plugin/element-ui/lib/index.js"></script>
-    <!-- quill -->
+
+    {% include "common/commonjs.volt" %}
     <script src="/plugin/quill-1.3.1/quill.js"></script>
-    <!-- plupload -->
     <script src="/plugin/plupload-2.1.x/moxie.js"></script>
     <script src="/plugin/plupload-2.1.x/plupload.dev.js"></script>
-    <!-- qiniu -->
     <script src="/plugin/qiniu-1.0.19/qiniu.js"></script>
     <script src="/plugin/image-resize.min.js"></script>
-    <script type="text/javascript" src="/cms/js/common/common.js"></script>
     <script type="text/javascript" src="/cms/js/pages/product_detail.js"></script>
 </body>
 </html>

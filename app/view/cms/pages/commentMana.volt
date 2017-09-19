@@ -38,9 +38,8 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/plugin/vue.js"></script>
-    <script src="/plugin/element-ui/lib/index.js"></script>
-    <script type="text/javascript" src="/cms/js/common/common.js"></script>
+
+    {% include "common/commonjs.volt" %}
     <script type="text/javascript" src="/cms/js/pages/commentMana.js"></script>
 </body>
 </html>
