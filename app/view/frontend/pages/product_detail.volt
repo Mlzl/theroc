@@ -75,7 +75,7 @@
                 </div>
             </div>
             <!--添加评价 弹出框-->
-            <el-dialog title="我要评价" v-model="addComment_show" custom-class="addComment_dialog"
+            <el-dialog title="I WANT COMMENT" v-model="addComment_show" custom-class="addComment_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="addComment_dialog_main">
                     <p>

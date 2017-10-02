@@ -279,7 +279,7 @@
   background: #25ba80;
 }
 .el-button--primary:hover,
-.el-button--primaryfocus {
+.el-button--primary:focus {
   color: #fff;
   border: 1px solid #25ba80;
   background: #25ba80;

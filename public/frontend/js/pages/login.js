@@ -5,15 +5,17 @@ var login=new Vue({
     data:{
         email:'',
         password:'',
-        dialogFormVisible:false,
-        newPassword:null,
-        captcha:null,
-        dialogEmail:null
+        //忘记密码弹出框
+        forgetPass_show:false,  //忘记密码弹出框 显示隐藏
+        myEmail:'',
+        captcha:'',
+        newPassword:'',
     },
     created:function(){
 
     },
     methods:{
+        //异步方法
         login:function(){    //登录
             var _password=hex_md5(this.password);
             var _this=this;
@@ -33,40 +35,26 @@ var login=new Vue({
                 console.log(err);
             });
         },
-        forgetPassword:function(){
-            this.newPassword=null;
-            this.captcha=null;
-            this.dialogEmail=null;
-            this.dialogFormVisible=true;
-        },
-        sendEmail:function(){
+        sendCaptcha:function(){  //发送验证码
             var _this=this;
-            var param={
-                email:this.dialogEmail
-            };
-            this.$http.get('/api/user/sendForgetPwdEmail',{params:param}).then(function(res){
+            var url='/api/user/sendForgetPwdEmail?email='+this.myEmail;
+            this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
                     _this.$message("send success,please find in your mailbook");
-                }
-                else{
+                }else{
                     _this.$message(_res.msg);
                 }
             }, function(err){
                 console.log(err);
             });
         },
-        updatePwdByEmail:function(){
-            //输入验证
-            var _password=hex_md5(this.password);
-            var param={
-                email:this.dialogEmail,
-                captcha:this.captcha,
-                password:_password
-            };
-            this.$http.get('/api/user/updatePwdByEmail',{
-                params:params
-            }).then(function(res){
+        updatePwdByEmail:function(){  //通过邮箱更新密码
+            var _this=this;
+            var newPassword=hex_md5(this.newPassword);
+            var url='/api/user/updatePwdByEmail?email='+this.myEmail+'&captcha='+this.captcha+'&password='+newPassword;
+
+            this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
                     window.location.href='/';
@@ -78,7 +66,58 @@ var login=new Vue({
                 console.log(err);
             });
 
-        }
+        },
+        //普通方法
+        loginBtn:function(e){  //登录 按钮
+            var email=this.email;
+            var password=this.password;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
 
+            if(email==''||email.trim()==''){
+                this.$message('email can not be empty');
+            }else if(password==''||password.trim()==''){
+                this.$message('password can not be empty');
+            }else if(!EMAILREG.test(email.trim())){
+                this.$message('please input valid email');
+            }else{
+                this.login();
+            }
+        },
+        showForgetPass:function(forgetPass_show,e){  //忘记密码弹出框 显示隐藏
+            this.forgetPass_show=forgetPass_show;
+        },
+        sendCaptchaBtn:function(e){  //发送验证码按钮
+            var myEmail=this.myEmail;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+            if(myEmail==''||myEmail.trim()==''){
+                this.$message('email can not be empty');
+            }else if(!EMAILREG.test(myEmail.trim())){
+                this.$message('please input valid email');
+            }else{
+                this.sendCaptcha();
+            }
+        },
+        updatePwdByEmailBtn:function(e){  //通过邮箱更新密码 按钮
+            var myEmail=this.myEmail;
+            var captcha=this.captcha;
+            var newPassword=this.newPassword;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+            if(myEmail==''||myEmail.trim()==''){
+                this.$message('email can not be empty');
+            }else if(captcha==''||captcha.trim()==''){
+                this.$message('email can not be empty');
+            }else if(newPassword==''||newPassword.trim()==''){
+                this.$message('email can not be empty');
+            }else if(!EMAILREG.test(myEmail.trim())){
+                this.$message('please input valid email');
+            }else{
+                this.updatePwdByEmail();
+            }
+        },
+        toRegisterPage:function(e){  //to注册页面
+            window.location.href='register';
+        },
     }
 })
