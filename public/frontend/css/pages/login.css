@@ -517,34 +517,34 @@ table {
   margin: 0 0 25px 0;
   background: #fff;
 }
-#login_main .forgetPasswordDialog {
+#login_main .forgetPasswordDialog .el-dialog {
+  width: 500px;
   font-size: 14px;
 }
-#login_main .forgetPasswordDialog button {
+#login_main .forgetPasswordDialog .el-dialog button {
   padding: 10px 20px;
 }
-#login_main .forgetPasswordDialog .main {
-  width: 60%;
-  min-width: 150px;
+#login_main .forgetPasswordDialog .el-dialog .main {
+  width: 400px;
   margin: 0 auto;
 }
-#login_main .forgetPasswordDialog .main p {
+#login_main .forgetPasswordDialog .el-dialog .main p {
   margin-top: 10px;
 }
-#login_main .forgetPasswordDialog .main p input {
+#login_main .forgetPasswordDialog .el-dialog .main p input {
   box-sizing: border-box;
 }
-#login_main .forgetPasswordDialog .main p .firstInput {
+#login_main .forgetPasswordDialog .el-dialog .main p .firstInput {
   width: 60%;
 }
-#login_main .forgetPasswordDialog .main p .secondInput {
+#login_main .forgetPasswordDialog .el-dialog .main p .secondInput {
   width: 100% ;
 }
-#login_main .forgetPasswordDialog .main p:nth-of-type(1) button {
+#login_main .forgetPasswordDialog .el-dialog .main p:nth-of-type(1) button {
   float: right;
   color: #5a5a5a;
 }
-#login_main .forgetPasswordDialog .dialog-footer button {
+#login_main .forgetPasswordDialog .el-dialog .dialog-footer button {
   color: #fff!important;
   font-size: 18px!important;
 }
