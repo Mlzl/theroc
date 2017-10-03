@@ -22,46 +22,34 @@
         <div id="user_main" v-cloak>
             <div class="user-overview clearfix">
                 <div class="overview-item1">
-                    <img :src="person.avatar" alt="photo" class="photo">
-                    <div class="uploadimg-btn">
-                        <img src="/images/upload_icon.png"  class="uploadimg">
-                    </div>
+                    <img :src="person.avatar">
                 </div>
                 <ul class="overview-item2">
                     <li class="overview-email">~{person.email}</li>
-                    <li class="photo-btn"><a href="javascript:void(0)" @click="changePhoto()">Change Photo</a></li>
-                 <!--   <li class="password-btn"><a href="javascript:void(0)">Change Password</a></li>-->
+                    <li class="photo-btn" @click="changePhoto">Change Photo</li>
                 </ul>
             </div>
             <div class="user-form">
-                <div class="row" >
-                    <input type="text" class="user-name" placeholder="Use name" v-model="person.user_name">
-                </div>
-                <div class="row long-row">
-                    <div class="form-email-tip">Email address</div>
-                    <div class="form-email">1446418561@qq.com</div>
-                </div>
-                <div class="row clearfix" >
-               <!--     <input type="text" class="inp-normal" placeholder="Date of birth">
-                    <span class="fill1"></span>
-                    <input type="text" class="inp-normal" placeholder="Gender">
-                    <span class="fill1"></span>-->
-                    <input type="text" class="inp-big" placeholder="Phone number" v-model="person.cellphone">
-                </div>
-                <div class="row clearfix">
-                    <input type="text" class="inp-normal" placeholder="Country" v-model="person.country">
-                    <span class="fill1"></span>
-                    <input type="text" class="inp-normal" placeholder="State" v-model="person.state">
-                    <span class="fill1"></span>
-                    <input type="text" class="inp-small-left"  placeholder="City" v-model="person.city">
-                    <span class="fill2"></span>
-                    <input type="text" class="inp-small-right"  placeholder="Zip code" v-model="person.zip_code">
-                </div>
-                <div class="row form-footer" >
-                    <span class="submit" @click="updateUserInfo()">SUBMIT</span>
-                </div>
+                <p class="userName">
+                    <input type="text" placeholder="Use name" v-model="person.user_name">
+                </p>
+                <p class="userEmail">
+                    <span class="form-email-tip">Email address<span/>
+                    <span class="form-email">1446418561@qq.com</span>
+                </p>
+                <p class="phoneNum" >
+                    <input type="text" placeholder="Phone number" v-model="person.cellphone">
+                </p>
+                <p class="area">
+                    <input type="text" placeholder="Country" v-model="person.country">
+                    <input type="text" placeholder="State" v-model="person.state">
+                    <input type="text" placeholder="City" v-model="person.city">
+                    <input type="text" placeholder="Zip code" v-model="person.zip_code">
+                </p>
+                <p class="form-footer" >
+                    <el-button type="primary" @click="updateUserInfo">SUBMIT</el-button>
+                </p>
             </div>
-
         </div>
         <!--底部-->
         {% include "smart/footer.volt" %}

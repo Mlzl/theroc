@@ -3,7 +3,6 @@ var user=new Vue({
     el:'#user_main',
     delimiters:['~{','}'],
     data:{
-        //必须有个内容才可以监听变化？
         person:{
             email:null,
             avatar:null
@@ -18,6 +17,7 @@ var user=new Vue({
         this.getQiNiuToken();
     },
     methods:{
+        //异步请求
         getQiNiuToken:function(){
             var that=this;
             this.$http.get('/api/auth/getQiNiuToken').then(function(res){
@@ -29,6 +29,50 @@ var user=new Vue({
                 console.log(err);
             });
         },
+        getUserInfo:function(){
+            var that=this;
+            this.$http.get('/api/api/getUserInfo').then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var data=_res.data;
+                    that.person.user_name=data.user_name;
+                    that.person.cellphone=data.cellphone;
+                    that.person.country=data.country;
+                    that.person.state=data.state;
+                    that.person.city=data.city;
+                    that.person.zip_code=data.zip_code;
+                    that.person.avatar=data.avatar==''?that.defaultImg:data.avatar;
+                    that.person.email=data.email;
+                    that.oldPerson=JSON.parse(JSON.stringify(that.person));
+                }
+                else{
+                    that.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        updateUserInfo:function(){
+            var param={};
+            for(var d in this.person){
+                if(this.person[d]!==this.oldPerson[d]){
+                    param[d]=this.person[d];
+                }
+            }
+            var that=this;
+            this.$http.post('/api/api/update_profile',param, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    that.$message('success');
+                }
+                else{
+                    that.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        //普通请求
         initImageUpload:function(uptoken){  //图片上传
             var _this=this;
             //引入Plupload 、qiniu.js后
@@ -142,51 +186,5 @@ var user=new Vue({
             var imageUploadBtn=document.getElementById('imageUploadBtn');
             imageUploadBtn.click();
         },
-        getUserInfo:function(){
-            var that=this;
-            this.$http.get('/api/api/getUserInfo').then(function(res){
-                var _res=res.body;
-                if(_res.code==0){
-                    var data=_res.data;
-                    that.person.user_name=data.user_name;
-                    that.person.cellphone=data.cellphone;
-                    that.person.country=data.country;
-                    that.person.state=data.state;
-                    that.person.city=data.city;
-                    that.person.zip_code=data.zip_code;
-                    that.person.avatar=data.avatar==''?that.defaultImg:data.avatar;
-                    that.person.email=data.email;
-                    that.oldPerson=JSON.parse(JSON.stringify(that.person));
-                }
-                else{
-                    that.$message(_res.msg);
-                }
-            }, function(err){
-                console.log(err);
-            });
-        },
-        updateUserInfo:function(){
-            var param={};
-            for(var d in this.person){
-                if(this.person[d]!==this.oldPerson[d]){
-                    param[d]=this.person[d];
-                }
-            }
-            var that=this;
-            this.$http.post('/api/api/update_profile',param, {emulateJSON:true}).then(function(res){
-                var _res=res.body;
-                if(_res.code==0){
-                    that.$message('success');
-                }
-                else{
-                    that.$message(_res.msg);
-                }
-            }, function(err){
-                console.log(err);
-            });
-
-
-        }
-
     }
 })

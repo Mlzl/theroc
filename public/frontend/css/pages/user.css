@@ -399,19 +399,11 @@ table {
   background-color: #ffffff;
   margin: 0 auto;
 }
-#user_main a {
-  text-decoration: none;
-  color: #5a5a5a;
-}
-#user_main li {
-  text-align: left;
-  list-style: none;
-}
 #user_main .user-overview {
-  width: 81%;
+  width: 1120px;
+  height: 126px;
   margin: 0 auto;
   background-color: #f8f8f8;
-  display: block;
 }
 #user_main .user-overview .overview-item1 {
   position: relative;
@@ -419,92 +411,55 @@ table {
   float: left;
   margin: 13px 30px 13px 77px;
 }
-#user_main .user-overview .overview-item1 .photo {
+#user_main .user-overview .overview-item1 img {
   width: 100px;
   height: 100px;
   border-radius: 100px;
   border: 0px solid transparent;
 }
-#user_main .user-overview .overview-item1 .uploadimg-btn {
-  position: absolute;
-  top: 33px;
-  left: 31px;
-  width: 37px;
-  height: 32px;
-}
-#user_main .user-overview .overview-item1 .uploadimg {
-  width: 37px;
-  height: 32px;
-}
 #user_main .user-overview .overview-item2 {
   display: inline-block;
   box-sizing: border-box;
   height: 126px;
-  float: left;
   padding-top: 34px;
   padding-left: 0;
   margin: 0;
+  float: left;
 }
 #user_main .user-overview .overview-item2 .overview-email {
-  font-family: MicrosoftYaHei;
-  font-size: 16px;
   color: #5a5a5a;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-#user_main .user-overview .overview-item2 .photo-btn,
-#user_main .user-overview .overview-item2 .password-btn {
+#user_main .user-overview .overview-item2 .photo-btn {
+  cursor: pointer;
   font-size: 14px;
   color: #5a5a5a;
 }
 #user_main .user-form {
-  width: 76%;
+  width: 1120px;
   margin: 0 auto;
 }
-#user_main .user-form .row {
+#user_main .user-form > p {
   margin-top: 20px;
 }
-#user_main .user-form .row .user-name {
+#user_main .user-form .userName input {
   width: 100%;
 }
-#user_main .user-form .row .inp-normal {
-  float: left;
-  width: 27%;
-  display: table-cell;
-}
-#user_main .user-form .row .fill1 {
-  float: left;
-  display: table-cell;
-  width: 4%;
-  height: 40px;
-}
-#user_main .user-form .row .inp-big {
-  float: left;
+#user_main .user-form .phoneNum input {
   width: 100%;
-  display: table-cell;
 }
-#user_main .user-form .row .inp-small-left {
-  float: left;
-  display: table-cell;
-  width: 16%;
-}
-#user_main .user-form .row .inp-small-right {
-  float: left;
-  display: table-cell;
-  width: 16%;
-}
-#user_main .user-form .row .fill2 {
-  float: left;
-  display: table-cell;
-  width: 6%;
-  height: 40px;
-}
-#user_main .user-form .long-row {
+#user_main .user-form .userEmail {
   height: 56px;
   border-radius: 4px;
   background-color: #f8f8f8;
   border: solid 1px #cccccc;
   padding-left: 10px;
 }
-#user_main .user-form .long-row .form-email-tip {
+#user_main .user-form .userEmail span {
+  display: block;
+}
+#user_main .user-form .userEmail span:nth-of-type(1) {
   height: 13px;
   font-size: 14px;
   line-height: 1.07;
@@ -512,7 +467,7 @@ table {
   color: #999999;
   margin-top: 11px;
 }
-#user_main .user-form .long-row .form-email {
+#user_main .user-form .userEmail span:nth-of-type(2) {
   height: 15px;
   font-size: 14px;
   line-height: 1.07;
@@ -520,17 +475,27 @@ table {
   color: #666666;
   margin-top: 8px;
 }
+#user_main .user-form .area input {
+  margin-right: 50px;
+}
+#user_main .user-form .area input:nth-of-type(1),
+#user_main .user-form .area input:nth-of-type(2) {
+  width: 280px;
+}
+#user_main .user-form .area input:nth-of-type(3),
+#user_main .user-form .area input:nth-of-type(4) {
+  width: 169px;
+}
 #user_main .user-form .form-footer {
   height: 40px;
   text-align: right;
+  margin-bottom: 10px;
 }
-#user_main .user-form .form-footer .submit {
-  display: inline-block;
+#user_main .user-form .form-footer button {
   width: 100px;
   height: 40px;
   border-radius: 4px;
   background-color: #25ba80;
-  font-family: MicrosoftYaHei;
   font-size: 14px;
   line-height: 40px;
   text-align: center;

@@ -8,141 +8,110 @@
   width: 1366px;
   background-color: #ffffff;
   margin:0 auto;
-  a{
-    text-decoration: none;
-    color: #5a5a5a;
-  }
-  li{
-    text-align: left;
-    list-style: none;
-  }
   .user-overview{
-     width:81%;
+     width:1120px;
+     height:126px;
      margin: 0 auto;
      background-color: #f8f8f8;
-     display:block;
      .overview-item1{
        position: relative;
        display: inline-block;
-
        float:left;
        margin:13px 30px 13px 77px;
-       .photo {
+       img {
          width: 100px;
          height: 100px;
          border-radius: 100px;
          border:0px solid transparent;
-       }
-       .uploadimg-btn{
-         position: absolute;
-         top:33px;
-         left:31px;
-         width: 37px;
-         height: 32px;
-       }
-       .uploadimg{
-         width: 37px;
-         height: 32px;
        }
      }
      .overview-item2{
        display:inline-block;
        box-sizing:border-box;
        height:126px;
-       float:left;
        padding-top:34px;
        padding-left:0;
        margin:0;
+       float:left;
        .overview-email{
-         font-family: MicrosoftYaHei;
-         font-size: 16px;
          color: #5a5a5a;
+         font-size: 16px;
+         margin-bottom:5px;
        }
-       .photo-btn,.password-btn{
+       .photo-btn{
+         cursor:pointer;
          font-size: 14px;
          color: #5a5a5a;
        }
      }
   }
   .user-form{
-    width:76%;
+    width:1120px;
     margin:0 auto;
-    .row{
+    >p{
       margin-top: 20px;
-      .user-name{
+
+    }
+    .userName{
+      input{
         width: 100%;
-      }
-      .inp-normal{
-        float: left;
-        width: 27%;
-        display: table-cell;
-      }
-      .fill1{
-        float: left;
-        display: table-cell;
-        width:4%;
-        height:40px;
-      }
-      .inp-big{
-        float: left;
-        width: 100%;
-        display: table-cell;
-      }
-      .inp-small-left{
-        float: left;
-        display: table-cell;
-        width:16%;
-      }
-      .inp-small-right{
-        float: left;
-        display: table-cell;
-        width: 16%;
-      }
-      .fill2{
-        float: left;
-        display: table-cell;
-        width: 6%;
-        height:40px;
       }
     }
-    .long-row{
+    .phoneNum{
+      input{
+        width: 100%;
+      }
+    }
+    .userEmail{
       height:56px;
       border-radius: 4px;
       background-color: #f8f8f8;
       border: solid 1px #cccccc;
       padding-left: 10px;
-      .form-email-tip{
-        height: 13px;
-        font-size: 14px;
-        line-height: 1.07;
-        text-align: left;
-        color: #999999;
-        margin-top: 11px;
+      span{
+        display:block;
+        &:nth-of-type(1){
+          height: 13px;
+          font-size: 14px;
+          line-height: 1.07;
+          text-align: left;
+          color: #999999;
+          margin-top: 11px;
+        }
+        &:nth-of-type(2){
+          height: 15px;
+          font-size: 14px;
+          line-height: 1.07;
+          text-align: left;
+          color: #666666;
+          margin-top: 8px;
+        }
       }
-      .form-email{
-        height: 15px;
-        font-size: 14px;
-        line-height: 1.07;
-        text-align: left;
-        color: #666666;
-        margin-top: 8px;
+    }
+    .area{
+      input{
+        margin-right:50px;
+        &:nth-of-type(1),&:nth-of-type(2){
+          width:280px;
+        }
+        &:nth-of-type(3),&:nth-of-type(4){
+          width:169px;
+        }
       }
     }
     .form-footer{
       height: 40px;
       text-align: right;
-      .submit{
-        display:inline-block;
+      margin-bottom:10px;
+      button{
         width: 100px;
         height: 40px;
         border-radius: 4px;
         background-color: #25ba80;
-        font-family: MicrosoftYaHei;
         font-size: 14px;
         line-height: 40px;
         text-align: center;
         color: #ffffff;
-
       }
     }
     input{
@@ -153,10 +122,5 @@
       border: solid 1px #cccccc;
       border-radius: 4px;
     }
-
-
-
-
   }
-
 }
