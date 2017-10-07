@@ -481,7 +481,8 @@ table {
   min-width: 1366px;
   height: 700px;
   background: url("/images/login_bg.png") no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  overflow: hidden;
   position: relative;
 }
 #register_main .register_box {
@@ -494,63 +495,43 @@ table {
   right: 121px;
   top: 74px;
 }
-#register_main .register_box .register-header {
+#register_main .register_box .register_header {
   height: 40px;
   line-height: 40px;
   font-size: 48px;
   text-align: center;
-  margin: 74px 0 51px 0;
+  padding: 74px 0 51px 0;
 }
-#register_main .register_box ul {
-  width: 447px;
+#register_main .register_box .register_info {
+  width: 100%;
   margin: 0 auto;
   list-style: none;
 }
-#register_main .register_box ul li {
-  box-sizing: border-box;
-  height: 49px;
-  border: 1px solid #5a5a5a;
+#register_main .register_box .register_info > p {
   margin: 0 0 28px 0;
 }
-#register_main .register_box ul li .user-icon {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-  margin: 12px;
-}
-#register_main .register_box ul li .password-icon {
-  width: 20px;
-  height: 24px;
-  vertical-align: middle;
-  margin: 14px;
-}
-#register_main .register_box ul li .again-icon {
-  width: 23px;
-  height: 24px;
-  vertical-align: middle;
-  margin: 12px;
-}
-#register_main .register_box ul li .vline {
-  vertical-align: middle;
-  display: inline-block;
-  width: 1px;
-  background-color: #5a5a5a;
-  height: 39px;
-  margin: 5px 0 5px 0;
-}
-#register_main .register_box ul li input {
-  vertical-align: top;
-  box-sizing: border-box;
-  width: 380px;
-  height: 47px;
-  border: 0px solid transparent;
-  border-radius: 3px;
+#register_main .register_box .register_info > p input {
+  width: 100%;
+  height: 50px;
   font-size: 18px;
-  line-height: 47px;
-  padding-left: 25px;
+  text-indent: 44px;
+  border-radius: 4px;
+  border: solid 1px #5a5a5a;
 }
-#register_main .register_box ul li input:focus {
-  outline: none;
+#register_main .register_box .register_info > p:nth-of-type(1) input {
+  background: url('/images/user.png') no-repeat;
+  background-position: 10px 13px;
+  background-size: 25px 25px;
+}
+#register_main .register_box .register_info > p:nth-of-type(2) input {
+  background: url('/images/password.png') no-repeat;
+  background-position: 10px 13px;
+  background-size: 20px 24px;
+}
+#register_main .register_box .register_info > p:nth-of-type(3) input {
+  background: url('/images/again.png') no-repeat;
+  background-position: 10px 13px;
+  background-size: 23px 24px;
 }
 #register_main .register_box .registerBtn {
   cursor: pointer;
@@ -561,4 +542,27 @@ table {
   color: #ffffff;
   font-size: 20px;
   border: 1px solid transparent;
+}
+@media screen and (max-width: 414px) {
+  #register_main {
+    min-width: 100%;
+    height: 600px;
+  }
+  #register_main .register_box {
+    width: 320px;
+    height: 400px;
+    padding: 0 20px;
+    margin: 60px auto 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #register_main .register_box .register_header {
+    font-size: 32px;
+    padding: 15px 0 20px 0;
+  }
+  #register_main .register_box .register_info > p input {
+    height: 40px;
+    background-position: 10px 8px!important;
+  }
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="{{keywords}}">
     <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
     <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
@@ -17,28 +18,14 @@
         {% include "smart/topBar.volt" %}
         <div id="login_main" v-cloak>
             <div class="login_box">
-                <h3 class="welcome">Welcome</h3>
-                <ul>
-                    <li class="clearfix li1">
-                        <span class="form-td">
-                            <img class="username-icon" src="/images/user.png">
-                        </span>
-                        <span class="line form-td"></span>
-                        <input type="email" class="form-td username" v-model="email" placeholder="Email Address">
-                    </li>
-                    <li class="clearfix li2">
-                        <span class="form-td">
-                             <img class="password-icon" src="/images/password.png">
-                        </span>
-                        <span class="line form-td"></span>
-                        <input type="password" class="form-td" v-model="password" placeholder="Password">
-                    </li>
-                    <li class="clearfix li3">
-                        <span><a class="form-td" href="javaScript:void(0)" @click="showForgetPass(true)">Forget your password?</a></span>
-                    </li>
-                </ul>
+                <h3 class="login_header">Welcome</h3>
+                <div class="login_info">
+                    <p><input type="email" class="username" v-model="email" placeholder="Email Address"></p>
+                    <p><input type="password"  v-model="password" placeholder="Password"></p>
+                    <p @click="showForgetPass(true)">Forget your password?</p>
+                </div>
                 <div class="btns">
-                    <button class="loginBtn form-td" @click="loginBtn">LOG IN</button>
+                    <button class="loginBtn" @click="loginBtn">LOG IN</button>
                     <p class="or_text">OR</p>
                     <button class="registerBtn" @click="toRegisterPage">CREATE ACCOUNT</button>
                 </div>

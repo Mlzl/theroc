@@ -18,24 +18,12 @@
     {% include "smart/topBar.volt" %}
     <div id="register_main" v-cloak>
         <div class="register_box">
-            <h3 class="register-header">Create Account</h3>
-            <ul>
-                <li>
-                    <img class="user-icon" src="/images/user.png" alt="user picture">
-                    <span class="vline"></span>
-                    <input type="email" v-model="email" placeholder="Email Address">
-                </li>
-                <li>
-                    <img class="password-icon" src="/images/password.png" alt="password picture">
-                    <span class="vline"></span>
-                    <input type="password" v-model="password" placeholder="Password">
-                </li>
-                <li>
-                    <img class="again-icon" src="/images/again.png" alt="again picture">
-                    <span class="vline"></span>
-                    <input type="password" v-model="rePassword" placeholder="Password Confirm">
-                </li>
-            </ul>
+            <h3 class="register_header">Create Account</h3>
+            <div class="register_info">
+                <p><input type="email" v-model="email" placeholder="Email Address"></p>
+                <p><input type="password" v-model="password" placeholder="Password"></p>
+                <p><input type="password" v-model="rePassword" placeholder="Password Confirm"></p>
+            </div>
             <button class="registerBtn" @click="register">REGISTER</button>
         </div>
     </div>
