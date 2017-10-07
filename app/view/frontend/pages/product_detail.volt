@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="{{keywords}}">
     <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
     <!-- element ui -->
     <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
@@ -22,7 +23,7 @@
                     <p>
                         <img :src="curCoverImg?curCoverImg:'/images/default_img.png'" />
                     </p>
-                    <ul>
+                    <ul class="picShowUl">
                         <li :class="{active:coverImg_index==index}"
                             v-for="(item,index) in productDetail._picture_url"
                             @click="switchCoverImg(item,index)">
@@ -34,11 +35,16 @@
                     <h3>~{productDetail.name}</h3>
                     <p>~{productDetail.label}</p>
                     <p>$~{curPrice}</p>
-                    <ul>
+                    <ul class="classifyAttr">
                         <li :class="{active:curClassifyAttr_index==index}"
                             v-for="(item,index) in productDetail.attr"
                             @click="switchClassifyAttr(item,index)">
                             ~{item.name}
+                        </li>
+                    </ul>
+                    <ul class="picShowUl">
+                        <li v-for="(item,index) in productDetail._picture_url" @click="">
+                            <img :src="item" />
                         </li>
                     </ul>
                     <el-button @click="toTargetUrl(productDetail.target_url)">BUY NOW</el-button>
