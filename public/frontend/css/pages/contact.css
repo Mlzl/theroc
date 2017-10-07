@@ -210,6 +210,7 @@ table {
   height: 40px;
 }
 #topBar .topBar_wap .nav .topBar_menu {
+  display: none;
   background: #fff;
   position: absolute;
   top: 40px;

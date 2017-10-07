@@ -7,9 +7,9 @@
     margin: 30px 0 40px 0;
     .oneProduct {
       display: inline-block;
-      width: 271px;
-      height: 331px;
-      margin: 0 12px 10px 0;
+      width:271px;
+      height:331px;
+      margin:0 12px 10px 0;
       &:hover{
         -webkit-transform: translateY(-4px);
         transform: translateY(-4px);
@@ -18,19 +18,34 @@
         box-shadow: 0 4px 30px rgba(0,0,0,.15)
       }
       .oneProduct_img {
-        width: 271px;
-        height: 271px;
+        width:100%;
+        height:82%;
         > img {
-          width: 271px;
-          height: 271px;
+          width:100%;
+          height:100%;
         }
       }
       .oneProduct_desc {
-        box-sizing: border-box;
-        width: 271px;
-        height: 60px;
-        padding: 10px;
+        box-sizing:border-box;
+        width:100%;
+        height:18%;
+        text-align:center;
+        padding:10px 0 0 0;
         background-color: #E8E8E8;
+      }
+    }
+  }
+}
+
+//响应式布局
+@media screen and (max-width: 414px) {
+  #product_search_main{
+    .product_list{
+      text-align:left;
+      .oneProduct {
+        width: 185px;
+        height: 230px;
+        margin: 0 2px 5px 0;
       }
     }
   }

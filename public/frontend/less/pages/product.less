@@ -3,8 +3,9 @@
 
 #product_main{
   .carouselArea{
-    min-width: 1366px;
+    min-width: 100%;
     height: 342px;
+    overflow:hidden;
   }
   .product_list{
     color:#5a5a5a;
@@ -73,19 +74,42 @@
           box-shadow: 0 4px 30px rgba(0,0,0,.15)
         }
         .oneProduct_img{
-          width:271px;
-          height:271px;
+          width:100%;
+          height:82%;
           >img{
-            width:271px;
-            height:271px;
+            width:100%;
+            height:100%;
           }
         }
         .oneProduct_desc{
           box-sizing:border-box;
-          width:271px;
-          height:60px;
-          padding:10px;
+          width:100%;
+          height:18%;
+          text-align:center;
+          padding:10px 0 0 0;
           background-color: #E8E8E8;
+        }
+      }
+    }
+  }
+}
+
+//响应式布局
+@media screen and (max-width: 414px) {
+  #product_main{
+    .carouselArea {
+      height: 150px;
+    }
+    .product_list{
+      text-align:left;
+      .category {
+        padding: 0;
+      }
+      .theProduct {
+        .oneProduct {
+          width: 185px;
+          height: 230px;
+          margin: 0 2px 5px 0;
         }
       }
     }

@@ -210,6 +210,7 @@ table {
   height: 40px;
 }
 #topBar .topBar_wap .nav .topBar_menu {
+  display: none;
   background: #fff;
   position: absolute;
   top: 40px;
@@ -477,8 +478,9 @@ table {
   color: #25ba80;
 }
 #product_main .carouselArea {
-  min-width: 1366px;
+  min-width: 100%;
   height: 342px;
+  overflow: hidden;
 }
 #product_main .product_list {
   color: #5a5a5a;
@@ -540,17 +542,34 @@ table {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 #product_main .product_list .theProduct .oneProduct .oneProduct_img {
-  width: 271px;
-  height: 271px;
+  width: 100%;
+  height: 82%;
 }
 #product_main .product_list .theProduct .oneProduct .oneProduct_img > img {
-  width: 271px;
-  height: 271px;
+  width: 100%;
+  height: 100%;
 }
 #product_main .product_list .theProduct .oneProduct .oneProduct_desc {
   box-sizing: border-box;
-  width: 271px;
-  height: 60px;
-  padding: 10px;
+  width: 100%;
+  height: 18%;
+  text-align: center;
+  padding: 10px 0 0 0;
   background-color: #E8E8E8;
+}
+@media screen and (max-width: 414px) {
+  #product_main .carouselArea {
+    height: 150px;
+  }
+  #product_main .product_list {
+    text-align: left;
+  }
+  #product_main .product_list .category {
+    padding: 0;
+  }
+  #product_main .product_list .theProduct .oneProduct {
+    width: 185px;
+    height: 230px;
+    margin: 0 2px 5px 0;
+  }
 }
