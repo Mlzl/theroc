@@ -24,12 +24,13 @@
         height: 280px;
         overflow:hidden;
         float:left;
+        position:relative;
       }
       .oneProduct_nav_img{
         box-shadow:0 4px 30px rgba(0, 0, 0, 0.15);
         >img{
-          width: 280px;
-          height: 280px;
+          width: 100%;
+          height: 100%;
           transition:2s;
           -moz-transition:2s; /* Firefox 4 */
           -webkit-transition:2s; /* Safari and Chrome */
@@ -43,9 +44,14 @@
       }
       .oneProduct_nav_desc{
         >h4{
+          width:100%;
           font-size: 18px;
           text-align:center;
-          margin: 131px 0;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          position:absolute;
+          top:50%;
+          //left:50%;
         }
       }
     }
@@ -57,6 +63,7 @@
       height:35px;
       line-height:35px;
       font-size: 20px;
+      text-align:center;
       color: #585858;
       margin:0 0 20px 0;
     }
@@ -73,19 +80,19 @@
         box-shadow: 0 4px 30px rgba(0,0,0,.15)
       }
       .oneProduct_img{
-        width:271px;
-        height:271px;
+        width:100%;
+        height:82%;
         >img{
-          width:271px;
-          height:271px;
+          width:100%;
+          height:100%;
         }
       }
       .oneProduct_desc{
         box-sizing:border-box;
-        width:271px;
-        height:60px;
-        line-height:40px;
-        padding:10px;
+        width:100%;
+        height:18%;
+        text-align:center;
+        padding:10px 0 0 0;
         background-color: #E8E8E8;
       }
     }
@@ -95,18 +102,32 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+//以下是响应式布局
+@media screen and (max-width: 414px) {
   #home_main{
     .carouselArea {
       height: 150px;
     }
+    .product_nav{
+      width:100%;
+      .oneProduct_nav{
+        width:100%;
+        height:175px;
+        margin-bottom:10px;
+        .oneProduct_nav_img,.oneProduct_nav_desc{
+          width:175px;
+          height:175px;
+        }
+      }
+    }
+    .product_sell,.product_recom{
+      text-align:left;
+      .oneProduct {
+        display: inline-block;
+        width: 187px;
+        height: 246px;
+        margin: 0 2px 5px 0;
+      }
+    }
   }
 }
-//
-//@media screen and (max-width: 960px) and (min-width: 500px) {
-//  .carouselArea { background-color: pink; }
-//}
-//
-//@media screen and (max-width: 500px) {
-//  .carouselArea { background-color: yellow; }
-//}
