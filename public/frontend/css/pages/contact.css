@@ -498,3 +498,8 @@ table {
   width: 49%;
   text-align: center;
 }
+@media screen and (max-width: 414px) {
+  #contact_main {
+    margin: 10px 0 0 0;
+  }
+}
