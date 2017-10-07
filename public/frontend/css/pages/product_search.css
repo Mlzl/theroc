@@ -209,17 +209,6 @@ table {
   width: 40px;
   height: 40px;
 }
-#topBar .topBar_wap .nav .topBar_menu {
-  display: none;
-  background: #fff;
-  position: absolute;
-  top: 40px;
-  left: 0;
-}
-#topBar .topBar_wap .nav .topBar_menu li {
-  height: 25px;
-  line-height: 25px;
-}
 #topBar .topBar_wap .search {
   width: 180px;
   margin: 0 auto;
@@ -270,6 +259,15 @@ table {
   background-size: 16px 16px;
   position: relative;
   top: 2px;
+}
+#topBar .toNav_dialog .el-dialog__header {
+  display: none;
+}
+#topBar .toNav_dialog .toNav_dialog_main li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  white-space: nowrap;
 }
 #footer {
   box-sizing: border-box;

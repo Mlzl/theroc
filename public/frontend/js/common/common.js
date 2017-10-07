@@ -2,7 +2,8 @@ var topBar = new Vue({
     el: '#topBar',
     delimiters: ['~{', '}'],
     data: {
-        keyword: '',
+        keyword:'',
+        toNav_show:false,
     },
     created: function () {
 
@@ -24,7 +25,9 @@ var topBar = new Vue({
                                     type == 3 ? 'contact' :
                                         type == 4 ? 'login' :
                                             type == 5 ? 'user':
-                                                type==6 ? 'product/search?keyword='+this.keyword:'';
+                                                type==6 ? 'product/search?keyword='+this.keyword:
+                                                    type==7?'support?tab=0':
+                                                        type==8?'support?tab=1':'';
             if(type!=6){
                 window.location.href = '/' + page;
             }else{
@@ -36,6 +39,9 @@ var topBar = new Vue({
                 }
             }
         },
+        showToNav:function(toNav_show){
+            this.toNav_show=toNav_show;
+        },
         logout:function(e){  //登出
             // this.delCookie('roc_u');
             // this.delCookie('roc_key');
@@ -46,21 +52,6 @@ var topBar = new Vue({
             $.cookie('roc_key', null);
             window.location.reload();
         },
-        getCookie:function(name) {
-            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-
-            if(arr=document.cookie.match(reg))
-                return unescape(arr[2]);
-            else
-                return null;
-        },
-        delCookie:function(name) {
-            var exp = new Date();
-            exp.setTime(exp.getTime() - 1);
-            var cval=this.getCookie(name);
-            if(cval!=null)
-                document.cookie= name + "="+cval+";expires="+exp.toGMTString();
-        }
     }
 });
 

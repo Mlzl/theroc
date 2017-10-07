@@ -34,15 +34,7 @@
     </div>
     <div class="topBar_wap">
         <div class="nav">
-            <img src="/images/logo.png" class="nav_img"/>
-            <ul class="topBar_menu">
-                <li @click="switchPages(0)">HOME</li>
-                <li @click="switchPages(1)">PRODUCTS</li>
-                <li @click="switchPages(2)">COMMUNITY</li>
-                <li @click="switchPages(3)">CONTACT US</li>
-                <li @click="switchPages(3)">REFUND & EXCHANGE</li>
-                <li @click="switchPages(3)">WARRANTY</li>
-            </ul>
+            <img src="/images/logo.png" class="nav_img" @click="showToNav(true)"/>
         </div>
         <p class="search">
             <input type="text" v-model="keyword" @keyup.enter="switchPages(6)"/>
@@ -55,4 +47,16 @@
             {% endif %}
         </p>
     </div>
+    <!--跳转nav 弹出框-->
+    <el-dialog title="" v-model="toNav_show" custom-class="toNav_dialog"
+               :show-close=false>
+        <ul class="toNav_dialog_main">
+            <li @click="switchPages(0)">HOME</li>
+            <li @click="switchPages(1)">PRODUCTS</li>
+            <li @click="switchPages(2)">COMMUNITY</li>
+            <li @click="switchPages(3)">CONTACT US</li>
+            <li @click="switchPages(7)">REFUND & EXCHANGE</li>
+            <li @click="switchPages(8)">WARRANTY</li>
+        </ul>
+    </el-dialog>
 </div>
