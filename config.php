@@ -1,6 +1,7 @@
 <?php
 //mysql database address
-define('DB_HOST','127.0.0.1');
+//define('DB_HOST','127.0.0.1');
+define('DB_HOST','47.93.24.122');
 //mysql database user
 define('DB_USER','root');
 //database password

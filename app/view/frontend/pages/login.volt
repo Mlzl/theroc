@@ -42,7 +42,7 @@
                         <el-button type='primary' @click="sendCaptchaBtn">Send code</el-button>
                     </p>
                     <p>
-                        <input type="text" v-model="newPassword" placeholder="New password" />
+                        <input type="password" v-model="newPassword" placeholder="New password" />
                     </p>
                 </div>
                 <span slot="footer" class="dialog-footer">

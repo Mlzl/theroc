@@ -37,8 +37,11 @@ var login=new Vue({
         },
         sendCaptcha:function(){  //发送验证码
             var _this=this;
-            var url='/api/user/sendForgetPwdEmail?email='+this.myEmail;
-            this.$http.get(url).then(function(res){
+            var _data={
+                email:this.myEmail,
+            }
+            var url='/api/user/sendForgetPwdEmail';
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
                     _this.$message("send success,please find in your mailbook");
@@ -52,12 +55,18 @@ var login=new Vue({
         updatePwdByEmail:function(){  //通过邮箱更新密码
             var _this=this;
             var newPassword=hex_md5(this.newPassword);
-            var url='/api/user/updatePwdByEmail?email='+this.myEmail+'&captcha='+this.captcha+'&password='+newPassword;
+            var _data={
+                email:this.myEmail,
+                captcha:this.captcha,
+                password:newPassword
+            }
+            var url='/api/user/updatePwdByEmail';
 
-            this.$http.get(url).then(function(res){
+            this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    window.location.href='/';
+                    _this.forgetPass_show=false;
+                    _this.$message('update password success');
                 }
                 else{
                     _this.$message(_res.msg);
@@ -107,9 +116,9 @@ var login=new Vue({
             if(myEmail==''||myEmail.trim()==''){
                 this.$message('email can not be empty');
             }else if(captcha==''||captcha.trim()==''){
-                this.$message('email can not be empty');
+                this.$message('captcha can not be empty');
             }else if(newPassword==''||newPassword.trim()==''){
-                this.$message('email can not be empty');
+                this.$message('newPassword can not be empty');
             }else if(!EMAILREG.test(myEmail.trim())){
                 this.$message('please input valid email');
             }else{
