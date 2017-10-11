@@ -8,19 +8,20 @@ namespace Roc\BackendController;
 use Roc\Library\Language;
 
 use Roc\Library\Captcha;
+use Roc\Library\LoginStatus;
 use Roc\Library\PhpMailer;
 use Roc\Library\Response;
 use Roc\Library\Utility;
 
 class AdminController extends BackendController {
 
+    public function onConstruct(){
+        //不继承父方法
+    }
+
     public function api_loginAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $captcha = $this->request->getPost('captcha');
-        if(!Captcha::verify($captcha)){
-            Response::error(Language::CAPTCHA_ERROR);
-        }
         if(!$email){
             Response::error(Language::EMAIL_EMPTY);
         }
@@ -31,6 +32,12 @@ class AdminController extends BackendController {
         if (!$user_info = $userModel->login($email, $password)){
             Response::error($userModel->getMessage());
         }
+        $adminInfo = \Admin::getAdminByUserId($user_info['user_id']);
+        if(!$adminInfo){
+            Response::error(Language::USER_NOT_EXISTS);
+        }
+        $loginStatusLib = new LoginStatus($this->di);
+        $loginStatusLib->setLoginStatus($user_info['user_id'], $user_info, true);
         Response::success($user_info);
     }
 
