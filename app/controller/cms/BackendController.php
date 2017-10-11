@@ -1,6 +1,7 @@
 <?php
 namespace Roc\BackendController;
 use \Phalcon\Mvc\Controller;
+use Roc\Library\Language;
 use Roc\Library\Response;
 use Roc\Library\LoginStatus;
 
@@ -10,10 +11,11 @@ use Roc\Library\LoginStatus;
  */
 class BackendController extends Controller{
     public function onConstruct(){
-        $loginLib = new LoginStatus($this->di);
-        $loginLib->registerUserToDi(10000000,'1069163403@qq.com', 'mlzl', 1);
-
         $this->view->setViewsDir(APP_PATH.'view/cms');
+        $loginLib = new LoginStatus($this->di);
+        if(!$loginLib->isAdminLogin()){
+            Response::error(Language::NO_LOGIN_STATUS);
+        }
     }
 
     public function updateItem(&$model, $data=array()){
