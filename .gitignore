@@ -1,4 +1,4 @@
 app/cache/*.volt.php
-.idea/*
-content/cache/*
+.idea/
+content/cache/
 

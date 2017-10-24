@@ -7,6 +7,10 @@ use \Phalcon\Mvc\Controller;
  * 登录页
  */
 class LoginController extends BackendController{
+    public function onConstruct(){
+        $this->view->setViewsDir(APP_PATH.'view/cms');
+    }
+
     public function indexAction(){
         $this->view->render('pages','login');
     }
