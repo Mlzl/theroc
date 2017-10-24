@@ -40,7 +40,7 @@ class LoginAuth{
         if(!$isLogin){
             return false;
         }
-        if(empty($userData['admin'])){
+        if(empty($userData['is_admin'])){
             return false;
         }
         return true;
