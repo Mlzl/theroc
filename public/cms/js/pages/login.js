@@ -5,10 +5,6 @@ var login=new Vue({
     data:{
         email:'',
         password:'',
-        dialogFormVisible:false,
-        newPassword:null,
-        code:null,
-        dialogEmail:null
     },
     created:function(){
 
@@ -22,11 +18,11 @@ var login=new Vue({
                 email:this.email,
                 password:_password,
             };
-            this.$http.post('/api/user/login',data, {emulateJSON:true}).then(function(res){
+            this.$http.post('/cms/admin/api_login',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
                     sessionStorage.active=0;
-                    window.location.href='/';
+                    window.location.href='/cms/carousel';
                 }
                 else{
                     _this.$message(_res.msg);
@@ -51,14 +47,5 @@ var login=new Vue({
                 this.login();
             }
         },
-        toRegisterPage:function(e){  //to注册页面
-            window.location.href='register';
-        },
-        forgetPassword:function(){
-            this.newPassword=null;
-            this.code=null;
-            this.dialogEmail=null;
-            this.dialogFormVisible=true;
-        }
     }
 })

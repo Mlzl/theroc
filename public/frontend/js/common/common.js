@@ -21,14 +21,16 @@ var topBar = new Vue({
             sessionStorage.active=type;
             var page = type == 0 ? '' :
                             type == 1 ? 'product' :
-                                type == 2 ? 'community' :
+                                type == 2 ? 'blog.php' :
                                     type == 3 ? 'contact' :
                                         type == 4 ? 'login' :
                                             type == 5 ? 'user':
                                                 type==6 ? 'product/search?keyword='+this.keyword:
                                                     type==7?'support?tab=0':
                                                         type==8?'support?tab=1':'';
-            if(type!=6){
+            if(type==2){
+                window.open('/' + page);
+            } else if(type!=6){
                 window.location.href = '/' + page;
             }else{
                 var keyword=this.keyword;
