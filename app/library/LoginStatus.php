@@ -24,8 +24,8 @@ class LoginStatus{
             return false;
         }
         $roc_key = $_COOKIE[$this->roc_cookie_key];
-        setcookie($this->roc_cookie_key, '', time(), '/', Constant::HOST);
-        setcookie($this->uid_mk5_cookie_key, '', time(), '/', Constant::HOST);
+        setcookie($this->roc_cookie_key, '', time(), '/');
+        setcookie($this->uid_mk5_cookie_key, '', time(), '/');
         $this->di->get('redis')->del(RedisKey::USER_LOGIN_KEY.$roc_key);
         $this->di->setShared('user',null);
         return true;
@@ -37,9 +37,9 @@ class LoginStatus{
         }
         $user_info['is_admin'] = $is_admin;
         $roc_key = md5(time().$uid.time().mt_rand(1,100000));
-        setcookie($this->roc_cookie_key, $roc_key, time() + TimeStep::SEVEN_DAYS, '/', Constant::HOST);
+        setcookie($this->roc_cookie_key, $roc_key, time() + TimeStep::SEVEN_DAYS, '/');
         $roc_u = Password::getMD5Uid($uid);
-        setcookie($this->uid_mk5_cookie_key, $roc_u, time() + TimeStep::SEVEN_DAYS, '/', Constant::HOST);
+        setcookie($this->uid_mk5_cookie_key, $roc_u, time() + TimeStep::SEVEN_DAYS, '/');
         $this->di->get('redis')->set(RedisKey::USER_LOGIN_KEY.$roc_key, json_encode($user_info), TimeStep::SEVEN_DAYS);
         $this->registerUserToDi($user_info['user_id'], $user_info['email'], $user_info['user_name'],false);
         return true;
@@ -65,7 +65,7 @@ class LoginStatus{
     }
 
     public function isAdminLogin(){
-        $user_info = $this->isLogin(false);
+        $user_info = $this->isLogin();
         if(!$user_info){
             return false;
         }
