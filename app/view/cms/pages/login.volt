@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!-- element ui -->
-    <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
-    <!-- private -->
+    <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/cms/css/pages/login.css">
 </head>
 <body>

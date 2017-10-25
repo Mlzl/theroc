@@ -7,7 +7,7 @@ var user=new Vue({
             email:null,
             avatar:null
         },
-        defaultImg:'/frontend/image/Koala.jpg',
+        defaultImg:'/images/Koala.jpg',
         oldPerson:null   //用于判断表单值是否有更新
     },
     created:function(){

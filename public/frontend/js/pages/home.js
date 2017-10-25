@@ -3,6 +3,7 @@ var home=new Vue({
     el:'#home_main',
     delimiters:['~{','}'],
     data:{
+        // img_param:'?imageMogr2/thumbnail/800x800/gravity/Center/crop/500x500/strip/format/jpg',
         bannerList:[],
         productNavList:[],  //导航产品列表
         productHotList:[],  //热销产品列表

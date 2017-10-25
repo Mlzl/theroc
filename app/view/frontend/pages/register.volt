@@ -7,9 +7,8 @@
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
     <title>{{title}}</title>
-    <!-- element ui -->
-    <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
-    <!-- private -->
+    <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/register.css">
 </head>
 <body>

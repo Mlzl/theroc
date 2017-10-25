@@ -7,9 +7,8 @@
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
-    <!-- element ui -->
-    <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
-    <!-- private -->
+    <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/product.css" >
 </head>
 <body>
@@ -19,7 +18,7 @@
         <div id="product_main" v-cloak>
             <!--轮播图-->
             <div class="carouselArea">
-                <el-carousel height="342px">
+                <el-carousel arrow="never">
                     <el-carousel-item v-for="item in bannerList" :key="item">
                         <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>

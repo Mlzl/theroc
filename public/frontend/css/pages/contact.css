@@ -494,7 +494,17 @@ table {
 #contact_main .contantUs .callUs {
   display: inline-block;
   width: 49%;
+  font-size: 24px;
   text-align: center;
+  margin-top: 150px;
+}
+#contact_main .contantUs .emailUs > h4,
+#contact_main .contantUs .callUs > h4 {
+  margin-bottom: 20px;
+}
+#contact_main .contantUs .emailUs > p,
+#contact_main .contantUs .callUs > p {
+  font-weight: 500;
 }
 @media screen and (max-width: 414px) {
   #contact_main {

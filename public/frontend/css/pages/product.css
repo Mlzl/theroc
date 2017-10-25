@@ -502,12 +502,12 @@ table {
   text-align: center;
   padding: 0 15px;
   border-top: 2px solid #E8E8E8;
-  border-right: 1px solid #ccc;
+  border-right: 0.5px solid #fafafa;
   float: left;
 }
 #product_main .product_list .category .primary > li .secondary {
   display: none;
-  height: 30px;
+  height: 40px;
   text-align: left;
   position: absolute;
   top: 35px;
@@ -518,7 +518,7 @@ table {
   line-height: 20px;
   text-align: center;
   padding: 0 5px;
-  margin: 5px 10px;
+  margin: 10px 10px;
   float: left;
 }
 #product_main .product_list .category .primary > li .secondary > li:hover {

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/plugin/quill-1.3.1/quill.snow.css">
-    <link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">
+    <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/cms/css/pages/product_detail.css" >
 </head>
 <body>
