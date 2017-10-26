@@ -50,8 +50,8 @@ var topBar = new Vue({
             // window.location.reload();
             // $.cookie("roc_u",null,{path:"/"});
             // $.cookie("roc_key",null,{path:"/"});
-            $.cookie('roc_u',null,{domain:'www.theroc.com'});
-            $.cookie('roc_key',null,{domain:'www.theroc.com'});
+            $.cookie('roc_u',null,{});
+            $.cookie('roc_key',null,{});
             window.location.reload();
         },
     }

@@ -14,8 +14,8 @@ var topBar=new Vue({
             // window.location.reload();
             // $.cookie("roc_u",null,{path:"/"});
             // $.cookie("roc_key",null,{path:"/"});
-            $.cookie('roc_u',null,{domain:'www.theroc.com',path:'/'});
-            $.cookie('roc_key',null,{domain:'www.theroc.com',path:'/'});
+            $.cookie('roc_u',null,{path:'/'});
+            $.cookie('roc_key',null,{path:'/'});
             window.location.reload();
         },
     }
