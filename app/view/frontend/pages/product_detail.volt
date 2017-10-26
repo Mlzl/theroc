@@ -97,7 +97,6 @@
         <!--底部-->
         {% include "smart/footer.volt" %}
     </div>
-
     {% include "common/commonjs.volt" %}
     <script type="text/javascript" src="/frontend/js/pages/product_detail.js"></script>
 </body>
