@@ -1,6 +1,7 @@
 <?php
 namespace Roc\BackendController;
-use \Phalcon\Mvc\Controller;
+use Roc\Library\LoginStatus;
+
 /**
  * User: ambi
  * Date: 2017/6/21
@@ -12,6 +13,16 @@ class LoginController extends BackendController{
     }
 
     public function indexAction(){
+        $loginLib = new LoginStatus($this->di);
+        if($loginLib->isAdminLogin()){
+            header("Location: ".$_SERVER['SERVER_NAME']);
+            exit();
+        }
         $this->view->render('pages','login');
+    }
+
+    public function logoutAction(){
+        $loginStatus = new LoginStatus($this->di);
+        $loginStatus->logout();
     }
 }
