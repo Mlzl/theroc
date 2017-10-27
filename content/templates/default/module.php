@@ -177,9 +177,10 @@ function blog_navi(){
             if ($value['pid'] != 0) {
                 continue;
             }
-            if($value['url'] == ROLE_ADMIN && (ROLE == ROLE_ADMIN || ROLE == ROLE_USER)):
+            if((ROLE == ROLE_ADMIN || ROLE == ROLE_USER)):
             ?>
             <?php
+                echo isset($GLOBALS['user_name']) ? $GLOBALS['user_name'] : $GLOBALS['email'];
                 continue;
             endif;
             $newtab = $value['newtab'] == 'y' ? 'target="_blank"' : '';
