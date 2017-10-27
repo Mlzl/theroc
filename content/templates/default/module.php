@@ -177,7 +177,7 @@ function blog_navi(){
             if ($value['pid'] != 0) {
                 continue;
             }
-            if($value['url'] == ROLE_ADMIN && (ROLE == ROLE_ADMIN || ROLE == ROLE_WRITER)):
+            if($value['url'] == ROLE_ADMIN && (ROLE == ROLE_ADMIN || ROLE == ROLE_USER)):
             ?>
             <?php
                 continue;

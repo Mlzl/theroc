@@ -33,7 +33,7 @@
 		<td>
 		<?php echo empty($val['name']) ? $val['login'] : $val['name']; ?><br />
 		<?php echo $val['role'] == ROLE_ADMIN ? $val['uid'] == 1 ? '创始人':'管理员' : '作者'; ?>
-        <?php if ($val['role'] == ROLE_WRITER && $val['ischeck'] == 'y') echo '(文章需审核)';?>
+        <?php if ($val['role'] == ROLE_USER && $val['ischeck'] == 'y') echo '(文章需审核)';?>
 		<span style="display:none; margin-left:8px;">
 		<?php 
         if (UID != $val['uid']): ?>

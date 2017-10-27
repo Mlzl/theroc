@@ -129,7 +129,7 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
       <span style="display:none; margin-left:8px;">
         <?php if($pid != 'draft' && ROLE == ROLE_ADMIN && $value['checked'] == 'n'): ?>
         <a href="./admin_log.php?action=operate_log&operate=check&gid=<?php echo $value['gid']?>&token=<?php echo LoginAuth::genToken(); ?>">审核</a> 
-        <?php elseif($pid != 'draft' && ROLE == ROLE_ADMIN && $author_role == ROLE_WRITER):?>
+        <?php elseif($pid != 'draft' && ROLE == ROLE_ADMIN && $author_role == ROLE_USER):?>
         <a href="./admin_log.php?action=operate_log&operate=uncheck&gid=<?php echo $value['gid']?>&token=<?php echo LoginAuth::genToken(); ?>">驳回</a> 
         <?php endif;?>
       </span>

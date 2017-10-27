@@ -19,6 +19,6 @@ if (IS_ADMIN === false) {
 }
 
 $request_uri = strtolower(substr(basename($_SERVER['SCRIPT_NAME']), 0, -4));
-if (ROLE == ROLE_WRITER && !in_array($request_uri, array('write_log','admin_log','attachment','blogger','comment','index','save_log'))) {
+if (ROLE == ROLE_USER && !in_array($request_uri, array('write_log','admin_log','attachment','blogger','comment','index','save_log'))) {
     emMsg('权限不足！','./');
 }
