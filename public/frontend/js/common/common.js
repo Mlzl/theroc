@@ -45,11 +45,6 @@ var topBar = new Vue({
             this.toNav_show=toNav_show;
         },
         logout:function(e){  //登出
-            // this.delCookie('roc_u');
-            // this.delCookie('roc_key');
-            // window.location.reload();
-            // $.cookie("roc_u",null,{path:"/"});
-            // $.cookie("roc_key",null,{path:"/"});
             $.cookie('roc_u',null,{});
             $.cookie('roc_key',null,{});
             window.location.reload();

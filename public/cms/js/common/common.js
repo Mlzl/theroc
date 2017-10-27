@@ -9,11 +9,6 @@ var topBar=new Vue({
     },
     methods:{
         logout:function(e){  //登出
-            // this.delCookie('roc_u');
-            // this.delCookie('roc_key');
-            // window.location.reload();
-            // $.cookie("roc_u",null,{path:"/"});
-            // $.cookie("roc_key",null,{path:"/"});
             $.cookie('roc_u',null,{path:'/'});
             $.cookie('roc_key',null,{path:'/'});
             window.location.reload();
@@ -39,8 +34,12 @@ var sideBar=new Vue({
                                         type==4?'returnMana':
                                             type==5?'userMana':
                                                 type==6?'blogMana':'';
-            sessionStorage.sideBar_tab=type;
-            window.location.href='/cms/'+page;
+            if(type==6){
+                window.open('/admin');
+            }else{
+                sessionStorage.sideBar_tab=type;
+                window.location.href='/cms/'+page;
+            }
         }
     }
 })
