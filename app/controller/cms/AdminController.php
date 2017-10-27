@@ -41,7 +41,6 @@ class AdminController extends BackendController {
         Response::success($user_info);
     }
 
-
     public function api_registerAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
@@ -74,5 +73,10 @@ class AdminController extends BackendController {
             Response::success($userModel->toArray());
         }
         Response::error(Language::REGISTER_ERROR);
+    }
+
+    public function testAction(){
+        $key = "theroc:login:user:info:a24d1a6f1626323e5fcb3bb73b51db19";
+        var_dump($this->redis->get($key));
     }
 }

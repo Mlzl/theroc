@@ -14,6 +14,7 @@ class PhpMailer{
             $mailer = new \PHPMailer();
             $mailer->Port = '25';
             $mailer->isSMTP();
+            $mailer->Timeout = 5;
             $mailer->SMTPAuth = true;
             $mailer->Username = '13533808115@163.com';
             $mailer->Host = 'smtp.163.com';
