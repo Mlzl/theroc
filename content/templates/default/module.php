@@ -180,7 +180,6 @@ function blog_navi(){
             if((ROLE == ROLE_ADMIN || ROLE == ROLE_USER)):
             ?>
             <?php
-                echo isset($GLOBALS['user_name']) ? $GLOBALS['user_name'] : $GLOBALS['email'];
                 continue;
             endif;
             $newtab = $value['newtab'] == 'y' ? 'target="_blank"' : '';
