@@ -143,4 +143,41 @@ class UserController extends ApiController{
         }
         Response::error($userModel->getMessage());
     }
+
+    public function autoRegisterAdminAction(){
+        $password = $this->request->get('password');
+        $email = $this->request->get('email');
+        $r_token = $this->request->get('token');
+        $token = '3ygehwdfibuyk3n2';
+
+        if($r_token != $token || !$email || !$password){
+            header('http/1.1 404 NOT FOUND');
+            exit();
+        }
+        if(\User::findUserByEmail($email)){
+            Response::error(Language::EMAIL_HAD_BE_USED);
+        }
+        $userModel = new \User();
+        $data = array(
+            'password'=>md5($password),
+            'email'=>$email,
+            'reg_date'=>time(),
+            'status'=>\User::NORMAL,
+            'salt'=>Password::geneSalt(),
+        );
+
+        $data['password'] = Password::encrypt($password, $data['salt']);
+        if (!$userModel->save($data)){
+            exit($userModel->getMessage());
+        }
+        $adminData = array(
+            'user_id'=>$userModel->user_id,
+            'status'=>1
+        );
+        $adminModel = new \Admin();
+        if(!$adminModel->save($adminData)){
+            exit('failed');
+        }
+        Response::success();
+    }
 }
