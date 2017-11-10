@@ -12,14 +12,14 @@ class PhpMailer{
         static $mailer = null;
         if(!$mailer){
             $mailer = new \PHPMailer();
-            $mailer->Port = '25';
-            $mailer->isSMTP();
-            $mailer->Timeout = 5;
-            $mailer->SMTPAuth = true;
+            $mailer->Port = 25;
+            $mailer->Timeout = 3;
+            $mailer->SMTPAuth = false;
+            $mailer->SMTPSecure = false;
             $mailer->Username = 'notice@limskey.com';
             $mailer->Host = 'smtpout.secureserver.net';
             $mailer->Password = 'Gdd526691651';
-            $mailer->setFrom('notice@limskey.com', 'theroc');
+            $mailer->setFrom('notice@limskey.com', 'limskey');
             $mailer->isHTML(true);
         }
         return $mailer;
