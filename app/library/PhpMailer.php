@@ -16,10 +16,10 @@ class PhpMailer{
             $mailer->isSMTP();
             $mailer->Timeout = 5;
             $mailer->SMTPAuth = true;
-            $mailer->Username = '13533808115@163.com';
-            $mailer->Host = 'smtp.163.com';
-            $mailer->Password = 'ambi123456ambi';
-            $mailer->setFrom('13533808115@163.com', 'theroc');
+            $mailer->Username = 'notice@limskey.com';
+            $mailer->Host = 'smtpout.secureserver.net';
+            $mailer->Password = 'Gdd526691651';
+            $mailer->setFrom('notice@limskey.com', 'theroc');
             $mailer->isHTML(true);
         }
         return $mailer;
