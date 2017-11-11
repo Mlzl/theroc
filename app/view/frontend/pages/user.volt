@@ -9,6 +9,7 @@
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/user.css" >
+    {% include "common/analysis.volt" %}
 </head>
 <body>
     <div id="user">
