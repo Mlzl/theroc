@@ -541,6 +541,21 @@ table {
   font-size: 20px;
   border: 1px solid transparent;
 }
+.reSendEmail_dialog {
+  width: 325px;
+  margin: 0 auto;
+}
+.reSendEmail_dialog .reSendEmail_dialog_main {
+  overflow: hidden;
+}
+.reSendEmail_dialog .reSendEmail_dialog_main button {
+  display: block;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 20px;
+  margin: 15px auto 20px auto;
+}
 @media screen and (max-width: 414px) {
   #register_main {
     min-width: 100%;

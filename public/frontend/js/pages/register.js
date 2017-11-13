@@ -6,6 +6,8 @@ var register=new Vue({
         email:'',
         password:'',
         rePassword:'',
+        //重发邮件弹出框
+        reSendEmail_show:false,
     },
     methods:{
         //异步方法
@@ -22,7 +24,7 @@ var register=new Vue({
                     _this.email='';
                     _this.password='';
                     _this.rePassword='';
-                    _this.$message('注册成功，请注意查收邮件激活账号！');
+                    _this.reSendEmail_show=true;
                 }
                 else{
                     _this.$message(_res.msg);
@@ -32,6 +34,9 @@ var register=new Vue({
             });
         },
         //普通方法
+        showReSendEmail:function(reSendEmail_show,e){
+            this.reSendEmail_show=reSendEmail_show;
+        },
         registerBtn:function(e){  // 注册按钮
             var email=this.email;
             var password=this.password;

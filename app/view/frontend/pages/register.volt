@@ -26,6 +26,18 @@
             </div>
             <button class="registerBtn" @click="registerBtn">REGISTER</button>
         </div>
+        <!--重发邮件对话框-->
+        <el-dialog title="Activate Your Account" v-model="reSendEmail_show" custom-class="reSendEmail_dialog"
+                   :show-close=true :close-on-click-modal=false>
+            <div class="reSendEmail_dialog_main">
+                <p>
+                    We’re excited to have you with us!
+                    We have sent an Activation Email to below Email address.
+                    Please open the mail to complete registration.
+                </p>
+                <el-button type="primary" @click="">Resend the Email</el-button>
+            </div>
+        </el-dialog>
     </div>
     <!--底部-->
     {% include "smart/footer.volt" %}
