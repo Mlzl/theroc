@@ -45,7 +45,7 @@ class User extends Model{
             if(($res = \Roc\Library\PhpMailer::sendRegisterMail($email, $email, $token)) !==true){
                 $this->error_message = $res;
             }else{
-                $this->error_message = "账号尚未激活，已发送邮件到 {$email}, 请前往邮箱激活";
+                $this->error_message = "The Account is not active，we has send the email to {$email}, please go to activate the account";
             }
             return false;
         }
