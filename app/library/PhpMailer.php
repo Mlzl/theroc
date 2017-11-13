@@ -30,7 +30,7 @@ class PhpMailer{
         $mailer->Subject = 'from the';
         $mailer->Body    =<<<EOT
 This is the HTML message body <b>in bold!</b>
-<a href='http://www.theroc.com/login/activateAccount?email=$mail&token=$token'>点击激活</a>";
+<a href='http://www.limskey.com/login/activateAccount?email=$mail&token=$token'>点击激活</a>";
 EOT;
         if(!$mailer->send()){
             return $mailer->ErrorInfo;
