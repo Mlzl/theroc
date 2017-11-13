@@ -24,7 +24,7 @@
                 <p><input type="password" v-model="password" placeholder="Password"></p>
                 <p><input type="password" v-model="rePassword" placeholder="Password Confirm"></p>
             </div>
-            <button class="registerBtn" @click="register">REGISTER</button>
+            <button class="registerBtn" @click="registerBtn">REGISTER</button>
         </div>
     </div>
     <!--底部-->

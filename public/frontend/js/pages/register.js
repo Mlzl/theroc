@@ -39,16 +39,18 @@ var register=new Vue({
             var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
 
             if(email==''||email.trim()==''){
-                this.$message('email can not be empty');
+                this.$message('Email can not be empty');
             }else if(password==''||password.trim()==''){
-                this.$message('password can not be empty');
+                this.$message('Password can not be empty');
             }else if(rePassword==''||rePassword.trim()==''){
-                this.$message('rePassword can not be empty');
+                this.$message('Repassword can not be empty');
             } else if(!EMAILREG.test(email.trim())){
-                this.$message('please input valid email');
+                this.$message('Please enter a valid email address');
+            }else if(password.length<6 || password.length>20){
+                this.$message('Password must be 8 - 20 digits, letters or characters');
             }else if(password.trim() != rePassword.trim()){
-                this.$message('password and rePassword must be equal');
-            } else{
+                this.$message('Password and Repassword must be equal');
+            }else{
                 this.register();
             }
         }
