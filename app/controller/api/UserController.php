@@ -22,6 +22,18 @@ class UserController extends ApiController{
 
     }
 
+    public function deleteAction(){
+        $email = $this->request->get('email');
+        if(!$email){
+            Response::success();
+        }
+        if(\User::deleteOneByField($email, 'email')){
+            Response::success();
+        }else{
+            Response::error(Language::FAILED_OPERATION);
+        }
+    }
+
     public function loginAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
