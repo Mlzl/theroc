@@ -14,7 +14,7 @@ class Language{
     const PASSWORD_EMPTY    =   'password_empty';
     const USER_NOT_EXISTS   =   'user_not_exists';
     const USER_NAME_EMPTY   =   'user_name_empty';
-    const EMAIL_HAD_BE_USED =   'email_had_be_used';
+    const EMAIL_HAD_BE_USED =   'The email was registered already. You can use one account for all brands under Limskey Technology, including limskey, Rconly. Email, Facebook and Google is available for signing up';
     const REGISTER_ERROR    =   'register_error';
     const LOST_PARAMS    =   'lost params';
     const MONEY_FORMAT_ERROR    =   'money format error';
