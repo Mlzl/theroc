@@ -17,9 +17,10 @@ class ApiController extends Controller {
 
     public function onConstruct(){
         $loginLib = new LoginStatus($this->di);
-        if(!$loginLib->isLogin()){
-            Response::error(Language::NO_LOGIN_STATUS);
-        }
+        $loginLib->isLogin();
+//        if(!$loginLib->isLogin()){
+//            Response::error(Language::NO_LOGIN_STATUS);
+//        }
     }
 
     public function updateItem(&$model, $data=array()){

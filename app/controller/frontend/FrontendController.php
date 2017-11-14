@@ -13,9 +13,7 @@ class FrontendController extends Controller{
 
     public function onConstruct(){
         $loginLib = new LoginStatus($this->di);
-        if(!$user_info = $loginLib->isLogin()){
-            Common::goLogin();
-        }
+        $user_info = $loginLib->isLogin();
         $this->view->setViewsDir(APP_PATH.'view/frontend');
         $this->view->setVar("user_info", $user_info);
     }
