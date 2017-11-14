@@ -21,9 +21,9 @@ var register=new Vue({
             this.$http.post('/api/user/register',data, {emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    _this.email='';
-                    _this.password='';
-                    _this.rePassword='';
+                    // _this.email='';
+                    // _this.password='';
+                    // _this.rePassword='';
                     _this.reSendEmail_show=true;
                 }
                 else{
