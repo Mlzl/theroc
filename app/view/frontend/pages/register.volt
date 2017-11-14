@@ -35,7 +35,7 @@
                     We have sent an Activation Email to below Email address.
                     Please open the mail to complete registration.
                 </p>
-                <el-button type="primary" @click="">Resend the Email</el-button>
+                <el-button type="primary" @click="resendEmail">Resend the Email</el-button>
             </div>
         </el-dialog>
     </div>

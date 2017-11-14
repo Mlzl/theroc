@@ -33,6 +33,19 @@ var register=new Vue({
                 console.log(err);
             });
         },
+        resendEmail:function(){
+            var _this=this;
+            var url='/api/user/delete?email='+this.email;
+
+            this.$http.get(url).then(function (res) {
+                var _res = res.body;
+                if(_res.code==0){
+                    _this.$message('We have resend the email for you,please check out it');
+                }
+            }, function (err) {
+                console.log(err);
+            });
+        },
         //普通方法
         showReSendEmail:function(reSendEmail_show,e){
             this.reSendEmail_show=reSendEmail_show;
