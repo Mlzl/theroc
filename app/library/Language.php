@@ -33,6 +33,7 @@ class Language{
     const GENE_CAPTCHA_FAILED ="generating captcha failed";
     const FORGET_PWD_CAPTCHA_ERROR = "captcha out of date or error";
     const ADD_REFUND_FAILED = 'add refund failed';
+    const USER_HAS_ACTIVE = 'user has active';
 
     public static function getMessage($message){
         $t = English::getMessage($message);

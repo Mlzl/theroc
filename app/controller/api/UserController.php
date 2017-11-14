@@ -63,6 +63,26 @@ class UserController extends ApiController{
         Response::success($data);
     }
 
+    public function resendActiveEmailAction(){
+        $email = $this->request->getPost('email');
+        if(!$email){
+            Response::error(Language::EMAIL_EMPTY);
+        }
+        $user = \User::findUserByEmail($email);
+        if(!$user){
+            Response::error(Language::USER_NOT_EXISTS);
+        }
+        if($user->status != \User::UN_ACTIVE){
+            Response::error(Language::USER_HAS_ACTIVE);
+        }
+        $utility = new Utility($this->di);
+        $token = $utility->geneRegisterToken($email);
+        if(($res = PhpMailer::sendRegisterMail($email, $email, $token)) != 1){
+            Response::error($res);
+        }
+        Response::success();
+    }
+
     public function registerAction(){
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
