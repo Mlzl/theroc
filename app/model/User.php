@@ -42,7 +42,7 @@ class User extends Model{
         if($user['status'] == self::UN_ACTIVE){
             $utility = new \Roc\Library\Utility($this->getDI());
             $token = $utility->geneRegisterToken($email);
-            if(($res = \Roc\Library\PhpMailer::sendRegisterMail($email, $email, $token)) !==true){
+            if(($res = \Roc\Library\PhpMailer::sendRegisterMail($email, $email, $token)) != 1){
                 $this->error_message = $res;
             }else{
                 $this->error_message = "The Account is not active，we has send the email to {$email}, please go to activate the account";
