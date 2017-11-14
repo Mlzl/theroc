@@ -95,7 +95,16 @@ class UserController extends ApiController{
         if(!$password){
             Response::error(Language::PASSWORD_EMPTY);
         }
-        if(\User::findUserByEmail($email)){
+        $user = \User::findUserByEmail($email);
+        if($user && $user->status == \User::UN_ACTIVE){
+            $utility = new Utility($this->di);
+            $token = $utility->geneRegisterToken($email);
+            if(($res = PhpMailer::sendRegisterMail($email, $email, $token)) != 1){
+                Response::error($res);
+            }
+            Response::success($user->toArray());
+        }
+        if($user){
             Response::error(Language::EMAIL_HAD_BE_USED);
         }
         $userModel = new \User();
