@@ -19,7 +19,8 @@ class PhpMailer{
             $mailer->Username = 'notice@limskey.com';
             $mailer->Host = 'smtpout.secureserver.net';
             $mailer->Password = 'Gdd526691651';
-            $mailer->FromName = 'limskey.com';
+            $mailer->FromName = "limskey";
+            $mailer->From = "zhanwei@join.limskey.com";
             $mailer->isHTML(true);
         }
         return $mailer;
