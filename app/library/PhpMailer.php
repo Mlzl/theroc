@@ -19,7 +19,7 @@ class PhpMailer{
             $mailer->Username = 'notice@limskey.com';
             $mailer->Host = 'smtpout.secureserver.net';
             $mailer->Password = 'Gdd526691651';
-            $mailer->setFrom('notice@limskey.com', 'limskey');
+            $mailer->FromName = 'limskey.com';
             $mailer->isHTML(true);
         }
         return $mailer;
@@ -27,11 +27,11 @@ class PhpMailer{
     public static function sendRegisterMail($mail, $name, $token){
         $mailer = self::getMailerInstance();
         $mailer->addAddress($mail, $name);     // Add a recipient
-        $mailer->Subject = 'from the';
+        $mailer->Subject = 'join limskey';
         $mailer->Body    =<<<EOT
-dear user $name:
-    thank you for you register limskey.you can enjoy all service,after you click below link to active your account.
-    <a href='http://www.limskey.com/login/activateAccount?email=$mail&token=$token'>http://www.limskey.com/login/activateAccount?email=$mail&token=$token</a>";
+dear user $name:<br />
+    thank you for you register limskey.you can enjoy all service,after you click below link to active your account.<br />
+    <a href='http://www.limskey.com/login/activateAccount?email=$mail&token=$token'>http://www.limskey.com/login/activateAccount?email=$mail&token=$token</a><br />
     ps：the link will be invalid after 24 hour
 EOT;
         if(!$mailer->send()){
