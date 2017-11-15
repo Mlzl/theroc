@@ -32,7 +32,7 @@ class PhpMailer{
 dear user $name:<br />
     thank you for you register limskey.you can enjoy all service,after you click below link to active your account.<br />
     <a href='http://www.limskey.com/login/activateAccount?email=$mail&token=$token'>http://www.limskey.com/login/activateAccount?email=$mail&token=$token</a><br />
-    ps：the link will be invalid after 24 hour
+    ps: the link will be invalid after 24 hour
 EOT;
         if(!$mailer->send()){
             return $mailer->ErrorInfo;
