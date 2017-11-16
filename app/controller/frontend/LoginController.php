@@ -28,21 +28,21 @@ class LoginController extends FrontendController {
         $email = $this->request->get('email');
         $user = \User::findUserByEmail($email);
         if(!$user){
-            exit('user not exists');
+            $this->view->render('pages','active_fail');
         }
         if($user->status == 1){
-            exit('user has activate');
+            $this->view->render('pages','active_success');
         }
         if($user->status == 2){
-            exit('user has been ban');
+            $this->view->render('pages','active_fail');
         }
         $utility = new Utility($this->di);
         if($utility->checkRegisterToken($token, $email)){
             if($user){
                 $user->activateAccount();
-                exit("success");
+                $this->view->render('pages','active_success');
             }
         }
-        exit("failed");
+        $this->view->render('pages','active_fail');
     }
 }
