@@ -14,7 +14,7 @@
 <body>
     <div id="active_success">
         <p>
-            <img src="/images/cry_img.png" />
+            <img src="/images/laugh_img.png" />
         </p>
         <p>Your account has been activated,<br/>please click <span @click="toLoginPage">this</span> to login page.</p>
     </div>
