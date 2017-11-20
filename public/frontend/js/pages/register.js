@@ -63,8 +63,8 @@ var register=new Vue({
             }else if(rePassword==''||rePassword.trim()==''){
                 this.$message('Repassword can not be empty');
             } else if(!EMAILREG.test(email.trim())){
-                this.$message('Please enter a valid email address');
-            }else if(password.length<6 || password.length>20){
+                this.$message('Please enter a valid email address (Example: name@domain.com)');
+            }else if(password.length < 6 || password.length > 20){
                 this.$message('Password must be 8 - 20 digits, letters or characters');
             }else if(password.trim() != rePassword.trim()){
                 this.$message('Password and Repassword must be equal');
