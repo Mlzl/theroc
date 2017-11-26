@@ -4,10 +4,10 @@ use \Phalcon\Mvc\Controller;
 /**
  * User: ambi
  * Date: 2017/6/21
- * 数据分析页
+ * 博客管理页
  */
-class DataAnalysisController extends BackendController{
+class BlogmanaController extends BackendController{
     public function indexAction(){
-        $this->view->render('pages','dataAnalysis');
+        $this->view->render('pages','blogMana');
     }
 }

@@ -4,10 +4,10 @@ use \Phalcon\Mvc\Controller;
 /**
  * User: ambi
  * Date: 2017/6/21
- * 退款管理页
+ * 用户管理页
  */
-class ReturnManaController extends BackendController{
+class UsermanaController extends BackendController{
     public function indexAction(){
-        $this->view->render('pages','returnMana');
+        $this->view->render('pages','userMana');
     }
 }

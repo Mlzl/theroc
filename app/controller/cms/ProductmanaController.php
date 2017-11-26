@@ -6,7 +6,7 @@ use \Phalcon\Mvc\Controller;
  * Date: 2017/6/21
  * 产品管理页
  */
-class ProductManaController extends BackendController{
+class ProductmanaController extends BackendController{
     public function indexAction(){
         $this->view->render('pages','productMana');
     }

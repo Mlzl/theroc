@@ -6,7 +6,7 @@ use \Phalcon\Mvc\Controller;
  * Date: 2017/6/21
  * 模块管理页
  */
-class ModuleManaController extends BackendController{
+class ModulemanaController extends BackendController{
     public function indexAction(){
         $this->view->render('pages','moduleMana');
     }
