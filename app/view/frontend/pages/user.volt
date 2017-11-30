@@ -6,6 +6,7 @@
     <meta name="keywords" content="{{keywords}}">
     <meta name="description" content="{{description}}">
     <title>{{title}}</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/user.css" >

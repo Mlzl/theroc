@@ -7,6 +7,7 @@
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/product.css" >
@@ -29,10 +30,10 @@
             <div class="product_list">
                 <div class="category">
                     <ul class="primary">
-                        <li class="primary_li" v-for="(item1,index1) in allClass">
+                        <li class="primary_li" v-for="(item1,index1) in allClass" @click.stop="switchClass(item1)">
                             ~{item1.name}
                             <ul class="secondary">
-                                <li v-for="(item2,index2) in item1.child">
+                                <li v-for="(item2,index2) in item1.child" @click.stop="switchClass(item2)">
                                     ~{item2.name}
                                 </li>
                             </ul>

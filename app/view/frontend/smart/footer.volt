@@ -33,4 +33,5 @@
             <p>245452530@qq.com</p>
         </div>
     </div>
+    <p class="statement">Copyright © 2017 Limskey Technology Co. Limited</p>
 </div>

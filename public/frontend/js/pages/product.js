@@ -27,7 +27,7 @@ var product=new Vue({
         })
     },
     methods:{
-        //获取轮播图
+        //异步方法
         getBanner:function(){
             var that = this;
             this.$http.get('/api/product/getBanner', {params: {banner_type: 'pro_banner'}}).then(function (res) {
@@ -37,11 +37,6 @@ var product=new Vue({
                 console.log(err);
             });
         },
-        //跳至链接
-        locateHref:function(href){
-            window.location.href=href;
-        },
-        //异步方法
         getAllClass:function(){  //获取分类
             var _this=this;
             this.$http.get('/api/product/getAllClass').then(function(res){
@@ -84,7 +79,7 @@ var product=new Vue({
 
                     _this.curProductList=curProductList;
                     // _this.curProductList_total=curProductList_total;
-                    console.log(curProductList)
+                    // console.log(curProductList)
                 }else{
                     _this.$message(_res.msg);
                 }
@@ -93,9 +88,16 @@ var product=new Vue({
             });
         },
         //普通方法
+        locateHref:function(href){
+            window.location.href=href;
+        },
         toDetailPage:function(product_id){
             // location.href='/product/detail?product_id='+product_id;
             window.open('/product/detail?product_id='+product_id)
+        },
+        switchClass:function(curClickClass){
+            this.curClickClass=curClickClass;
+            this.getCurProductList();
         }
     }
 })

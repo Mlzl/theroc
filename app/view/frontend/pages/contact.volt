@@ -7,6 +7,7 @@
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/contact.css" >

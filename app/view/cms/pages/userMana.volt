@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/cms/css/pages/userMana.css" >

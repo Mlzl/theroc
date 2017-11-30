@@ -8,11 +8,11 @@
   position: relative;
   .topBar_pc{
     .logo {
-      width: 36px;
-      height: 30px;
+      width: 48px;
+      height: 40px;
       position: absolute;
-      top: 13px;
-      left: 78px;
+      top: 8px;
+      left: 310px;
     }
     .topBar_menu {
       width: 560px;
@@ -22,17 +22,20 @@
         cursor: pointer;
         height: 40px;
         line-height: 56px;
+        font-size:18px;
         text-align: center;
-        margin: 0 30px;
+        margin: 0 22px;
         float: left;
         position: relative;
         &:hover {
           color: #25ba80;
+          font-weight:500;
           border-bottom: 1px solid #25ba80;
         }
       }
       li.active{
         color: #25ba80;
+        font-weight:500;
         border-bottom: 1px solid #25ba80;
       }
     }
@@ -55,6 +58,7 @@
         }
         .search_icon {
           display: inline-block;
+          cursor:pointer;
           width: 15px;
           height: 15px;
           background: url('/images/search_icon.png') no-repeat;
@@ -203,7 +207,7 @@
     }
   }
   .subscribe {
-    width: 33%;
+    width: 32%;
     .email_submit {
       > input {
         width: 277px;
@@ -285,6 +289,12 @@
       }
     }
   }
+  .statement{
+    color:#fff;
+    font-size:16px;
+    text-align:center;
+    margin-top:20px;
+  }
 }
 
 //响应式布局
@@ -310,7 +320,7 @@
 //弹出框 强改样式
 .el-dialog{
   padding:15px 25px 0 25px;
-  margin:0;
+  //margin:0;
 }
 .el-dialog__header{
   font-weight: 300!important;
