@@ -13,5 +13,6 @@ try{
     $application->handle()->send();
 }
 catch (\Exception $e){
-    var_dump($e);
+    echo json_encode(array ('code'=>500, 'msg'=>"系统错误"));
+    exit;
 }
