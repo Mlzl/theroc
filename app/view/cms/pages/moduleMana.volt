@@ -54,7 +54,7 @@
             <el-dialog title="添加" v-model="addShow" custom-class="add_dialog"
                        :show-close=false :close-on-click-modal=false>
                 <div class="add_dialog_main">
-                    <input v-model="productName" placeholder="请输入产品标题" @keyup.enter="searchProduct" />
+                    <input v-model="productName" placeholder="请输入产品标题并回车搜索相应产品" @keyup.enter="searchProduct" />
                     <ul class="searchProduct_list" v-show="showSearchBox">
                         <li v-for="(item,index) in searchProductList"
                             @click="selectProduct(item.product_id,item.name)">

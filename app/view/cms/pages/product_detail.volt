@@ -76,14 +76,18 @@
                         <span>标题:</span>
                         <el-input v-model="productDetail_edit.name"></el-input>
                     </p>
-                    <!--<p>-->
-                        <!--<span>分类属性</span>-->
-                        <!--<span class="classify_attr">-->
-                            <!--<input type="text" /><input type="text" /><br/>-->
-                            <!--<input type="text" /><input type="text" /><br/>-->
-                            <!--<input type="text" /><input type="text" /><br/>-->
-                        <!--</span>-->
-                    <!--</p>-->
+                    <p>
+                        <span>分类属性:</span>
+                        <span class="classify_attr">
+                            <template v-for="(item,index) in productDetail.attr" >
+                                <span>~{item.name}</span>
+                                <span>~{item.price}$</span>
+                                <em @click="showModifyPrice(true,item)">修改</em>
+                                <em @click="delAttr(item.id,index)">删除</em>
+                                <br/>
+                            </template>
+                        </span>
+                    </p>
                     <p>
                         <span>自定义属性:</span>
                         <el-input v-model="productDetail_edit.label"></el-input>
@@ -133,7 +137,7 @@
                             </span>
                             <span>~{item.content}</span>
                             <span>
-                                <el-button class="delete_btn" @click="">删除</el-button>
+                                <el-button class="delete_btn" @click="del_btn(item,index)">删除</el-button>
                             </span>
                         </p>
                     </div>
@@ -146,6 +150,18 @@
                     </el-pagination>
                 </div>
             </div>
+            <!--修改价格 弹出框-->
+            <el-dialog title="修改价格" v-model="modifyPrice_show" custom-class="modifyPrice_dialog"
+                       :show-close=false :close-on-click-modal=false>
+                <div class="modifyPrice_dialog_main">
+                    <el-input v-model="price_attr" placeholder="请输入价格属性"></el-input>
+                    <el-input type="number" step="1" v-model="price" placeholder="请输入价格"></el-input>
+                </div>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="showModifyPrice(false)">取 消</el-button>
+                    <el-button type="primary" @click="modifyPrice">确 定</el-button>
+                </span>
+            </el-dialog>
         </div>
     </div>
 

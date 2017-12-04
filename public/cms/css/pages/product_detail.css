@@ -321,7 +321,6 @@ table {
 }
 .el-dialog {
   padding: 15px 25px 0 25px;
-  margin: 0;
 }
 .el-dialog__header {
   font-weight: 300!important;
@@ -477,6 +476,10 @@ table {
   min-height: 40px;
   line-height: 40px;
 }
+#product_detail_main .baseData .baseData_see > p .classify_attr > span,
+#product_detail_main .baseData .baseData_edit > p .classify_attr > span {
+  margin: 0 30px 0 0;
+}
 #product_detail_main .baseData .baseData_see > p span,
 #product_detail_main .baseData .baseData_edit > p span {
   display: inline-block;
@@ -485,6 +488,12 @@ table {
 #product_detail_main .baseData .baseData_see > p > span:nth-of-type(1),
 #product_detail_main .baseData .baseData_edit > p > span:nth-of-type(1) {
   width: 100px;
+}
+#product_detail_main .baseData .baseData_see > p em,
+#product_detail_main .baseData .baseData_edit > p em {
+  cursor: pointer;
+  color: #25ba80;
+  margin-right: 10px;
 }
 #product_detail_main .baseData .baseData_see > p .el-input,
 #product_detail_main .baseData .baseData_edit > p .el-input {
@@ -495,9 +504,6 @@ table {
 #product_detail_main .baseData .baseData_edit > p .el-input input {
   height: 30px;
   line-height: 30px;
-}
-#product_detail_main .baseData .baseData_see > p .classify_attr > span {
-  margin: 0 30px 0 0;
 }
 #product_detail_main .baseData .baseData_see .cover_img {
   margin: 10px 0 0 0;
@@ -598,4 +604,14 @@ table {
 #product_detail_main .commentList .product_table .product_tbody > p button {
   height: 25px;
   padding: 0 5px;
+}
+.modifyPrice_dialog {
+  width: 340px;
+  height: 200px;
+}
+.modifyPrice_dialog .modifyPrice_dialog_main input {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin: 0 0 12px 0;
 }

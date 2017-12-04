@@ -112,6 +112,6 @@ var moduleMana_main=new Vue({
             this.selectedProductId=productId;
             this.productName=productName;
             this.showSearchBox=false;
-        }
+        },
     }
 })

@@ -67,12 +67,22 @@
       >p{
         min-height:40px;
         line-height:40px;
+        .classify_attr{
+          >span{
+            margin:0 30px 0 0;
+          }
+        }
         span{
           display:inline-block;
           vertical-align:top;
         }
         >span:nth-of-type(1){
           width:100px;
+        }
+        em{
+          cursor:pointer;
+          color:#25ba80;
+          margin-right:10px;
         }
         .el-input{
           display:inline-block;
@@ -85,13 +95,6 @@
       }
     }
     .baseData_see{
-      >p{
-        .classify_attr{
-          >span{
-            margin:0 30px 0 0;
-          }
-        }
-      }
       .cover_img{
         margin:10px 0 0 0;
         >span{
@@ -200,6 +203,18 @@
           }
         }
       }
+    }
+  }
+}
+.modifyPrice_dialog{
+  width:340px;
+  height:200px;
+  .modifyPrice_dialog_main{
+    input{
+      height: 32px;
+      line-height:32px;
+      font-size:12px;
+      margin:0 0 12px 0;
     }
   }
 }

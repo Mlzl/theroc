@@ -14,6 +14,11 @@ var product_detail_main=new Vue({
         commentList_size:10,  //评论列表每页显示条数
         commentList_page:1,  //评论列表当前页
         commentList_total:0,  //评论列表总条数
+        //修改价格 弹出框
+        modifyPrice_show:false,  //添加价格弹出框 显示隐藏
+        price_attr:'',  //价格属性
+        price:'',  //价格
+        curClickAttr:{},
     },
     computed: {
         product_id: function () {
@@ -134,6 +139,63 @@ var product_detail_main=new Vue({
                 }else{
                     _this.$message(_res.msg);
                 }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        delComment:function(item,index){  //
+            var _this=this;
+            var comment_id=item.id;
+            var url='/cms/product/api_delete_comments?comment_id='+comment_id
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                if(_res.code===0){
+                    _this.commentList.splice(index,1);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        modifyPrice:function(){  //
+            var _this=this;
+            var _data={
+                product_id:this.product_id,
+                attribute_id:this.curClickAttr.id,
+                name:this.price_attr,
+                price:this.price
+            }
+            var url='/cms/productattribute/api_update';
+            this.$http.post(url,_data, {emulateJSON:true}).then(function(res){
+                var _res=res.body;
+                if(_res.code==0){
+                    var attr=_this.productDetail_edit.attr;
+                    for(var i=0,len=attr.length;i<len;i++){
+                        if(attr[i].id==_this.curClickAttr.id){
+                            attr[i].name=_this.price_attr;
+                            attr[i].price=_this.price;
+                        }
+                    }
+                    _this.productDetail_edit.attr=attr;
+                    _this.productDetail.attr=attr;
+                    _this.modifyPrice_show=false;
+                    _this.$message('修改成功');
+                }else{
+                    _this.$message(_res.msg);
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
+        delAttr:function(attribute_id,index){  //
+            var _this=this;
+            var url='/cms/productattribute/api_delete?attribute_id='+attribute_id
+            this.$http.get(url).then(function(res){
+                var _res=res.body;
+                // if(_res.code===0){
+                //
+                // }
+                _this.productDetail_edit.attr.splice(index,1);
+                _this.productDetail.attr.splice(index,1);
             }, function(err){
                 console.log(err);
             });
@@ -306,6 +368,26 @@ var product_detail_main=new Vue({
         commentChange(val){  //评论列表翻页时
             this.commentList_page=val;
             this.getCommentList();
+        },
+        del_btn:function(item,index,e){  //删除轮播图 按钮
+            var _this=this;
+            this.$confirm('确定删除该评论吗?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                _this.delComment(item,index);
+            }).catch(() => {
+
+            });
+        },
+        showModifyPrice:function(modifyPrice_show,item){  //显示隐藏 修改价格弹出框
+            this.modifyPrice_show=modifyPrice_show;
+            if(modifyPrice_show){
+                this.curClickAttr=item;
+                this.price_attr=item.name;
+                this.price=item.price;
+            }
         },
     }
 })
