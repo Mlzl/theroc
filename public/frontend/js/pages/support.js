@@ -45,7 +45,7 @@ var support=new Vue({
                 var _res=res.body;
                 if(_res.code==0){
                     _this.reset();
-                    _this.$message('提交退款成功');
+                    _this.$message('commit refund apply succeed');
                 }else{
                     _this.$message(_res.msg);
                 }
