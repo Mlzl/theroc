@@ -12,6 +12,7 @@ use Roc\Library\Response;
 
 class ServiceController extends ApiController{
     public function addRefundAction(){
+        $this->checkLogin();
         $order_detail = $this->request->getPost("order_detail");
         $product_detail = $this->request->getPost('product_detail');
         $images = $this->request->getPost('images');

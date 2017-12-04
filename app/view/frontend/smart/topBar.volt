@@ -15,17 +15,22 @@
             </p>
             {% if user_info is defined %}
             <p class="user_info">
-                {% if user_info['avatar'] != '' %}
-                <img src="{{user_info['avatar']}}" />
-                {% endif  %}
-                <span @click="switchPages(5)">
-                {% if user_info['user_name'] == '' %}
-                {{user_info['email']}}
+                {% if user_info == '' %}
+                    <i class="user_icon" @click="switchPages(4,$event)"></i>
                 {% else %}
-                {{user_info['user_name']}}
+                    {% if user_info['avatar'] != '' %}
+                    <img src="{{user_info['avatar']}}" />
+                    {% endif  %}
+                    <span @click="switchPages(5)">
+
+                    {% if user_info['user_name'] == '' %}
+                    {{user_info['email']}}
+                    {% else %}
+                    {{user_info['user_name']}}
+                    {% endif  %}
+                    </span>
+                    <i class="quit_icon" @click="logout"></i>
                 {% endif  %}
-                </span>
-                <i class="quit_icon" @click="logout"></i>
             </p>
             {% else %}
             <i class="user_icon" @click="switchPages(4,$event)"></i>

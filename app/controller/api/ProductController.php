@@ -119,6 +119,8 @@ class ProductController extends ApiController {
     }
 
     public function addCommentAction(){
+        $this->checkLogin();
+
         $content = $this->request->get('content');
         $product_id = $this->request->get('product_id');
         $stat_num = intval($this->request->get('stat_num'));

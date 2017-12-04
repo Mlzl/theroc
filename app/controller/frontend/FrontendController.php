@@ -14,8 +14,11 @@ class FrontendController extends Controller{
     public function onConstruct(){
         $loginLib = new LoginStatus($this->di);
         $user_info = $loginLib->isLogin();
-        $this->view->setViewsDir(APP_PATH.'view/frontend');
+        if($user_info == false){
+            $user_info ='';
+        }
         $this->view->setVar("user_info", $user_info);
+        $this->view->setViewsDir(APP_PATH.'view/frontend');
     }
 
     public function updateItem(&$model, $data=array()){
