@@ -7,7 +7,7 @@
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
-    <link rel="icon" href="png_favicon.png" type="image/png" >
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
     <link rel="stylesheet" href="https://unpkg.com/element-ui@next/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="/frontend/css/pages/home.css" >
@@ -20,7 +20,7 @@
         <div id="home_main" v-cloak>
             <!--轮播图-->
             <div class="carouselArea">
-                <el-carousel arrow="never">
+                <el-carousel arrow="never" height="100%">
                     <el-carousel-item v-for="item in bannerList" :key="item">
                         <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>
@@ -30,7 +30,7 @@
             <div class="product_nav">
                 <div class="oneProduct_nav" v-for="(item,index) in productNavList">
                     <p class="oneProduct_nav_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="toDetailPage(item.product_id)"/>
                     </p>
                     <div class="oneProduct_nav_desc">
                         <h4>~{item.name}</h4>
@@ -42,7 +42,7 @@
                 <h3>Hot-sale product</h3>
                 <div class="oneProduct" v-for="(item,index) in productHotList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="toDetailPage(item.product_id)"/>
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>
@@ -52,7 +52,7 @@
                 <h3>Recommended products</h3>
                 <div class="oneProduct" v-for="(item,index) in productRecommendList">
                     <p class="oneProduct_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
+                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="toDetailPage(item.product_id)"/>
                     </p>
                     <p class="oneProduct_desc">~{item.name}</p>
                 </div>

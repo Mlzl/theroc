@@ -43,11 +43,11 @@
                             ~{item.name}
                         </li>
                     </ul>
-                    <ul class="picShowUl">
-                        <li v-for="(item,index) in productDetail._picture_url" @click="">
-                            <img :src="item" />
-                        </li>
-                    </ul>
+                    <!--<ul class="picShowUl">-->
+                        <!--<li v-for="(item,index) in productDetail._picture_url" @click="">-->
+                            <!--<img :src="item" />-->
+                        <!--</li>-->
+                    <!--</ul>-->
                     <el-button @click="toTargetUrl(productDetail.target_url)">BUY NOW</el-button>
                 </div>
             </div>

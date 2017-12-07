@@ -32,7 +32,7 @@
                     <p>
                         <span>序号</span>
                         <span>链接</span>
-                        <span>预览(1366*342)</span>
+                        <span>预览(1920*860)</span>
                         <span>操作</span>
                     </p>
                 </div>

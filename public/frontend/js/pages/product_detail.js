@@ -93,7 +93,7 @@ var product_detail=new Vue({
                 if(_res.code==0){
                     _this.getCommentList();
                     _this.addComment_show=false;
-                    _this.$message('评价成功');
+                    _this.$message('comment success');
                 }else{
                     _this.$message(_res.msg);
                 }

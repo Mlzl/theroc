@@ -20,7 +20,7 @@ class PhpMailer{
             $mailer->Host = 'smtpout.secureserver.net';
             $mailer->Password = 'Gdd526691651';
             $mailer->FromName = "limskey";
-            $mailer->From = "zhanwei@join.limskey.com";
+            $mailer->From = "notice@limskey.com";
             $mailer->isHTML(true);
         }
         return $mailer;

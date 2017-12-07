@@ -54,5 +54,9 @@ var home=new Vue({
         locateHref:function(href){  //跳至链接
             window.open(href);
         },
+        toDetailPage:function(product_id){
+            // location.href='/product/detail?product_id='+product_id;
+            window.open('/product/detail?product_id='+product_id)
+        },
     }
 })

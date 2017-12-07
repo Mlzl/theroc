@@ -20,7 +20,7 @@
         <div id="product_main" v-cloak>
             <!--轮播图-->
             <div class="carouselArea">
-                <el-carousel arrow="never">
+                <el-carousel arrow="never" height="100%">
                     <el-carousel-item v-for="item in bannerList" :key="item">
                         <img :src="item.value.picture_url" @click="locateHref(item.value.target_url)"/>
                     </el-carousel-item>

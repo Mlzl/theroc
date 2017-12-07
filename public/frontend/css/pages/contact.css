@@ -498,6 +498,11 @@ table {
   height: 400px;
   margin: 10px auto;
   background: #f2f2f2;
+  overflow: hidden;
+}
+#contact_main .contantUs > p {
+  text-align: center;
+  margin-top: 10px;
 }
 #contact_main .contantUs .emailUs,
 #contact_main .contantUs .callUs {

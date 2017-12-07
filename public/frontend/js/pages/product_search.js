@@ -29,7 +29,7 @@ var product_search=new Vue({
                         }
                         _this.searchProductList=searchProductList;
                     }else{
-                        _this.$message('没有搜索到任何产品');
+                        _this.$message('Sorry, we couldn’t find anything.Please search again');
                     }
                 }else{
                     _this.$message(_res.msg);

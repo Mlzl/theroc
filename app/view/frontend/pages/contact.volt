@@ -18,16 +18,19 @@
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
         <div id="contact_main" v-cloak>
+            
             <h1>Contact Us</h1>
             <p>Whatever your question, we’re here to help.</p>
             <div class="contantUs">
+                <p>Customer Service Inquiries</p>
+                <p>Please get in touch about any issues you’re having, and we’ll try our best to respond with 24 hours.</p>
                 <div class="emailUs">
                     <h4>email us</h4>
-                    <p>245452530@qq.com</p>
+                    <p>support@limskey.com</p>
                 </div>
                 <div class="callUs">
                     <h4>call us</h4>
-                    <p>13560455672</p>
+                    <p>86-15622377975</p>
                 </div>
             </div>
         </div>
