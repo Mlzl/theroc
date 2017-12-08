@@ -21,17 +21,6 @@ class ServiceController extends BackendController{
             $size = 10;
         }
         $refunds = \Refund::refundList($page, $size);
-        foreach ($refunds as &$refund){
-            $refund_user = \User::findOneByField("user_id", $refund['user_id']);
-            $user_name = '';
-            $email = '';
-            if($refund_user){
-                $user_name = $refund_user->user_name;
-                $email = $refund_user->email;
-            }
-            $refund['user_name'] = $user_name;
-            $refund['email'] =  $email;
-        }
         $data = array(
             'list'=>$refunds,
             'total'=>\Refund::count()

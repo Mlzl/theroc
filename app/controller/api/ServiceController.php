@@ -7,24 +7,33 @@
 namespace Roc\ApiController;
 
 
+
 use Roc\Library\Language;
 use Roc\Library\Response;
 
 class ServiceController extends ApiController{
     public function addRefundAction(){
-        $this->checkLogin();
         $order_detail = $this->request->getPost("order_detail");
         $product_detail = $this->request->getPost('product_detail');
         $images = $this->request->getPost('images');
-        $user_id = $this->user->user_id;
-        if(!$order_detail){
-            Response::error(Language::LOST_PARAMS);
+        $username = $this->request->getPost('username');
+        $email = $this->request->getPost('email');
+        if(!$order_detail || !$product_detail || !$images || !$username || !$email){
+            Response::error(Language::PARAM_ERROR);
         }
+        if(mb_strlen($username)<50){
+            Response::error(Language::USER_NAME_TOO_LONG);
+        }
+        if(mb_strlen($email)<50){
+            Response::error(Language::EMAIL_TOO_LONG);
+        }
+
         $data = array(
             'order_detail'=>$order_detail,
             'product_detail'=>$product_detail,
             'images'=>$images,
-            'user_id'=>$user_id
+            'username'=>$username,
+            'email'=>$email
         );
         $refundModel = new \Refund();
         if($refundModel->addRefund($data)){

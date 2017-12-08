@@ -34,6 +34,9 @@ class Language{
     const FORGET_PWD_CAPTCHA_ERROR = "captcha out of date or error";
     const ADD_REFUND_FAILED = 'add refund failed';
     const USER_HAS_ACTIVE = 'user has active';
+    const USER_NAME_TOO_LONG = 'user name beyond 50 char';
+    const EMAIL_TOO_LONG = 'email beyond 50 char';
+
 
     public static function getMessage($message){
         $t = English::getMessage($message);
