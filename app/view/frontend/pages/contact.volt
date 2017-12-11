@@ -18,13 +18,17 @@
         <!--头部导航栏-->
         {% include "smart/topBar.volt" %}
         <div id="contact_main" v-cloak>
-            
+            <div class="contactUsImg">
+                <img src="/images/contactUsImg.jpg" />
+            </div>
             <h1>Contact Us</h1>
             <p>Whatever your question, we’re here to help.</p>
             <div class="contantUs">
-                <p>Customer Service Inquiries</p>
-                <p>Please get in touch about any issues you’re having, and we’ll try our best to respond with 24 hours.</p>
                 <div class="emailUs">
+                    <div class="info">
+                        <h4>Customer Service Inquiries</h4>
+                        <p>Please get in touch about any issues you’re having, and we’ll try our best to respond with 24 hours.</p>
+                    </div>
                     <h4>email us</h4>
                     <p>support@limskey.com</p>
                 </div>

@@ -24,14 +24,6 @@
         <div id="support_main" v-cloak>
             <div class="banner-container">
                 <img class="img" src="/images/supportBg.jpg">
-                <!--<div class="search">-->
-                    <!--<div class="title">DOWNLOAD</div>-->
-                    <!--<div class="search-tip">Search By Product Name</div>-->
-                    <!--<form action="" method="get" class="productForm clearfix">-->
-                        <!--<input type="text" class="searchText">-->
-                        <!--<button class="submit"></button>-->
-                    <!--</form>-->
-                <!--</div>-->
             </div>
             <ul class="service-nav">
                 <li :class="{active:activeTab==='refunds-tab'}" @click="clickTab('refunds-tab')">
@@ -47,8 +39,16 @@
                 <!--退款-->
                 <div class="refunds" v-show="activeTab==='refunds-tab'">
                     <div class="refunds-form">
+                        <div class="email">
+                            <h3 class="item-title">Email address</h3>
+                            <input type="text" v-model="emailValue">
+                        </div>
+                        <div class="name">
+                            <h3 class="item-title">Contact Name</h3>
+                            <input type="text" v-model="nameValue">
+                        </div>
                         <div class="order">
-                            <h3 class="item-title">Order Details</h3>
+                            <h3 class="item-title">Order ID</h3>
                             <input type="text" v-model="orderValue">
                         </div>
                         <div class="issue">

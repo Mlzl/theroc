@@ -15,7 +15,8 @@ class Refund extends Model{
             'order_detail'=>$refund_data['order_detail'],
             'create_time'=>time(),
             'images'=>$refund_data['images'],
-            'user_id'=>$refund_data['user_id']
+            'username'=>$refund_data['username'],
+            'email'=>$refund_data['email']
         );
         return $this->save($data);
     }

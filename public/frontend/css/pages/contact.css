@@ -484,6 +484,18 @@ table {
 .el-loading-spinner .el-loading-text {
   color: #25ba80;
 }
+#contact_main .contactUsImg {
+  padding-top: 31.25%;
+  margin-bottom: 20px;
+  position: relative;
+}
+#contact_main .contactUsImg > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #contact_main > h1 {
   font-size: 40px;
   text-align: center;
@@ -506,19 +518,33 @@ table {
 }
 #contact_main .contantUs .emailUs,
 #contact_main .contantUs .callUs {
+  box-sizing: border-box;
   display: inline-block;
   width: 49%;
-  font-size: 24px;
-  text-align: center;
-  margin-top: 150px;
+  font-size: 20px;
+  padding-left: 120px;
+  margin-top: 100px;
+}
+#contact_main .contantUs .emailUs .info > h4,
+#contact_main .contantUs .callUs .info > h4 {
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+}
+#contact_main .contantUs .emailUs .info > p,
+#contact_main .contantUs .callUs .info > p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0 20px 0;
 }
 #contact_main .contantUs .emailUs > h4,
 #contact_main .contantUs .callUs > h4 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 #contact_main .contantUs .emailUs > p,
 #contact_main .contantUs .callUs > p {
-  font-weight: 500;
+  font-size: 16px;
 }
 @media screen and (max-width: 414px) {
   #contact_main {

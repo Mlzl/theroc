@@ -18,13 +18,13 @@ class ServiceController extends ApiController{
         $images = $this->request->getPost('images');
         $username = $this->request->getPost('username');
         $email = $this->request->getPost('email');
-        if(!$order_detail || !$product_detail || !$images || !$username || !$email){
+        if(!$order_detail || !$product_detail || !$username || !$email){
             Response::error(Language::PARAM_ERROR);
         }
-        if(mb_strlen($username)<50){
+        if(mb_strlen($username)>50){
             Response::error(Language::USER_NAME_TOO_LONG);
         }
-        if(mb_strlen($email)<50){
+        if(mb_strlen($email)>50){
             Response::error(Language::EMAIL_TOO_LONG);
         }
 

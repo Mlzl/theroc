@@ -4,7 +4,9 @@ var support=new Vue({
     delimiters:['~{','}'],
     data:{
         activeTab:'refunds-tab',
-        orderValue:'',  //订单详情内容
+        emailValue:'',
+        nameValue:'',
+        orderValue:'',  //
         issueValue:'',  //产品描述内容
         imageList:[],  //图片列表
     },
@@ -35,6 +37,8 @@ var support=new Vue({
         commitReturn:function(){  //提交退款
             var _this=this;
             var _data={
+                email:this.emailValue,
+                username:this.nameValue,
                 order_detail:this.orderValue,
                 product_detail:this.issueValue,
                 images:this.imageList.join(',')
@@ -44,7 +48,6 @@ var support=new Vue({
             this.$http.post(url,_data,{emulateJSON:true}).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    _this.reset();
                     _this.$message('commit refund apply succeed');
                 }else{
                     _this.$message(_res.msg);
@@ -147,19 +150,30 @@ var support=new Vue({
             imageList.splice(index,1);
         },
         reset:function(){  //重置
+            this.emailValue='';
+            this.nameValue='';
             this.orderValue='';
             this.issueValue='';
             this.imageList=[];
         },
         commitReturnBtn:function(e){  ////提交退款 按钮
+            var emailValue=this.emailValue;
+            var nameValue=this.nameValue;
             var orderValue=this.orderValue;
             var issueValue=this.issueValue;
-            var imageList=this.imageList;
+            var EMAILREG = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
 
-            if(orderValue==''||orderValue.trim()==''){
-                this.$message('order details can not be empty');
+
+            if(emailValue==''||emailValue.trim()==''){
+                this.$message('email address can not be empty');
+            }else if(nameValue==''||nameValue.trim()==''){
+                this.$message('contact name can not be empty');
+            }else if(orderValue==''||orderValue.trim()==''){
+                this.$message('order id can not be empty');
             }else if(issueValue==''||issueValue.trim()==''){
                 this.$message('issue details can not be empty');
+            }else if(!EMAILREG.test(emailValue.trim())){
+                this.$message('please enter a valid email address (Example: name@domain.com)');
             }else{
                 this.commitReturn();
             }

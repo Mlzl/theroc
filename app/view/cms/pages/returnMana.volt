@@ -30,7 +30,7 @@
                     <p v-for="(item,index) in curReturnList">
                         <span>~{index+1}</span>
                         <span>~{item.email}</span>
-                        <span>~{item.user_name}</span>
+                        <span>~{item.username}</span>
                         <span>~{item.order_detail}</span>
                         <span>~{item.product_detail}</span>
                         <span>
