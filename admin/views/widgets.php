@@ -34,7 +34,7 @@
                     <div id="calendar" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".calendar" class="widget-title" aria-expanded="false">日历</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".calendar" class="widget-title" aria-expanded="false">calendar</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -51,7 +51,7 @@
                     <div id="tag" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".tag" class="widget-title" aria-expanded="false">标签</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".tag" class="widget-title" aria-expanded="false">tag</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -68,7 +68,7 @@
                     <div id="sort" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".sort" class="widget-title" aria-expanded="false">分类</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".sort" class="widget-title" aria-expanded="false">classification</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -85,7 +85,7 @@
                     <div id="archive" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".archive" class="widget-title" aria-expanded="false">存档</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".archive" class="widget-title" aria-expanded="false">file</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -102,7 +102,7 @@
                     <div id="newcomm" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".newcomm" class="widget-title" aria-expanded="false">最新评论</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".newcomm" class="widget-title" aria-expanded="false">lastest comment</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -124,7 +124,7 @@
                     <div id="newlog" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".newlog" class="widget-title" aria-expanded="false">最新文章</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".newlog" class="widget-title" aria-expanded="false">lastest article</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -144,7 +144,7 @@
                     <div id="hotlog" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".hotlog" class="widget-title" aria-expanded="false">热门文章</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".hotlog" class="widget-title" aria-expanded="false">hot article</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -164,7 +164,7 @@
                     <div id="link" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".link" class="widget-title" aria-expanded="false">链接</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".link" class="widget-title" aria-expanded="false">link</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>
@@ -181,7 +181,7 @@
                     <div id="search" class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".search" class="widget-title" aria-expanded="false">搜索</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href=".search" class="widget-title" aria-expanded="false">search</a>
                                 <li class="widget-act-add"></li>
                                 <li class="widget-act-del"></li>
                             </h4>

@@ -21,15 +21,17 @@ return array(
         'api'  =>"Roc\\ApiController",
     ),
     'mysql' =>array(
-        'host'=>getenv('THEROC_MYSQL_HOST'),
-        'password'=>getenv('THEROC_MYSQL_PASSWORD'),
-        'username'=>getenv('THEROC_MYSQL_USERNAME'),
+        'host'=>'47.93.24.122',
+        'password'=>'123456',
+        'username'=>'root',
         'port'=>getenv('THEROC_MYSQL_PORT'),
-        'dbname'=>getenv('THEROC_MYSQL_DATABASE'),
+        'dbname'=>'theroc',
         'charset' => 'utf8',
     ),
     'redis' =>array(
-        'host'=>getenv('THEROC_REDIS_HOST'),
-        'port'=>getenv('THEROC_REDIS_PORT')
+//        'host'=>getenv('THEROC_REDIS_HOST'),
+//        'port'=>getenv('THEROC_REDIS_PORT')
+         'host'=>'47.93.24.122',
+        'port'=>'6379'
     ),
 );
