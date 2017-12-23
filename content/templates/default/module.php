@@ -307,7 +307,7 @@ function blog_comments($comments){
     extract($comments);
     if($commentStacks): ?>
     <a name="comments"></a>
-    <p class="comment-header"><b>评论：</b></p>
+    <p class="comment-header"><b>comment：</b></p>
     <?php endif; ?>
     <?php
     $isGravatar = Option::get('isgravatar');
@@ -321,7 +321,7 @@ function blog_comments($comments){
         <div class="comment-info">
             <b><?php echo $comment['poster']; ?> </b><br /><span class="comment-time"><?php echo $comment['date']; ?></span>
             <div class="comment-content"><?php echo $comment['content']; ?></div>
-            <div class="comment-reply"><a href="#comment-<?php echo $comment['cid']; ?>" onclick="commentReply(<?php echo $comment['cid']; ?>,this)">回复</a></div>
+            <div class="comment-reply"><a href="#comment-<?php echo $comment['cid']; ?>" onclick="commentReply(<?php echo $comment['cid']; ?>,this)">replay</a></div>
         </div>
         <?php blog_comments_children($comments, $comment['children']); ?>
     </div>
@@ -357,21 +357,21 @@ function blog_comments_post($logid,$ckname,$ckmail,$ckurl,$verifyCode,$allow_rem
     <div id="comment-place">
     <div class="comment-post" id="comment-post">
         <div class="cancel-reply" id="cancel-reply" style="display:none"><a href="javascript:void(0);" onclick="cancelReply()">取消回复</a></div>
-        <p class="comment-header"><b>发表评论：</b><a name="respond"></a></p>
+        <p class="comment-header"><b>comment：</b><a name="respond"></a></p>
         <form method="post" name="commentform" action="<?php echo BASE_URL; ?>?action=addcom" id="commentform">
             <input type="hidden" name="gid" value="<?php echo $logid; ?>" />
             <?php if(ROLE == ROLE_VISITOR): ?>
             <p>
                 <input type="text" name="comname" maxlength="49" value="<?php echo $ckname; ?>" size="22" tabindex="1">
-                <label for="author"><small>昵称</small></label>
+                <label for="author"><small>name</small></label>
             </p>
             <p>
                 <input type="text" name="commail"  maxlength="128"  value="<?php echo $ckmail; ?>" size="22" tabindex="2">
-                <label for="email"><small>邮件地址 (选填)</small></label>
+                <label for="email"><small>email address (optional)</small></label>
             </p>
             <p>
                 <input type="text" name="comurl" maxlength="128"  value="<?php echo $ckurl; ?>" size="22" tabindex="3">
-                <label for="url"><small>个人主页 (选填)</small></label>
+                <label for="url"><small>personal page (optional)</small></label>
             </p>
             <?php else: ?>
             <p><textarea name="comment" id="comment" rows="10" tabindex="4"></textarea></p>

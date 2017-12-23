@@ -46,7 +46,7 @@ define('UID', $userData['user_id']);
 //站点固定地址
 
 define('BLOG_URL', Option::get('blogurl'));
-define('BASE_URL', trim(BLOG_URL, '/').'/blog.php');
+define('BASE_URL', trim(BLOG_URL, '/').'/community.php');
 //模板库地址
 define('TPLS_URL', BLOG_URL.'content/templates/');
 //模板库路径

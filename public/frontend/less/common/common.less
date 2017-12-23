@@ -3,16 +3,17 @@
 }
 
 #topBar {
-  min-width: 1366px;
+  min-width: 1050px;
   height: 56px;
   position: relative;
   .topBar_pc{
     .logo {
       width: 48px;
       height: 40px;
+      margin-left:20%;
       position: absolute;
       top: 8px;
-      left: 310px;
+      left: 0;
     }
     .topBar_menu {
       width: 560px;
@@ -192,22 +193,26 @@
 
 #footer {
   box-sizing: border-box;
-  min-width: 1366px;
+  min-width: 1050px;
   height: 380px;
-  padding: 85px 0 0 130px;
+  padding: 85px 0 0 0;
   background-color: #585858;
+  overflow:hidden;
   .subscribe, .about, .support, .contact {
     display: inline-block;
     color: #fff;
     font-size: 12px;
     vertical-align: top;
+    float:left;
     > h4 {
       font-size: 16px;
       margin: 0 0 20px 0;
     }
   }
   .subscribe {
-    width: 32%;
+    box-sizing:border-box;
+    width: 34%;
+    padding-left:5%;
     .email_submit {
       > input {
         width: 277px;
@@ -293,7 +298,8 @@
     color:#fff;
     font-size:16px;
     text-align:center;
-    margin-top:20px;
+    clear:both;
+    padding-top:20px;
   }
 }
 

@@ -152,17 +152,17 @@ class Option {
      */
     static function getWidgetTitle() {
         $widget_title = array(
-            'blogger' => '个人资料',
-            'calendar' => '日历',
-            'tag' => '标签',
-            'sort' => '分类',
-            'archive' => '存档',
-            'newcomm' => '最新评论',
-            'newlog' => '最新文章',
-            'hotlog' => '热门文章',
-            'link' => '链接',
-            'search' => '搜索',
-            'custom_text' => '自定义组件'
+            'blogger' => 'personal info',
+            'calendar' => 'calendar',
+            'tag' => 'tag',
+            'sort' => 'classification',
+            'archive' => 'file',
+            'newcomm' => 'latest comment',
+            'newlog' => 'latest article',
+            'hotlog' => 'hot article',
+            'link' => 'link',
+            'search' => 'search',
+            'custom_text' => 'custom component'
         );
         return $widget_title;
     }

@@ -29,12 +29,7 @@
             <!--产品导航模块-->
             <div class="product_nav">
                 <div class="oneProduct_nav" v-for="(item,index) in productNavList">
-                    <p class="oneProduct_nav_img">
-                        <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="toDetailPage(item.product_id)"/>
-                    </p>
-                    <div class="oneProduct_nav_desc">
-                        <h4>~{item.name}</h4>
-                    </div>
+                    <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" @click="locateHref(item.target_url)"/>
                 </div>
             </div>
             <!--热销产品模块-->

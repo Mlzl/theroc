@@ -95,16 +95,17 @@ table {
   display: none;
 }
 #topBar {
-  min-width: 1366px;
+  min-width: 1050px;
   height: 56px;
   position: relative;
 }
 #topBar .topBar_pc .logo {
   width: 48px;
   height: 40px;
+  margin-left: 20%;
   position: absolute;
   top: 8px;
-  left: 310px;
+  left: 0;
 }
 #topBar .topBar_pc .topBar_menu {
   width: 560px;
@@ -275,10 +276,11 @@ table {
 }
 #footer {
   box-sizing: border-box;
-  min-width: 1366px;
+  min-width: 1050px;
   height: 380px;
-  padding: 85px 0 0 130px;
+  padding: 85px 0 0 0;
   background-color: #585858;
+  overflow: hidden;
 }
 #footer .subscribe,
 #footer .about,
@@ -288,6 +290,7 @@ table {
   color: #fff;
   font-size: 12px;
   vertical-align: top;
+  float: left;
 }
 #footer .subscribe > h4,
 #footer .about > h4,
@@ -297,7 +300,9 @@ table {
   margin: 0 0 20px 0;
 }
 #footer .subscribe {
-  width: 32%;
+  box-sizing: border-box;
+  width: 34%;
+  padding-left: 5%;
 }
 #footer .subscribe .email_submit > input {
   width: 277px;
@@ -383,7 +388,8 @@ table {
   color: #fff;
   font-size: 16px;
   text-align: center;
-  margin-top: 20px;
+  clear: both;
+  padding-top: 20px;
 }
 @media screen and (max-width: 414px) {
   #topBar {
@@ -485,7 +491,7 @@ table {
   color: #25ba80;
 }
 #register_main {
-  min-width: 1366px;
+  min-width: 1050px;
   height: 700px;
   background: url("/images/login_bg.png") no-repeat;
   background-size: cover;
