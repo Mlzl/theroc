@@ -21,7 +21,7 @@ var topBar = new Vue({
             sessionStorage.active=type;
             var page = type == 0 ? '' :
                             type == 1 ? 'product' :
-                                type == 2 ? 'community.php' :
+                                type == 2 ? 'community' :
                                     type == 3 ? 'contact' :
                                         type == 4 ? 'login' :
                                             type == 5 ? 'user':
