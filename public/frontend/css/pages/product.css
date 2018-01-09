@@ -586,6 +586,9 @@ table {
   background-color: #E8E8E8;
 }
 @media screen and (max-width: 414px) {
+  #product_main {
+    min-width: auto;
+  }
   #product_main .product_list {
     text-align: left;
   }

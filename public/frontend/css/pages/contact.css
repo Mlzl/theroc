@@ -557,6 +557,31 @@ table {
 }
 @media screen and (max-width: 414px) {
   #contact_main {
+    min-width: auto;
     margin: 10px 0 0 0;
+  }
+  #contact_main .contantUs {
+    width: 80%;
+    height: 400px;
+    margin: 10px auto;
+    background: #f2f2f2;
+    overflow: hidden;
+  }
+  #contact_main .contantUs > p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  #contact_main .contantUs .emailUs,
+  #contact_main .contantUs .callUs {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 40px 0 0 0;
+  }
+  #contact_main .contantUs .emailUs .info,
+  #contact_main .contantUs .callUs .info {
+    display: none;
   }
 }

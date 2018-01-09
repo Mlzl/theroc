@@ -512,15 +512,16 @@ table {
 }
 #home_main .product_nav {
   width: 100%;
+  text-align: center;
   margin: 0 auto 40px auto;
   overflow: hidden;
 }
 #home_main .product_nav .oneProduct_nav {
-  width: 25%;
+  display: inline-block;
+  width: 22%;
   text-align: center;
-  padding-top: 25%;
+  padding-top: 22%;
   margin: 0 10px;
-  float: left;
   overflow: hidden;
   position: relative;
 }
@@ -558,9 +559,13 @@ table {
 #home_main .product_sell .oneProduct,
 #home_main .product_recom .oneProduct {
   display: inline-block;
-  width: 271px;
-  height: 331px;
+  width: 22%;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 28%;
   margin: 0 12px;
+  overflow: hidden;
+  position: relative;
 }
 #home_main .product_sell .oneProduct:hover,
 #home_main .product_recom .oneProduct:hover {
@@ -574,6 +579,9 @@ table {
 #home_main .product_recom .oneProduct .oneProduct_img {
   width: 100%;
   height: 82%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #home_main .product_sell .oneProduct .oneProduct_img > img,
 #home_main .product_recom .oneProduct .oneProduct_img > img {
@@ -588,36 +596,24 @@ table {
   text-align: center;
   padding: 10px 0 0 0;
   background-color: #E8E8E8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 #home_main .product_recommend {
   margin: 0 0 60px 0;
 }
 @media screen and (max-width: 414px) {
-  #home_main .product_nav {
-    width: 100%;
+  #home_main {
+    min-width: auto;
   }
   #home_main .product_nav .oneProduct_nav {
-    width: 100%;
-    height: 175px;
-    margin-bottom: 10px;
-  }
-  #home_main .product_nav .oneProduct_nav .oneProduct_nav_img,
-  #home_main .product_nav .oneProduct_nav .oneProduct_nav_desc {
-    width: 175px;
-    height: 175px;
-  }
-  #home_main .product_nav .oneProduct_nav .oneProduct_nav_img {
-    box-shadow: none;
-  }
-  #home_main .product_sell,
-  #home_main .product_recom {
-    text-align: left;
+    width: 40%;
+    padding-top: 40%;
   }
   #home_main .product_sell .oneProduct,
   #home_main .product_recom .oneProduct {
-    display: inline-block;
-    width: 185px;
-    height: 230px;
-    margin: 0 2px 5px 0;
+    width: 40%;
+    padding-top: 48%;
   }
 }

@@ -67,6 +67,29 @@
 //响应式布局
 @media screen and (max-width: 414px) {
   #contact_main{
+    min-width:auto;
     margin:10px 0 0 0;
+    .contantUs{
+      width:80%;
+      height:400px;
+      margin:10px auto;
+      background:#f2f2f2;
+      overflow:hidden;
+      >p{
+        text-align:center;
+        margin-top:10px;
+      }
+      .emailUs,.callUs{
+        box-sizing:border-box;
+        display:block;
+        width:100%;
+        text-align:center;
+        padding:0;
+        margin:40px 0 0 0;
+        .info{
+          display:none;
+        }
+      }
+    }
   }
 }

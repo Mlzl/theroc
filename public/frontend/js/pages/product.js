@@ -61,18 +61,18 @@ var product=new Vue({
             this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    var curProductList=_res.data.list;
+                    var _curProductList=_res.data.list;
                     var curProductList_total=_res.data.total;
+                    var curProductList=[];
+
+                    for(var i=0,len=_curProductList.length;i<len;i++){
+                        if(_curProductList[i].name.indexOf('[none]')==-1){
+                            curProductList.push(_curProductList[i])
+                        }
+                    }
+
                     for(var i=0,len=curProductList.length;i<len;i++){
-                        // var attr=curProductList[i].attr;
-                        // pubMethod.bubbleSort(attr,'price');
-                        // if(attr.length==0){
-                        //     curProductList[i].price='-';
-                        // }else if(attr.length==1){
-                        //     curProductList[i].price='$'+attr[0].price;
-                        // }else{
-                        //     curProductList[i].price='$'+attr[0].price+'~$'+attr[attr.length-1].price;
-                        // }
+
                         var _picture_url=curProductList[i].picture_url.split(',');
                         curProductList[i]._picture_url=_picture_url;
                     }
