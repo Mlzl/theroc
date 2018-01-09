@@ -29,12 +29,12 @@
                 <div class="return_tbody">
                     <p v-for="(item,index) in curReturnList">
                         <span>~{index+1}</span>
-                        <span>~{item.email}</span>
-                        <span>~{item.username}</span>
-                        <span>~{item.order_detail}</span>
-                        <span>~{item.product_detail}</span>
+                        <span :title="item.email">~{item.email}</span>
+                        <span :title="item.username">~{item.username}</span>
+                        <span :title="item.order_detail">~{item.order_detail}</span>
+                        <span :title="item.product_detail">~{item.product_detail}</span>
                         <span>
-                            <img v-for="(item1,index1) in item._images" :src="item1"/>
+                            <img v-for="(item1,index1) in item._images" :src="item1" @click="preview(item1)"/>
                         </span>
                     </p>
                 </div>
@@ -46,6 +46,13 @@
                                @current-change="curProductChange">
                 </el-pagination>
             </div>
+            <!--重发邮件对话框-->
+            <el-dialog title="" v-model="preview_show" custom-class="preview_dialog"
+                       :show-close=true :close-on-click-modal=false>
+                <div class="preview_dialog_main">
+                    <img :src="previewImg">
+                </div>
+            </el-dialog>
         </div>
     </div>
 

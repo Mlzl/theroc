@@ -1,0 +1,31 @@
+@import "../common/reset";
+@import "../common/common";
+
+#company_main{
+  min-width:1050px;
+  .contactUsImg{
+    padding-top:percentage(5/16);
+    margin-bottom:20px;
+    position:relative;
+    >img{
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+  }
+  .info{
+    width:80%;
+    font-size:16px;
+    margin:25px auto;
+  }
+}
+
+//响应式布局
+@media screen and (max-width: 414px) {
+  #contact_main{
+    min-width:auto;
+    margin:10px 0 0 0;
+  }
+}

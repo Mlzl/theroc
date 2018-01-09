@@ -20,7 +20,7 @@
         <div id="product_search_main" v-cloak>
             <!--产品列表-->
             <div class="product_list">
-                <div class="oneProduct" v-for="(item,index) in searchProductList">
+                <div class="oneProduct" v-for="(item,index) in searchProductList" @click="toDetailPage(item.product_id)">
                     <p class="oneProduct_img">
                         <img :src="item._picture_url[0]?item._picture_url[0]:'/images/default_img.png'" />
                     </p>

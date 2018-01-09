@@ -14,6 +14,7 @@
         <h4>About</h4>
         <ul>
             <li><span @click="switchPages(0,$event)">Contact us</span></li>
+            <li><span @click="switchPages(3,$event)">Company</span></li>
         </ul>
     </div>
     <div class="support">

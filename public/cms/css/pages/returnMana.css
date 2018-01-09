@@ -483,3 +483,14 @@ table {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+#returnMana_main .preview_dialog {
+  width: 325px;
+  height: 325px;
+}
+#returnMana_main .preview_dialog .preview_dialog_main {
+  overflow: hidden;
+}
+#returnMana_main .preview_dialog .preview_dialog_main img {
+  width: 100%;
+  height: 100%;
+}

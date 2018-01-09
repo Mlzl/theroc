@@ -38,5 +38,9 @@ var product_search=new Vue({
                 console.log(err);
             });
         },
+        toDetailPage:function(product_id){
+            // location.href='/product/detail?product_id='+product_id;
+            window.open('/product/detail?product_id='+product_id)
+        },
     }
 })

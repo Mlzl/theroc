@@ -7,6 +7,8 @@ var returnMana_main=new Vue({
         curReturnList_size:11,  //当前退款列表每页显示条数
         curReturnList_page:1,  //当前退款列表当前页
         curReturnList_total:0,  //当前退款列表总条数
+        preview_show:false,
+        previewImg:''
     },
     created:function(){
         this.getReturnList()
@@ -37,9 +39,13 @@ var returnMana_main=new Vue({
             });
         },
         //普通方法
-        curProductChange(val){  //产品列表翻页时
+        curProductChange:function(val){  //产品列表翻页时
             this.curReturnList_page=val;
             this.getReturnList();
         },
+        preview:function(src){
+            this.preview_show=true;
+            this.previewImg=src;
+        }
     }
 })

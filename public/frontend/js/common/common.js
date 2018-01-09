@@ -85,7 +85,8 @@ var footer = new Vue({
         switchPages: function (type) {  //切换页面，0联系我们、1 2支持中心
             var page = type == 0 ? 'contact' :
                 type == 1 ? 'support?tab=0' :
-                    type == 2 ? 'support?tab=1' : '';
+                    type == 2 ? 'support?tab=1' :
+                        type==3?'company':'';
             window.location.href = '/' + page;
         },
         toOtherLink: function (link, e) {  //跳转至其他外链

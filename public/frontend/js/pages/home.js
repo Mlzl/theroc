@@ -32,7 +32,18 @@ var home=new Vue({
             this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    var data=_res.data;
+                    var _data=_res.data;
+                    var data=[];
+                    if(label!='product_nav'){
+                        for(var i=0,len=_data.length;i<len;i++){
+                            if(_data[i].name.indexOf('[none]')==-1){
+                                data.push(_data[i])
+                            }
+                        }
+                    }else{
+                        data=_data;
+                    }
+
                     for(var i=0,len=data.length;i<len;i++){
                         data[i]._picture_url=data[i].picture_url.split(',');
                     }

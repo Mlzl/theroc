@@ -344,7 +344,7 @@ function blog_comments_children($comments, $children){
         <div class="comment-info">
             <b><?php echo $comment['poster']; ?> </b><br /><span class="comment-time"><?php echo $comment['date']; ?></span>
             <div class="comment-content"><?php echo $comment['content']; ?></div>
-            <?php if($comment['level'] < 4): ?><div class="comment-reply"><a href="#comment-<?php echo $comment['cid']; ?>" onclick="commentReply(<?php echo $comment['cid']; ?>,this)">回复</a></div><?php endif; ?>
+            <?php if($comment['level'] < 4): ?><div class="comment-reply"><a href="#comment-<?php echo $comment['cid']; ?>" onclick="commentReply(<?php echo $comment['cid']; ?>,this)">reply</a></div><?php endif; ?>
         </div>
         <?php blog_comments_children($comments, $comment['children']);?>
     </div>
@@ -375,7 +375,7 @@ function blog_comments_post($logid,$ckname,$ckmail,$ckurl,$verifyCode,$allow_rem
             </p>
             <?php else: ?>
             <p><textarea name="comment" id="comment" rows="10" tabindex="4"></textarea></p>
-            <p><?php echo $verifyCode; ?> <input type="submit" id="comment_submit" value="发表评论" tabindex="6" /></p>
+            <p><?php echo $verifyCode; ?> <input type="submit" id="comment_submit" value="comment" tabindex="6" /></p>
             <input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
             <?php endif;?>
         </form>
