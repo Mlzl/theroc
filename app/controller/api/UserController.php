@@ -102,7 +102,11 @@ class UserController extends ApiController{
             if(($res = PhpMailer::sendRegisterMail($email, $email, $token)) != 1){
                 Response::error($res);
             }
-            Response::success($user->toArray());
+            $userInfo = $user->toArray();
+            unset($userInfo['user_id']);
+            unset($userInfo['password']);
+            unset($userInfo['salt']);
+            Response::success($userInfo);
         }
         if($user){
             Response::error(Language::EMAIL_HAD_BE_USED);
@@ -122,7 +126,7 @@ class UserController extends ApiController{
             unset($userInfo['user_id']);
             unset($userInfo['password']);
             unset($userInfo['salt']);
-            Response::success();
+            Response::success($userInfo);
         }
         Response::error(Language::REGISTER_ERROR);
     }
