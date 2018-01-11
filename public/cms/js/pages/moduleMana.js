@@ -101,6 +101,34 @@ var moduleMana_main=new Vue({
                 console.log(err);
             });
         },
+        del:function(item,index){  //
+            var _this=this;
+            var tab=this.tab;
+            var special_label=tab==0?'product_nav':
+                                tab==1?'product_hot':
+                                    tab==2?'product_recommend':'';
+            var url='/cms/setting/api_delete_special_product';
+            var data={
+                product_id:item.product_id,
+                special_label:special_label
+            }
+
+            this.$http.post(url,data, {emulateJSON:true}).then(function(res){
+                var _res = res.body;
+                if(_res.code==0){
+                    var tab=_this.tab;
+                    if(tab==0){
+                        _this.productNavList.splice(index,1);
+                    }else if(tab==1){
+                        _this.productHotList.splice(index,1);
+                    }else if(tab==2){
+                        _this.productRecommendList.splice(index,1);
+                    }
+                }
+            }, function(err){
+                console.log(err);
+            });
+        },
         //普通方法
         switchTab:function(tab){  //切换选项卡
             this.tab=tab;
@@ -112,6 +140,18 @@ var moduleMana_main=new Vue({
             this.selectedProductId=productId;
             this.productName=productName;
             this.showSearchBox=false;
+        },
+        del_btn:function(item,index,e){  //
+            var _this=this;
+            this.$confirm('确定删除吗?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                _this.del(item,index);
+            }).catch(() => {
+
+            });
         },
     }
 })

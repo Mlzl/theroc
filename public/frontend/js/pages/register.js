@@ -35,16 +35,20 @@ var register=new Vue({
         },
         resendEmail:function(){
             var _this=this;
-            var url='/api/user/delete?email='+this.email;
+            var data={
+                email:this.email,
+            };
+            var url='/api/user/resendActiveEmail?email='+this.email;
 
-            this.$http.get(url).then(function (res) {
+            this.$http.post(url,data, {emulateJSON:true}).then(function(res){
                 var _res = res.body;
                 if(_res.code==0){
                     _this.$message('We have resend the email for you,please check out it');
                 }
-            }, function (err) {
+            }, function(err){
                 console.log(err);
             });
+
         },
         //普通方法
         showReSendEmail:function(reSendEmail_show,e){

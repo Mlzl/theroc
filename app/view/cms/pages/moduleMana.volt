@@ -45,7 +45,7 @@
                             <img :src="item._picture_url[0]" />
                         </span>
                         <span>
-                            <el-button class="delete_btn" @click="">删除</el-button>
+                            <el-button class="delete_btn" @click="del_btn(item,index)">删除</el-button>
                         </span>
                     </p>
                 </div>
