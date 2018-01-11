@@ -118,7 +118,11 @@ class UserController extends ApiController{
             if(($res = PhpMailer::sendRegisterMail($email, $email, $token)) !==true){
                 Response::error($res);
             }
-            Response::success($userModel->toArray());
+            $userInfo = $userModel->toArray();
+            unset($userInfo['user_id']);
+            unset($userInfo['password']);
+            unset($userInfo['salt']);
+            Response::success();
         }
         Response::error(Language::REGISTER_ERROR);
     }
