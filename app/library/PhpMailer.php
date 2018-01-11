@@ -29,11 +29,12 @@ class PhpMailer{
         $mailer = self::getMailerInstance();
         $mailer->addAddress($mail, $name);     // Add a recipient
         $mailer->Subject = 'join limskey';
+        $now = date('Y-m-d H:i:s', time());
         $mailer->Body    =<<<EOT
 dear user $name:<br />
     thank you for you register limskey.you can enjoy all service,after you click below link to active your account.<br />
     <a href='http://www.limskey.com/login/activateAccount?email=$mail&token=$token'>http://www.limskey.com/login/activateAccount?email=$mail&token=$token</a><br />
-    ps: the link will be invalid after 24 hour
+    ps: the link will be invalid after 24 hour. [$now]
 EOT;
         if(!$mailer->send()){
             return $mailer->ErrorInfo;
