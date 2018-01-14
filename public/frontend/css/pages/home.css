@@ -28,8 +28,8 @@ td {
   padding: 0;
 }
 body {
-  font-family: STHeitiSC!important;
-  font-size: 14px!important;
+  font-family: 微软雅黑!important;
+  font-size: 16px!important;
   font-weight: 300!important;
   color: #14181b!important;
   background-color: #fafafa!important;
@@ -210,7 +210,12 @@ table {
   left: 15px;
   z-index: 999;
 }
-#topBar .topBar_wap .nav .nav_img {
+#topBar .topBar_wap .nav .nav_img1 {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+#topBar .topBar_wap .nav .nav_img2 {
   width: 40px;
   height: 40px;
 }
@@ -288,7 +293,7 @@ table {
 #footer .contact {
   display: inline-block;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   vertical-align: top;
   float: left;
 }
@@ -296,7 +301,7 @@ table {
 #footer .about > h4,
 #footer .support > h4,
 #footer .contact > h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 20px 0;
 }
 #footer .subscribe {
@@ -316,7 +321,7 @@ table {
   width: 78px;
   height: 30px;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   padding: 0;
   border: solid 1px #989898;
@@ -381,12 +386,12 @@ table {
 }
 #footer .contact .call > h4,
 #footer .contact .email > h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 20px 0;
 }
 #footer .statement {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   clear: both;
   padding-top: 20px;
@@ -592,7 +597,7 @@ table {
 #home_main .product_recom .oneProduct .oneProduct_desc {
   box-sizing: border-box;
   width: 100%;
-  height: 18%;
+  min-height: 18%;
   text-align: center;
   padding: 10px 0 0 0;
   background-color: #fff;

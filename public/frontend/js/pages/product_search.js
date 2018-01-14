@@ -21,7 +21,15 @@ var product_search=new Vue({
             this.$http.get(url).then(function(res){
                 var _res=res.body;
                 if(_res.code==0){
-                    var searchProductList=_res.data.list;
+                    var _searchProductList=_res.data.list;
+                    var searchProductList=[];
+
+                    for(var i=0,len=_searchProductList.length;i<len;i++){
+                        if(_searchProductList[i].name.indexOf('[none]')==-1){
+                            searchProductList.push(_searchProductList[i])
+                        }
+                    }
+
                     if(searchProductList && searchProductList.length>0){
                         for(var i=0,len=searchProductList.length;i<len;i++){
                             var _picture_url=searchProductList[i].picture_url.split(',');

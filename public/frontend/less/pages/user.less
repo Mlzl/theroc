@@ -8,7 +8,7 @@
   background-color: #ffffff;
   margin:0 auto;
   .user-overview{
-     width:1120px;
+     //width:1120px;
      height:126px;
      margin: 0 auto;
      background-color: #f8f8f8;
@@ -45,7 +45,7 @@
      }
   }
   .user-form{
-    width:1120px;
+    width:90%;
     margin:0 auto;
     >p{
       margin-top: 20px;
@@ -120,6 +120,25 @@
       text-indent:10px;
       border: solid 1px #cccccc;
       border-radius: 4px;
+    }
+  }
+}
+
+//响应式布局
+@media screen and (max-width: 414px) {
+  #user_main{
+    min-width: auto;
+    .user-overview{
+      .overview-item1{
+        margin:13px 30px 13px 30px;
+      }
+    }
+    .user-form{
+      .area{
+        >input{
+          margin-bottom:20px;
+        }
+      }
     }
   }
 }

@@ -22,9 +22,15 @@
                 <img src="/images/companyImg.jpg" />
             </div>
             <div class="info">
-                Shenzhen Limskey Technology Co.,Ltd. is one professional new-energy base manufacturing high power rechargeable batteries and cores which are use for RC filed. We provide one stop service for battery cell production, R&D, Assemble & Produce, and market sales. Our company owns professional R&D technology and management team. We can provide customized battery cores and optimal battery cells as sembling plan according to customer’s need. With the products’ strength of high security, reliability, high discharge plateau, long cycle life etc., we win recognition and praise of customers from both home and abroad.
-                Products are widely applied for UAV, RC airplane, RC models, RC boat model, RC gun model, Robot, Medical facility, Fashing machine, Monocycle, Electric power tool, etc. we can meet customers from various files, in different degree, and different circumstances. Our products win customers’ s praise because of products feature of small size, light weight, stable performance, long discharge time, high power discharge performance, etc.
-                Our company receive OEM, ODM order. Full range of battery cells, sufficient stock, deliver in time! We have professional self-test team, strict test working procedure. We will provide you with our Best Buys products and Excellent After-sales service wholeheartedly.
+                <p>
+                    Shenzhen Limskey Technology Co.,Ltd. is one professional new-energy base manufacturing high power rechargeable batteries and cores which are use for RC filed. We provide one stop service for battery cell production, R&D, Assemble & Produce, and market sales. Our company owns professional R&D technology and management team. We can provide customized battery cores and optimal battery cells as sembling plan according to customer’s need. With the products’ strength of high security, reliability, high discharge plateau, long cycle life etc., we win recognition and praise of customers from both home and abroad.
+                </p>
+                <p>
+                    Products are widely applied for UAV, RC airplane, RC models, RC boat model, RC gun model, Robot, Medical facility, Fashing machine, Monocycle, Electric power tool, etc. we can meet customers from various files, in different degree, and different circumstances. Our products win customers’ s praise because of products feature of small size, light weight, stable performance, long discharge time, high power discharge performance, etc.
+                </p>
+                <p>
+                    Our company receive OEM, ODM order. Full range of battery cells, sufficient stock, deliver in time! We have professional self-test team, strict test working procedure. We will provide you with our Best Buys products and Excellent After-sales service wholeheartedly.
+                </p>
             </div>
         </div>
         <!--底部-->

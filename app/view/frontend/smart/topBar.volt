@@ -39,16 +39,19 @@
     </div>
     <div class="topBar_wap">
         <div class="nav">
-            <img src="/images/logo.png" class="nav_img" @click="showToNav(true)"/>
+            <img src="/images/line.png" class="nav_img1" @click="showToNav(true)"/>
+            <img src="/images/logo.png" class="nav_img2"/>
         </div>
         <p class="search">
             <input type="text" v-model="keyword" @keyup.enter="switchPages(6)"/>
             <i class="search_icon"></i>
         </p>
         <p class="info">
-            <i class="user_icon" @click="switchPages(4,$event)"></i>
             {% if user_info is defined %}
+            <i class="user_icon" @click="switchPages(5,$event)"></i>
             <i class="quit_icon" @click="logout"></i>
+            {% else %}
+            <i class="user_icon" @click="switchPages(4,$event)"></i>
             {% endif %}
         </p>
     </div>

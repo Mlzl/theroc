@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="{{keywords}}">
     <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>{{title}}</title>
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--<link rel="stylesheet" href="/plugin/element-ui/lib/theme-default/index.css">-->
@@ -36,7 +37,7 @@
                 </p>
                 <p class="userEmail">
                     <span class="form-email-tip">Email address<span/>
-                    <span class="form-email">1446418561@qq.com</span>
+                    <span class="form-email">~{person.email}</span>
                 </p>
                 <p class="phoneNum" >
                     <input type="text" placeholder="Phone number" v-model="person.cellphone">
