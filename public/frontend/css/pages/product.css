@@ -607,14 +607,16 @@ table {
     height: 30px;
   }
   #product_main .product_list .category .primary > li {
-    width: 50px;
+    width: auto;
     height: 28px;
     line-height: 28px;
+    padding: 0 5px;
   }
   #product_main .product_list .category .primary > li .secondary {
     height: 35px;
   }
   #product_main .product_list .category .primary > li .secondary > li {
+    width: auto;
     height: 15px;
     line-height: 15px;
     margin: 5px 0;
