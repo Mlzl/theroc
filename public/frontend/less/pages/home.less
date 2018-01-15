@@ -92,7 +92,7 @@
       .oneProduct_desc{
         box-sizing:border-box;
         width:100%;
-        min-height:18%;
+        height:18%;
         text-align:center;
         padding:10px 0 0 0;
         background-color: #fff;
@@ -119,8 +119,20 @@
     }
     .product_sell,.product_recom{
       .oneProduct{
-        width: 40%;
-        padding-top:48%;
+        width: 185px;
+        height: auto;
+        padding:0;
+        overflow:auto;
+        position:relative;
+        .oneProduct_img{
+          height:184px;
+          position:relative;
+        }
+        .oneProduct_desc{
+          height:auto;
+          padding: 5px 0;
+          position:relative;
+        }
       }
     }
   }

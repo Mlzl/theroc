@@ -63,6 +63,7 @@
             <li @click="switchPages(1)">PRODUCTS</li>
             <li @click="switchPages(2)">COMMUNITY</li>
             <li @click="switchPages(3)">CONTACT US</li>
+            <li @click="switchPages(9)">COMPANY</li>
             <li @click="switchPages(7)">REFUND & EXCHANGE</li>
             <li @click="switchPages(8)">WARRANTY</li>
         </ul>

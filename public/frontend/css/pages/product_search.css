@@ -541,7 +541,14 @@ table {
   }
   #product_search_main .product_list .oneProduct {
     width: 185px;
-    height: 230px;
+    height: auto;
     margin: 0 2px 5px 0;
+  }
+  #product_search_main .product_list .oneProduct .oneProduct_img {
+    height: 184px;
+  }
+  #product_search_main .product_list .oneProduct .oneProduct_desc {
+    height: auto;
+    padding: 5px 0;
   }
 }

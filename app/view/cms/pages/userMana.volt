@@ -31,14 +31,14 @@
                 <div class="user_tbody">
                     <p v-for="(item,index) in userList">
                         <span>~{index+1}</span>
-                        <span>~{item.email}</span>
-                        <span>~{item.user_name}</span>
+                        <span :title="item.email">~{item.email}</span>
+                        <span :title="item.user_name">~{item.user_name}</span>
                         <span>
                             <img :src="item.avatar" />
                         </span>
-                        <span>~{item.cellphone}</span>
-                        <span>~{item.country}~{item.state}~{item.city}</span>
-                        <span>~{item.zip_code}</span>
+                        <span :title="item.cellphone">~{item.cellphone}</span>
+                        <span :title="item.country+item.state+item.city">~{item.country}~{item.state}~{item.city}</span>
+                        <span :title="item.zip_code">~{item.zip_code}</span>
                         <span>~{item.status==1?'已激活':'未激活'}</span>
                     </p>
                 </div>

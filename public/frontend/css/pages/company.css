@@ -519,8 +519,7 @@ table {
   text-indent: 40px;
 }
 @media screen and (max-width: 414px) {
-  #contact_main {
+  #company_main {
     min-width: auto;
-    margin: 10px 0 0 0;
   }
 }

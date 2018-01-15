@@ -27,7 +27,8 @@ var topBar = new Vue({
                                             type == 5 ? 'user':
                                                 type==6 ? 'product/search?keyword='+this.keyword:
                                                     type==7?'support?tab=0':
-                                                        type==8?'support?tab=1':'';
+                                                        type==8?'support?tab=1':
+                                                            type==9?'company':'';
             if(type==2){
                 window.open('/' + page);
             } else if(type!=6){

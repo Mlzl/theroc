@@ -600,11 +600,35 @@ table {
     text-align: left;
   }
   #product_main .product_list .category {
+    font-size: 16px;
     padding: 0;
+  }
+  #product_main .product_list .category .primary {
+    height: 30px;
+  }
+  #product_main .product_list .category .primary > li {
+    width: 50px;
+    height: 28px;
+    line-height: 28px;
+  }
+  #product_main .product_list .category .primary > li .secondary {
+    height: 35px;
+  }
+  #product_main .product_list .category .primary > li .secondary > li {
+    height: 15px;
+    line-height: 15px;
+    margin: 5px 0;
   }
   #product_main .product_list .theProduct .oneProduct {
     width: 185px;
-    height: 230px;
+    height: auto;
     margin: 0 2px 5px 0;
+  }
+  #product_main .product_list .theProduct .oneProduct .oneProduct_img {
+    height: 184px;
+  }
+  #product_main .product_list .theProduct .oneProduct .oneProduct_desc {
+    height: auto;
+    padding: 5px 0;
   }
 }
